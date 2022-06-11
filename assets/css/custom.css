@@ -1,0 +1,17 @@
+.mtxt {
+    font-family: Pretendard,-apple-system,BlinkMacSystemFont,Bazier Square,Noto Sans KR,Segoe UI,Apple SD Gothic Neo,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    line-height: 1.4;
+    font-weight: 600;
+}
+@media (max-width: 383px){
+    .other{
+        flex-direction: column;
+    }
+    .resume-social{
+        width:auto;
+        display:flex;
+    }
+    .resume-social li + li{
+        margin-left:1.2rem;
+    }
+}
