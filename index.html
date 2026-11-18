@@ -1,622 +1,237 @@
-<!DOCTYPE html>
-<html lang="kr"> 
+<!doctype html>
+<html lang="ko">
 <head>
-    <title>Quedevel Resume</title>
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Responsive Resume Template">
-    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
-    <link rel="shortcut icon" href="favicon.ico"> 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-    <!-- FontAwesome JS-->
-	<script defer src="assets/fontawesome/js/all.min.js"></script>
-    <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="assets/css/pillar-2.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>스쿼시 노트</title>
+<meta name="description" content="스쿼시 기술을 물리·역학 원리로 풀어 쓴 개인 노트">
+<meta property="og:title" content="스쿼시 노트">
+<meta property="og:description" content="스쿼시 기술을 물리·역학 원리로 풀어 쓴 개인 노트">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='26' fill='%232b2b2b'/%3E%3Ccircle cx='38' cy='24' r='4' fill='%23f4c20d'/%3E%3Ccircle cx='28' cy='24' r='4' fill='%23f4c20d'/%3E%3C/svg%3E">
+<style>
+:root {
+  --bg: #f6f7f9;
+  --paper: #ffffff;
+  --ink: #1f2328;
+  --muted: #5b6470;
+  --line: #e3e6ea;
+  --accent: #1f6feb;
+  --accent-soft: #eef4ff;
+  --orange: #e8590c;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111418;
+    --paper: #181c21;
+    --ink: #e6e8eb;
+    --muted: #a0a8b3;
+    --line: #2c323a;
+    --accent: #6ea8fe;
+    --accent-soft: #1b2a40;
+    --orange: #ff8a4c;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", system-ui, sans-serif;
+  line-height: 1.7;
+  word-break: keep-all;
+}
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
 
-	<link rel="stylesheet" href="assets/css/custom.css">
-</head> 
-<body>	
-    <article class="resume-wrapper text-center position-relative">
-	    <div class="resume-wrapper-inner mx-auto text-start bg-white shadow-lg">
-		    <header class="resume-header pt-4 pt-md-0">
-			    <div class="row">
-				    <div class="col-block col-md-auto resume-picture-holder text-center text-md-start">
-				        <img class="picture" src="assets/images/profile.jpg" alt="">
-				    </div><!--//col-->
-				    <div class="col">
-					    <div class="row p-4 justify-content-center justify-content-md-between other">
-						    <div class="primary-info col-auto">
-							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">김동호</h1>
-							    <div class="title mb-3">Backend Developer</div>
-							    <ul class="list-unstyled">
-								    <li class="mb-2"><a class="text-link" href="javascript:void(0);" style="cursor: default;"><i class="far fa-envelope fa-fw me-2" data-fa-transform="grow-3"></i>kdh90817@naver.com</a></li>
-								    <!--<li><a class="text-link" href="tel:010-3502-1599" style="cursor: default;"><i class="fas fa-mobile-alt fa-fw me-2" data-fa-transform="grow-6"></i>010 3502 1599</a></li>-->
-							    </ul>
-						    </div><!--//primary-info-->
-						    <div class="secondary-info col-auto mt-2">
-							    <ul class="resume-social list-unstyled">
-					                <li class="mb-3"><a class="text-link" target="_blank" href="https://www.linkedin.com/in/%EB%8F%99%ED%98%B8-%EA%B9%80-2ba641238/"><span class="fa-container text-center me-2"><i class="fab fa-linkedin-in fa-fw"></i></span>LinkedIn</a></li>
-					                <li class="mb-3"><a class="text-link" target="_blank" href="https://github.com/quedevel"><span class="fa-container text-center me-2"><i class="fab fa-github-alt fa-fw"></i></span>GitHub</a></li>
-							    </ul>
-						    </div><!--//secondary-info-->
-					    </div><!--//row-->
-					    
-				    </div><!--//col-->
-			    </div><!--//row-->
-		    </header>
-		    <div class="resume-body p-5">
-			    <section class="resume-section summary-section mb-5">
-				    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Career Summary</h2>
-				    <div class="resume-section-content">
-					    <p class="mb-0 mtxt">Java 기반의 백엔드 개발자로 재직 중이며, 다양한 B2B/B2C 서비스의 구축 및 고도화 프로젝트를 수행하고 있습니다.</p>
-						<p class="mtxt">E-commerce, 모바일 앱, 데이터 처리 API 등 다양한 도메인을 경험하였고, 기획 초기 단계부터 설계, 개발, 배포, 운영까지 전반적인 개발 업무를 담당하고 있습니다.</p>
-						<p class="mb-0 mtxt">특히, React Native 기반의 모바일 앱 개발 및 API 연동 경험을 통해 프론트-백 간의 통합 구조 이해도를 높였으며, <br>AWS Glue와 유사한 데이터 파이프라인 시스템과 스케줄링 툴 개발을 통해 대규모 워크플로우 구성과 실행 자동화 경험을 쌓았습니다.</p>
-						<p class="mtxt">또한, 프로젝트마다 Git-flow 기반의 협업 문화를 정착시키고, 코드 리뷰 및 커밋 컨벤션 등의 개발 문화를 주도적으로 적용하여 팀의 생산성과 코드 품질 향상에 기여하고 있습니다.</p>
-				    </div>
-			    </section><!--//summary-section-->
-			    <div class="row">
-				    <div class="col-lg-9">
-					    <section class="resume-section experience-section mb-5">
-						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Work Experience</h2>
-							<div class="resume-section-content">
-								<div class="resume-timeline position-relative">
-									<article class="resume-timeline-item position-relative">
-										<div class="resume-timeline-item-header mb-2">
-											<div class="d-flex flex-column flex-md-row">
-												<h3 class="resume-position-title font-weight-bold mb-1 mtxt">
-													주식회사 피치마인드(peachmind Co.,Ltd.)
-												</h3>
-											</div><!--//row-->
-										</div><!--//resume-timeline-item-header-->
-										<div class="resume-timeline-item-desc">
-											<p class="mtxt"></p>
-											<div class="resume-position-time mtxt">2023-08 - 2025-05</div>
-											<h4 class="resume-timeline-item-desc-heading font-weight-bold"></h4>
-											<ul class="list-achieve">
-											</ul>
-										</div>
-										<div class="resume-section-content">
-											<div class="resume-timeline position-relative">
+/* hero */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 72px 0 56px;
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+.hero svg.court {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 520px;
+  max-width: 45%;
+  opacity: .9;
+  pointer-events: none;
+}
+.hero .eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  line-height: 1.25;
+  margin: 16px 0 12px;
+  letter-spacing: -0.02em;
+  position: relative;
+}
+.hero p {
+  margin: 0;
+  max-width: 460px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  position: relative;
+}
 
-												<!-- LG 에너지솔루션 Davinci Scheduler 개발 프로젝트 -->
-												<article class="resume-timeline-item position-relative pb-5">
-													<div class="resume-timeline-item-header mb-2">
-														<div class="d-flex flex-column flex-md-row">
-															<h3 class="resume-position-title font-weight-bold mb-1 mtxt">LG 에너지솔루션 Davinci Scheduler 개발 프로젝트</h3>
-														</div><!--//row-->
+/* list */
+main.wrap { padding-top: 48px; padding-bottom: 72px; }
+.section-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 0 0 20px;
+}
+.section-title h2 { font-size: 1.25rem; margin: 0; }
+.section-title span { color: var(--muted); font-size: .9rem; }
 
-													</div><!--//resume-timeline-item-header-->
-													<div class="resume-timeline-item-desc">
-														<div class="resume-position-time mtxt">2025-02 - 2025-10</div>
-														<h4 class="resume-timeline-item-desc-heading font-weight-bold">Achievements:</h4>
-														<ul class="list-achieve">
-															<li class="mtxt">React Flow를 활용하여 사용자가 Drag & Drop으로 Workflow를 구성할 수 있는 시각적 UI를 개발</li>
-															<li class="mtxt">Glue API와 통합하여 외부 시스템(MLDL, DataPrep, Spotfire, S3 등)과 연동 구현</li>
-															<li class="mtxt">복잡한 노드 간의 실행 순서의 탐색 및 정렬 알고리즘을 적용하여 백엔드 로직을 개발</li>
-														</ul>
-														<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Java 17</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Spring Boot 3.2</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">JPA</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Postgresql</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">React</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">TypeScript</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Git</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Jenkins</span></li>
-														</ul>
-													</div><!--//resume-timeline-item-desc-->
-												</article><!--//resume-timeline-item-->
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  color: inherit;
+  text-decoration: none;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.card:hover, .card:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.08);
+  border-color: var(--accent);
+  outline: none;
+}
+.thumb {
+  aspect-ratio: 960 / 520;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+}
+.thumb img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+.card h3 { margin: 0; font-size: 1.15rem; line-height: 1.4; }
+.card p { margin: 0; color: var(--muted); font-size: .95rem; }
+.meta {
+  margin-top: auto;
+  padding-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: .85rem;
+  color: var(--muted);
+}
+.meta .go { color: var(--accent); font-weight: 700; }
 
-												<!-- LG 에너지솔루션 Glue API 개발 프로젝트 -->
-												<article class="resume-timeline-item position-relative pb-5">
-													<div class="resume-timeline-item-header mb-2">
-														<div class="d-flex flex-column flex-md-row">
-															<h3 class="resume-position-title font-weight-bold mb-1 mtxt">LG 에너지솔루션 Glue API 개발 프로젝트</h3>
-														</div><!--//row-->
+footer {
+  border-top: 1px solid var(--line);
+  padding: 24px 0 40px;
+  color: var(--muted);
+  font-size: .85rem;
+  text-align: center;
+}
 
-													</div><!--//resume-timeline-item-header-->
-													<div class="resume-timeline-item-desc">
-														<div class="resume-position-time mtxt">2024-10 - 2025-01</div>
-														<h4 class="resume-timeline-item-desc-heading font-weight-bold">Achievements:</h4>
-														<ul class="list-achieve">
-															<li class="mtxt">AWS Glue와 유사한 기능의 백엔드 API를 설계 및 개발</li>
-															<li class="mtxt">Job, Trigger, Workflow 개념을 중심으로 데이터 흐름을 정의하고 실행할 수 있는 구조를 구축</li>
-															<li class="mtxt">Glue Scheduler에서 API를 호출하여 Workflow 실행을 자동화할 수 있도록 설계</li>
-														</ul>
-														<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Java 17</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Spring Boot 3.2</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">JPA</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Postgresql</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Git</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Jenkins</span></li>
-														</ul>
-													</div><!--//resume-timeline-item-desc-->
-												</article><!--//resume-timeline-item-->
+@media (max-width: 640px) {
+  .hero { padding: 48px 0 40px; }
+  .hero svg.court { opacity: .25; right: -80px; max-width: 110%; }
+  .grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
 
-												<!-- PDI 모바일 구축 프로젝트 -->
-												<article class="resume-timeline-item position-relative pb-5">
-													<div class="resume-timeline-item-header mb-2">
-														<div class="d-flex flex-column flex-md-row">
-															<h3 class="resume-position-title font-weight-bold mb-1 mtxt">PDI 모바일 구축 프로젝트</h3>
-														</div><!--//row-->
+<header class="hero">
+  <!-- decorative court + drive trajectory -->
+  <svg class="court" viewBox="0 0 520 300" aria-hidden="true">
+    <rect x="20" y="40" width="10" height="220" fill="#9aa4ae"/>
+    <rect x="490" y="40" width="10" height="220" fill="#9aa4ae"/>
+    <rect x="20" y="260" width="480" height="8" fill="#9aa4ae"/>
+    <path d="M30,190 Q190,180 330,260" fill="none" stroke="#1f6feb" stroke-width="4"/>
+    <path d="M330,260 Q420,228 490,236" fill="none" stroke="#1f6feb" stroke-width="4"/>
+    <path d="M30,100 Q200,10 330,260" fill="none" stroke="#e8590c" stroke-width="3" stroke-dasharray="7 6" opacity=".7"/>
+    <circle cx="490" cy="236" r="9" fill="#2b2b2b"/>
+    <circle cx="493" cy="232" r="2" fill="#f4c20d"/>
+  </svg>
+  <div class="wrap">
+    <span class="eyebrow">SQUASH NOTES</span>
+    <h1>스쿼시 노트</h1>
+    <p>국내에서 찾기 어려운 스쿼시 기술 자료를, 물리·역학 원리 중심으로 풀어 정리한 개인 아카이브입니다.</p>
+  </div>
+</header>
 
-													</div><!--//resume-timeline-item-header-->
-													<div class="resume-timeline-item-desc">
-														<div class="resume-position-time mtxt">2023-06 - 2024-09</div>
-														<h4 class="resume-timeline-item-desc-heading font-weight-bold">Achievements:</h4>
-														<ul class="list-achieve">
-															<li class="mtxt">관리자용 Backoffice에서 설정/조회할 수 있는 기능을 개발하고, 사용자 앱과의 데이터 연동을 구현</li>
-															<li class="mtxt">상품 관리 및 메인 구성 데이터에 대한 API 설계를 맡았으며, 유지보수가 편리하도록 계층 구조를 정리</li>
-														</ul>
-														<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Java 17</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Spring Boot 3.1</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">JPA</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Postgresql</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Git</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Jenkins</span></li>
-														</ul>
-													</div><!--//resume-timeline-item-desc-->
-												</article><!--//resume-timeline-item-->
+<main class="wrap">
+  <div class="section-title">
+    <h2>문서</h2>
+    <span id="count"></span>
+  </div>
+  <div class="grid" id="list"></div>
+</main>
 
+<footer>
+  <div class="wrap">개인 학습용 노트 · 자세 교정보다 원리 이해에 초점을 둔 문서 모음</div>
+</footer>
 
-												<!-- Dadoom 모바일 구축 프로젝트 -->
-												<article class="resume-timeline-item position-relative pb-5">
-													<div class="resume-timeline-item-header mb-2">
-														<div class="d-flex flex-column flex-md-row">
-															<h3 class="resume-position-title font-weight-bold mb-1 mtxt">Dadoom 모바일 구축 프로젝트</h3>
-														</div><!--//row-->
+<script>
+  // 새 문서를 추가하려면 이 배열에 항목을 하나 더 넣으면 됩니다.
+  const docs = [
+    {
+      href: "스쿼시_정석드라이브_역학원리.html",
+      title: "스쿼시 정석 드라이브의 물리·역학 원리",
+      desc: "프로의 드라이브는 왜 바운드 후에도 백월까지 뻗고, 동호인의 공은 왜 비슷한 자리에서 죽을까? 공의 성질부터 스윙·임팩트·스핀까지 역학으로 풀어 봅니다.",
+      tags: ["드라이브", "역학", "스핀"],
+      thumb: "images/드라이브_궤적비교.svg",
+      meta: "도표 6장 · 약 15분"
+    }
+  ];
 
-													</div><!--//resume-timeline-item-header-->
-													<div class="resume-timeline-item-desc">
-														<div class="resume-position-time mtxt">2023-09 - 2024-05</div>
-														<h4 class="resume-timeline-item-desc-heading font-weight-bold">Achievements:</h4>
-														<ul class="list-achieve">
-															<li class="mtxt">React Native 기반의 신규 앱 개발 프로젝트에서 메인 페이지, 회원 기능, 공통 뒤로가기 기능 등을 개발</li>
-															<li class="mtxt">Redux Toolkit 기반으로 slice 구조를 커스터마이징하여 앱 내 전역 상태 관리 체계를 설계</li>
-														</ul>
-														<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Java 17</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Spring Boot 3.1</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">JPA</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Postgresql</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">React Native</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">TypeScript</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Git</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Jenkins</span></li>
-														</ul>
-													</div><!--//resume-timeline-item-desc-->
-												</article><!--//resume-timeline-item-->
-
-												<!-- GoParts 모바일 구축 프로젝트 -->
-												<article class="resume-timeline-item position-relative pb-5">
-													<div class="resume-timeline-item-header mb-2">
-														<div class="d-flex flex-column flex-md-row">
-															<h3 class="resume-position-title font-weight-bold mb-1 mtxt">GoParts 모바일 구축 프로젝트</h3>
-														</div><!--//row-->
-
-													</div><!--//resume-timeline-item-header-->
-													<div class="resume-timeline-item-desc">
-														<div class="resume-position-time mtxt">2023-08 - 2023-09</div>
-														<h4 class="resume-timeline-item-desc-heading font-weight-bold">Achievements:</h4>
-														<ul class="list-achieve">
-															<li class="mtxt">Google Cloud Vision API를 활용하여 차량 번호판 및 차대번호 인식 기능을 구현</li>
-															<li class="mtxt">OCR 결과값 후처리 및 정규화 처리 로직을 개발하여 부품 조회 기능과 연동</li>
-														</ul>
-														<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Java 17</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Spring Boot 3.1</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">JPA</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Postgresql</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Vue</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">TypeScript</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Git</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Jenkins</span></li>
-														</ul>
-													</div><!--//resume-timeline-item-desc-->
-												</article><!--//resume-timeline-item-->
-
-											</div><!--//resume-timeline-->
-										</div>
-									</article>
-								</div>
-
-							</div>
-						    <div class="resume-section-content">
-								<div class="resume-timeline position-relative">
-									<article class="resume-timeline-item position-relative">
-										<div class="resume-timeline-item-header mb-2">
-											<div class="d-flex flex-column flex-md-row">
-												<h3 class="resume-position-title font-weight-bold mb-1 mtxt">(주)이노트리</h3>
-											</div><!--//row-->
-										</div><!--//resume-timeline-item-header-->
-										<div class="resume-timeline-item-desc">
-											<p class="mtxt"></p>
-											<div class="resume-position-time mtxt">2020-02 - 2023-06</div>
-											<h4 class="resume-timeline-item-desc-heading font-weight-bold"></h4>
-											<ul class="list-achieve">
-											</ul>
-										</div>
-										<div class="resume-section-content">
-											<div class="resume-timeline position-relative">
-												<!-- E-commerce 솔루션 iShop 차세대 프로젝트 -->
-												<article class="resume-timeline-item position-relative pb-5">
-													<div class="resume-timeline-item-header mb-2">
-														<div class="d-flex flex-column flex-md-row">
-															<h3 class="resume-position-title font-weight-bold mb-1 mtxt">E-commerce 솔루션 iShop 차세대 프로젝트</h3>
-														</div><!--//row-->
-
-													</div><!--//resume-timeline-item-header-->
-													<div class="resume-timeline-item-desc">
-														<p class="mtxt">Java 17 및 Spring Boot 3.1, JPA 로 업그레이드하여 프로젝트에 도입</p>
-														<div class="resume-position-time mtxt">2023-05 - 2023-06</div>
-														<h4 class="resume-timeline-item-desc-heading font-weight-bold">Achievements:</h4>
-														<ul class="list-achieve">
-															<li class="mtxt">개발 문화 만들기 도입(Git-flow, Code review, commit convention, Kanban board etc.)</li>
-															<li class="mtxt">iShop의 차세대 프로젝트에서 백엔드의 모든 설정과 구조를 잡는 역할을 맡았습니다.</li>
-														</ul>
-														<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Java 17</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Spring Boot 3.1</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">JPA</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Oracle</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">React</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">TypeScript</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Git</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Jenkins</span></li>
-														</ul>
-													</div><!--//resume-timeline-item-desc-->
-												</article><!--//resume-timeline-item-->
-
-												<!-- 현대리바트몰 H.Point Pay 개발 -->
-												<article class="resume-timeline-item position-relative pb-5">
-													<div class="resume-timeline-item-header mb-2">
-														<div class="d-flex flex-column flex-md-row">
-															<h3 class="resume-position-title font-weight-bold mb-1 mtxt">현대리바트몰 H.Point Pay 연동</h3>
-														</div><!--//row-->
-
-													</div><!--//resume-timeline-item-header-->
-													<div class="resume-timeline-item-desc">
-														<p class="mtxt">현대리바트몰과 H.Point Pay 간편 결제 서비스 연동을 담당</p>
-														<div class="resume-position-time mtxt">2023-01 - 2023-05</div>
-														<h4 class="resume-timeline-item-desc-heading font-weight-bold">Achievements:</h4>
-														<ul class="list-achieve">
-															<li class="mtxt">개발한 H.Point Pay 간편 결제 주문 기능에서는 다양한 예외 상황을 고려한 예외 처리를 추가하여 사용자 경험을 개선하고 결제 성공률을 높였습니다.</li>
-															<li class="mtxt">사용자가 보유한 카드와 계좌를 쉽게 확인하고 추가 등록할 수 있는 기능을 개발하여 사용자 경험을 향상시켰습니다.</li>
-														</ul>
-														<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Java</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Javascript</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Spring Framework</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">MyBatis</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Oracle</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">JSP</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Git</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Bitbucket</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Bamboo</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Wiki</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Jira</span></li>
-														</ul>
-													</div><!--//resume-timeline-item-desc-->
-												</article><!--//resume-timeline-item-->
-
-												<!-- LFmall 전시 운영 -->
-												<article class="resume-timeline-item position-relative pb-5">
-
-													<div class="resume-timeline-item-header mb-2">
-														<div class="d-flex flex-column flex-md-row">
-															<h3 class="resume-position-title font-weight-bold mb-1 mtxt">LFmall 전시 운영</h3>
-														</div><!--//row-->
-
-													</div><!--//resume-timeline-item-header-->
-													<div class="resume-timeline-item-desc">
-														<p class="mtxt">기획전 고도화 및 전시 서비스 운영</p>
-														<div class="resume-position-time mtxt">2021-10 - 2022-12</div>
-														<h4 class="resume-timeline-item-desc-heading font-weight-bold">Achievements:</h4>
-														<ul class="list-achieve">
-															<li class="mtxt">템플릿 기획전을 고도화를 통하여 관리자로부터 템플릿 사용률을 40% 상승 시켰습니다.</li>
-															<li class="mtxt">쿠폰, 마일리지와 같은 혜택에 대한 잦은 오발급 이슈를 재설계하여 하나로 통합하는데 성공했습니다.</li>
-															<li class="mtxt">레거시 소스를 제거 및 리팩토링하고 쿼리를 최적화 했으며 스크립트 지연 로딩을 통해 페이지 로딩 시간을 평균 33~40% 상향시켜 고객 만족도 증대에 기여하였습니다.</li>
-														</ul>
-														<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Java</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Javascript</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Spring Boot</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">MyBatis</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Oracle</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">MySQL</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Thymeleaf</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">JSP</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Nexacro</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">GitLab</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Jenkins</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Jira</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Wiki</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Slack</span></li>
-														</ul>
-													</div><!--//resume-timeline-item-desc-->
-
-												</article><!--//resume-timeline-item-->
-
-												<!-- LFmall DB 전환 -->
-												<article class="resume-timeline-item position-relative pb-5">
-
-													<div class="resume-timeline-item-header mb-2">
-														<div class="d-flex flex-column flex-md-row">
-															<h3 class="resume-position-title font-weight-bold mb-1 mtxt">LFmall DB 전환</h3>
-														</div><!--//row-->
-
-													</div><!--//resume-timeline-item-header-->
-													<div class="resume-timeline-item-desc">
-														<p class="mtxt">OGG로 연결하던 MySQL 영역을 제거하기 위해서 해당 문법을 모두 Oracle로 전환</p>
-														<div class="resume-position-time mtxt">2021-08 - 2021-10</div>
-														<h4 class="resume-timeline-item-desc-heading font-weight-bold">Achievements:</h4>
-														<ul class="list-achieve">
-															<li class="mtxt">LFmall에서는 기존 MySQL 영역을 제거하고, Oracle로 DB 전환 작업을 진행했습니다.</li>
-															<li class="mtxt">MySQL 문법으로 사용하던 모든 쿼리를 Oracle 문법으로 전환하였으며, 전환으로 인한 속도 이슈를 Oracle 힌트와 쿼리 최적화를 통해 수정하였습니다.</li>
-														</ul>
-														<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Java</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Javascript</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Spring Boot</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">MyBatis</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Oracle</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">MySQL</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Thymeleaf</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">JSP</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Nexacro</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">GitLab</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Jenkins</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Jira</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Wiki</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Slack</span></li>
-														</ul>
-													</div><!--//resume-timeline-item-desc-->
-
-												</article><!--//resume-timeline-item-->
-
-												<!-- LFmall 홈개편 -->
-												<article class="resume-timeline-item position-relative pb-5">
-
-													<div class="resume-timeline-item-header mb-2">
-														<div class="d-flex flex-column flex-md-row">
-															<h3 class="resume-position-title font-weight-bold mb-1 mtxt">LFmall 홈개편</h3>
-														</div><!--//row-->
-
-													</div><!--//resume-timeline-item-header-->
-													<div class="resume-timeline-item-desc">
-														<p class="mtxt">메인 페이지에 다양한 모듈을 적용하기 위한 Backoffice 작업 및 전시영역 개발.</p>
-														<div class="resume-position-time mtxt">2021-03 - 2021-08</div>
-														<h4 class="resume-timeline-item-desc-heading font-weight-bold">Achievements:</h4>
-														<ul class="list-achieve">
-															<li class="mtxt">많은 컨텐츠로 인한 속도 이슈가 발생하여 HTTP 1.1에서 HTTP 2.0으로 업그레이드를 제안</li>
-															<li class="mtxt">스크립트와 이미지에 대해서도 지연 로딩을 적용하여 이슈를 해결하였습니다. 이렇게 진행된 프로젝트를 통해 고객들의 접근성을 개선하고, 사용성을 향상시켰습니다.</li>
-														</ul>
-														<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Java</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Javascript</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Spring Boot</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">MyBatis</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Oracle</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">MySQL</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Thymeleaf</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">JSP</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Nexacro</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">GitLab</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Jenkins</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Jira</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Wiki</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Slack</span></li>
-														</ul>
-													</div><!--//resume-timeline-item-desc-->
-
-												</article><!--//resume-timeline-item-->
-
-												<!-- 현대리바트몰 구축 -->
-												<article class="resume-timeline-item position-relative pb-5">
-
-													<div class="resume-timeline-item-header mb-2">
-														<div class="d-flex flex-column flex-md-row">
-															<h3 class="resume-position-title font-weight-bold mb-1 mtxt">현대리바트몰 구축</h3>
-														</div><!--//row-->
-
-													</div><!--//resume-timeline-item-header-->
-													<div class="resume-timeline-item-desc">
-														<p class="mtxt">상품 파트로 Backoffice의 상품 관련을 메인으로 개발했으며, 정책에 따른 휴먼회원과 탈퇴회원 관리 등을 개발</p>
-														<div class="resume-position-time mtxt">2020-02 - 2021-02</div>
-														<h4 class="resume-timeline-item-desc-heading font-weight-bold">Achievements:</h4>
-														<ul class="list-achieve">
-															<li class="mtxt">기존 리바트몰에서 제공되지 않았던 상품 관리 및 회원 관리 기능을 이전 레거시 프로젝트의 분석과 설계를 철저히 수행하여 기존 기능을 유지하고, 새롭게 기능을 추가하여 사용자에게 더욱 편리한 쇼핑 경험을 제공할 수 있었습니다. 이로써 사용자는 더욱 안정적이고 빠르게 쇼핑을 즐길 수 있게 되었습니다.</li>
-														</ul>
-														<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Java</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Javascript</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Spring Framework</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Spring Batch</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">MyBatis</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Oracle</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">JSP</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">SVN</span></li>
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Jenkins</span></li>
-														</ul>
-														<ul class="list-inline">
-															<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Wiki</span></li>
-														</ul>
-													</div><!--//resume-timeline-item-desc-->
-												</article><!--//resume-timeline-item-->
-											</div><!--//resume-timeline-->
-										</div>
-									</article>
-								</div>
-
-							</div>
-					    </section><!--//experience-section-->
-				    </div>
-				    <div class="col-lg-3">
-					    <section class="resume-section skills-section mb-5">
-						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Skills &amp; Tools</h2>
-						    <div class="resume-section-content">
-						        <div class="resume-skill-item">
-							        <h4 class="resume-skills-cat font-weight-bold">Backend</h4>
-							        <ul class="list-unstyled mb-4">
-								        <li class="mb-2">
-								            <div class="resume-skill-name">Java</div>
-								        </li>
-										<li class="mb-2">
-								            <div class="resume-skill-name">Spring Boot, Spring Framework</div>
-								        </li>
-										<li class="mb-2">
-								            <div class="resume-skill-name">MyBatis, Spring Data JPA</div>
-								        </li>
-										<li class="mb-2">
-								            <div class="resume-skill-name">Gradle, Maven</div>
-								        </li>
-										<li class="mb-2">
-								            <div class="resume-skill-name">IntelliJ, Visual Studio Code</div>
-								        </li>
-							        </ul>
-						        </div><!--//resume-skill-item-->
-								<div class="resume-skill-item">
-						            <h4 class="resume-skills-cat font-weight-bold">DevOps</h4>
-							        <ul class="list-unstyled">
-								        <li class="mb-2">
-								            <div class="resume-skill-name">MySQL, Oracle</div>
-								        </li>
-								        <li class="mb-2">
-								            <div class="resume-skill-name">Git, GitLab, Jenkins, Bitbucket, Bamboo</div>
-								        </li>
-							        </ul>
-						        </div>
-						        <div class="resume-skill-item">
-						            <h4 class="resume-skills-cat font-weight-bold">Frontend</h4>
-							        <ul class="list-unstyled">
-								        <li class="mb-2">
-								            <div class="resume-skill-name">React, TypeScript, ES6, Thymeleaf, React Native</div>
-								        </li>
-							        </ul>
-						        </div>        
-						    </div><!--resume-section-content-->
-					    </section><!--//skills-section-->
-					    <section class="resume-section education-section mb-5">
-						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Education</h2>
-						    <div class="resume-section-content">
-							    <ul class="list-unstyled">
-								    <li class="mb-2">
-								        <div class="resume-degree font-weight-bold">삼육대학교</div>
-								        <div class="resume-degree-org">카메카트로닉스학과 3.7 / 4.5</div>
-								        <div class="resume-degree-time">2009 - 2016</div>
-								    </li>
-							    </ul>
-						    </div>
-					    </section><!--//education-section-->
-					    <section class="resume-section interests-section mb-5">
-						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Certificate</h2>
-						    <div class="resume-section-content">
-							    <ul class="list-unstyled">
-								    <li class="mb-1">정보처리기사</li>
-							    </ul>
-						    </div>
-					    </section><!--//interests-section-->
-					    <section class="resume-section interests-section mb-5">
-						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Recent Interests</h2>
-						    <div class="resume-section-content">
-							    <ul class="list-unstyled">
-								    <li class="mb-1">Spring Data JPA</li>
-								    <li class="mb-1">Spring WebFlux</li>
-								    <li class="mb-1">Transaction</li>
-							    </ul>
-						    </div>
-					    </section><!--//interests-section-->
-				    </div>
-			    </div><!--//row-->
-		    </div><!--//resume-body-->
-	    </div>
-    </article> 
+  const list = document.getElementById("list");
+  document.getElementById("count").textContent = docs.length + "편";
+  for (const d of docs) {
+    const a = document.createElement("a");
+    a.className = "card";
+    a.href = d.href;
+    a.innerHTML = `
+      <div class="thumb">${d.thumb ? `<img src="${d.thumb}" alt="" loading="lazy">` : ""}</div>
+      <div class="body">
+        <div class="tags">${d.tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>
+        <h3></h3>
+        <p></p>
+        <div class="meta"><span>${d.meta || ""}</span><span class="go">읽기 →</span></div>
+      </div>`;
+    a.querySelector("h3").textContent = d.title;
+    a.querySelector("p").textContent = d.desc;
+    const img = a.querySelector("img");
+    if (img) img.onerror = () => img.remove();
+    list.appendChild(a);
+  }
+</script>
 </body>
-</html> 
-
+</html>
