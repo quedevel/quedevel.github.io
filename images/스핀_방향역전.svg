@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <defs>
+    <marker id="spin" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d6336c"/>
+    </marker>
+    <marker id="move" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1f6feb"/>
+    </marker>
+    <marker id="gray" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2f9e44"/>
+    </marker>
+  </defs>
+  <rect width="960" height="420" fill="#fff"/>
+  <text x="480" y="32" text-anchor="middle" font-size="20" font-weight="700" fill="#222">앞벽을 거치며 언더스핀이 "탑스핀 방향"으로 바뀌는 원리 (측면도)</text>
+
+  <!-- legend -->
+  <g font-size="13" fill="#333">
+    <line x1="300" y1="56" x2="336" y2="56" stroke="#1f6feb" stroke-width="4" marker-end="url(#move)"/>
+    <text x="344" y="61">진행 방향</text>
+    <path d="M440,62 A14,14 0 0 1 468,62" fill="none" stroke="#d6336c" stroke-width="3" marker-end="url(#spin)"/>
+    <text x="478" y="61">회전 방향 (세 장면 모두 시계 방향으로 동일)</text>
+  </g>
+
+  <!-- dividers -->
+  <line x1="320" y1="80" x2="320" y2="350" stroke="#ddd" stroke-width="2"/>
+  <line x1="640" y1="80" x2="640" y2="350" stroke="#ddd" stroke-width="2"/>
+
+  <!-- ===== Panel 1 ===== -->
+  <g>
+    <text x="160" y="100" text-anchor="middle" font-size="16" font-weight="700" fill="#222">① 라켓에서 건 언더스핀</text>
+    <text x="160" y="120" text-anchor="middle" font-size="13" fill="#555">앞벽을 향해 날아가는 중</text>
+    <rect x="20" y="135" width="12" height="165" fill="#9aa4ae"/>
+    <text x="26" y="316" text-anchor="middle" font-size="12" fill="#555">앞벽</text>
+    <rect x="20" y="300" width="290" height="8" fill="#9aa4ae"/>
+    <!-- travel arrow (left) -->
+    <line x1="146" y1="210" x2="48" y2="210" stroke="#1f6feb" stroke-width="4" marker-end="url(#move)"/>
+    <!-- ball -->
+    <circle cx="200" cy="210" r="26" fill="#2b2b2b"/>
+    <circle cx="211" cy="200" r="3" fill="#f4c20d"/>
+    <circle cx="203" cy="200" r="3" fill="#f4c20d"/>
+    <!-- clockwise arcs -->
+    <path d="M168,190 A38,38 0 0 1 232,190" fill="none" stroke="#d6336c" stroke-width="3.5" marker-end="url(#spin)"/>
+    <path d="M232,230 A38,38 0 0 1 168,230" fill="none" stroke="#d6336c" stroke-width="3.5" marker-end="url(#spin)"/>
+    <text x="200" y="156" text-anchor="middle" font-size="12" fill="#d6336c">윗면 → (플레이어 쪽)</text>
+    <rect x="70" y="252" width="180" height="34" rx="6" fill="#fff0f5" stroke="#d6336c"/>
+    <text x="160" y="274" text-anchor="middle" font-size="14" font-weight="700" fill="#a61e4d">진행 기준 = 백스핀</text>
+  </g>
+
+  <!-- ===== Panel 2 ===== -->
+  <g>
+    <text x="480" y="100" text-anchor="middle" font-size="16" font-weight="700" fill="#222">② 앞벽에 맞고 튕겨 나옴</text>
+    <text x="480" y="120" text-anchor="middle" font-size="13" fill="#555">회전은 그대로, 진행 방향만 반전</text>
+    <rect x="340" y="135" width="12" height="165" fill="#9aa4ae"/>
+    <text x="346" y="316" text-anchor="middle" font-size="12" fill="#555">앞벽</text>
+    <rect x="340" y="300" width="290" height="8" fill="#9aa4ae"/>
+    <!-- ball -->
+    <circle cx="430" cy="210" r="26" fill="#2b2b2b"/>
+    <circle cx="441" cy="200" r="3" fill="#f4c20d"/>
+    <circle cx="433" cy="200" r="3" fill="#f4c20d"/>
+    <path d="M398,190 A38,38 0 0 1 462,190" fill="none" stroke="#d6336c" stroke-width="3.5" marker-end="url(#spin)"/>
+    <path d="M462,230 A38,38 0 0 1 398,230" fill="none" stroke="#d6336c" stroke-width="3.5" marker-end="url(#spin)"/>
+    <text x="430" y="156" text-anchor="middle" font-size="12" fill="#d6336c">윗면 → (백월 쪽)</text>
+    <!-- travel arrow (right) -->
+    <line x1="484" y1="210" x2="610" y2="210" stroke="#1f6feb" stroke-width="4" marker-end="url(#move)"/>
+    <text x="548" y="200" text-anchor="middle" font-size="12" fill="#1f6feb">백월 방향</text>
+    <rect x="390" y="252" width="180" height="34" rx="6" fill="#ebfbee" stroke="#2f9e44"/>
+    <text x="480" y="274" text-anchor="middle" font-size="14" font-weight="700" fill="#2b8a3e">진행 기준 = 탑스핀</text>
+  </g>
+
+  <!-- ===== Panel 3 ===== -->
+  <g>
+    <text x="800" y="100" text-anchor="middle" font-size="16" font-weight="700" fill="#222">③ 바닥에 바운드</text>
+    <text x="800" y="120" text-anchor="middle" font-size="13" fill="#555">바닥 접점이 진행 반대 방향으로 움직임</text>
+    <rect x="660" y="300" width="290" height="8" fill="#9aa4ae"/>
+    <text x="930" y="294" text-anchor="end" font-size="12" fill="#555">바닥</text>
+    <!-- ball touching floor -->
+    <circle cx="760" cy="274" r="26" fill="#2b2b2b"/>
+    <circle cx="771" cy="264" r="3" fill="#f4c20d"/>
+    <circle cx="763" cy="264" r="3" fill="#f4c20d"/>
+    <path d="M728,254 A38,38 0 0 1 792,254" fill="none" stroke="#d6336c" stroke-width="3.5" marker-end="url(#spin)"/>
+    <!-- travel arrow -->
+    <line x1="814" y1="262" x2="930" y2="262" stroke="#1f6feb" stroke-width="4" marker-end="url(#move)"/>
+    <text x="872" y="252" text-anchor="middle" font-size="12" fill="#1f6feb">진행 →</text>
+    <!-- contact point motion -->
+    <line x1="786" y1="326" x2="734" y2="326" stroke="#2f9e44" stroke-width="3" marker-end="url(#gray)"/>
+    <text x="760" y="346" text-anchor="middle" font-size="12" fill="#2b8a3e">접점의 회전 움직임 ←</text>
+    <text x="800" y="166" text-anchor="middle" font-size="13" fill="#333">바닥과의 미끄러짐 감소</text>
+    <text x="800" y="186" text-anchor="middle" font-size="13" font-weight="700" fill="#2b8a3e">→ 수평 속도 손실 감소</text>
+  </g>
+
+  <!-- footer -->
+  <rect x="40" y="364" width="880" height="42" rx="8" fill="#f8f9fa" stroke="#ccc"/>
+  <text x="480" y="384" text-anchor="middle" font-size="13" fill="#333">앞벽 마찰도 같은 방향의 회전을 만들거나 크기를 정리한다. 단, 스쿼시 공은 벽에서 회전이 크게 초기화되므로</text>
+  <text x="480" y="400" text-anchor="middle" font-size="13" fill="#333">바운드 후 뻗음에 대한 스핀의 직접 효과는 "속도·입사각" 효과보다 작다.</text>
+</svg>

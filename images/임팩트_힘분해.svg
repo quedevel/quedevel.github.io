@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" width="960" height="470" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <defs>
+    <marker id="blue" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1f6feb"/>
+    </marker>
+    <marker id="pink" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d6336c"/>
+    </marker>
+    <marker id="gray" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#868e96"/>
+    </marker>
+  </defs>
+  <rect width="960" height="470" fill="#fff"/>
+  <text x="480" y="32" text-anchor="middle" font-size="20" font-weight="700" fill="#222">임팩트 순간 힘의 분해 (측면도, 앞벽은 오른쪽)</text>
+
+  <line x1="480" y1="56" x2="480" y2="380" stroke="#ddd" stroke-width="2"/>
+
+  <!-- ===== Panel 1 : 정석 ===== -->
+  <g>
+    <text x="240" y="66" text-anchor="middle" font-size="16" font-weight="700" fill="#1f6feb">정석 드라이브 : 약간 열린 면</text>
+    <!-- vertical reference -->
+    <line x1="238.7" y1="235.7" x2="238.7" y2="110" stroke="#adb5bd" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <!-- face -->
+    <line x1="210.2" y1="129.4" x2="267.2" y2="342" stroke="#495057" stroke-width="7" stroke-linecap="round"/>
+    <text x="212" y="118" text-anchor="middle" font-size="12" fill="#495057">라켓 면</text>
+    <text x="232" y="98" text-anchor="end" font-size="12" fill="#868e96">약 10~20° 오픈</text>
+    <!-- racket travel -->
+    <line x1="80" y1="208" x2="222" y2="232" stroke="#868e96" stroke-width="4" stroke-dasharray="8 5" marker-end="url(#gray)"/>
+    <text x="60" y="186" font-size="12" fill="#495057">라켓 진행 방향</text>
+    <text x="60" y="202" font-size="12" fill="#495057">(거의 수평, 약간 아래)</text>
+    <!-- ball -->
+    <circle cx="260" cy="230" r="22" fill="#2b2b2b"/>
+    <!-- normal component -->
+    <line x1="260" y1="230" x2="402" y2="192" stroke="#1f6feb" stroke-width="6" marker-end="url(#blue)"/>
+    <text x="300" y="128" font-size="13" font-weight="700" fill="#1f6feb">면에 수직인 힘 (대부분)</text>
+    <text x="300" y="146" font-size="12" fill="#1f6feb">→ 빠른 출발 속도</text><text x="300" y="162" font-size="12" fill="#1f6feb">(앞으로, 약간 위로)</text>
+    <!-- tangential component -->
+    <line x1="260" y1="230" x2="277" y2="294" stroke="#d6336c" stroke-width="4" marker-end="url(#pink)"/>
+    <text x="292" y="290" font-size="13" font-weight="700" fill="#d6336c">면을 스치는 힘 (조금)</text>
+    <text x="292" y="308" font-size="12" fill="#d6336c">→ 적당한 언더스핀</text>
+    <!-- spin arc (counter-clockwise, backspin for rightward travel) -->
+    <path d="M289,213 A34,34 0 0 0 231,213" fill="none" stroke="#d6336c" stroke-width="3" marker-end="url(#pink)"/>
+    <!-- ratio bars -->
+    <text x="60" y="352" font-size="12" fill="#333">속도</text>
+    <rect x="100" y="341" width="230" height="14" rx="3" fill="#1f6feb"/>
+    <text x="60" y="374" font-size="12" fill="#333">스핀</text>
+    <rect x="100" y="363" width="100" height="14" rx="3" fill="#d6336c"/>
+  </g>
+
+  <!-- ===== Panel 2 : 과하게 연 면 ===== -->
+  <g>
+    <text x="720" y="66" text-anchor="middle" font-size="16" font-weight="700" fill="#e8590c">비교 : 과하게 연 면 + 찍어 내리는 스윙</text>
+    <line x1="713.1" y1="224.1" x2="713.1" y2="110" stroke="#adb5bd" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <line x1="642.4" y1="139.8" x2="783.8" y2="308.4" stroke="#495057" stroke-width="7" stroke-linecap="round"/>
+    <text x="640" y="128" text-anchor="middle" font-size="12" fill="#495057">라켓 면</text>
+    <text x="720" y="104" font-size="12" fill="#868e96">약 40° 오픈</text>
+    <line x1="583" y1="151" x2="700" y2="217" stroke="#868e96" stroke-width="4" stroke-dasharray="8 5" marker-end="url(#gray)"/>
+    <text x="505" y="246" font-size="12" fill="#495057">라켓 진행 방향</text>
+    <text x="505" y="262" font-size="12" fill="#495057">(위에서 깎아 내림)</text>
+    <circle cx="730" cy="210" r="22" fill="#2b2b2b"/>
+    <!-- normal component (small) -->
+    <line x1="730" y1="210" x2="774" y2="174" stroke="#1f6feb" stroke-width="6" marker-end="url(#blue)"/>
+    <text x="790" y="160" font-size="13" font-weight="700" fill="#1f6feb">면에 수직인 힘 (작음)</text>
+    <text x="790" y="178" font-size="12" fill="#1f6feb">→ 느린 출발, 높게 뜸</text>
+    <!-- tangential (large) -->
+    <line x1="730" y1="210" x2="822" y2="320" stroke="#d6336c" stroke-width="5" marker-end="url(#pink)"/>
+    <text x="800" y="344" font-size="13" font-weight="700" fill="#d6336c">면을 스치는 힘 (큼)</text>
+    <text x="800" y="362" font-size="12" fill="#d6336c">→ 과한 스핀</text>
+    <path d="M759,193 A34,34 0 0 0 701,193" fill="none" stroke="#d6336c" stroke-width="4.5" marker-end="url(#pink)"/>
+    <text x="540" y="352" font-size="12" fill="#333">속도</text>
+    <rect x="580" y="341" width="90" height="14" rx="3" fill="#1f6feb"/>
+    <text x="540" y="374" font-size="12" fill="#333">스핀</text>
+    <rect x="580" y="363" width="200" height="14" rx="3" fill="#d6336c"/>
+  </g>
+
+  <!-- footer -->
+  <rect x="30" y="398" width="900" height="56" rx="8" fill="#f8f9fa" stroke="#ccc"/>
+  <text x="480" y="420" text-anchor="middle" font-size="13" fill="#333">핵심은 두 성분의 <tspan font-weight="700">비율</tspan>. 정석 드라이브는 공을 미는 힘이 대부분이고, 스핀은 궤적을 다듬을 만큼만 걸린다.</text>
+  <text x="480" y="442" text-anchor="middle" font-size="13" fill="#333">면을 과하게 열면 비율이 스핀 쪽으로 치우쳐 공이 느려지고, "느리고 높게 날아가 바닥을 찍는" 죽는 공이 된다.</text>
+</svg>

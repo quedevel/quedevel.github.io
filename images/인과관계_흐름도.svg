@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 820" width="960" height="820" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#495057"/>
+    </marker>
+  </defs>
+  <rect width="960" height="820" fill="#fff"/>
+  <text x="480" y="36" text-anchor="middle" font-size="20" font-weight="700" fill="#222">정석 드라이브가 백월까지 뻗기까지 : 인과 관계 한눈에 보기</text>
+
+  <g font-size="14">
+    <!-- stage chips -->
+    <g font-weight="700" text-anchor="middle" fill="#fff" font-size="15">
+      <rect x="30" y="66" width="110" height="70" rx="8" fill="#495057"/><text x="85" y="107">스윙</text>
+      <rect x="30" y="166" width="110" height="160" rx="8" fill="#495057"/><text x="85" y="252">임팩트</text>
+      <rect x="30" y="356" width="110" height="70" rx="8" fill="#495057"/><text x="85" y="397">비행</text>
+      <rect x="30" y="456" width="110" height="80" rx="8" fill="#495057"/><text x="85" y="502">앞벽</text>
+      <rect x="30" y="566" width="110" height="130" rx="8" fill="#c92a2a"/><text x="85" y="626">바닥</text><text x="85" y="646" font-size="12">결정적 요인</text>
+      <rect x="30" y="726" width="110" height="60" rx="8" fill="#1f6feb"/><text x="85" y="762">결과</text>
+    </g>
+
+    <!-- S1 swing -->
+    <rect x="160" y="66" width="770" height="70" rx="8" fill="#f1f3f5" stroke="#adb5bd"/>
+    <text x="545" y="94" text-anchor="middle" fill="#222">높은 백스윙 + 세운 손목 · 몸통 → 어깨 → 팔꿈치 → 전완 회전의 운동 사슬</text>
+    <text x="545" y="120" text-anchor="middle" font-weight="700" fill="#1f6feb">⇒ 큰 라켓 헤드 속도</text>
+    <line x1="545" y1="138" x2="545" y2="164" stroke="#495057" stroke-width="2.5" marker-end="url(#a)"/>
+
+    <!-- S2 impact -->
+    <rect x="160" y="166" width="770" height="56" rx="8" fill="#f1f3f5" stroke="#adb5bd"/>
+    <text x="545" y="199" text-anchor="middle" fill="#222">앞발 근처 타점 · 적당한 거리 · 약간 열린 면 · 목표 방향과 직각</text>
+    <line x1="352" y1="224" x2="352" y2="252" stroke="#495057" stroke-width="2.5" marker-end="url(#a)"/>
+    <line x1="738" y1="224" x2="738" y2="252" stroke="#495057" stroke-width="2.5" marker-end="url(#a)"/>
+    <rect x="160" y="254" width="385" height="72" rx="8" fill="#e7f0ff" stroke="#1f6feb"/>
+    <text x="352" y="282" text-anchor="middle" font-weight="700" fill="#1f6feb">면에 수직인 힘 (대부분)</text>
+    <text x="352" y="306" text-anchor="middle" fill="#222">⇒ 빠른 출발 속도</text>
+    <rect x="555" y="254" width="375" height="72" rx="8" fill="#fff0f5" stroke="#d6336c"/>
+    <text x="742" y="282" text-anchor="middle" font-weight="700" fill="#d6336c">면을 스치는 힘 (조금)</text>
+    <text x="742" y="306" text-anchor="middle" fill="#222">⇒ 적당한 언더스핀</text>
+    <line x1="352" y1="328" x2="500" y2="354" stroke="#495057" stroke-width="2.5" marker-end="url(#a)"/>
+    <line x1="742" y1="328" x2="590" y2="354" stroke="#495057" stroke-width="2.5" marker-end="url(#a)"/>
+
+    <!-- S3 flight -->
+    <rect x="160" y="356" width="770" height="70" rx="8" fill="#f1f3f5" stroke="#adb5bd"/>
+    <text x="545" y="384" text-anchor="middle" fill="#222">빠른 속도 + 언더스핀의 마그누스 양력(덜 처짐)</text>
+    <text x="545" y="410" text-anchor="middle" font-weight="700" fill="#1f6feb">⇒ 낮고 납작한 궤적, 짧은 비행 시간</text>
+    <line x1="545" y1="428" x2="545" y2="454" stroke="#495057" stroke-width="2.5" marker-end="url(#a)"/>
+
+    <!-- S4 front wall -->
+    <rect x="160" y="456" width="770" height="80" rx="8" fill="#f1f3f5" stroke="#adb5bd"/>
+    <text x="545" y="484" text-anchor="middle" fill="#222">언더스핀 → 진행 방향 반전 → 백월 기준 <tspan font-weight="700" fill="#2b8a3e">탑스핀 방향 회전</tspan></text>
+    <text x="545" y="510" text-anchor="middle" font-size="13" fill="#555">(앞벽 마찰이 회전을 같은 방향으로 정리 · 회전은 상당 부분 초기화됨)</text>
+    <line x1="545" y1="538" x2="545" y2="564" stroke="#495057" stroke-width="2.5" marker-end="url(#a)"/>
+
+    <!-- S5 floor -->
+    <rect x="160" y="566" width="770" height="130" rx="8" fill="#fff5f5" stroke="#c92a2a" stroke-width="2.5"/>
+    <text x="545" y="596" text-anchor="middle" font-size="16" font-weight="700" fill="#c92a2a">큰 수평 속도 + 얕은 입사각</text>
+    <text x="545" y="622" text-anchor="middle" fill="#222">수직 성분은 낮은 반발력 때문에 죽고, 수평 성분은 마찰로 일부만 잃고 남음</text>
+    <text x="545" y="646" text-anchor="middle" fill="#222">탑스핀 방향 회전이 바닥 마찰 손실을 조금 더 줄임</text>
+    <text x="545" y="670" text-anchor="middle" fill="#222">뜨거운 공은 앞벽 · 바닥에서 손실이 더 적음</text>
+    <line x1="545" y1="698" x2="545" y2="724" stroke="#495057" stroke-width="2.5" marker-end="url(#a)"/>
+
+    <!-- S6 result -->
+    <rect x="160" y="726" width="770" height="60" rx="8" fill="#1f6feb"/>
+    <text x="545" y="762" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">바운드 후에도 백월까지 빠르게 뻗어 맞고 나옴</text>
+  </g>
+</svg>
