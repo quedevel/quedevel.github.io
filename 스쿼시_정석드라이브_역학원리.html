@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>스쿼시 노트</title>
+<meta name="description" content="스쿼시 기술을 물리·역학 원리로 풀어 쓴 개인 노트">
+<meta property="og:title" content="스쿼시 노트">
+<meta property="og:description" content="스쿼시 기술을 물리·역학 원리로 풀어 쓴 개인 노트">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='26' fill='%232b2b2b'/%3E%3Ccircle cx='38' cy='24' r='4' fill='%23f4c20d'/%3E%3Ccircle cx='28' cy='24' r='4' fill='%23f4c20d'/%3E%3C/svg%3E">
+<style>
+:root {
+  --bg: #f6f7f9;
+  --paper: #ffffff;
+  --ink: #1f2328;
+  --muted: #5b6470;
+  --line: #e3e6ea;
+  --accent: #1f6feb;
+  --accent-soft: #eef4ff;
+  --orange: #e8590c;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111418;
+    --paper: #181c21;
+    --ink: #e6e8eb;
+    --muted: #a0a8b3;
+    --line: #2c323a;
+    --accent: #6ea8fe;
+    --accent-soft: #1b2a40;
+    --orange: #ff8a4c;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", system-ui, sans-serif;
+  line-height: 1.7;
+  word-break: keep-all;
+}
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+/* hero */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 72px 0 56px;
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+.hero svg.court {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 520px;
+  max-width: 45%;
+  opacity: .9;
+  pointer-events: none;
+}
+.hero .eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  line-height: 1.25;
+  margin: 16px 0 12px;
+  letter-spacing: -0.02em;
+  position: relative;
+}
+.hero p {
+  margin: 0;
+  max-width: 460px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  position: relative;
+}
+
+/* list */
+main.wrap { padding-top: 48px; padding-bottom: 72px; }
+.section-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 0 0 20px;
+}
+.section-title h2 { font-size: 1.25rem; margin: 0; }
+.section-title span { color: var(--muted); font-size: .9rem; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  color: inherit;
+  text-decoration: none;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.card:hover, .card:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.08);
+  border-color: var(--accent);
+  outline: none;
+}
+.thumb {
+  aspect-ratio: 960 / 520;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+}
+.thumb img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+.card h3 { margin: 0; font-size: 1.15rem; line-height: 1.4; }
+.card p { margin: 0; color: var(--muted); font-size: .95rem; }
+.meta {
+  margin-top: auto;
+  padding-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: .85rem;
+  color: var(--muted);
+}
+.meta .go { color: var(--accent); font-weight: 700; }
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 24px 0 40px;
+  color: var(--muted);
+  font-size: .85rem;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 48px 0 40px; }
+  .hero svg.court { opacity: .25; right: -80px; max-width: 110%; }
+  .grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <!-- decorative court + drive trajectory -->
+  <svg class="court" viewBox="0 0 520 300" aria-hidden="true">
+    <rect x="20" y="40" width="10" height="220" fill="#9aa4ae"/>
+    <rect x="490" y="40" width="10" height="220" fill="#9aa4ae"/>
+    <rect x="20" y="260" width="480" height="8" fill="#9aa4ae"/>
+    <path d="M30,190 Q190,180 330,260" fill="none" stroke="#1f6feb" stroke-width="4"/>
+    <path d="M330,260 Q420,228 490,236" fill="none" stroke="#1f6feb" stroke-width="4"/>
+    <path d="M30,100 Q200,10 330,260" fill="none" stroke="#e8590c" stroke-width="3" stroke-dasharray="7 6" opacity=".7"/>
+    <circle cx="490" cy="236" r="9" fill="#2b2b2b"/>
+    <circle cx="493" cy="232" r="2" fill="#f4c20d"/>
+  </svg>
+  <div class="wrap">
+    <span class="eyebrow">SQUASH NOTES</span>
+    <h1>스쿼시 노트</h1>
+    <p>국내에서 찾기 어려운 스쿼시 기술 자료를, 물리·역학 원리 중심으로 풀어 정리한 개인 아카이브입니다.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="section-title">
+    <h2>문서</h2>
+    <span id="count"></span>
+  </div>
+  <div class="grid" id="list"></div>
+</main>
+
+<footer>
+  <div class="wrap">개인 학습용 노트 · 자세 교정보다 원리 이해에 초점을 둔 문서 모음</div>
+</footer>
+
+<script>
+  // 새 문서를 추가하려면 이 배열에 항목을 하나 더 넣으면 됩니다.
+  const docs = [
+    {
+      href: "스쿼시_정석드라이브_역학원리.html",
+      title: "스쿼시 정석 드라이브의 물리·역학 원리",
+      desc: "프로의 드라이브는 왜 바운드 후에도 백월까지 뻗고, 동호인의 공은 왜 비슷한 자리에서 죽을까? 공의 성질부터 스윙·임팩트·스핀까지 역학으로 풀어 봅니다.",
+      tags: ["드라이브", "역학", "스핀"],
+      thumb: "images/드라이브_궤적비교.svg",
+      meta: "도표 6장 · 약 15분"
+    }
+  ];
+
+  const list = document.getElementById("list");
+  document.getElementById("count").textContent = docs.length + "편";
+  for (const d of docs) {
+    const a = document.createElement("a");
+    a.className = "card";
+    a.href = d.href;
+    a.innerHTML = `
+      <div class="thumb">${d.thumb ? `<img src="${d.thumb}" alt="" loading="lazy">` : ""}</div>
+      <div class="body">
+        <div class="tags">${d.tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>
+        <h3></h3>
+        <p></p>
+        <div class="meta"><span>${d.meta || ""}</span><span class="go">읽기 →</span></div>
+      </div>`;
+    a.querySelector("h3").textContent = d.title;
+    a.querySelector("p").textContent = d.desc;
+    const img = a.querySelector("img");
+    if (img) img.onerror = () => img.remove();
+    list.appendChild(a);
+  }
+</script>
+</body>
+</html>
