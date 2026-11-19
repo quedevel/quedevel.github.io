@@ -6,7 +6,8 @@
  */
 window.SQUASH_SERIES = {
   principle: { icon: "🔬", title: "기초 원리", desc: "샷이 왜 그렇게 날아가는지, 역학으로 이해하기" },
-  tactics:   { icon: "♟️", title: "단식 전술 시리즈", desc: "랠리의 기본 골격에서 상황별 정석까지" }
+  tactics:   { icon: "♟️", title: "단식 전술 시리즈", desc: "랠리의 기본 골격에서 상황별 정석까지" },
+  training:  { icon: "🏋️", title: "훈련 세션", desc: "전술을 몸에 새기는 인원별 훈련 프로그램" }
 };
 
 window.SQUASH_DOCS = [
@@ -112,5 +113,15 @@ window.SQUASH_DOCS = [
     tags: ["체력", "공 온도", "렛·스트로크"],
     thumb: "images/규칙_렛판정흐름.svg",
     meta: "도표 3장 · 약 22분"
+  },
+  {
+    id: "drive-training", icon: "🔁", tone: "teal",
+    series: "training", no: 1, status: "published",
+    href: "스쿼시_드라이브_훈련세션.html",
+    title: "드라이브 훈련 세션",
+    desc: "좋은 드라이브의 채점 기준과 60분 세션 구조, 혼자·둘·셋·그룹·코치 레슨별 드릴, 전술 장면별 미니 블록, 주간 프로그램과 기록표까지 정리합니다.",
+    tags: ["드라이브", "드릴", "측정·기록"],
+    thumb: "images/드라이브_타깃존.svg",
+    meta: "도표 3장 · 약 20분"
   }
 ];
