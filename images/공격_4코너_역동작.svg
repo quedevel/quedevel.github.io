@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <defs>
+    <marker id="sa5-o" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#e8590c"/></marker>
+    <marker id="sa5-r" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#e03131"/></marker>
+  </defs>
+  <rect width="960" height="560" fill="#fff"/>
+  <text x="480" y="32" text-anchor="middle" font-size="20" font-weight="700" fill="#222">상대의 이동을 설계한다 (위에서 본 코트, 앞벽은 위쪽)</text>
+  <g id="sa5-c">
+    <rect x="125" y="110" width="230" height="351" fill="#fbf7ef" stroke="#9aa4ae" stroke-width="2"/>
+    <rect x="125" y="104" width="230" height="7" fill="#9aa4ae"/>
+    <line x1="125" y1="306" x2="355" y2="306" stroke="#c9a96e" stroke-width="2"/>
+    <line x1="240" y1="306" x2="240" y2="461" stroke="#c9a96e" stroke-width="2"/>
+    <rect x="125" y="306" width="58" height="58" fill="none" stroke="#c9a96e" stroke-width="2"/>
+    <rect x="297" y="306" width="58" height="58" fill="none" stroke="#c9a96e" stroke-width="2"/>
+  </g>
+  <use href="#sa5-c" x="480"/>
+
+  <!-- panel 1 : 4 corners -->
+  <text x="240" y="66" text-anchor="middle" font-size="16" font-weight="700" fill="#222">① 4코너 순환</text>
+  <text x="240" y="88" text-anchor="middle" font-size="13" fill="#555">대각선 두 번 + 앞뒤 두 번</text>
+  <polyline points="160,430 322,145 330,430 156,145 160,420" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#sa5-o)"/>
+  <g font-size="13" font-weight="700" fill="#fff" text-anchor="middle">
+    <circle cx="150" cy="440" r="13" fill="#2f9e44"/><text x="150" y="445">1</text>
+    <circle cx="334" cy="134" r="13" fill="#2f9e44"/><text x="334" y="139">2</text>
+    <circle cx="334" cy="446" r="13" fill="#2f9e44"/><text x="334" y="451">3</text>
+    <circle cx="146" cy="134" r="13" fill="#2f9e44"/><text x="146" y="139">4</text>
+  </g>
+  <circle cx="240" cy="300" r="13" fill="#1f6feb"/><text x="240" y="305" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">나</text>
+  <g font-size="12" fill="#444" text-anchor="middle">
+    <text x="240" y="490">1 왼쪽 뒤 길이 → 2 오른쪽 앞 드롭 (대각선)</text>
+    <text x="240" y="508">→ 3 오른쪽 뒤 롭 → 4 왼쪽 앞 드롭 (대각선)</text>
+    <text x="240" y="530" font-weight="700" fill="#d9480f">상대의 이동 : 약 30m, 방향 전환 네 번</text>
+  </g>
+
+  <!-- panel 2 : wrong-footing -->
+  <text x="720" y="66" text-anchor="middle" font-size="16" font-weight="700" fill="#222">② 역동작 걸기</text>
+  <text x="720" y="88" text-anchor="middle" font-size="13" fill="#555">상대가 T로 돌아가는 순간 같은 곳으로</text>
+  <path d="M634,436 Q680,390 700,340" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#sa5-o)"/>
+  <path d="M706,330 Q730,300 712,360 Q690,420 650,440" fill="none" stroke="#e03131" stroke-width="3" marker-end="url(#sa5-r)"/>
+  <text x="742" y="336" font-size="12" font-weight="700" fill="#c92a2a">방향 반전</text>
+  <g font-size="13" font-weight="700" fill="#fff" text-anchor="middle">
+    <circle cx="620" cy="452" r="13" fill="#2f9e44"/><text x="620" y="457">1</text>
+    <circle cx="646" cy="466" r="13" fill="#2f9e44" opacity=".85"/><text x="646" y="471">2</text>
+  </g>
+  <circle cx="738" cy="270" r="13" fill="#1f6feb"/><text x="738" y="275" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">나</text>
+  <polyline points="738,276 618,111 612,440" fill="none" stroke="#2f9e44" stroke-width="3" opacity=".6"/>
+  <g font-size="12" fill="#444" text-anchor="middle">
+    <text x="720" y="490">1 왼쪽 뒤 스트레이트 → 상대가 T로 복귀 시작</text>
+    <text x="720" y="508">→ 2 같은 왼쪽 뒤로 다시 스트레이트 (발리로 일찍)</text>
+    <text x="720" y="530" font-weight="700" fill="#c92a2a">상대는 출발한 몸을 멈추고 거꾸로 되돌려야 함</text>
+  </g>
+</svg>

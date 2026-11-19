@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>체력·환경·규칙 변수</title>
+<meta name="description" content="지쳤을 때와 상대가 지쳤을 때의 운영, 공 온도와 코트 컨디션에 따른 샷 조정, 5분 워밍업 활용, 렛·스트로크 판정의 원리와 클리어링, 턴 판단까지 정리합니다.">
+<meta property="og:title" content="체력·환경·규칙 변수">
+<meta property="og:description" content="지쳤을 때와 상대가 지쳤을 때의 운영, 공 온도와 코트 컨디션에 따른 샷 조정, 5분 워밍업 활용, 렛·스트로크 판정의 원리와 클리어링, 턴 판단까지 정리합니다.">
+<link rel="icon" href="favicon.ico">
+<script>try{var t=localStorage.getItem("squash-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/css/squash.css">
+<script src="assets/js/squash-docs.js" defer></script>
+<script src="assets/js/squash.js" defer></script>
+</head>
+<body class="article" data-doc="fitness-env-rules">
+<aside class="sidebar" aria-label="페이지 목록"><div class="sidebar-scroll"></div></aside>
+<div class="scrim"></div>
+<div class="main">
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="페이지 목록 열기"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3.5 5.5h13M3.5 10h13M3.5 14.5h13"/></svg></button>
+  <nav class="crumbs" aria-label="현재 위치"><a href="index.html">스쿼시 노트</a></nav>
+  <button class="icon-btn theme-toggle" type="button" aria-label="밝게/어둡게 전환">
+    <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+  </button>
+</header>
+<div class="cover" data-tone="amber" aria-hidden="true"></div>
+<div class="page">
+<main class="doc">
+<header class="doc-hero">
+<div class="page-icon" aria-hidden="true">🔋</div>
+<h1 id="체력-환경-규칙-변수">체력·환경·규칙 변수</h1>
+<dl class="props">
+<dt><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 4.5h4l1.2 1.5H14v6.5H2z"/></svg>시리즈</dt><dd><span class="pill accent">단식 전술 시리즈</span><span class="pill">8편</span></dd>
+<dt><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><path d="M8 4.8V8l2.2 1.4"/></svg>분량</dt><dd>도표 3장 · 약 22분</dd>
+<dt><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><path d="M8 7.2v4M8 5v.1"/></svg>기준</dt><dd>오른손잡이 대 오른손잡이 · WSF 규칙의 원리 요약</dd>
+<dt><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2.5 2.5h5l6 6-5 5-6-6z"/><circle cx="5.3" cy="5.3" r=".9"/></svg>태그</dt><dd><span class="pill">체력 운영</span><span class="pill">공 온도</span><span class="pill">워밍업</span><span class="pill">렛·스트로크</span><span class="pill">클리어링</span></dd>
+</dl>
+<blockquote>정석은 "보통의 조건"을 전제로 합니다. 하지만 실제 경기에서는 내가 지치고, 공이 차갑거나 뜨겁고, 상대와 몸이 겹칩니다. 이 문서는 정석이 놓인 <strong>조건 자체가 바뀌는 세 가지 변수</strong>, 즉 체력, 환경, 규칙을 다룹니다.<br>규칙 부분은 판정의 <strong>원리</strong>를 전술 관점에서 요약한 것이며, 실제 판정은 심판의 판단과 최신 WSF 규칙을 따릅니다. 수치는 이해를 돕기 위한 <strong>대략적인 값</strong>입니다.</blockquote>
+</header>
+<hr>
+<nav class="toc"><h2 id="목차">목차</h2>
+<ul><li><a href="#f0">0. 먼저 알아야 할 것 : 변수는 정석의 조건을 바꾼다</a></li><li><a href="#f1">1. 내가 지쳤을 때</a></li><li><a href="#f2">2. 상대가 지쳤을 때</a></li><li><a href="#f3">3. 공 온도와 코트 컨디션</a></li><li><a href="#f4">4. 5분 워밍업 활용</a></li><li><a href="#f5">5. 렛·스트로크·노 렛의 원리</a></li><li><a href="#f6">6. 친 뒤에 비켜 주기 (클리어링)</a></li><li><a href="#f7">7. 턴 : 해도 될 때와 하면 안 될 때</a></li><li><a href="#f8">8. 한눈에 보는 변수별 판단표</a></li><li><a href="#f9">9. 자주 오해하는 것들</a></li></ul></nav>
+<hr>
+
+<h2 id="f0"><span class="sec-num">0</span>먼저 알아야 할 것 : 변수는 정석의 조건을 바꾼다</h2>
+<p>1~7편의 정석은 모두 몇 가지 조건 위에 서 있습니다. T로 돌아갈 체력이 있고, 공이 예상한 만큼 튀고, 상대와 내가 서로의 길을 막지 않는다는 조건입니다. 세 가지 변수는 각각 이 조건 하나를 흔듭니다.</p>
+<div class="table-wrap"><table><thead><tr><th>변수</th><th>바뀌는 조건</th><th>조정의 방향</th></tr></thead><tbody>
+<tr><td><strong>체력</strong></td><td>T로 돌아가는 시간</td><td>시간을 버는 샷의 비중을 조절</td></tr>
+<tr><td><strong>환경</strong></td><td>공이 튀고 죽는 정도</td><td>길이의 세기와 공격의 효과를 다시 계산</td></tr>
+<tr><td><strong>규칙</strong></td><td>두 선수가 공유하는 이동 공간</td><td>내 동선과 상대 동선을 함께 설계</td></tr>
+</tbody></table></div>
+<hr>
+
+<h2 id="f1"><span class="sec-num">1</span>내가 지쳤을 때</h2>
+<p>지치면 가장 먼저 <strong>T로 돌아가는 속도</strong>가 느려집니다. 같은 길이를 쳐도 상대가 공을 치기 전에 T에 도착하지 못하므로, 평소라면 충분했던 샷이 부족해집니다. 조정의 원칙은 단순합니다. 내 회복이 느려진 만큼 공이 오래 날아가게 합니다.</p>
+<div class="table-wrap"><table><thead><tr><th>할 일</th><th>방법</th><th>이유</th></tr></thead><tbody>
+<tr><td><strong>롭과 높은 길이를 늘린다</strong></td><td>특히 크로스 롭. 상대가 뒤 코너까지 가게 함</td><td>공이 오래 날아가는 동안 T로 돌아가고 숨을 고름</td></tr>
+<tr><td><strong>확실한 기회는 놓치지 않는다</strong></td><td>3편의 공격 조건이 갖춰진 공은 바로 마무리</td><td>랠리를 짧게 만드는 가장 안전한 방법은 확률 높은 공격</td></tr>
+<tr><td><strong>무리한 마무리는 하지 않는다</strong></td><td>"빨리 끝내고 싶어서" 치는 킬과 드롭을 참음</td><td>지친 상태의 저확률 공격은 틴과 짧은 공이 되어 오히려 더 뛰게 만듦</td></tr>
+<tr><td><strong>서브를 높고 안전하게</strong></td><td>롭 서브로 상대의 공격적인 리턴을 막음</td><td>랠리의 시작에서 수비부터 하지 않도록</td></tr>
+<tr><td><strong>랠리 사이 시간을 온전히 쓴다</strong></td><td>규정 안에서 숨을 고르고 준비</td><td>다만 고의적인 지연은 품행 위반</td></tr>
+<tr><td><strong>피로를 드러내지 않는다</strong></td><td>T에서의 자세와 대기 위치를 유지</td><td>상대가 피로를 알아채면 2장의 공략이 시작됨</td></tr>
+</tbody></table></div>
+<p>지쳤을 때 가장 흔한 실수는 랠리를 빨리 끝내려고 공격을 서두르는 것입니다. 지친 상태에서는 스윙도 정확하지 않으므로, 공격은 <strong>조건이 더 확실할 때로 미루고</strong> 그 사이는 높이로 버팁니다.</p>
+<hr>
+
+<h2 id="f2"><span class="sec-num">2</span>상대가 지쳤을 때</h2>
+<h3 id="f2-1"><span class="sub-num">2-1</span>피로의 신호</h3>
+<ul>
+<li><strong>T로 돌아가는 속도</strong>가 늦어지고, 공을 친 자리에서 잠시 머묾</li>
+<li><strong>길이가 짧아짐</strong> : 뒤 코너에서 친 공이 서비스 박스 앞에 떨어지기 시작</li>
+<li><strong>롭이 늘어남</strong> : 시간을 벌려는 샷이 많아짐</li>
+<li><strong>공격을 서두름</strong> : 조건이 안 되는 공으로 드롭이나 킬을 시도</li>
+<li>랠리 사이에 허리를 숙이거나 숨을 크게 쉬고, 서브 준비가 늦어짐</li>
+</ul>
+<h3 id="f2-2"><span class="sub-num">2-2</span>공략</h3>
+<div class="table-wrap"><table><thead><tr><th>할 일</th><th>방법</th><th>이유</th></tr></thead><tbody>
+<tr><td><strong>랠리를 길게</strong></td><td>마무리를 서두르지 않고 길이로 계속 움직이게 함</td><td>피로는 랠리가 길수록 쌓이고, 지친 상대는 결국 짧은 공을 줌</td></tr>
+<tr><td><strong>앞뒤로 움직인다</strong></td><td>4코너, 특히 앞 코너에서 대각선 뒤 코너로</td><td>방향 전환이 큰 이동이 체력을 가장 많이 씀</td></tr>
+<tr><td><strong>템포를 올린다</strong></td><td>상대의 롭을 발리로 끊음</td><td>상대가 시간을 벌지 못하게 함</td></tr>
+<tr><td><strong>서두른 공격에 대비한다</strong></td><td>대기 위치를 반 걸음 앞으로</td><td>지친 상대의 드롭은 느슨하게 들어오는 경우가 많아 되받아칠 기회</td></tr>
+</tbody></table></div>
+<p>상대가 지친 것처럼 보여도 바로 공격 비중을 늘리지 않습니다. 지친 상대에게 가장 고통스러운 것은 끝나지 않는 랠리입니다. 그리고 피로를 일부러 과장하는 상대도 있으므로, 한두 개의 신호보다 <strong>길이가 짧아지는지</strong>처럼 공에 나타나는 신호를 더 믿습니다.</p>
+<hr>
+
+<h2 id="f3"><span class="sec-num">3</span>공 온도와 코트 컨디션</h2>
+<p>드라이브 역학 문서의 1-5장에서 본 것처럼 스쿼시 공의 반발력은 온도에 매우 민감합니다. 공이 데워질수록, 코트가 따뜻할수록 공은 바닥과 벽에서 에너지를 덜 잃고 "살아" 있습니다. 같은 스윙이라도 조건에 따라 공이 멈추는 자리가 달라집니다.</p>
+<figure class="fig"><svg role="img" aria-label="공 온도에 따른 바운드 후 궤적 비교" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <defs>
+    <marker id="sf1-w" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#e8590c"/></marker>
+    <marker id="sf1-n" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2f9e44"/></marker>
+    <marker id="sf1-c" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c7ed6"/></marker>
+  </defs>
+  <rect width="960" height="500" fill="#fff"/>
+  <text x="480" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#222">같은 드라이브, 다른 온도 (옆에서 본 코트)</text>
+  <rect x="78" y="90" width="12" height="330" fill="#adb5bd"/>
+  <rect x="870" y="250" width="12" height="170" fill="#adb5bd"/>
+  <line x1="78" y1="420" x2="882" y2="420" stroke="#495057" stroke-width="3"/>
+  <text x="84" y="448" text-anchor="middle" font-size="12" fill="#495057">앞벽</text>
+  <text x="876" y="448" text-anchor="middle" font-size="12" fill="#495057">뒤벽</text>
+  <line x1="510" y1="420" x2="510" y2="428" stroke="#495057" stroke-width="2"/>
+  <text x="510" y="448" text-anchor="middle" font-size="12" fill="#495057">바운드 지점 (같음)</text>
+
+  <path d="M90,250 Q300,290 510,420" fill="none" stroke="#495057" stroke-width="3"/>
+  <path d="M510,420 Q700,230 870,318" fill="none" stroke="#e8590c" stroke-width="3"/>
+  <path d="M870,318 Q820,350 770,418" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#sf1-w)"/>
+  <path d="M510,420 Q700,320 870,398" fill="none" stroke="#2f9e44" stroke-width="3" marker-end="url(#sf1-n)"/>
+  <path d="M510,420 Q610,360 710,420" fill="none" stroke="#1c7ed6" stroke-width="3"/>
+  <line x1="710" y1="420" x2="780" y2="420" stroke="#1c7ed6" stroke-width="3" stroke-dasharray="3 5" marker-end="url(#sf1-c)"/>
+
+  <rect x="120" y="70" width="400" height="128" rx="10" fill="#f8f9fa" stroke="#dee2e6"/>
+  <g font-size="13">
+    <line x1="140" y1="98" x2="176" y2="98" stroke="#e8590c" stroke-width="3"/>
+    <text x="186" y="103" font-weight="700" fill="#d9480f">뜨거운 공 · 따뜻한 코트</text>
+    <text x="186" y="121" font-size="12" fill="#555">뒤벽을 맞고 튀어나와 상대에게 기회</text>
+    <line x1="140" y1="142" x2="176" y2="142" stroke="#2f9e44" stroke-width="3"/>
+    <text x="186" y="147" font-weight="700" fill="#2b8a3e">적당히 데워진 공</text>
+    <text x="186" y="165" font-size="12" fill="#555">뒤벽에 낮게 닿고 죽는 정석의 길이</text>
+    <line x1="140" y1="184" x2="176" y2="184" stroke="#1c7ed6" stroke-width="3"/>
+    <text x="186" y="189" font-weight="700" fill="#1864ab">차가운 공 · 차가운 코트 <tspan font-weight="400" font-size="12" fill="#555">: 뒤벽 전에 두 번째 바운드</tspan></text>
+  </g>
+  <rect x="160" y="462" width="640" height="30" rx="7" fill="#fff4e6" stroke="#ffd8a8"/>
+  <text x="480" y="482" text-anchor="middle" font-size="13" fill="#444">공이 멈추는 자리가 바뀌면 길이의 세기와 공격의 효과를 다시 계산해야 한다</text>
+</svg><figcaption>바운드 지점이 같아도 공의 온도에 따라 뒤벽에서의 결과가 달라진다. 궤적은 비교를 위한 개념도</figcaption></figure>
+<div class="table-wrap"><table><thead><tr><th></th><th>잘 튀는 조건 (따뜻한 코트, 뜨거운 공)</th><th>잘 죽는 조건 (차가운 코트, 차가운 공)</th></tr></thead><tbody>
+<tr><td><strong>길이</strong></td><td>조금 부드럽게, 낮게. 세게 치면 뒤벽을 맞고 나옴</td><td>더 세게, 조금 높게. 그래야 뒤 코너까지 감</td></tr>
+<tr><td><strong>롭</strong></td><td>뒤벽을 맞고 나오기 쉬워 높이와 세기를 줄임</td><td>효과가 큼. 뒤 코너에서 잘 죽음</td></tr>
+<tr><td><strong>드롭·킬</strong></td><td>덜 죽어 상대가 닿기 쉬움. 더 정확해야 함</td><td>효과가 큼. 어설픈 드롭도 잘 죽음</td></tr>
+<tr><td><strong>랠리 성격</strong></td><td>길어짐. 체력과 인내가 유리</td><td>짧아짐. 공격적인 선수가 유리</td></tr>
+<tr><td><strong>유리한 상대</strong></td><td>리트리버, 체력이 좋은 선수</td><td>샷메이커, 공격형 선수</td></tr>
+</tbody></table></div>
+<p>코트의 온도와 습도, 벽과 바닥의 재질, 높은 고도도 공의 반응을 바꿉니다. 높은 곳일수록 공기가 희박해 공이 빠르고 잘 튀는 편입니다. 투어의 유리 코트는 벽 재질과 조명, 배경이 일반 코트와 달라 공의 반응과 보이는 정도가 다를 수 있습니다. 이런 차이는 외우기보다 <strong>워밍업에서 직접 확인</strong>하는 것이 정석입니다.</p>
+<p>경기 중에도 조건은 변합니다. 긴 랠리가 이어지면 공은 더 뜨거워지고, 경기 후반으로 갈수록 대개 살아납니다. 1게임에서 잘 죽던 드롭이 4게임에서는 상대에게 닿기 시작하는 이유입니다.</p>
+<hr>
+
+<h2 id="f4"><span class="sec-num">4</span>5분 워밍업 활용</h2>
+<p>경기 전에는 두 선수가 함께 코트에서 5분간 워밍업을 하고, 중간에 서로 코트의 반대쪽으로 바꿉니다. 이 5분은 몸을 푸는 시간이면서 <strong>코트와 상대를 조사하는 시간</strong>입니다.</p>
+<div class="table-wrap"><table><thead><tr><th>확인할 것</th><th>방법</th><th>경기에서의 쓰임</th></tr></thead><tbody>
+<tr><td><strong>공 데우기</strong></td><td>처음에는 강한 스트레이트 드라이브를 반복</td><td>공이 충분히 데워져야 실제 경기의 바운스를 확인할 수 있음</td></tr>
+<tr><td><strong>바운스</strong></td><td>길이가 뒤벽까지 얼마나 가는지, 드롭이 얼마나 빨리 죽는지</td><td>3장의 표에 따라 길이의 세기와 공격 비중을 정함</td></tr>
+<tr><td><strong>벽과 바닥</strong></td><td>벽의 반응, 바닥의 미끄러움, 조명과 배경</td><td>런지와 방향 전환의 안정성, 공이 잘 안 보이는 구역 확인</td></tr>
+<tr><td><strong>상대의 스윙</strong></td><td>포핸드와 백핸드 중 어느 쪽이 편한지, 높은 공 처리</td><td>5편의 공략 지점, 첫 서브의 방향</td></tr>
+<tr><td><strong>상대의 선호</strong></td><td>워밍업 중 자주 치는 샷, 발리를 하는지, 왼손잡이인지</td><td>첫 게임 탐색의 출발점</td></tr>
+</tbody></table></div>
+<p>워밍업에서 내 기술을 보여 줄 필요는 없습니다. 상대에게 공을 치기 좋게 보내 주는 것이 예의이고, 그 공을 상대가 어떻게 치는지 보는 것이 정보입니다.</p>
+<hr>
+
+<h2 id="f5"><span class="sec-num">5</span>렛·스트로크·노 렛의 원리</h2>
+<p>스쿼시는 두 선수가 같은 공간을 쓰는 경기라서 서로의 움직임이 겹치는 일이 자주 생깁니다. 규칙은 공을 칠 차례인 선수, 즉 <strong>스트라이커</strong>에게 다음 네 가지를 보장합니다. 공을 친 상대는 이것을 내주기 위해 모든 노력을 해야 합니다.</p>
+<div class="table-wrap"><table><thead><tr><th>스트라이커의 권리</th><th>의미</th></tr></thead><tbody>
+<tr><td><strong>직접 접근</strong></td><td>공까지 곧장 갈 수 있는 길</td></tr>
+<tr><td><strong>공을 볼 수 있음</strong></td><td>공이 앞벽에서 돌아오는 것을 볼 수 있는 시야</td></tr>
+<tr><td><strong>스윙 공간</strong></td><td>합리적인 백스윙과 팔로스루를 할 공간. 지나치게 큰 스윙은 보호받지 못함</td></tr>
+<tr><td><strong>앞벽 전체로 칠 자유</strong></td><td>앞벽의 어느 부분으로든 곧장 칠 수 있는 길</td></tr>
+</tbody></table></div>
+<p>이 권리가 침해되었을 때, 즉 간섭이 있었을 때 스트라이커는 경기를 멈추고 렛을 요청할 수 있습니다. 판정은 대략 다음 흐름으로 정해집니다.</p>
+<figure class="fig"><svg role="img" aria-label="렛, 스트로크, 노 렛 판정 흐름" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <defs>
+    <marker id="sf2-a" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#495057"/></marker>
+  </defs>
+  <rect width="960" height="600" fill="#fff"/>
+  <text x="480" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#222">간섭이 있을 때의 판정 흐름 (나 = 공을 칠 차례인 선수)</text>
+
+  <rect x="360" y="56" width="240" height="40" rx="20" fill="#343a40"/>
+  <text x="480" y="81" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">경기를 멈추고 렛 요청</text>
+
+  <g stroke="#495057" stroke-width="2" fill="none" marker-end="url(#sf2-a)">
+    <line x1="480" y1="96" x2="480" y2="120"/>
+    <line x1="480" y1="186" x2="480" y2="214"/>
+    <line x1="480" y1="280" x2="480" y2="308"/>
+    <line x1="480" y1="374" x2="480" y2="402"/>
+    <line x1="480" y1="468" x2="480" y2="500"/>
+    <line x1="660" y1="153" x2="706" y2="153"/>
+    <line x1="660" y1="247" x2="706" y2="247"/>
+    <line x1="660" y1="341" x2="706" y2="341"/>
+    <line x1="660" y1="435" x2="706" y2="435"/>
+  </g>
+  <g font-size="12" font-weight="700" fill="#495057">
+    <text x="490" y="205">예</text><text x="490" y="299">예</text><text x="490" y="393">예</text><text x="490" y="490">아니오</text>
+    <text x="668" y="145">아니오</text><text x="668" y="239">아니오</text><text x="668" y="333">아니오</text><text x="676" y="427">예</text>
+  </g>
+
+  <g font-size="14" text-anchor="middle" fill="#212529">
+    <rect x="300" y="120" width="360" height="66" rx="10" fill="#fff" stroke="#868e96" stroke-width="1.5"/>
+    <text x="480" y="148" font-weight="700">① 실제로 간섭이 있었고,</text>
+    <text x="480" y="170" font-weight="700">그 영향이 아주 작지 않았는가?</text>
+    <rect x="300" y="214" width="360" height="66" rx="10" fill="#fff" stroke="#868e96" stroke-width="1.5"/>
+    <text x="480" y="242" font-weight="700">② 간섭이 없었다면 좋은 리턴을</text>
+    <text x="480" y="264" font-weight="700">칠 수 있었고, 그렇게 하려 했는가?</text>
+    <rect x="300" y="308" width="360" height="66" rx="10" fill="#fff" stroke="#868e96" stroke-width="1.5"/>
+    <text x="480" y="336" font-weight="700">③ 상대가 간섭을 피하려고</text>
+    <text x="480" y="358" font-weight="700">모든 노력을 했는가?</text>
+    <rect x="300" y="402" width="360" height="66" rx="10" fill="#fff" stroke="#868e96" stroke-width="1.5"/>
+    <text x="480" y="430" font-weight="700">④ 간섭이 없었다면</text>
+    <text x="480" y="452" font-weight="700">위너를 칠 수 있었는가?</text>
+  </g>
+
+  <g text-anchor="middle">
+    <rect x="710" y="126" width="220" height="54" rx="10" fill="#f1f3f5" stroke="#868e96"/>
+    <text x="820" y="149" font-size="15" font-weight="700" fill="#495057">노 렛 · 상대 점수</text>
+    <text x="820" y="169" font-size="12" fill="#666">간섭이 없거나 아주 작음</text>
+    <rect x="710" y="220" width="220" height="54" rx="10" fill="#f1f3f5" stroke="#868e96"/>
+    <text x="820" y="243" font-size="15" font-weight="700" fill="#495057">노 렛 · 상대 점수</text>
+    <text x="820" y="263" font-size="12" fill="#666">어차피 닿지 못했을 공</text>
+    <rect x="710" y="314" width="220" height="54" rx="10" fill="#d3f9d8" stroke="#2f9e44"/>
+    <text x="820" y="337" font-size="15" font-weight="700" fill="#2b8a3e">스트로크 · 내 점수</text>
+    <text x="820" y="357" font-size="12" fill="#444">상대가 비켜 주지 않음</text>
+    <rect x="710" y="408" width="220" height="54" rx="10" fill="#d3f9d8" stroke="#2f9e44"/>
+    <text x="820" y="431" font-size="15" font-weight="700" fill="#2b8a3e">스트로크 · 내 점수</text>
+    <text x="820" y="451" font-size="12" fill="#444">위너 기회를 막음</text>
+    <rect x="370" y="500" width="220" height="54" rx="10" fill="#d0ebff" stroke="#1c7ed6"/>
+    <text x="480" y="523" font-size="15" font-weight="700" fill="#1864ab">렛 · 랠리를 다시</text>
+    <text x="480" y="543" font-size="12" fill="#444">상대도 비키려 했고, 나도 칠 수 있었음</text>
+  </g>
+
+  <g font-size="12" fill="#555">
+    <text x="30" y="150" font-weight="700" fill="#343a40">노 렛이 되는 흔한 경우</text>
+    <text x="30" y="172">· 공에 닿을 수 없었음</text>
+    <text x="30" y="192">· 내가 돌아가는 길을 택해</text>
+    <text x="40" y="210">스스로 간섭을 만듦</text>
+    <text x="30" y="230">· 간섭을 받아들이고 계속</text>
+    <text x="40" y="248">친 뒤에 요청함</text>
+    <text x="30" y="268">· 지나치게 큰 스윙</text>
+  </g>
+  <text x="480" y="584" text-anchor="middle" font-size="12" fill="#666">원리를 단순화한 흐름이다. 실제 판정은 심판의 판단과 최신 WSF 규칙을 따른다</text>
+</svg><figcaption>판정의 핵심은 두 가지다. 내가 칠 수 있었는가, 상대가 비키려 했는가</figcaption></figure>
+<h3 id="f5-1"><span class="sub-num">5-1</span>공이 상대를 맞혔을 때</h3>
+<div class="table-wrap"><table><thead><tr><th>상황 (내가 친 공이 상대에게 맞음)</th><th>판정의 원리</th></tr></thead><tbody>
+<tr><td>앞벽으로 <strong>곧장</strong> 갈 공이었음</td><td>스트로크, 내 점수</td></tr>
+<tr><td>사이드월 등 <strong>다른 벽을 먼저</strong> 맞을 공이었음</td><td>렛</td></tr>
+<tr><td>내가 <strong>턴</strong>을 한 뒤 친 공이 상대를 맞힘</td><td>상대 점수 (7장)</td></tr>
+</tbody></table></div>
+<h3 id="f5-2"><span class="sub-num">5-2</span>전술적으로 의미하는 것</h3>
+<ul>
+<li><strong>공을 향해 끝까지 움직인다</strong> : 칠 노력을 하지 않고 멈춰서 요청하면 ②에서 노 렛이 되기 쉽습니다. 간섭이 생긴 지점까지 공을 향해 움직인 뒤 멈추는 것이 정석입니다.</li>
+<li><strong>간섭을 받으면 바로 멈춘다</strong> : 간섭을 받고도 계속 치면 그 간섭을 받아들인 것으로 봅니다. 억지로 친 공이 약해져 랠리를 잃고 나서 요청하면 늦습니다.</li>
+<li><strong>좋은 공을 치면 렛도 유리해진다</strong> : 상대를 앞 코너에 묶어 둔 뒤 상대가 비키지 못하면 스트로크가 될 수 있습니다. 반대로 내 공이 느슨하게 나에게 돌아오면 내가 상대의 길을 막게 됩니다(6편 4장).</li>
+<li><strong>렛은 무기가 아니라 안전장치다</strong> : 렛을 노려 일부러 상대에게 몸을 붙이는 플레이는 판정에서 불리하게 작용하고, 무엇보다 부상의 위험이 큽니다.</li>
+</ul>
+<hr>
+
+<h2 id="f6"><span class="sec-num">6</span>친 뒤에 비켜 주기 (클리어링)</h2>
+<p>공을 친 뒤에는 상대에게 5장의 네 가지 권리를 내주어야 합니다. 동시에 나도 T로 돌아가야 합니다. 이 두 가지를 함께 만족시키는 동선이 클리어링입니다. 문제는 <strong>내가 T로 가는 길과 상대가 공으로 가는 길이 겹치는 경우</strong>입니다.</p>
+<figure class="fig"><svg role="img" aria-label="스트레이트와 크로스 뒤의 클리어링 동선" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 580" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <defs>
+    <marker id="sf3-g" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f6feb"/></marker>
+    <marker id="sf3-o" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#e8590c"/></marker>
+    <marker id="sf3-r" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#e03131"/></marker>
+  </defs>
+  <rect width="960" height="580" fill="#fff"/>
+  <text x="480" y="30" text-anchor="middle" font-size="20" font-weight="700" fill="#222">친 뒤의 동선 : 상대의 길을 비우고 T로 (앞벽은 위쪽)</text>
+  <g id="sf3-c">
+    <rect x="125" y="110" width="230" height="351" fill="#fbf7ef" stroke="#9aa4ae" stroke-width="2"/>
+    <rect x="125" y="104" width="230" height="7" fill="#9aa4ae"/>
+    <line x1="125" y1="306" x2="355" y2="306" stroke="#c9a96e" stroke-width="2"/>
+    <line x1="240" y1="306" x2="240" y2="461" stroke="#c9a96e" stroke-width="2"/>
+    <rect x="125" y="306" width="58" height="58" fill="none" stroke="#c9a96e" stroke-width="2"/>
+    <rect x="297" y="306" width="58" height="58" fill="none" stroke="#c9a96e" stroke-width="2"/>
+  </g>
+  <use href="#sf3-c" x="480"/>
+
+  <!-- panel A : straight -->
+  <text x="240" y="66" text-anchor="middle" font-size="16" font-weight="700" fill="#222">① 스트레이트를 친 뒤</text>
+  <text x="240" y="88" text-anchor="middle" font-size="13" fill="#555">→ 공의 길에서 먼저 옆으로 빠진다</text>
+  <polyline points="152,415 140,111 136,440" fill="none" stroke="#adb5bd" stroke-width="2" stroke-dasharray="4 4"/>
+  <line x1="240" y1="306" x2="176" y2="404" stroke="#e8590c" stroke-width="3" marker-end="url(#sf3-o)"/>
+  <line x1="166" y1="412" x2="236" y2="312" stroke="#e03131" stroke-width="16" stroke-linecap="round" opacity=".18"/>
+  <text x="186" y="350" text-anchor="end" font-size="13" font-weight="700" fill="#e03131">겹침 ✕</text>
+  <polyline points="168,424 214,440 262,330" fill="none" stroke="#1f6feb" stroke-width="3" marker-end="url(#sf3-g)"/>
+  <circle cx="160" cy="422" r="12" fill="#1f6feb"/><text x="160" y="427" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">나</text>
+  <circle cx="240" cy="300" r="12" fill="#e8590c"/><text x="240" y="305" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">상대</text>
+  <g font-size="12" fill="#444" text-anchor="middle">
+    <text x="240" y="490">공이 친 자리 근처로 돌아온다</text>
+    <text x="240" y="510">T로 곧장 가면 상대의 길과 겹침 (빨간 띠)</text>
+    <text x="240" y="530">옆으로 빠졌다가 T 옆으로 (파란 선)</text>
+  </g>
+
+  <!-- panel B : cross -->
+  <text x="720" y="66" text-anchor="middle" font-size="16" font-weight="700" fill="#222">② 크로스를 친 뒤</text>
+  <text x="720" y="88" text-anchor="middle" font-size="13" fill="#555">→ T로 곧장 가도 된다</text>
+  <polyline points="642,415 760,111 818,440" fill="none" stroke="#adb5bd" stroke-width="2" stroke-dasharray="4 4"/>
+  <line x1="720" y1="306" x2="796" y2="404" stroke="#e8590c" stroke-width="3" marker-end="url(#sf3-o)"/>
+  <line x1="646" y1="410" x2="706" y2="324" stroke="#1f6feb" stroke-width="3" marker-end="url(#sf3-g)"/>
+  <circle cx="640" cy="422" r="12" fill="#1f6feb"/><text x="640" y="427" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">나</text>
+  <circle cx="720" cy="300" r="12" fill="#e8590c"/><text x="720" y="305" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">상대</text>
+  <g font-size="12" fill="#444" text-anchor="middle">
+    <text x="720" y="490">공은 반대쪽 뒤 코너로 간다</text>
+    <text x="720" y="510">상대는 오른쪽 뒤로, 나는 T로</text>
+    <text x="720" y="530">두 길이 겹치지 않는다</text>
+  </g>
+  <g font-size="12" fill="#444">
+    <line x1="300" y1="560" x2="330" y2="560" stroke="#adb5bd" stroke-width="2" stroke-dasharray="4 4"/><text x="338" y="564">공</text>
+    <line x1="380" y1="560" x2="410" y2="560" stroke="#1f6feb" stroke-width="3"/><text x="418" y="564">나의 동선</text>
+    <line x1="500" y1="560" x2="530" y2="560" stroke="#e8590c" stroke-width="3"/><text x="538" y="564">상대의 동선</text>
+  </g>
+</svg><figcaption>스트레이트는 공이 친 사람 근처로 돌아오기 때문에 클리어링이 더 어렵다. 크로스는 공이 친 사람에게서 멀어지므로 쉽다</figcaption></figure>
+<div class="table-wrap"><table><thead><tr><th>상황</th><th>정석 동선</th><th>흔한 블로킹</th></tr></thead><tbody>
+<tr><td><strong>스트레이트 길이 뒤</strong></td><td>공의 길에서 먼저 옆으로 빠졌다가 T 옆으로</td><td>T로 곧장 가며 상대의 길을 가로지름</td></tr>
+<tr><td><strong>크로스 뒤</strong></td><td>T로 곧장</td><td>공을 따라 코트 중앙으로 너무 깊이 들어감</td></tr>
+<tr><td><strong>앞 코너 드롭 뒤</strong></td><td>바로 뒤로 물러나 상대의 접근 길과 앞벽 쪽 시야를 비움</td><td>친 자리에 서서 공을 지켜봄</td></tr>
+<tr><td><strong>느슨한 공을 쳤을 때</strong></td><td>공이 나에게 돌아오면 가능한 한 빨리 빠지고, 막혔다면 상대의 렛을 받아들임</td><td>내 공을 피해 상대 쪽으로 움직임</td></tr>
+</tbody></table></div>
+<p>클리어링의 가장 좋은 방법은 사실 좋은 샷입니다. 타이트한 스트레이트는 벽에 붙어 가므로 친 사람이 쉽게 공의 길을 비울 수 있고, 넓은 크로스는 공이 나에게서 멀어집니다. 공이 느슨해서 코트 중앙으로 나올수록 클리어링은 어려워지고 상대의 렛과 스트로크가 늘어납니다.</p>
+<hr>
+
+<h2 id="f7"><span class="sec-num">7</span>턴 : 해도 될 때와 하면 안 될 때</h2>
+<p>턴은 뒤 코너에서 공이 몸 뒤를 지나갈 때 공을 따라 몸을 돌려 반대쪽에서 치는 것입니다. 예를 들어 백핸드 뒤 코너로 간 공을 놓친 뒤 몸을 돌려 포핸드로 칩니다. 문제는 몸을 돌리는 동안 <strong>상대가 어디 있는지 볼 수 없다</strong>는 점입니다.</p>
+<div class="table-wrap"><table><thead><tr><th>상황</th><th>판단</th></tr></thead><tbody>
+<tr><td>상대가 확실히 멀리 있고 공의 진행선 밖에 있음</td><td>턴 가능. 다만 칠 때 상대 위치를 확인</td></tr>
+<tr><td>상대가 T나 뒤쪽 가까이 있어 어디 있는지 확실하지 않음</td><td><strong>렛 요청</strong>이 정석. 턴한 공에 상대가 맞으면 내 실점이고 부상 위험이 큼</td></tr>
+<tr><td>몸을 돌리지 않고 칠 수 있는 공</td><td>보스트나 높은 스트레이트로 처리. 턴보다 안전하고 T로 돌아가기도 쉬움</td></tr>
+</tbody></table></div>
+<p>턴이 필요하다는 것은 이미 2편의 백 코너 탈출이 늦었다는 뜻이기도 합니다. 턴을 하지 않아도 되도록 공 뒤로 일찍 들어가는 것이 근본적인 해결입니다.</p>
+<p>반대로 <strong>상대가 턴을 하려 할 때</strong>는 공의 진행선과 상대의 라켓에서 멀어지고 몸을 보호합니다. 상대가 나를 볼 수 없는 상태라는 것을 기억합니다.</p>
+<blockquote><strong>렛 요청은 소극적인 선택이 아니라 정석이다.</strong><br>상대를 맞힐 위험이 있는 공을 억지로 치는 것보다 멈추는 쪽이 판정에서도, 안전에서도 낫습니다.</blockquote>
+<hr>
+
+<h2 id="f8"><span class="sec-num">8</span>한눈에 보는 변수별 판단표</h2>
+<div class="table-wrap"><table><thead><tr><th>변수</th><th>신호</th><th>정석</th><th>하지 말 것</th></tr></thead><tbody>
+<tr><td>내가 지침</td><td>T 복귀가 늦어짐</td><td><strong>롭과 높은 길이</strong>, 확실한 기회만 마무리</td><td>빨리 끝내려는 무리한 공격</td></tr>
+<tr><td>상대가 지침</td><td>짧아진 길이, 늘어난 롭, 서두른 공격</td><td><strong>랠리를 길게</strong>, 앞뒤 이동, 발리</td><td>서둘러 끝내려는 공격</td></tr>
+<tr><td>잘 튀는 조건</td><td>공이 뒤벽을 맞고 나옴</td><td><strong>부드럽고 낮은 길이</strong>, 정확한 마무리</td><td>세고 높은 길이</td></tr>
+<tr><td>잘 죽는 조건</td><td>길이가 뒤까지 가지 않음</td><td><strong>세고 높은 길이</strong>, 드롭 활용</td><td>평소 세기의 길이</td></tr>
+<tr><td>워밍업</td><td>-</td><td><strong>공 데우기, 바운스와 상대 확인</strong></td><td>기술 과시</td></tr>
+<tr><td>간섭</td><td>상대가 길을 막음</td><td><strong>공을 향해 움직인 뒤 멈추고 요청</strong></td><td>간섭을 받고 계속 친 뒤 요청</td></tr>
+<tr><td>클리어링</td><td>공이 나에게 돌아옴</td><td><strong>공의 길에서 먼저 빠짐</strong></td><td>T로 곧장 가로지르기</td></tr>
+<tr><td>턴</td><td>상대 위치가 불확실</td><td><strong>렛 요청</strong>, 보스트</td><td>보지 않고 턴해서 치기</td></tr>
+</tbody></table></div>
+<p>세 가지 변수에 대한 대처는 다음 한 줄로 요약됩니다.</p>
+<blockquote><strong>지치면 높이로 시간을 사고, 공이 바뀌면 세기를 다시 맞추고, 몸이 겹치면 멈춰서 규칙에 맡긴다.</strong></blockquote>
+<hr>
+
+<h2 id="f9"><span class="sec-num">9</span>자주 오해하는 것들</h2>
+<section class="myths">
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"지쳤을 때는 빨리 끝내는 게 낫다"</span></p><p class="myth-a"><span class="label">실제</span><span>지친 상태의 무리한 공격은 틴과 짧은 공이 되어 오히려 더 뛰게 만듭니다. 롭과 높은 길이로 시간을 벌고, 확실한 기회에서만 마무리합니다.</span></p></div>
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"공이 잘 튀는 날에는 더 세게 쳐야 한다"</span></p><p class="myth-a"><span class="label">실제</span><span>잘 튀는 조건에서 세게 치면 공이 뒤벽을 맞고 코트 가운데로 튀어나와 상대에게 기회를 줍니다. 오히려 길이를 부드럽고 낮게 조정합니다.</span></p></div>
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"워밍업은 몸만 풀면 된다"</span></p><p class="myth-a"><span class="label">실제</span><span>5분 동안 공을 데우고, 코트의 바운스를 확인하고, 상대의 포핸드와 백핸드 습관을 볼 수 있습니다. 첫 게임의 탐색이 워밍업에서 시작됩니다.</span></p></div>
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"상대와 부딪힐 것 같아도 일단 치고 나서 렛을 요청하면 된다"</span></p><p class="myth-a"><span class="label">실제</span><span>간섭을 받고도 계속 치면 그 간섭을 받아들인 것으로 봅니다. 공을 향해 움직이다가 간섭이 생긴 시점에 멈추고 요청하는 것이 정석입니다.</span></p></div>
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"턴은 고급 기술이니 할 수 있으면 하는 게 좋다"</span></p><p class="myth-a"><span class="label">실제</span><span>턴하는 동안에는 상대를 볼 수 없어 공으로 상대를 맞힐 위험이 큽니다. 맞히면 내 실점이고 부상으로 이어질 수 있습니다. 상대 위치가 불확실하면 렛 요청이 정석입니다.</span></p></div>
+</section>
+<hr>
+<blockquote class="summary">체력, 환경, 규칙은 정석이 놓인 <strong>조건</strong>을 바꿉니다.<br>내가 지치면 롭과 높은 길이로 T로 돌아갈 시간을 사고, 상대가 지치면 랠리를 길게 끌며 앞뒤로 움직입니다. 공이 잘 튀는 날에는 길이를 부드럽게, 잘 죽는 날에는 세게 치며, 이를 워밍업에서 미리 확인합니다. 간섭이 생기면 공을 향해 움직인 뒤 멈추고 요청하고, 친 뒤에는 상대의 길을 비우며 T로 갑니다. 상대 위치가 불확실한 턴 대신 렛을 요청하는 것도 정석입니다.<br>이것으로 단식 전술 시리즈를 마칩니다. 0편의 원리 위에 서브와 리턴, 수비, 공격, 랠리 패턴, 상대, 구역, 스코어, 그리고 조건의 변수까지 쌓였습니다.</blockquote>
+<nav class="pager" aria-label="이전·다음 글"></nav>
+</main>
+</div>
+<footer class="site-foot"><a href="index.html">← 스쿼시 노트 목록</a> · 개인 학습용 노트</footer>
+</div>
+</body>
+</html>

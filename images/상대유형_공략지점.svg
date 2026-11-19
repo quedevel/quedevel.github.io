@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 580" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <defs>
+    <marker id="so2-g" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2f9e44"/></marker>
+  </defs>
+  <rect width="960" height="580" fill="#fff"/>
+  <text x="480" y="30" text-anchor="middle" font-size="20" font-weight="700" fill="#222">유형별로 보낼 곳과 피할 곳 (위에서 본 코트, 앞벽은 위쪽)</text>
+  <g id="so2-c">
+    <rect x="45" y="110" width="230" height="351" fill="#fbf7ef" stroke="#9aa4ae" stroke-width="2"/>
+    <rect x="45" y="104" width="230" height="7" fill="#9aa4ae"/>
+    <line x1="45" y1="306" x2="275" y2="306" stroke="#c9a96e" stroke-width="2"/>
+    <line x1="160" y1="306" x2="160" y2="461" stroke="#c9a96e" stroke-width="2"/>
+    <rect x="45" y="306" width="58" height="58" fill="none" stroke="#c9a96e" stroke-width="2"/>
+    <rect x="217" y="306" width="58" height="58" fill="none" stroke="#c9a96e" stroke-width="2"/>
+  </g>
+  <use href="#so2-c" x="320"/>
+  <use href="#so2-c" x="640"/>
+
+  <!-- hard hitter -->
+  <text x="160" y="66" text-anchor="middle" font-size="16" font-weight="700" fill="#d9480f">하드 히터</text>
+  <text x="160" y="88" text-anchor="middle" font-size="13" fill="#555">→ 높고 느린 공을 뒤 코너로</text>
+  <rect x="46" y="380" width="70" height="80" fill="#2f9e44" opacity=".22"/>
+  <rect x="204" y="380" width="70" height="80" fill="#2f9e44" opacity=".22"/>
+  <rect x="46" y="111" width="80" height="60" fill="#2f9e44" opacity=".12"/>
+  <rect x="194" y="111" width="80" height="60" fill="#2f9e44" opacity=".12"/>
+  <ellipse cx="160" cy="300" rx="70" ry="44" fill="#e03131" opacity=".12" stroke="#e03131" stroke-dasharray="4 4"/>
+  <text x="160" y="296" text-anchor="middle" font-size="12" font-weight="700" fill="#c92a2a">빠르고 어중간한</text>
+  <text x="160" y="312" text-anchor="middle" font-size="12" font-weight="700" fill="#c92a2a">길이 금지</text>
+  <text x="81" y="426" text-anchor="middle" font-size="12" font-weight="700" fill="#2b8a3e">롭</text>
+  <text x="239" y="426" text-anchor="middle" font-size="12" font-weight="700" fill="#2b8a3e">롭</text>
+  <text x="86" y="146" text-anchor="middle" font-size="11" fill="#2b8a3e">드롭</text>
+  <text x="234" y="146" text-anchor="middle" font-size="11" fill="#2b8a3e">드롭</text>
+  <text x="160" y="490" text-anchor="middle" font-size="12" fill="#444">템포를 죽이고, 뒤에서 기다리는</text>
+  <text x="160" y="508" text-anchor="middle" font-size="12" fill="#444">상대를 가끔 앞으로 끌어냄</text>
+
+  <!-- retriever -->
+  <text x="480" y="66" text-anchor="middle" font-size="16" font-weight="700" fill="#1864ab">리트리버</text>
+  <text x="480" y="88" text-anchor="middle" font-size="13" fill="#555">→ 4코너, 앞에서 뒤로</text>
+  <g fill="#2f9e44" opacity=".2">
+    <rect x="366" y="111" width="60" height="55"/><rect x="534" y="111" width="60" height="55"/>
+    <rect x="366" y="400" width="60" height="60"/><rect x="534" y="400" width="60" height="60"/>
+  </g>
+  <g stroke="#2f9e44" stroke-width="2.5" fill="none" marker-end="url(#so2-g)">
+    <line x1="400" y1="160" x2="556" y2="418"/>
+    <line x1="560" y1="160" x2="404" y2="418"/>
+  </g>
+  <ellipse cx="480" cy="160" rx="44" ry="34" fill="#e03131" opacity=".12" stroke="#e03131" stroke-dasharray="4 4"/>
+  <text x="480" y="156" text-anchor="middle" font-size="11" font-weight="700" fill="#c92a2a">어설픈</text>
+  <text x="480" y="170" text-anchor="middle" font-size="11" font-weight="700" fill="#c92a2a">드롭 금지</text>
+  <text x="480" y="490" text-anchor="middle" font-size="12" fill="#444">닿을 수 있는 공으로 끝내려 하지 않고</text>
+  <text x="480" y="508" text-anchor="middle" font-size="12" fill="#444">방향 전환과 누적 피로로 무너뜨림</text>
+
+  <!-- shotmaker -->
+  <text x="800" y="66" text-anchor="middle" font-size="16" font-weight="700" fill="#2b8a3e">샷메이커</text>
+  <text x="800" y="88" text-anchor="middle" font-size="13" fill="#555">→ 뒤 코너 벽에 붙여서</text>
+  <rect x="686" y="111" width="228" height="150" fill="#e03131" opacity=".08"/>
+  <text x="800" y="188" text-anchor="middle" font-size="13" font-weight="700" fill="#c92a2a">짧은 공 금지 구역</text>
+  <rect x="686" y="330" width="22" height="130" fill="#2f9e44" opacity=".35"/>
+  <rect x="892" y="330" width="22" height="130" fill="#2f9e44" opacity=".35"/>
+  <text x="730" y="404" font-size="12" font-weight="700" fill="#2b8a3e">타이트한</text>
+  <text x="730" y="420" font-size="12" font-weight="700" fill="#2b8a3e">길이</text>
+  <circle cx="800" cy="290" r="13" fill="#1f6feb"/><text x="800" y="295" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">나</text>
+  <text x="820" y="280" font-size="11" fill="#1864ab">대기 위치</text>
+  <text x="820" y="294" font-size="11" fill="#1864ab">반 걸음 앞</text>
+  <text x="800" y="490" text-anchor="middle" font-size="12" fill="#444">상대를 벽에 붙은 공으로 계속 치게 하고</text>
+  <text x="800" y="508" text-anchor="middle" font-size="12" fill="#444">빠른 템포로 홀드할 시간을 뺏음</text>
+
+  <rect x="200" y="534" width="560" height="30" rx="7" fill="#f8f9fa" stroke="#dee2e6"/>
+  <rect x="220" y="543" width="16" height="12" fill="#2f9e44" opacity=".35"/><text x="244" y="554" font-size="12" fill="#444">보낼 곳</text>
+  <rect x="330" y="543" width="16" height="12" fill="#e03131" opacity=".25"/><text x="354" y="554" font-size="12" fill="#444">피할 곳</text>
+  <text x="440" y="554" font-size="12" fill="#444">진할수록 비중이 큼 · 정석의 뼈대는 그대로</text>
+</svg>

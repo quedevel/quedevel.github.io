@@ -55,44 +55,62 @@ window.SQUASH_DOCS = [
   },
   {
     id: "attack", icon: "⚡", tone: "amber",
-    series: "tactics", no: 3, status: "planned",
+    series: "tactics", no: 3, status: "published",
     href: "스쿼시_공격_마무리_전술.html",
     title: "공격과 마무리 — 기회를 점수로 바꾸기",
-    desc: "짧은 공 마무리, 발리 공격, 디셉션과 홀드, 공격 보스트, 4코너 공략, 역동작"
+    desc: "짧은 공이 왔을 때 킬·드롭·니크 중 무엇을 고를까? 발리 공격, 디셉션과 홀드, 공격 보스트, 4코너 공략과 역동작까지 마무리의 정석을 정리합니다.",
+    tags: ["킬·드롭", "발리", "역동작"],
+    thumb: "images/공격_4코너_역동작.svg",
+    meta: "도표 4장 · 약 25분"
   },
   {
     id: "rally-patterns", icon: "🧩", tone: "violet",
-    series: "tactics", no: 4, status: "planned",
+    series: "tactics", no: 4, status: "published",
     href: "스쿼시_프로_랠리패턴_분석.html",
     title: "프로 랠리 패턴 분석",
-    desc: "랠리 단계별 목표, 대표 샷 시퀀스, 템포 전환, 실수 직후의 대처"
+    desc: "랠리는 샷 하나가 아니라 순서로 이긴다. 랠리 단계별 목표, 프로가 반복해 쓰는 대표 샷 시퀀스 네 가지, 템포 전환, 실수 직후의 대처를 정리합니다.",
+    tags: ["랠리 단계", "샷 시퀀스", "템포"],
+    thumb: "images/랠리패턴_AB.svg",
+    meta: "도표 4장 · 약 20분"
   },
   {
     id: "opponent-types", icon: "👥", tone: "rose",
-    series: "tactics", no: 5, status: "planned",
+    series: "tactics", no: 5, status: "published",
     href: "스쿼시_상대유형별_공략.html",
     title: "상대 유형별 공략",
-    desc: "하드 히터·수비형·공격형·왼손잡이 상대, 실력 차, 경기 중 상대 분석"
+    desc: "하드 히터, 리트리버, 샷메이커, 키 큰 상대와 빠른 상대, 왼손잡이, 강하거나 약한 상대. 상대에 맞게 정석의 비중을 조정하는 법과 경기 중 상대를 읽는 법을 정리합니다.",
+    tags: ["유형별 공략", "왼손잡이", "상대 분석"],
+    thumb: "images/상대유형_공략지점.svg",
+    meta: "도표 3장 · 약 20분"
   },
   {
     id: "court-zones", icon: "🗺️", tone: "teal",
-    series: "tactics", no: 6, status: "planned",
+    series: "tactics", no: 6, status: "published",
     href: "스쿼시_코트구역별_특수상황.html",
     title: "코트 구역별 특수 상황",
-    desc: "사이드월에 붙은 공, 미들 코트 볼, 몸쪽 공, 와이드하지 않은 크로스 응징"
+    desc: "사이드월에 붙은 타이트 볼, 미들 코트 사이드월 근처의 애매한 공, 몸쪽으로 오는 바디 볼, 넓지 않은 크로스의 인터셉트. 공의 위치가 선택지를 어떻게 바꾸는지 정리합니다.",
+    tags: ["타이트 볼", "바디 볼", "인터셉트"],
+    thumb: "images/코트구역_지도.svg",
+    meta: "도표 4장 · 약 18분"
   },
   {
     id: "score-flow", icon: "📊", tone: "blue",
-    series: "tactics", no: 7, status: "planned",
+    series: "tactics", no: 7, status: "published",
     href: "스쿼시_스코어와_경기흐름_운영.html",
     title: "스코어와 경기 흐름 운영",
-    desc: "점수별 리스크 관리, 매치 단위 전략, 게임 사이 휴식, 흐름을 빼앗겼을 때"
+    desc: "PAR 11 점수에 따라 바뀌는 공격의 문턱, 앞설 때와 뒤질 때의 운영, 게임 스코어별 매치 전략, 게임 사이 90초 휴식, 흐름을 빼앗겼을 때 되찾는 순서를 정리합니다.",
+    tags: ["스코어", "매치 전략", "모멘텀"],
+    thumb: "images/스코어_운영지도.svg",
+    meta: "도표 3장 · 약 18분"
   },
   {
     id: "fitness-env-rules", icon: "🔋", tone: "amber",
-    series: "tactics", no: 8, status: "planned",
+    series: "tactics", no: 8, status: "published",
     href: "스쿼시_체력_환경_규칙_변수.html",
     title: "체력·환경·규칙 변수",
-    desc: "체력 운영, 코트 컨디션과 공 온도, 워밍업 활용, 렛·스트로크와 클리어링"
+    desc: "지쳤을 때와 상대가 지쳤을 때의 운영, 공 온도와 코트 컨디션, 5분 워밍업 활용, 렛·스트로크 판정의 원리와 클리어링, 턴 판단까지 정리합니다.",
+    tags: ["체력", "공 온도", "렛·스트로크"],
+    thumb: "images/규칙_렛판정흐름.svg",
+    meta: "도표 3장 · 약 22분"
   }
 ];

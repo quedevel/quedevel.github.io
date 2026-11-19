@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 580" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <defs>
+    <marker id="sr2-g" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2f9e44"/></marker>
+    <marker id="sr2-o" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#e8590c"/></marker>
+    <marker id="sr2-b" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f6feb"/></marker>
+  </defs>
+  <rect width="960" height="580" fill="#fff"/>
+  <text x="480" y="32" text-anchor="middle" font-size="20" font-weight="700" fill="#222">패턴 A · B (위에서 본 코트, 앞벽은 위쪽)</text>
+  <g id="sr2-c">
+    <rect x="125" y="110" width="230" height="351" fill="#fbf7ef" stroke="#9aa4ae" stroke-width="2"/>
+    <rect x="125" y="104" width="230" height="7" fill="#9aa4ae"/>
+    <line x1="125" y1="306" x2="355" y2="306" stroke="#c9a96e" stroke-width="2"/>
+    <line x1="240" y1="306" x2="240" y2="461" stroke="#c9a96e" stroke-width="2"/>
+    <rect x="125" y="306" width="58" height="58" fill="none" stroke="#c9a96e" stroke-width="2"/>
+    <rect x="297" y="306" width="58" height="58" fill="none" stroke="#c9a96e" stroke-width="2"/>
+  </g>
+  <use href="#sr2-c" x="480"/>
+
+  <!-- Pattern A -->
+  <text x="240" y="66" text-anchor="middle" font-size="16" font-weight="700" fill="#222">A. 길이 싸움 → 발리 드롭</text>
+  <text x="240" y="88" text-anchor="middle" font-size="13" fill="#555">왼쪽 벽을 따라 버티다가 느슨한 공을 끊는다</text>
+  <polyline points="150,445 142,111 136,448" fill="none" stroke="#2f9e44" stroke-width="2.5" opacity=".55"/>
+  <polyline points="158,440 150,111 144,452" fill="none" stroke="#2f9e44" stroke-width="2.5" opacity=".55"/>
+  <polyline points="146,438 172,111 214,318" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#sr2-o)"/>
+  <polyline points="222,322 140,111 134,150" fill="none" stroke="#2f9e44" stroke-width="4" marker-end="url(#sr2-g)"/>
+  <line x1="160" y1="438" x2="150" y2="178" stroke="#e8590c" stroke-width="2" stroke-dasharray="4 5" marker-end="url(#sr2-o)"/>
+  <circle cx="232" cy="330" r="13" fill="#1f6feb"/><text x="232" y="335" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">나</text>
+  <circle cx="162" cy="450" r="13" fill="#e8590c"/><text x="162" y="455" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">상대</text>
+  <g font-size="12" font-weight="700" fill="#fff" text-anchor="middle">
+    <circle cx="118" cy="420" r="11" fill="#2f9e44"/><text x="118" y="424">1</text>
+    <circle cx="198" cy="276" r="11" fill="#e8590c"/><text x="198" y="280">2</text>
+    <circle cx="118" cy="146" r="11" fill="#2f9e44"/><text x="118" y="150">3</text>
+  </g>
+  <g font-size="12" fill="#444" text-anchor="middle">
+    <text x="240" y="490">1 스트레이트 길이를 여러 번 → 2 상대 반환이 벽에서 떨어짐</text>
+    <text x="240" y="508">→ 3 T에서 발리로 스트레이트 드롭</text>
+    <text x="240" y="530" font-weight="700" fill="#d9480f">상대는 뒤 코너에서 앞 코너까지 전력 질주</text>
+  </g>
+
+  <!-- Pattern B -->
+  <text x="720" y="66" text-anchor="middle" font-size="16" font-weight="700" fill="#222">B. 크로스 롭 → 약한 발리 → 먼 코너</text>
+  <text x="720" y="88" text-anchor="middle" font-size="13" fill="#555">높은 백핸드 발리를 강요한 뒤 대각선으로</text>
+  <polyline points="800,152 690,111 606,384 628,448" fill="none" stroke="#2f9e44" stroke-width="3" marker-end="url(#sr2-g)"/>
+  <path d="M790,166 Q760,240 728,296" fill="none" stroke="#1f6feb" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#sr2-b)"/>
+  <polyline points="648,372 636,111 690,262" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#sr2-o)"/>
+  <polyline points="728,304 828,111 832,142" fill="none" stroke="#2f9e44" stroke-width="4" marker-end="url(#sr2-g)"/>
+  <line x1="660" y1="372" x2="812" y2="168" stroke="#e8590c" stroke-width="2" stroke-dasharray="4 5" marker-end="url(#sr2-o)"/>
+  <circle cx="800" cy="146" r="11" fill="#1f6feb" opacity=".45"/>
+  <circle cx="726" cy="312" r="13" fill="#1f6feb"/><text x="726" y="317" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">나</text>
+  <circle cx="648" cy="380" r="13" fill="#e8590c"/><text x="648" y="385" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">상대</text>
+  <g font-size="12" font-weight="700" fill="#fff" text-anchor="middle">
+    <circle cx="590" cy="384" r="11" fill="#2f9e44"/><text x="590" y="388">1</text>
+    <circle cx="676" cy="214" r="11" fill="#e8590c"/><text x="676" y="218">2</text>
+    <circle cx="846" cy="128" r="11" fill="#2f9e44"/><text x="846" y="132">3</text>
+  </g>
+  <g font-size="12" fill="#444" text-anchor="middle">
+    <text x="720" y="490">1 앞 코너에서 넓은 크로스 롭 → 2 상대가 높은 백핸드로</text>
+    <text x="720" y="508">겨우 발리, 짧고 느슨하게 → 3 T에서 먼 앞 코너로 드롭</text>
+    <text x="720" y="530" font-weight="700" fill="#d9480f">상대는 왼쪽 뒤에서 오른쪽 앞까지 대각선</text>
+  </g>
+</svg>
