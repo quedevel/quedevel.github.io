@@ -123,5 +123,15 @@ window.SQUASH_DOCS = [
     tags: ["드라이브", "드릴", "측정·기록"],
     thumb: "images/드라이브_타깃존.svg",
     meta: "도표 3장 · 약 20분"
+  },
+  {
+    id: "kill-drop-training", icon: "💥", tone: "rose",
+    series: "training", no: 2, status: "published",
+    href: "스쿼시_킬드롭_훈련세션.html",
+    title: "킬·드롭 훈련 세션",
+    desc: "틴 위 목표 띠와 킬·드롭 채점표, 칠 공을 고르는 판단 흐름, 혼자·둘·셋·그룹·코치 레슨별 드릴과 주간 프로그램까지 정리합니다.",
+    tags: ["킬·드롭", "틴 마진", "공격 판단"],
+    thumb: "images/킬드롭_타깃.svg",
+    meta: "도표 3장 · 약 20분"
   }
 ];
