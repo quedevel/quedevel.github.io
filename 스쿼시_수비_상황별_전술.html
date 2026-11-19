@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>수비 상황별 전술 — 밀렸을 때 살아남기</title>
+<meta name="description" content="백 코너에 갇혔을 때, 앞으로 끌려 나왔을 때, 겨우 공에 닿았을 때. 수비를 '시간 벌기'로 보고 롭·탈출·복귀 동선의 정석을 정리합니다.">
+<meta property="og:title" content="수비 상황별 전술 — 밀렸을 때 살아남기">
+<meta property="og:description" content="백 코너에 갇혔을 때, 앞으로 끌려 나왔을 때, 겨우 공에 닿았을 때. 수비를 '시간 벌기'로 보고 롭·탈출·복귀 동선의 정석을 정리합니다.">
+<link rel="icon" href="favicon.ico">
+<script>try{var t=localStorage.getItem("squash-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/css/squash.css">
+<script src="assets/js/squash-docs.js" defer></script>
+<script src="assets/js/squash.js" defer></script>
+</head>
+<body class="article" data-doc="defense">
+<aside class="sidebar" aria-label="페이지 목록"><div class="sidebar-scroll"></div></aside>
+<div class="scrim"></div>
+<div class="main">
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="페이지 목록 열기"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3.5 5.5h13M3.5 10h13M3.5 14.5h13"/></svg></button>
+  <nav class="crumbs" aria-label="현재 위치"><a href="index.html">스쿼시 노트</a></nav>
+  <button class="icon-btn theme-toggle" type="button" aria-label="밝게/어둡게 전환">
+    <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+  </button>
+</header>
+<div class="cover" data-tone="blue" aria-hidden="true"></div>
+<div class="page">
+<main class="doc">
+<header class="doc-hero">
+<div class="page-icon" aria-hidden="true">🛡️</div>
+<h1 id="수비-상황별-전술">수비 상황별 전술 — 밀렸을 때 살아남기</h1>
+<dl class="props">
+<dt><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 4.5h4l1.2 1.5H14v6.5H2z"/></svg>시리즈</dt><dd><span class="pill accent">단식 전술 시리즈</span><span class="pill">2편</span></dd>
+<dt><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><path d="M8 4.8V8l2.2 1.4"/></svg>분량</dt><dd>도표 4장 · 약 25분</dd>
+<dt><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><path d="M8 7.2v4M8 5v.1"/></svg>기준</dt><dd>오른손잡이 대 오른손잡이</dd>
+<dt><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2.5 2.5h5l6 6-5 5-6-6z"/><circle cx="5.3" cy="5.3" r=".9"/></svg>태그</dt><dd><span class="pill">수비</span><span class="pill">롭</span><span class="pill">백 코너</span><span class="pill">프런트</span><span class="pill">T 되찾기</span></dd>
+</dl>
+<blockquote>프로 랠리의 대부분은 공격이 아니라 <strong>중립과 수비</strong>로 채워집니다. 랭킹을 가르는 것은 결정타보다, 밀린 상황에서 실점하지 않고 다시 중립으로 돌아오는 능력입니다.<br>이 문서는 백 코너에 갇혔을 때, 앞으로 끌려 나왔을 때, 겨우 공에 닿았을 때의 정석을 <strong>"시간을 어떻게 버느냐"</strong>라는 하나의 원리로 정리합니다.<br>모든 설명은 <strong>오른손잡이 대 오른손잡이</strong>를 기준으로 하며, 수치는 이해를 돕기 위한 <strong>대략적인 값</strong>입니다.</blockquote>
+</header>
+<hr>
+<nav class="toc"><h2 id="목차">목차</h2>
+<ul><li><a href="#d0">0. 먼저 알아야 할 것 : 수비는 시간을 사는 일</a></li><li><a href="#d1">1. 백 코너에 갇혔을 때</a><ul><li><a href="#d1-1">1-1. 상황 인식</a></li><li><a href="#d1-2">1-2. 탈출 선택지의 사다리</a></li><li><a href="#d1-3">1-3. 실행 디테일 : 공간 만들기</a></li></ul></li><li><a href="#d2">2. 백월 샷 : 최후의 수단</a></li><li><a href="#d3">3. 롭 : 수비 샷의 왕</a><ul><li><a href="#d3-1">3-1. 롭은 리셋 버튼이다</a></li><li><a href="#d3-2">3-2. 좋은 롭의 설계</a></li><li><a href="#d3-3">3-3. 스트레이트 롭과 크로스 롭</a></li></ul></li><li><a href="#d4">4. 앞으로 끌려 나왔을 때 (프런트 수비)</a><ul><li><a href="#d4-1">4-1. 런지와 마지막 스텝</a></li><li><a href="#d4-2">4-2. 타점 높이로 고르는 선택지</a></li><li><a href="#d4-3">4-3. 앞에서 T로 돌아오는 동선</a></li></ul></li><li><a href="#d5">5. 겨우 닿았을 때 (스트레칭 수비)</a></li><li><a href="#d6">6. T를 빼앗겼을 때 되찾는 순서</a></li><li><a href="#d7">7. 한눈에 보는 수비 판단표</a></li><li><a href="#d8">8. 자주 오해하는 것들</a></li></ul></nav>
+<hr>
+
+<h2 id="d0"><span class="sec-num">0</span>먼저 알아야 할 것 : 수비는 시간을 사는 일</h2>
+<p><a href="스쿼시_단식_경기운용_전술.html">기본편</a>의 시간 원리를 다시 꺼내 보겠습니다. 스쿼시의 진짜 단위는 거리가 아니라 <strong>"다음 공까지 남은 시간"</strong>입니다. 수비 상황은 이렇게 정의할 수 있습니다.</p>
+<blockquote><strong>수비 상황 = 공을 친 뒤 T로 돌아갈 시간이 부족한 상황.</strong><br>공에 늦게 도착했거나, 벽에 붙은 공 때문에 원하는 샷을 칠 수 없거나, 공을 치는 위치가 T에서 너무 멀 때 수비 상황이 됩니다.</blockquote>
+<p>다음 신호 중 둘 이상이 겹치면 수비 상황으로 판단하고 샷 선택을 바꿔야 합니다.</p>
+<div class="table-wrap"><table><thead><tr><th>신호</th><th>의미</th></tr></thead><tbody>
+<tr><td>상대가 T에 있다</td><td>상대는 어떤 공이든 한두 걸음 안에 도착함</td></tr>
+<tr><td>공이 옆벽·백월에 붙어 있다</td><td>스윙 공간이 좁아 공의 속도와 방향을 마음대로 고를 수 없음</td></tr>
+<tr><td>내가 공 뒤로 들어가지 못했다</td><td>몸이 공보다 앞에 있거나 옆에 있어 체중을 실을 수 없음</td></tr>
+<tr><td>런지가 최대로 늘어났다</td><td>친 뒤 균형을 되찾는 데 시간이 걸림</td></tr>
+<tr><td>내가 T에서 서너 걸음 이상 떨어져 있다</td><td>공을 친 뒤 복귀 시간 자체가 김</td></tr>
+</tbody></table></div>
+<p>이때 수비 샷이 할 일은 세 가지입니다.</p>
+<ol><li><strong>시간 사기</strong> : 공이 상대에게 도착하기까지의 시간을, 내가 T로 돌아가는 시간보다 길게 만듭니다.</li><li><strong>상대를 T에서 떼어 내기</strong> : 상대가 T에서 다음 공을 치지 못하게 뒤로 보냅니다.</li><li><strong>공격할 공을 주지 않기</strong> : 짧거나 가운데로 뜬 공을 주지 않습니다.</li></ol>
+<figure class="fig"><svg role="img" aria-label="샷 종류별 상대에게 도착하기까지의 시간과 나의 복귀 시간 비교" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <rect width="960" height="420" fill="#fff"/>
+  <text x="480" y="32" text-anchor="middle" font-size="20" font-weight="700" fill="#222">뒤 코너에서 쳤을 때 : 공이 상대에게 가는 시간 vs 내가 T로 돌아가는 시간</text>
+
+  <!-- regions -->
+  <rect x="210" y="70" width="295" height="230" fill="#e03131" opacity=".05"/>
+  <rect x="505" y="70" width="385" height="230" fill="#2f9e44" opacity=".06"/>
+  <text x="357" y="88" text-anchor="middle" font-size="12" font-weight="700" fill="#c92a2a">상대가 칠 때 나는 아직 이동 중</text>
+  <text x="697" y="88" text-anchor="middle" font-size="12" font-weight="700" fill="#2b8a3e">T에 도착하고도 시간이 남음</text>
+
+  <!-- bars -->
+  <g font-size="14">
+    <text x="196" y="132" text-anchor="end" font-weight="700" fill="#333">하드 드라이브</text>
+    <rect x="210" y="112" width="181" height="30" rx="5" fill="#e8590c"/>
+    <text x="400" y="132" font-size="13" fill="#d9480f">약 0.8초</text>
+
+    <text x="196" y="192" text-anchor="end" font-weight="700" fill="#333">보통 드라이브</text>
+    <rect x="210" y="172" width="249" height="30" rx="5" fill="#f59f00"/>
+    <text x="450" y="192" text-anchor="end" font-size="13" font-weight="700" fill="#fff">약 1.1초</text>
+
+    <text x="196" y="252" text-anchor="end" font-weight="700" fill="#333">높은 롭</text>
+    <rect x="210" y="232" width="521" height="30" rx="5" fill="#2f9e44"/>
+    <text x="740" y="252" font-size="13" fill="#2b8a3e">약 2.3초</text>
+  </g>
+
+  <!-- recovery line -->
+  <line x1="505" y1="62" x2="505" y2="300" stroke="#1f6feb" stroke-width="3" stroke-dasharray="8 5"/>
+  <rect x="512" y="104" width="150" height="44" rx="6" fill="#fff" stroke="#1f6feb"/>
+  <text x="587" y="122" text-anchor="middle" font-size="12" font-weight="700" fill="#1864ab">뒤 코너 → T 복귀</text>
+  <text x="587" y="140" text-anchor="middle" font-size="12" fill="#1864ab">약 1.3초 (3~4걸음)</text>
+
+  <!-- axis -->
+  <line x1="210" y1="300" x2="890" y2="300" stroke="#868e96" stroke-width="1.5"/>
+  <g font-size="12" fill="#666" text-anchor="middle">
+    <line x1="210" y1="300" x2="210" y2="306" stroke="#868e96"/><text x="210" y="322">0초</text>
+    <line x1="323" y1="300" x2="323" y2="306" stroke="#868e96"/><text x="323" y="322">0.5</text>
+    <line x1="437" y1="300" x2="437" y2="306" stroke="#868e96"/><text x="437" y="322">1.0</text>
+    <line x1="550" y1="300" x2="550" y2="306" stroke="#868e96"/><text x="550" y="322">1.5</text>
+    <line x1="663" y1="300" x2="663" y2="306" stroke="#868e96"/><text x="663" y="322">2.0</text>
+    <line x1="777" y1="300" x2="777" y2="306" stroke="#868e96"/><text x="777" y="322">2.5</text>
+    <line x1="890" y1="300" x2="890" y2="306" stroke="#868e96"/><text x="890" y="322">3.0</text>
+  </g>
+  <text x="550" y="350" text-anchor="middle" font-size="13" fill="#555">내가 공을 친 순간부터 상대가 다음 공을 치기까지의 시간</text>
+  <rect x="140" y="368" width="680" height="34" rx="8" fill="#f8f9fa" stroke="#dee2e6"/>
+  <text x="480" y="390" text-anchor="middle" font-size="12" fill="#666">수치는 이해를 돕기 위한 대략값. 공 온도, 코트, 상대가 발리하는지에 따라 크게 달라짐</text>
+</svg><figcaption>수비 상황에서 빠른 공은 상대의 시간과 함께 내 복귀 시간도 빼앗는다</figcaption></figure>
+<p>그림의 핵심은 단순합니다. 뒤 코너에서 친 하드 드라이브는 내가 T에 도착하기 전에 상대에게 도착합니다. 상대가 T에서 발리로 끊으면 그 시간은 더 짧아집니다. 반대로 높은 롭은 내가 T에 도착한 뒤에도 시간이 남습니다. 수비에서 "세게 쳐서 빠져나가기"가 잘 통하지 않는 이유입니다.</p>
+<hr>
+
+<h2 id="d1"><span class="sec-num">1</span>백 코너에 갇혔을 때</h2>
+
+<h3 id="d1-1"><span class="sub-num">1-1</span>상황 인식</h3>
+<p>가장 흔한 수비 상황입니다. 상대의 타이트한 길이나 롭에 밀려 공이 뒤 코너, 옆벽과 백월 근처로 들어갔고 상대는 T에서 기다리고 있습니다. 이때 내 공이 조금이라도 짧거나 가운데로 뜨면, 상대는 T에서 한 걸음 만에 앞 코너로 공격합니다. 기본편의 공격 조건인 "상대가 뒤에 있고, 공이 느슨하고, 공격자가 앞에 있다"가 그대로 성립하기 때문입니다.</p>
+<p>그래서 백 코너 수비의 목표는 한 문장입니다.</p>
+<blockquote><strong>상대를 T에서 떼어 내는 공을, 실수 없이, 내가 T로 돌아갈 시간과 함께 보낸다.</strong></blockquote>
+
+<h3 id="d1-2"><span class="sub-num">1-2</span>탈출 선택지의 사다리</h3>
+<p>백 코너에서의 선택은 고정된 순위가 아니라 <strong>공의 상태에 따라 내려가는 사다리</strong>입니다. 공에 여유가 있을수록 위 칸을, 공이 나쁠수록 아래 칸을 고릅니다.</p>
+<figure class="fig"><svg role="img" aria-label="백 코너 탈출 선택지의 사다리" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <defs>
+    <marker id="sd1-g" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2f9e44"/></marker>
+    <marker id="sd1-a" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#f08c00"/></marker>
+    <marker id="sd1-r" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#e03131"/></marker>
+    <marker id="sd1-k" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#868e96"/></marker>
+  </defs>
+  <rect width="960" height="560" fill="#fff"/>
+  <text x="480" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#222">백 코너 탈출 : 공이 나빠질수록 사다리를 내려간다</text>
+
+  <!-- court -->
+  <rect x="60" y="70" width="294" height="449" fill="#fbf7ef" stroke="#9aa4ae" stroke-width="2"/>
+  <rect x="60" y="63" width="294" height="8" fill="#9aa4ae"/>
+  <line x1="60" y1="320" x2="354" y2="320" stroke="#c9a96e" stroke-width="2"/>
+  <line x1="207" y1="320" x2="207" y2="519" stroke="#c9a96e" stroke-width="2"/>
+  <rect x="60" y="320" width="74" height="74" fill="none" stroke="#c9a96e" stroke-width="2"/>
+  <rect x="280" y="320" width="74" height="74" fill="none" stroke="#c9a96e" stroke-width="2"/>
+
+  <!-- opponent reach -->
+  <circle cx="212" cy="326" r="62" fill="#e8590c" opacity=".07" stroke="#e8590c" stroke-dasharray="4 4"/>
+
+  <!-- 1/2 straight drive & lob -->
+  <polyline points="92,488 78,71 70,500" fill="none" stroke="#2f9e44" stroke-width="4" marker-end="url(#sd1-g)"/>
+  <!-- cross lob -->
+  <polyline points="92,488 232,71 353,436 334,505" fill="none" stroke="#2f9e44" stroke-width="2.5" stroke-dasharray="8 5" marker-end="url(#sd1-g)"/>
+  <!-- back wall boast -->
+  <polyline points="92,488 118,519 300,71 336,128" fill="none" stroke="#f08c00" stroke-width="2.5" stroke-dasharray="4 5" marker-end="url(#sd1-a)"/>
+  <!-- defensive boost -->
+  <polyline points="92,488 61,436 262,71 296,140" fill="none" stroke="#e03131" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#sd1-r)"/>
+  <text x="300" y="168" font-size="18" font-weight="700" fill="#e03131">✕</text>
+
+  <circle cx="92" cy="492" r="14" fill="#1f6feb"/><text x="92" y="497" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">나</text>
+  <circle cx="212" cy="326" r="14" fill="#e8590c"/><text x="212" y="331" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">상대</text>
+  <text x="207" y="545" text-anchor="middle" font-size="12" fill="#666">상대는 T, 나는 왼쪽 뒤 코너</text>
+
+  <!-- ladder -->
+  <g font-size="13">
+    <rect x="410" y="72" width="500" height="92" rx="10" fill="#ebfbee" stroke="#2f9e44" stroke-width="2"/>
+    <text x="430" y="98" font-size="15" font-weight="700" fill="#2b8a3e">① 스윙 공간이 있다 → 스트레이트 드라이브</text>
+    <text x="430" y="122" fill="#333">공이 백월에서 나와 몸 앞에 떨어졌을 때. 옆벽에 붙여 길게.</text>
+    <text x="430" y="144" fill="#666">결과 : 중립 유지. 상대를 같은 뒤 코너로 묶음</text>
+
+    <rect x="410" y="180" width="500" height="92" rx="10" fill="#ebfbee" stroke="#2f9e44" stroke-width="2" stroke-dasharray="6 4"/>
+    <text x="430" y="206" font-size="15" font-weight="700" fill="#2b8a3e">② 공이 벽에 붙었거나 늦었다 → 스트레이트 롭 · 크로스 롭</text>
+    <text x="430" y="230" fill="#333">강하게 칠 수 없을 때. 높이로 시간을 사고 T로 복귀.</text>
+    <text x="430" y="252" fill="#666">크로스 롭은 상대보다 뒤에서 옆벽에 닿을 만큼 넓게</text>
+
+    <rect x="410" y="288" width="500" height="92" rx="10" fill="#fff9db" stroke="#f08c00" stroke-width="2"/>
+    <text x="430" y="314" font-size="15" font-weight="700" fill="#e67700">③ 앞으로 칠 수 없다 → 백월 샷</text>
+    <text x="430" y="338" fill="#333">공이 몸 뒤, 백월 쪽으로 지나가 버렸을 때만.</text>
+    <text x="430" y="360" fill="#666">결과 : 랠리는 이어지지만 대개 상대에게 공격 기회</text>
+
+    <rect x="410" y="396" width="500" height="92" rx="10" fill="#fff5f5" stroke="#e03131" stroke-width="2" stroke-dasharray="7 5"/>
+    <text x="430" y="422" font-size="15" font-weight="700" fill="#c92a2a">✕ 상대가 T에 있을 때의 수비적 보스트</text>
+    <text x="430" y="446" fill="#333">공이 상대 바로 앞, 앞 코너로 감. 상대는 한 걸음 만에 공격.</text>
+    <text x="430" y="468" fill="#666">"앞으로 끌어낸다"는 착각을 가장 흔히 부르는 샷</text>
+  </g>
+  <line x1="925" y1="80" x2="925" y2="480" stroke="#868e96" stroke-width="2" marker-end="url(#sd1-k)"/>
+  <text x="940" y="280" font-size="12" fill="#666" transform="rotate(90 940 280)" text-anchor="middle">공이 나빠질수록 아래로</text>
+</svg><figcaption>백 코너 탈출의 사다리. 실선 = 스트레이트 드라이브·롭, 점선 = 크로스 롭, 주황 = 백월 샷, 빨강 = 피해야 할 보스트</figcaption></figure>
+<p>사다리에서 가장 많이 쓰는 칸은 ②입니다. 기본편에서 정리한 원리, 즉 <strong>"높게, 길게, 옆벽 쪽으로"</strong>가 정석인 이유가 여기서 드러납니다.</p>
+<ul><li><strong>높게</strong> : 공이 상대에게 가는 시간이 늘어 내가 T로 돌아갈 시간이 생깁니다.</li><li><strong>길게</strong> : 상대가 T에서 뒤로 물러나야 하므로 T가 비고, 상대의 다음 공도 뒤 코너에서 치는 수비 샷이 됩니다.</li><li><strong>옆벽 쪽으로</strong> : 상대가 T에서 발리로 끊기 어렵습니다. 공이 옆벽에 붙으면 상대의 스윙 공간도 좁아집니다.</li></ul>
+
+<h3 id="d1-3"><span class="sub-num">1-3</span>실행 디테일 : 공간 만들기</h3>
+<p>백 코너 수비의 질은 샷보다 <strong>공과 몸 사이의 공간</strong>에서 결정됩니다.</p>
+<div class="table-wrap"><table><thead><tr><th>요소</th><th>정석</th><th>이유</th></tr></thead><tbody>
+<tr><td>기다리기</td><td>공이 백월에 맞고 나올 것 같으면 서두르지 않고 나오기를 기다림</td><td>백월에서 나온 공은 몸 앞으로 오므로 스윙 공간과 선택지가 늘어남</td></tr>
+<tr><td>발 위치</td><td>공보다 뒤, 옆벽에서 반 걸음 떨어져 섬. 공이 벽에 붙을수록 오픈 스탠스</td><td>몸이 공과 벽 사이에 끼면 라켓이 지나갈 길이 없음</td></tr>
+<tr><td>백스윙</td><td>짧고 높게. 라켓 헤드를 세운 채 준비</td><td>벽과 백월 때문에 큰 스윙이 불가능. 짧은 스윙에서도 면만 정확하면 길이는 나옴</td></tr>
+<tr><td>라켓 면</td><td>롭은 면을 더 열어 공 아래로, 드라이브는 약간 연 면으로 공 뒤를</td><td><a href="스쿼시_정석드라이브_역학원리.html">드라이브 역학편</a>의 원리. 면의 각도가 높이를 정함</td></tr>
+<tr><td>몸을 돌리는 턴</td><td>원칙적으로 하지 않음</td><td>상대에게 위험하고, 대개 상대를 맞히는 상황을 만듦. 판정 문제는 8편에서 다룸</td></tr>
+</tbody></table></div>
+<hr>
+
+<h2 id="d2"><span class="sec-num">2</span>백월 샷 : 최후의 수단</h2>
+<p>공이 이미 몸 옆을 지나 백월 쪽으로 가 버려 앞으로 칠 수 없을 때, 공을 <strong>백월에 쳐서 앞벽까지 보내는</strong> 샷입니다. 흔히 백월 보스트라고 부릅니다.</p>
+<p>이 샷이 최후의 수단인 이유는 궤적에 있습니다. 공은 백월에서 앞벽까지 코트 전체 길이를 날아가야 하므로 높게 떠야 합니다. 그래서 대부분 앞 코너 쪽으로 느리게 떨어지고, 상대는 T에서 기다렸다가 쉽게 공격합니다.</p>
+<p>그래도 써야 한다면 다음 조건을 지킵니다.</p>
+<ul><li><strong>충분히 높게</strong> : 앞벽에 못 미치는 것이 가장 나쁜 결과입니다. 높이를 넉넉히 줘서 앞벽까지 확실히 보냅니다.</li><li><strong>앞벽 근처 옆벽을 거치게</strong> : 공이 앞벽 근처에서 옆벽을 거치면 앞 코너 깊숙이 떨어져 상대가 각도를 만들기 어려워집니다.</li><li><strong>상대가 뒤쪽에 있을 때가 그나마 낫다</strong> : 상대가 T보다 뒤에 있으면 앞 코너까지의 거리가 길어 시간을 조금 벌 수 있습니다.</li><li><strong>치고 나서 바로 앞으로</strong> : 상대의 다음 공은 거의 확실히 앞 코너 공격입니다. 백월 샷을 친 직후 T 앞쪽으로 이동해 대비합니다.</li></ul>
+<blockquote><strong>백월 샷을 자주 친다면, 문제는 백월 샷이 아니라 그 전 단계다.</strong><br>공이 몸 뒤로 지나가는 것은 대개 늦은 출발이나 공보다 앞에 선 위치 때문입니다. 공이 백월에서 나오기를 기다리는 습관이 생기면 백월 샷이 필요한 상황 자체가 줄어듭니다.</blockquote>
+<hr>
+
+<h2 id="d3"><span class="sec-num">3</span>롭 : 수비 샷의 왕</h2>
+
+<h3 id="d3-1"><span class="sub-num">3-1</span>롭은 리셋 버튼이다</h3>
+<p>롭을 "도망가는 샷"으로 보면 소극적으로 칩니다. 롭은 오히려 <strong>랠리를 처음 상태로 되돌리는 리셋 버튼</strong>입니다. 좋은 롭 하나가 만드는 결과는 다음과 같습니다.</p>
+<ol><li>나는 밀린 위치에서 T로 돌아옵니다.</li><li>상대는 T에서 뒤 코너로 밀려납니다.</li><li>상대의 다음 공은 뒤 코너에서 머리 위 높이의 공을 처리하는 수비 샷이 됩니다.</li></ol>
+<p>즉 롭 한 번으로 <strong>공격과 수비의 위치가 바뀝니다</strong>. 1편에서 리턴이 서버와 자리를 맞바꾸는 원리와 같습니다.</p>
+
+<h3 id="d3-2"><span class="sub-num">3-2</span>좋은 롭의 설계</h3>
+<figure class="fig"><svg role="img" aria-label="좋은 롭, 짧은 롭, 너무 센 롭의 측면 궤적" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <defs>
+    <marker id="sd2-g" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2f9e44"/></marker>
+    <marker id="sd2-r" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#e03131"/></marker>
+  </defs>
+  <rect width="960" height="560" fill="#fff"/>
+  <text x="480" y="32" text-anchor="middle" font-size="20" font-weight="700" fill="#222">앞 코너에서 친 롭의 세 가지 결과 (옆에서 본 코트, 앞벽은 왼쪽)</text>
+
+  <!-- pass band between opponent reach and side wall out line -->
+  <path d="M90,100 L870,271 L870,259 L90,259 Z" fill="#2f9e44" opacity=".07"/>
+  <!-- walls -->
+  <rect x="82" y="88" width="8" height="338" fill="#9aa4ae"/>
+  <rect x="870" y="230" width="8" height="196" fill="#9aa4ae"/>
+  <rect x="82" y="420" width="796" height="6" fill="#9aa4ae"/>
+  <line x1="90" y1="100" x2="112" y2="100" stroke="#e03131" stroke-width="3"/>
+  <text x="118" y="104" font-size="12" fill="#c92a2a">앞벽 아웃 라인 4.57m</text>
+  <line x1="90" y1="100" x2="870" y2="271" stroke="#e03131" stroke-width="1.5" stroke-dasharray="8 6" opacity=".6"/>
+  <text x="598" y="203" font-size="12" fill="#c92a2a" transform="rotate(12.4 598 203)">옆벽 아웃 라인</text>
+  <line x1="862" y1="271" x2="878" y2="271" stroke="#e03131" stroke-width="3"/>
+  <text x="864" y="222" text-anchor="end" font-size="12" fill="#c92a2a">백월 아웃 라인 2.13m</text>
+  <!-- reach -->
+  <line x1="90" y1="259" x2="870" y2="259" stroke="#e8590c" stroke-width="1.5" stroke-dasharray="5 4" opacity=".7"/>
+  <text x="240" y="280" font-size="12" font-weight="700" fill="#d9480f">상대 라켓 높이 (약 2.3m)</text>
+  <!-- short line marker -->
+  <line x1="525" y1="420" x2="525" y2="436" stroke="#c9a96e" stroke-width="3"/>
+  <text x="525" y="452" text-anchor="middle" font-size="12" fill="#8a6d3b">T (쇼트 라인 5.44m)</text>
+
+  <!-- good lob -->
+  <path d="M210,395 Q130,250 92,150" fill="none" stroke="#2f9e44" stroke-width="4" marker-end="url(#sd2-g)"/>
+  <path d="M92,150 Q500,110 840,418" fill="none" stroke="#2f9e44" stroke-width="4" marker-end="url(#sd2-g)"/>
+  <path d="M842,420 Q856,404 868,408" fill="none" stroke="#2f9e44" stroke-width="3"/>
+  <circle cx="572" cy="214" r="12" fill="#2f9e44"/><text x="572" y="219" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">1</text>
+
+  <!-- short lob -->
+  <path d="M92,215 Q330,150 600,418" fill="none" stroke="#e03131" stroke-width="2.5" stroke-dasharray="8 5" marker-end="url(#sd2-r)"/>
+  <circle cx="512" cy="300" r="16" fill="none" stroke="#e03131" stroke-width="2"/>
+  <circle cx="330" cy="256" r="12" fill="#e03131"/><text x="330" y="261" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">2</text>
+
+  <!-- too hard lob -->
+  <path d="M92,135 Q560,60 868,300" fill="none" stroke="#e03131" stroke-width="2.5" stroke-dasharray="3 5"/>
+  <path d="M868,300 Q760,330 690,418" fill="none" stroke="#e03131" stroke-width="2.5" stroke-dasharray="3 5" marker-end="url(#sd2-r)"/>
+  <circle cx="520" cy="116" r="12" fill="#e03131"/><text x="520" y="121" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">3</text>
+
+  <!-- players -->
+  <circle cx="210" cy="400" r="14" fill="#1f6feb"/><text x="210" y="405" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">나</text>
+  <circle cx="525" cy="392" r="14" fill="#e8590c"/><text x="525" y="397" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">상대</text>
+  <g font-size="13">
+    <circle cx="70" cy="490" r="11" fill="#2f9e44"/><text x="70" y="495" text-anchor="middle" font-weight="700" fill="#fff">1</text>
+    <text x="88" y="495" font-weight="700" fill="#2b8a3e">좋은 롭 : 상대 머리 위를 넘어 백월 직전 바운드</text>
+    <circle cx="420" cy="490" r="11" fill="#e03131"/><text x="420" y="495" text-anchor="middle" font-weight="700" fill="#fff">2</text>
+    <text x="438" y="495" font-weight="700" fill="#c92a2a">짧은 롭 : T에서 발리로 끊김</text>
+    <circle cx="650" cy="490" r="11" fill="#e03131"/><text x="650" y="495" text-anchor="middle" font-weight="700" fill="#fff">3</text>
+    <text x="668" y="495" font-weight="700" fill="#c92a2a">너무 센 롭 : 백월 맞고 가운데로</text>
+  </g>
+  <rect x="160" y="518" width="640" height="26" rx="6" fill="#f8f9fa" stroke="#dee2e6"/>
+  <text x="480" y="536" text-anchor="middle" font-size="12" fill="#666">스트레이트 롭은 옆벽 가까이 지나가므로 정점이 옆벽 아웃 라인보다 낮아야 함 (초록 띠)</text>
+</svg><figcaption>롭은 "상대 라켓보다 높고, 옆벽 아웃 라인보다 낮은" 띠를 지나 백월 직전에 떨어져야 한다</figcaption></figure>
+<p>좋은 롭은 네 가지 요소로 설계합니다.</p>
+<div class="table-wrap"><table><thead><tr><th>요소</th><th>목표</th><th>틀렸을 때</th></tr></thead><tbody>
+<tr><td><strong>앞벽 높이</strong></td><td>아웃 라인 아래, 대략 3.5~4m 부근</td><td>낮으면 정점이 낮아져 발리당하고, 높으면 아웃</td></tr>
+<tr><td><strong>정점의 위치</strong></td><td>T 부근, 상대 라켓이 닿는 높이보다 확실히 위</td><td>정점이 앞쪽에 있으면 T를 지날 때 이미 내려와 있음</td></tr>
+<tr><td><strong>옆벽 접촉</strong></td><td>스트레이트 롭은 옆벽에 거의 닿지 않거나 뒤쪽에서 살짝. 크로스 롭은 상대보다 뒤, 옆벽 높은 곳</td><td>너무 일찍·높게 닿으면 아웃, 닿지 않고 가운데로 뜨면 발리감</td></tr>
+<tr><td><strong>바운드 위치</strong></td><td>백월 바로 앞. 백월에 맞더라도 힘이 거의 남지 않게</td><td>짧으면 상대가 바운드 후 편하게 처리하고, 너무 세면 백월에 바로 맞고 가운데로 나옴</td></tr>
+</tbody></table></div>
+<p>상대가 발리로 끊기 어려운 롭의 조건을 한 줄로 줄이면 이렇습니다. <strong>T를 지날 때는 상대 라켓보다 높고, 옆벽에 닿을 때는 상대보다 뒤에 있는 롭</strong>입니다. 천장이 낮은 코트에서는 앞벽 높이를 낮추는 대신 정점을 T 쪽으로 늦춰서 같은 띠를 지나게 만듭니다.</p>
+
+<h3 id="d3-3"><span class="sub-num">3-3</span>스트레이트 롭과 크로스 롭</h3>
+<div class="table-wrap"><table><thead><tr><th></th><th>스트레이트 롭</th><th>크로스 롭</th></tr></thead><tbody>
+<tr><td>비행 거리</td><td>짧음 (같은 쪽 앞뒤)</td><td>김 (대각선)</td></tr>
+<tr><td>버는 시간</td><td>보통</td><td>가장 김</td></tr>
+<tr><td>정확도 부담</td><td>낮음. 옆벽을 따라가므로 방향 실수가 적음</td><td>높음. 좁으면 T 근처를 지나 발리감이 됨</td></tr>
+<tr><td>상대를 움직이는 거리</td><td>T에서 같은 쪽 뒤 코너</td><td>T에서 반대쪽 뒤 코너. 상대가 내 쪽으로 기울었다면 더 효과적</td></tr>
+<tr><td>잘 맞는 상황</td><td>몸이 밀려 정확한 방향 조절이 어려울 때, 스트레칭 수비</td><td>균형이 어느 정도 있고, 상대가 내 쪽 앞으로 쏠려 있을 때</td></tr>
+</tbody></table></div>
+<p>기본은 <strong>밀릴수록 스트레이트, 여유가 있을수록 크로스</strong>입니다. 크로스 롭이 더 많은 시간을 사 주지만, 실패했을 때의 대가도 더 큽니다.</p>
+<hr>
+
+<h2 id="d4"><span class="sec-num">4</span>앞으로 끌려 나왔을 때 (프런트 수비)</h2>
+<p>상대의 드롭이나 보스트에 끌려 앞 코너로 달려 나간 상황입니다. 앞 코너에서는 공을 보며 달려갈 수 있어 도착 자체는 뒤 코너보다 쉽습니다. 문제는 <strong>도착한 뒤</strong>입니다. 앞 코너는 T에서 가장 먼 곳이고, 상대는 내 뒤 T에서 내 다음 공을 기다립니다.</p>
+
+<h3 id="d4-1"><span class="sub-num">4-1</span>런지와 마지막 스텝</h3>
+<ul><li><strong>라켓 쪽 발로 마지막 스텝</strong> : 포핸드·백핸드 앞 코너 모두 오른발을 앞으로 내딛는 런지가 기본입니다. 몸이 공과 옆벽 사이에서 옆을 향하므로 스트레이트와 크로스를 모두 숨길 수 있고, 뒤로 밀어내며 복귀하기도 쉽습니다.</li><li><strong>라켓 면을 미리 열기</strong> : 낮은 공을 떠올려야 하므로 달려가는 동안 면을 열어 공 아래로 넣을 준비를 합니다.</li><li><strong>상체 세우기</strong> : 상체가 앞으로 쏟아지면 친 뒤 일어나는 데 시간이 걸립니다. 무릎과 엉덩이를 낮추고 상체는 세웁니다.</li><li><strong>공 옆에 멈추기</strong> : 공 위로 덮치듯 다가가면 스윙 공간이 사라집니다. 공에서 라켓 하나 거리만큼 옆에 멈춥니다.</li></ul>
+
+<h3 id="d4-2"><span class="sub-num">4-2</span>타점 높이로 고르는 선택지</h3>
+<p>프런트 수비의 선택은 거의 <strong>"공이 바닥에서 얼마나 떠 있을 때 치느냐"</strong>로 정해집니다.</p>
+<div class="table-wrap"><table><thead><tr><th>타점</th><th>상태</th><th>정석 선택</th></tr></thead><tbody>
+<tr><td><strong>높음</strong> (무릎 위)</td><td>일찍 도착해 균형이 있음</td><td>사실상 공격 기회. <strong>카운터 드롭</strong>, 또는 상대가 앞으로 쏠렸다면 <strong>플릭</strong>(드롭 동작에서 손목으로 길게 보내는 속임수)</td></tr>
+<tr><td><strong>중간</strong> (발목~정강이)</td><td>제때 도착했지만 여유는 없음</td><td><strong>스트레이트 롭·크로스 롭</strong>이 기본. 상대가 뒤쪽에 있다면 조건부로 카운터 드롭</td></tr>
+<tr><td><strong>바닥 직전</strong></td><td>겨우 닿음</td><td><strong>높은 롭</strong>만. 면을 크게 열어 퍼 올림. 드롭을 시도하면 대개 틴</td></tr>
+</tbody></table></div>
+<figure class="fig"><svg role="img" aria-label="앞 코너에서의 선택지와 T 복귀 동선" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <defs>
+    <marker id="sd3-g" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2f9e44"/></marker>
+    <marker id="sd3-a" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#f08c00"/></marker>
+    <marker id="sd3-b" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f6feb"/></marker>
+  </defs>
+  <rect width="960" height="560" fill="#fff"/>
+  <text x="480" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#222">앞 코너에서의 선택지와 T 복귀 (위에서 본 코트, 앞벽은 위쪽)</text>
+
+  <rect x="60" y="70" width="294" height="449" fill="#fbf7ef" stroke="#9aa4ae" stroke-width="2"/>
+  <rect x="60" y="63" width="294" height="8" fill="#9aa4ae"/>
+  <line x1="60" y1="320" x2="354" y2="320" stroke="#c9a96e" stroke-width="2"/>
+  <line x1="207" y1="320" x2="207" y2="519" stroke="#c9a96e" stroke-width="2"/>
+  <rect x="60" y="320" width="74" height="74" fill="none" stroke="#c9a96e" stroke-width="2"/>
+  <rect x="280" y="320" width="74" height="74" fill="none" stroke="#c9a96e" stroke-width="2"/>
+
+  <!-- straight lob -->
+  <polyline points="96,124 80,71 70,500" fill="none" stroke="#2f9e44" stroke-width="4" marker-end="url(#sd3-g)"/>
+  <!-- cross lob -->
+  <polyline points="96,124 196,71 353,442 336,505" fill="none" stroke="#2f9e44" stroke-width="2.5" stroke-dasharray="8 5" marker-end="url(#sd3-g)"/>
+  <!-- counter drop (cross) -->
+  <polyline points="96,124 214,71 330,104" fill="none" stroke="#f08c00" stroke-width="2.5" stroke-dasharray="4 5" marker-end="url(#sd3-a)"/>
+  <!-- recovery -->
+  <path d="M112,146 Q150,250 190,334" fill="none" stroke="#1f6feb" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#sd3-b)"/>
+  <text x="176" y="236" font-size="12" font-weight="700" fill="#1864ab">대각선</text><text x="176" y="252" font-size="12" font-weight="700" fill="#1864ab">복귀</text>
+
+  <circle cx="96" cy="124" r="14" fill="#1f6feb"/><text x="96" y="129" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">나</text>
+  <circle cx="226" cy="330" r="14" fill="#e8590c"/><text x="226" y="335" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">상대</text>
+  <text x="207" y="545" text-anchor="middle" font-size="12" fill="#666">상대의 드롭에 끌려 왼쪽 앞 코너로 나온 상황</text>
+
+  <!-- notes -->
+  <g font-size="13">
+    <line x1="410" y1="92" x2="446" y2="92" stroke="#2f9e44" stroke-width="4"/>
+    <text x="458" y="97" font-size="15" font-weight="700" fill="#2b8a3e">스트레이트 롭 (기본)</text>
+    <text x="458" y="120" fill="#444">짧은 거리, 방향 실수가 적음. 낮은 타점에서도 가능</text>
+    <text x="458" y="140" fill="#444">상대를 같은 쪽 뒤 코너로 보내고, 그 사이 T 복귀</text>
+
+    <line x1="410" y1="186" x2="446" y2="186" stroke="#2f9e44" stroke-width="2.5" stroke-dasharray="8 5"/>
+    <text x="458" y="191" font-size="15" font-weight="700" fill="#2b8a3e">크로스 롭 (넓게)</text>
+    <text x="458" y="214" fill="#444">가장 많은 시간을 삼. 상대보다 뒤에서 옆벽에 닿아야 함</text>
+    <text x="458" y="234" fill="#444">상대가 T에서 내 쪽으로 쏠렸을 때 특히 효과적</text>
+
+    <line x1="410" y1="280" x2="446" y2="280" stroke="#f08c00" stroke-width="2.5" stroke-dasharray="4 5"/>
+    <text x="458" y="285" font-size="15" font-weight="700" fill="#e67700">카운터 드롭 (조건부)</text>
+    <text x="458" y="308" fill="#444">타점이 높고 균형이 있을 때, 상대가 T 뒤쪽에 있을 때만</text>
+    <text x="458" y="328" fill="#444">실패하면 상대가 앞에서 그대로 마무리</text>
+
+    <path d="M410,374 L446,374" stroke="#1f6feb" stroke-width="3" stroke-dasharray="7 5"/>
+    <text x="458" y="379" font-size="15" font-weight="700" fill="#1864ab">복귀 동선</text>
+    <text x="458" y="402" fill="#444">앞 코너에서 T까지는 대각선. 공과 상대를 보면서</text>
+    <text x="458" y="422" fill="#444">뒷걸음이 아닌 반쯤 돌린 몸으로 사이드 스텝</text>
+    <text x="458" y="442" fill="#444">롭이 높을수록 복귀가 여유로워짐</text>
+  </g>
+</svg><figcaption>앞 코너 수비. 기본은 롭으로 상대를 뒤로 보내고 대각선으로 T 복귀</figcaption></figure>
+<p>공이 높게 떠 있어 균형이 있는데도 습관적으로 롭만 치면 상대에게 쉬운 랠리를 줍니다. 반대로 바닥 직전의 공에 카운터 드롭을 시도하면 대부분 틴에 걸리거나 짧게 떠서 상대의 마무리 공이 됩니다. 프런트 수비의 기술은 <strong>타점이 허락하는 만큼만 공격하는 것</strong>입니다.</p>
+
+<h3 id="d4-3"><span class="sub-num">4-3</span>앞에서 T로 돌아오는 동선</h3>
+<ol><li><strong>친 뒤 바로 일어선다</strong> : 런지한 앞발로 바닥을 밀어 체중을 뒤로 되돌립니다.</li><li><strong>대각선으로 물러난다</strong> : 앞 코너에서 T까지는 대각선입니다. 몸을 반쯤 돌린 채 사이드 스텝이나 크로스 스텝으로 물러나며 공과 상대를 시야에 둡니다.</li><li><strong>내가 친 공의 길을 비켜 준다</strong> : 스트레이트 롭을 쳤다면 상대는 내 쪽 옆벽을 따라 뒤로 가야 합니다. 그 길을 막지 않도록 T 쪽 안쪽으로 비켜 섭니다.</li><li><strong>상대가 칠 때 스플릿 스텝</strong> : 상대가 뒤 코너에서 칠 때는 다이나믹 T 원리대로 T보다 약간 뒤, 상대 쪽으로 기울어 기다립니다.</li></ol>
+<hr>
+
+<h2 id="d5"><span class="sec-num">5</span>겨우 닿았을 때 (스트레칭 수비)</h2>
+<p>몸을 최대로 뻗어 라켓 끝에 겨우 공을 맞히는 상황입니다. 이때는 선택지를 고민할 시간이 없으므로 미리 정해 둔 정답 하나를 실행합니다.</p>
+<blockquote><strong>스트레칭 수비의 정답은 "높게, 스트레이트로"다.</strong><br>방향 조절이 거의 불가능하므로 비행 거리가 짧고 벽을 따라가는 스트레이트가 가장 안전합니다. 높이는 내가 균형을 되찾고 T로 돌아갈 시간을 사 줍니다.</blockquote>
+<ul><li><strong>라켓 면을 크게 연다</strong> : 손목을 쓰지 않고 열린 면으로 공 아래를 받쳐 위로 보냅니다. 공을 "치는" 것보다 "들어 올리는" 느낌에 가깝습니다.</li><li><strong>가운데로만 보내지 않는다</strong> : 높이가 충분하지 않은 공이 가운데로 뜨면 상대는 T에서 발리로 마무리합니다. 높이가 부족할 것 같으면 더욱 옆벽 쪽으로 보냅니다.</li><li><strong>균형 회복이 다음 샷이다</strong> : 친 뒤 넘어질 듯한 자세에서 일어서는 동작까지가 한 샷입니다. 일어서는 방향은 항상 T 쪽입니다.</li></ul>
+<p>스트레칭 수비가 자주 나온다면 그 원인은 대개 그 전 단계에 있습니다. 예를 들어 T에서의 대기 위치가 너무 앞이거나 뒤였을 수 있고, 스플릿 스텝이 늦었을 수도 있습니다. 이 부분은 기본편의 다이나믹 T를 다시 점검합니다.</p>
+<hr>
+
+<h2 id="d6"><span class="sec-num">6</span>T를 빼앗겼을 때 되찾는 순서</h2>
+<p>상대가 T를 차지하고 나는 계속 코너를 오가는 상황에서 빠져나오는 방법은 공격이 아니라 <strong>순서</strong>입니다.</p>
+<div class="table-wrap"><table><thead><tr><th>단계</th><th>할 일</th><th>확인할 신호</th></tr></thead><tbody>
+<tr><td><strong>1. 멈춤</strong></td><td>높은 롭이나 깊은 스트레이트로 시간을 사서 일단 T 근처까지 돌아옴</td><td>상대가 뒤 코너에서 치고 있는가</td></tr>
+<tr><td><strong>2. 묶기</strong></td><td>타이트한 스트레이트 길이를 두세 번 이어 상대를 같은 뒤 코너에 묶음</td><td>상대의 반환이 옆벽에서 떨어지거나 짧아지는가</td></tr>
+<tr><td><strong>3. 앞으로 서기</strong></td><td>상대의 반환이 느슨해지면 T 앞쪽에서 발리로 끊음</td><td>내가 T에서, 상대가 뒤에서 치는 구도가 되었는가</td></tr>
+<tr><td><strong>4. 공격</strong></td><td>기본편의 공격 조건이 갖춰지면 먼 앞 코너로</td><td>상대가 뒤, 공이 느슨함, 내가 앞</td></tr>
+</tbody></table></div>
+<p>가장 흔한 실수는 <strong>1단계에서 바로 4단계로 건너뛰는 것</strong>입니다. 밀린 상태에서 드롭이나 보스트로 단번에 흐름을 바꾸려 하면, T에 있는 상대에게 앞쪽 공을 주게 됩니다. 길이를 두세 번 이어 상대를 뒤로 보내는 과정을 거쳐야 T가 내 것이 됩니다.</p>
+<hr>
+
+<h2 id="d7"><span class="sec-num">7</span>한눈에 보는 수비 판단표</h2>
+<div class="table-wrap"><table><thead><tr><th>상황</th><th>공의 상태</th><th>정석 선택</th><th>피할 것</th></tr></thead><tbody>
+<tr><td>뒤 코너</td><td>백월에서 나와 몸 앞</td><td><strong>스트레이트 드라이브</strong> (벽에 붙여 길게)</td><td>가운데로 새는 크로스</td></tr>
+<tr><td>뒤 코너</td><td>벽에 붙음, 스윙 공간 부족</td><td><strong>스트레이트 롭</strong>, 여유 있으면 <strong>넓은 크로스 롭</strong></td><td>억지 하드 드라이브</td></tr>
+<tr><td>뒤 코너</td><td>몸 뒤로 지나감</td><td><strong>높은 백월 샷</strong> 후 즉시 앞쪽 대비</td><td>앞벽에 못 미치는 낮은 백월 샷</td></tr>
+<tr><td>뒤 코너</td><td>상대가 T</td><td>-</td><td><strong>수비적 보스트</strong></td></tr>
+<tr><td>앞 코너</td><td>타점 높음, 균형 있음</td><td><strong>카운터 드롭</strong> 또는 <strong>플릭</strong></td><td>습관적인 롭</td></tr>
+<tr><td>앞 코너</td><td>타점 중간</td><td><strong>스트레이트 롭·크로스 롭</strong></td><td>짧은 롭</td></tr>
+<tr><td>앞 코너</td><td>바닥 직전</td><td><strong>높은 롭</strong>만</td><td>드롭 시도</td></tr>
+<tr><td>어디든</td><td>겨우 닿음</td><td><strong>높은 스트레이트 롭</strong></td><td>가운데로 뜨는 공</td></tr>
+<tr><td>T를 빼앗김</td><td>-</td><td><strong>멈춤 → 묶기 → 앞으로 서기 → 공격</strong> 순서</td><td>단번에 뒤집으려는 드롭·보스트</td></tr>
+</tbody></table></div>
+<p>수비 전체는 다음 한 줄로 요약됩니다.</p>
+<blockquote><strong>밀릴수록 높게, 길게, 벽 쪽으로. 공이 허락하는 만큼만 공격하고, 친 뒤에는 항상 T로.</strong></blockquote>
+<hr>
+
+<h2 id="d8"><span class="sec-num">8</span>자주 오해하는 것들</h2>
+<section class="myths">
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"롭은 약자의 샷이다"</span></p><p class="myth-a"><span class="label">실제</span><span>롭은 밀린 위치와 T를 차지한 위치를 맞바꾸는 가장 효율적인 샷입니다. 프로는 수비 상황에서 롭을 자주 쓰고, 상대를 지치게 하는 무기로도 씁니다. 약한 것은 롭이 아니라 짧고 낮은 롭입니다.</span></p></div>
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"코너에서 보스트를 치면 상대를 앞으로 끌어낼 수 있다"</span></p><p class="myth-a"><span class="label">실제</span><span>상대가 T에 있으면 보스트는 상대 바로 앞의 앞 코너로 갑니다. 상대는 한 걸음 만에 도착해, 아직 뒤 코너에 있는 나를 상대로 공격합니다. 끌려 나오는 것은 상대가 아니라 다음 공의 나입니다.</span></p></div>
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"드롭에는 드롭으로 받아쳐야 한다"</span></p><p class="myth-a"><span class="label">실제</span><span>카운터 드롭은 타점이 높고 균형이 있을 때만 성립합니다. 낮게 겨우 닿은 공으로 드롭을 시도하면 틴에 걸리거나 짧게 떠서 상대에게 마무리 공을 줍니다. 대부분의 프런트 수비는 롭으로 상대를 뒤로 보내는 것이 정석입니다.</span></p></div>
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"밀릴수록 세게 쳐서 빠져나와야 한다"</span></p><p class="myth-a"><span class="label">실제</span><span>빠른 공은 상대에게 일찍 도착합니다. 내가 아직 코너에서 T로 돌아오는 중일 때 상대가 다음 공을 칩니다. 밀린 상황에서 필요한 것은 속도가 아니라 내가 돌아갈 시간입니다.</span></p></div>
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"수비는 상대의 실수를 기다리는 것이다"</span></p><p class="myth-a"><span class="label">실제</span><span>좋은 수비 샷은 상대의 다음 공도 수비 샷으로 만듭니다. 높고 깊은 롭은 상대를 뒤 코너로 보내 머리 위 공을 처리하게 하고, 그 사이 나는 T를 차지합니다. 수비는 기다림이 아니라 위치를 되찾는 능동적인 과정입니다.</span></p></div>
+</section>
+<hr>
+<blockquote class="summary">수비의 본질은 <strong>"내가 T로 돌아갈 시간을 사는 것"</strong>입니다.<br>백 코너에서는 공의 상태에 따라 드라이브 → 롭 → 백월 샷의 사다리를 내려가고, 앞 코너에서는 타점이 허락하는 만큼만 공격하며, 겨우 닿았을 때는 높은 스트레이트로 시간을 삽니다. T를 빼앗겼다면 단번에 뒤집으려 하지 않고 멈춤, 묶기, 앞으로 서기, 공격의 순서를 밟습니다.</blockquote>
+<nav class="pager" aria-label="이전·다음 글"></nav>
+</main>
+</div>
+<footer class="site-foot"><a href="index.html">← 스쿼시 노트 목록</a> · 개인 학습용 노트</footer>
+</div>
+</body>
+</html>

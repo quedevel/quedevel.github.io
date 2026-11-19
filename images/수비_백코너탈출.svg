@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <defs>
+    <marker id="sd1-g" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2f9e44"/></marker>
+    <marker id="sd1-a" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#f08c00"/></marker>
+    <marker id="sd1-r" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#e03131"/></marker>
+    <marker id="sd1-k" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#868e96"/></marker>
+  </defs>
+  <rect width="960" height="560" fill="#fff"/>
+  <text x="480" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#222">백 코너 탈출 : 공이 나빠질수록 사다리를 내려간다</text>
+
+  <!-- court -->
+  <rect x="60" y="70" width="294" height="449" fill="#fbf7ef" stroke="#9aa4ae" stroke-width="2"/>
+  <rect x="60" y="63" width="294" height="8" fill="#9aa4ae"/>
+  <line x1="60" y1="320" x2="354" y2="320" stroke="#c9a96e" stroke-width="2"/>
+  <line x1="207" y1="320" x2="207" y2="519" stroke="#c9a96e" stroke-width="2"/>
+  <rect x="60" y="320" width="74" height="74" fill="none" stroke="#c9a96e" stroke-width="2"/>
+  <rect x="280" y="320" width="74" height="74" fill="none" stroke="#c9a96e" stroke-width="2"/>
+
+  <!-- opponent reach -->
+  <circle cx="212" cy="326" r="62" fill="#e8590c" opacity=".07" stroke="#e8590c" stroke-dasharray="4 4"/>
+
+  <!-- 1/2 straight drive & lob -->
+  <polyline points="92,488 78,71 70,500" fill="none" stroke="#2f9e44" stroke-width="4" marker-end="url(#sd1-g)"/>
+  <!-- cross lob -->
+  <polyline points="92,488 232,71 353,436 334,505" fill="none" stroke="#2f9e44" stroke-width="2.5" stroke-dasharray="8 5" marker-end="url(#sd1-g)"/>
+  <!-- back wall boast -->
+  <polyline points="92,488 118,519 300,71 336,128" fill="none" stroke="#f08c00" stroke-width="2.5" stroke-dasharray="4 5" marker-end="url(#sd1-a)"/>
+  <!-- defensive boost -->
+  <polyline points="92,488 61,436 262,71 296,140" fill="none" stroke="#e03131" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#sd1-r)"/>
+  <text x="300" y="168" font-size="18" font-weight="700" fill="#e03131">✕</text>
+
+  <circle cx="92" cy="492" r="14" fill="#1f6feb"/><text x="92" y="497" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">나</text>
+  <circle cx="212" cy="326" r="14" fill="#e8590c"/><text x="212" y="331" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">상대</text>
+  <text x="207" y="545" text-anchor="middle" font-size="12" fill="#666">상대는 T, 나는 왼쪽 뒤 코너</text>
+
+  <!-- ladder -->
+  <g font-size="13">
+    <rect x="410" y="72" width="500" height="92" rx="10" fill="#ebfbee" stroke="#2f9e44" stroke-width="2"/>
+    <text x="430" y="98" font-size="15" font-weight="700" fill="#2b8a3e">① 스윙 공간이 있다 → 스트레이트 드라이브</text>
+    <text x="430" y="122" fill="#333">공이 백월에서 나와 몸 앞에 떨어졌을 때. 옆벽에 붙여 길게.</text>
+    <text x="430" y="144" fill="#666">결과 : 중립 유지. 상대를 같은 뒤 코너로 묶음</text>
+
+    <rect x="410" y="180" width="500" height="92" rx="10" fill="#ebfbee" stroke="#2f9e44" stroke-width="2" stroke-dasharray="6 4"/>
+    <text x="430" y="206" font-size="15" font-weight="700" fill="#2b8a3e">② 공이 벽에 붙었거나 늦었다 → 스트레이트 롭 · 크로스 롭</text>
+    <text x="430" y="230" fill="#333">강하게 칠 수 없을 때. 높이로 시간을 사고 T로 복귀.</text>
+    <text x="430" y="252" fill="#666">크로스 롭은 상대보다 뒤에서 옆벽에 닿을 만큼 넓게</text>
+
+    <rect x="410" y="288" width="500" height="92" rx="10" fill="#fff9db" stroke="#f08c00" stroke-width="2"/>
+    <text x="430" y="314" font-size="15" font-weight="700" fill="#e67700">③ 앞으로 칠 수 없다 → 백월 샷</text>
+    <text x="430" y="338" fill="#333">공이 몸 뒤, 백월 쪽으로 지나가 버렸을 때만.</text>
+    <text x="430" y="360" fill="#666">결과 : 랠리는 이어지지만 대개 상대에게 공격 기회</text>
+
+    <rect x="410" y="396" width="500" height="92" rx="10" fill="#fff5f5" stroke="#e03131" stroke-width="2" stroke-dasharray="7 5"/>
+    <text x="430" y="422" font-size="15" font-weight="700" fill="#c92a2a">✕ 상대가 T에 있을 때의 수비적 보스트</text>
+    <text x="430" y="446" fill="#333">공이 상대 바로 앞, 앞 코너로 감. 상대는 한 걸음 만에 공격.</text>
+    <text x="430" y="468" fill="#666">"앞으로 끌어낸다"는 착각을 가장 흔히 부르는 샷</text>
+  </g>
+  <line x1="925" y1="80" x2="925" y2="480" stroke="#868e96" stroke-width="2" marker-end="url(#sd1-k)"/>
+  <text x="940" y="280" font-size="12" fill="#666" transform="rotate(90 940 280)" text-anchor="middle">공이 나빠질수록 아래로</text>
+</svg>

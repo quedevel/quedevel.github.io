@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>서브와 리턴 — 랠리의 첫 세 타</title>
+<meta name="description" content="프로는 왜 서브로 에이스를 노리지 않을까? 서브·리턴·3구째를 첫 T 쟁탈전으로 보고, 코트의 기하학과 동선으로 정석을 정리합니다.">
+<meta property="og:title" content="서브와 리턴 — 랠리의 첫 세 타">
+<meta property="og:description" content="프로는 왜 서브로 에이스를 노리지 않을까? 서브·리턴·3구째를 첫 T 쟁탈전으로 보고, 코트의 기하학과 동선으로 정석을 정리합니다.">
+<link rel="icon" href="favicon.ico">
+<script>try{var t=localStorage.getItem("squash-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/css/squash.css">
+<script src="assets/js/squash-docs.js" defer></script>
+<script src="assets/js/squash.js" defer></script>
+</head>
+<body class="article" data-doc="serve-return">
+<aside class="sidebar" aria-label="페이지 목록"><div class="sidebar-scroll"></div></aside>
+<div class="scrim"></div>
+<div class="main">
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="페이지 목록 열기"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3.5 5.5h13M3.5 10h13M3.5 14.5h13"/></svg></button>
+  <nav class="crumbs" aria-label="현재 위치"><a href="index.html">스쿼시 노트</a></nav>
+  <button class="icon-btn theme-toggle" type="button" aria-label="밝게/어둡게 전환">
+    <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+  </button>
+</header>
+<div class="cover" data-tone="teal" aria-hidden="true"></div>
+<div class="page">
+<main class="doc">
+<header class="doc-hero">
+<div class="page-icon" aria-hidden="true">🎯</div>
+<h1 id="서브와-리턴">서브와 리턴 — 랠리의 첫 세 타</h1>
+<dl class="props">
+<dt><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 4.5h4l1.2 1.5H14v6.5H2z"/></svg>시리즈</dt><dd><span class="pill accent">단식 전술 시리즈</span><span class="pill">1편</span></dd>
+<dt><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><path d="M8 4.8V8l2.2 1.4"/></svg>분량</dt><dd>도표 4장 · 약 20분</dd>
+<dt><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><path d="M8 7.2v4M8 5v.1"/></svg>기준</dt><dd>오른손잡이 대 오른손잡이 · PAR 11 점수제</dd>
+<dt><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2.5 2.5h5l6 6-5 5-6-6z"/><circle cx="5.3" cy="5.3" r=".9"/></svg>태그</dt><dd><span class="pill">서브</span><span class="pill">리턴</span><span class="pill">3구째</span><span class="pill">T 쟁탈</span></dd>
+</dl>
+<blockquote>프로는 왜 서브로 에이스를 노리지 않을까? 리턴은 왜 대부분 벽을 따라 곧게 길게 칠까?<br>이 문서는 서브, 리턴, 그리고 서버의 세 번째 샷을 <strong>"득점 수단"이 아니라 "랠리 첫 번째 T 쟁탈전"</strong>으로 보고 정석을 정리합니다. <a href="스쿼시_단식_경기운용_전술.html">기본편</a>의 대각선 원리, 시간 원리, 다이나믹 T를 그대로 이어서 씁니다.<br>모든 설명은 <strong>오른손잡이 대 오른손잡이</strong>를 기준으로 하며, 수치는 이해를 돕기 위한 <strong>대략적인 값</strong>입니다.</blockquote>
+</header>
+<hr>
+<nav class="toc"><h2 id="목차">목차</h2>
+<ul><li><a href="#s0">0. 먼저 알아야 할 서브의 규칙과 기하학</a></li><li><a href="#s1">1. 서브 : 서브는 득점이 아니라 3구 준비</a><ul><li><a href="#s1-1">1-1. 좋은 서브의 세 가지 기준</a></li><li><a href="#s1-2">1-2. 서브의 네 가지 종류</a></li><li><a href="#s1-3">1-3. 좋은 롭 서브의 조건 : 옆벽 접촉 지점</a></li><li><a href="#s1-4">1-4. 오른쪽 박스와 왼쪽 박스</a></li><li><a href="#s1-5">1-5. 서브 직후 T로 가는 동선</a></li><li><a href="#s1-6">1-6. 서브 운영 : 변화와 상대 읽기</a></li></ul></li><li><a href="#s2">2. 리턴 : 불리한 출발을 중립으로 되돌리기</a><ul><li><a href="#s2-1">2-1. 리턴의 목표</a></li><li><a href="#s2-2">2-2. 대기 위치와 자세</a></li><li><a href="#s2-3">2-3. 발리할까, 기다릴까</a></li><li><a href="#s2-4">2-4. 리턴 선택지와 우선순위</a></li><li><a href="#s2-5">2-5. 서브 종류별 정석 리턴</a></li></ul></li><li><a href="#s3">3. 3구째 : 서버의 첫 번째 진짜 기회</a><ul><li><a href="#s3-1">3-1. T에서 리턴을 읽는 법</a></li><li><a href="#s3-2">3-2. 리턴 유형별 3구 선택</a></li></ul></li><li><a href="#s4">4. 한눈에 보는 첫 세 타 판단표</a></li><li><a href="#s5">5. 자주 오해하는 것들</a></li></ul></nav>
+<hr>
+
+<h2 id="s0"><span class="sec-num">0</span>먼저 알아야 할 서브의 규칙과 기하학</h2>
+<p>서브 전술은 규칙이 정한 좁은 틀 안에서 움직입니다. 전술적으로 의미가 있는 규칙만 추리면 다음과 같습니다.</p>
+<div class="table-wrap"><table><thead><tr><th>규칙</th><th>대략적인 값</th><th>전술적 의미</th></tr></thead><tbody>
+<tr><td>앞벽에 맞는 높이</td><td>서비스 라인(약 1.78m)과 아웃 라인(약 4.57m) 사이</td><td>낮고 빠른 서브에는 한계가 있음. 서브는 구조적으로 <strong>"위에서 내려오는 공"</strong>이 되기 쉬움</td></tr>
+<tr><td>떨어져야 하는 곳</td><td>반대편 뒤쪽 쿼터 (쇼트 라인 뒤, 하프 코트 라인 반대편)</td><td>단, 리시버가 <strong>발리로 받으면 바운드 위치는 상관없음</strong>. 리시버에게 "끊을지 기다릴지" 선택권이 있음</td></tr>
+<tr><td>서버의 발 위치</td><td>적어도 한 발이 서비스 박스 안 (선을 밟으면 안 됨)</td><td>서버의 출발점은 T에서 옆·뒤로 <strong>약 1.5~2m</strong>. 한두 걸음이면 T에 도착</td></tr>
+<tr><td>서브 기회</td><td>한 번 (서브 실수는 곧 실점)</td><td>위험한 서브의 대가가 큼. <strong>안전 마진</strong>이 우선</td></tr>
+<tr><td>서브 박스 교대</td><td>서버가 랠리를 이기면 반대 박스에서 다시 서브</td><td>양쪽 박스의 서브를 모두 갖춰야 함</td></tr>
+</tbody></table></div>
+<p>여기서 첫 세 타를 지배하는 원리가 하나 나옵니다.</p>
+<blockquote><strong>서버는 T에 더 가까운 곳에서 출발한다.</strong><br>서버는 서비스 박스(T에서 한두 걸음)에서, 리시버는 뒤 코너 근처(T에서 서너 걸음)에서 랠리를 시작합니다. 서브의 목적은 이 <strong>출발선의 이점을 지키는 것</strong>이고, 리턴의 목적은 이 이점을 <strong>지우는 것</strong>입니다.</blockquote>
+<p>그래서 첫 세 타는 다음과 같은 구조가 됩니다.</p>
+<ol><li><strong>1타 서브</strong> : 리시버를 뒤 코너에 묶고, 서버는 T로 이동합니다.</li><li><strong>2타 리턴</strong> : 리시버는 서버를 T에서 밀어내고, 자신이 T로 돌아갈 시간을 법니다.</li><li><strong>3타</strong> : 서버는 T에서 리턴의 질을 보고 공격할지, 길이로 버틸지 정합니다.</li></ol>
+<hr>
+
+<h2 id="s1"><span class="sec-num">1</span>서브 : 서브는 득점이 아니라 3구 준비</h2>
+
+<h3 id="s1-1"><span class="sub-num">1-1</span>좋은 서브의 세 가지 기준</h3>
+<p>프로의 서브를 평가하는 기준은 "에이스가 나왔느냐"가 아니라 다음 세 가지입니다.</p>
+<div class="table-wrap"><table><thead><tr><th>기준</th><th>질문</th><th>왜 중요한가</th></tr></thead><tbody>
+<tr><td><strong>① 리턴을 공격하기 어려운가</strong></td><td>리시버가 편한 높이에서 발리로 끊을 수 있는가?</td><td>리시버가 편하게 발리하면 서버의 출발선 이점이 바로 사라짐</td></tr>
+<tr><td><strong>② 리시버를 뒤 코너에 묶는가</strong></td><td>리시버가 코너 깊숙이, 벽에 붙은 공을 쳐야 하는가?</td><td>뒤 코너에서 치는 리턴은 선택지가 좁고, T까지 돌아오는 거리가 길어짐</td></tr>
+<tr><td><strong>③ 서버가 T에 먼저 도착하는가</strong></td><td>리시버가 공을 치는 순간, 서버는 이미 T에서 기다리고 있는가?</td><td>3구째를 T에서, 균형 잡힌 자세로 치는 것이 서브의 최종 목표</td></tr>
+</tbody></table></div>
+<p>에이스를 노리는 강하고 빠른 서브는 ①을 얻는 대신 ③을 잃기 쉽습니다. 공이 빨리 돌아오니 서버가 T에 도착하기 전에 리턴이 날아옵니다. 서브 기회가 한 번뿐이라 실수의 대가도 큽니다. 그래서 프로의 서브는 대부분 <strong>높고 느린 쪽</strong>으로 기웁니다.</p>
+
+<h3 id="s1-2"><span class="sub-num">1-2</span>서브의 네 가지 종류</h3>
+<figure class="fig"><svg role="img" aria-label="롭 서브와 하드 서브의 측면 궤적 비교" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <defs>
+    <marker id="sv1-g" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2f9e44"/></marker>
+    <marker id="sv1-p" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#7048e8"/></marker>
+    <pattern id="sv1-tin" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#adb5bd" stroke-width="3"/></pattern>
+  </defs>
+  <rect width="960" height="500" fill="#fff"/>
+  <text x="480" y="32" text-anchor="middle" font-size="20" font-weight="700" fill="#222">롭 서브 vs 하드 서브 (옆에서 본 코트, 앞벽은 왼쪽)</text>
+
+  <!-- receiver volley reach zone -->
+  <rect x="640" y="259" width="96" height="161" fill="#e8590c" opacity=".07"/>
+  <line x1="640" y1="259" x2="736" y2="259" stroke="#e8590c" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="632" y="282" text-anchor="end" font-size="12" font-weight="700" fill="#d9480f">리시버 라켓이</text>
+  <text x="632" y="297" text-anchor="end" font-size="12" font-weight="700" fill="#d9480f">닿는 높이 (약 2.3m) →</text>
+
+  <!-- walls & floor -->
+  <rect x="82" y="88" width="8" height="338" fill="#9aa4ae"/>
+  <rect x="870" y="230" width="8" height="196" fill="#9aa4ae"/>
+  <rect x="82" y="420" width="796" height="6" fill="#9aa4ae"/>
+  <rect x="90" y="386" width="10" height="34" fill="url(#sv1-tin)"/>
+  <!-- front wall lines -->
+  <line x1="90" y1="100" x2="112" y2="100" stroke="#e03131" stroke-width="3"/>
+  <line x1="90" y1="295" x2="112" y2="295" stroke="#c9a96e" stroke-width="3"/>
+  <line x1="90" y1="386" x2="112" y2="386" stroke="#868e96" stroke-width="3"/>
+  <text x="118" y="104" font-size="12" fill="#c92a2a">아웃 라인 4.57m</text>
+  <text x="118" y="299" font-size="12" fill="#8a6d3b">서비스 라인 1.78m</text>
+  <text x="118" y="381" font-size="12" fill="#666">틴 0.48m</text>
+  <!-- side wall out line -->
+  <line x1="90" y1="100" x2="870" y2="271" stroke="#e03131" stroke-width="1.5" stroke-dasharray="8 6" opacity=".6"/>
+  <text x="430" y="166" font-size="12" fill="#c92a2a" transform="rotate(12.4 430 166)">옆벽 아웃 라인</text>
+  <!-- short line & service box on floor -->
+  <line x1="525" y1="420" x2="525" y2="436" stroke="#c9a96e" stroke-width="3"/>
+  <text x="525" y="452" text-anchor="middle" font-size="12" fill="#8a6d3b">쇼트 라인 5.44m</text>
+  <path d="M525,462 L525,468 L653,468 L653,462" fill="none" stroke="#c9a96e" stroke-width="2"/>
+  <text x="589" y="484" text-anchor="middle" font-size="12" fill="#8a6d3b">서비스 박스</text>
+  <text x="874" y="474" text-anchor="middle" font-size="12" fill="#666">백월</text>
+
+  <!-- lob serve -->
+  <path d="M575,350 Q320,190 92,175" fill="none" stroke="#2f9e44" stroke-width="4" marker-end="url(#sv1-g)"/>
+  <path d="M90,175 Q380,95 698,245" fill="none" stroke="#2f9e44" stroke-width="4"/>
+  <path d="M698,245 Q770,300 802,418" fill="none" stroke="#2f9e44" stroke-width="4" marker-end="url(#sv1-g)"/>
+  <circle cx="698" cy="245" r="7" fill="#fff" stroke="#2f9e44" stroke-width="3"/>
+  <text x="712" y="216" font-size="13" font-weight="700" fill="#2b8a3e">② 옆벽 높은 곳 접촉</text>
+  <text x="340" y="122" text-anchor="middle" font-size="14" font-weight="700" fill="#2b8a3e">롭 서브 : ① 리시버 머리 위로</text>
+  <text x="845" y="452" text-anchor="end" font-size="12" font-weight="700" fill="#2b8a3e">③ 뒤 코너에서 힘이 빠짐</text>
+
+  <!-- hard serve -->
+  <path d="M575,345 Q330,290 92,268" fill="none" stroke="#7048e8" stroke-width="3" stroke-dasharray="9 6" marker-end="url(#sv1-p)"/>
+  <path d="M90,268 Q430,300 698,418" fill="none" stroke="#7048e8" stroke-width="3" stroke-dasharray="9 6"/>
+  <path d="M698,420 Q790,350 868,330" fill="none" stroke="#7048e8" stroke-width="3" stroke-dasharray="9 6" marker-end="url(#sv1-p)"/>
+  <text x="235" y="360" text-anchor="middle" font-size="14" font-weight="700" fill="#5f3dc4">하드 서브 : 낮고 빠르게</text>
+  <text x="864" y="300" text-anchor="end" font-size="12" fill="#5f3dc4">백월 맞고 빨리 나옴</text>
+
+  <!-- players -->
+  <circle cx="575" cy="392" r="14" fill="#1f6feb"/><text x="575" y="397" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">서버</text>
+  <circle cx="690" cy="392" r="14" fill="#e8590c"/><text x="690" y="397" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">리시버</text>
+</svg><figcaption>롭 서브와 하드 서브의 측면 궤적 (서버와 리시버는 실제로 반대편에 있지만 한 화면에 겹쳐 그림)</figcaption></figure>
+<div class="table-wrap"><table><thead><tr><th>서브</th><th>궤적</th><th>목적</th><th>리스크</th></tr></thead><tbody>
+<tr><td><strong>롭 서브</strong> (기본)</td><td>앞벽 높은 곳(약 3~4m)에 부드럽게 → 리시버 머리 위 → 옆벽 높은 곳 → 뒤 코너</td><td>발리를 어렵게 하고, 리턴을 수비적으로 만들고, 서버가 T로 갈 시간을 최대로 확보</td><td>너무 높으면 옆벽 아웃, 너무 낮거나 짧으면 리시버의 편한 발리감</td></tr>
+<tr><td><strong>세미 롭</strong></td><td>롭보다 낮고 조금 빠르게 → 옆벽 중상단 → 뒤 코너</td><td>롭의 안전함을 유지하면서 리시버의 준비 시간을 조금 줄임. 실전에서 가장 자주 보이는 높이</td><td>높이가 애매하면 리시버 어깨 높이로 지나가 강한 발리 리턴을 허용</td></tr>
+<tr><td><strong>하드 서브</strong></td><td>서비스 라인 바로 위로 빠르고 낮게 → 뒤 코너 또는 리시버 쪽</td><td>리시버의 반응 시간을 빼앗는 변화구. 롭에 익숙해진 리시버를 흔듦</td><td>공이 빨리 돌아와 서버가 T에 늦음. 리시버가 공의 속도를 이용해 쉽게 길이를 줌</td></tr>
+<tr><td><strong>바디 서브</strong></td><td>리시버 몸쪽(대개 라켓 반대쪽 어깨·엉덩이)을 향해</td><td>스윙 공간을 빼앗아 리턴을 짧고 약하게 만듦</td><td>조금만 빗나가면 가운데로 떠서 정면 발리 공격을 허용</td></tr>
+</tbody></table></div>
+<p>프로의 서브는 대부분 <strong>롭과 세미 롭 사이</strong>에 있습니다. 하드 서브와 바디 서브는 같은 준비 동작에서 가끔 섞어 리시버가 한 가지 높이에 미리 자리 잡지 못하게 만드는 용도입니다.</p>
+
+<h3 id="s1-3"><span class="sub-num">1-3</span>좋은 롭 서브의 조건 : 옆벽 접촉 지점</h3>
+<p>롭 서브의 질은 거의 <strong>"옆벽 어디에 맞느냐"</strong>로 결정됩니다. 옆벽에 맞는 순간 공은 속도를 잃고, 벽을 따라 내려오며 뒤 코너로 향합니다. 이 지점을 기준으로 리시버의 선택지가 정해집니다.</p>
+<figure class="fig"><svg role="img" aria-label="오른쪽 박스에서의 롭 서브와 서버의 T 이동 (위에서 본 코트)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <defs>
+    <marker id="sv2-g" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2f9e44"/></marker>
+    <marker id="sv2-b" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f6feb"/></marker>
+  </defs>
+  <rect width="960" height="560" fill="#fff"/>
+  <text x="480" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#222">오른쪽 박스에서의 롭 서브와 서버의 T 이동 (위에서 본 코트, 앞벽은 위쪽)</text>
+
+  <!-- court (46px/m) -->
+  <rect x="60" y="70" width="294" height="449" fill="#fbf7ef" stroke="#9aa4ae" stroke-width="2"/>
+  <rect x="60" y="63" width="294" height="8" fill="#9aa4ae"/>
+  <line x1="60" y1="320" x2="354" y2="320" stroke="#c9a96e" stroke-width="2"/>
+  <line x1="207" y1="320" x2="207" y2="519" stroke="#c9a96e" stroke-width="2"/>
+  <rect x="60" y="320" width="74" height="74" fill="none" stroke="#c9a96e" stroke-width="2"/>
+  <rect x="280" y="320" width="74" height="74" fill="none" stroke="#c9a96e" stroke-width="2"/>
+  <!-- target quarter -->
+  <rect x="61" y="321" width="145" height="197" fill="#2f9e44" opacity=".06"/>
+  <text x="133" y="540" text-anchor="middle" font-size="12" fill="#2b8a3e">▲ 서브가 떨어져야 하는 쿼터</text>
+  <!-- T -->
+  <circle cx="207" cy="320" r="4" fill="#c9a96e"/>
+  <text x="222" y="314" font-size="12" font-weight="700" fill="#8a6d3b">T</text>
+
+  <!-- body serve (variant) -->
+  <polyline points="317,357 231,71 129,415" fill="none" stroke="#2f9e44" stroke-width="2.5" stroke-dasharray="8 6" opacity=".7"/>
+  <!-- lob serve -->
+  <polyline points="317,357 203,71 61,430" fill="none" stroke="#2f9e44" stroke-width="4"/>
+  <line x1="61" y1="430" x2="84" y2="496" stroke="#2f9e44" stroke-width="4" marker-end="url(#sv2-g)"/>
+  <circle cx="203" cy="71" r="6" fill="#fff" stroke="#2f9e44" stroke-width="3"/>
+  <circle cx="61" cy="430" r="7" fill="#fff" stroke="#2f9e44" stroke-width="3"/>
+  <!-- number tags -->
+  <circle cx="203" cy="96" r="11" fill="#2f9e44"/><text x="203" y="100" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">1</text>
+  <circle cx="86" cy="430" r="11" fill="#2f9e44"/><text x="86" y="434" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">2</text>
+  <circle cx="108" cy="492" r="11" fill="#2f9e44"/><text x="108" y="496" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">3</text>
+
+  <!-- server move to T -->
+  <line x1="309" y1="349" x2="204" y2="336" stroke="#1f6feb" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#sv2-b)"/>
+  <circle cx="246" cy="360" r="11" fill="#1f6feb"/><text x="246" y="364" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">4</text>
+
+  <!-- players -->
+  <circle cx="317" cy="357" r="14" fill="#1f6feb"/><text x="317" y="362" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">나</text>
+  <circle cx="125" cy="425" r="14" fill="#e8590c"/><text x="125" y="430" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">리시버</text>
+
+  <!-- notes -->
+  <g font-size="15" fill="#333">
+    <circle cx="420" cy="104" r="13" fill="#2f9e44"/><text x="420" y="109" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">1</text>
+    <text x="445" y="100" font-weight="700" fill="#2b8a3e">앞벽 : 중앙보다 약간 리시버 쪽, 높게</text>
+    <text x="445" y="122" font-size="13" fill="#555">높이는 대략 3~4m. 앞벽 위치가 옆벽 접촉 지점을 정함</text>
+
+    <circle cx="420" cy="184" r="13" fill="#2f9e44"/><text x="420" y="189" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">2</text>
+    <text x="445" y="180" font-weight="700" fill="#2b8a3e">옆벽 : 리시버보다 약간 뒤, 라켓이 닿기 어려운 높이</text>
+    <text x="445" y="202" font-size="13" fill="#555">맞기 전에는 너무 높아 발리가 어렵고,</text>
+    <text x="445" y="220" font-size="13" fill="#555">맞은 뒤에는 벽에 붙어 내려오므로 스윙 공간이 좁음</text>
+
+    <circle cx="420" cy="282" r="13" fill="#2f9e44"/><text x="420" y="287" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">3</text>
+    <text x="445" y="278" font-weight="700" fill="#2b8a3e">바운드 : 뒤 코너, 백월 근처에서 힘이 빠짐</text>
+    <text x="445" y="300" font-size="13" fill="#555">백월에 맞고 나와도 높이와 속도가 거의 남지 않음</text>
+
+    <circle cx="420" cy="362" r="13" fill="#1f6feb"/><text x="420" y="367" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">4</text>
+    <text x="445" y="358" font-weight="700" fill="#1864ab">서버 : 공이 앞벽에 닿을 즈음 이미 T로 출발</text>
+    <text x="445" y="380" font-size="13" fill="#555">T 바로 위가 아니라 공이 간 쪽(왼쪽)으로 약간 기울고</text>
+    <text x="445" y="398" font-size="13" fill="#555">T보다 반 걸음 뒤에서 리시버를 바라봄</text>
+
+    <line x1="420" y1="450" x2="452" y2="450" stroke="#2f9e44" stroke-width="2.5" stroke-dasharray="8 6"/>
+    <text x="462" y="455" font-size="13" fill="#555">바디 서브 : 옆벽 없이 리시버 몸쪽으로 (변화구)</text>
+  </g>
+</svg><figcaption>오른쪽 박스에서 리시버 백핸드 쪽으로 보내는 롭 서브. 숫자 순서대로 공과 서버가 움직임</figcaption></figure>
+<p>옆벽 접촉 지점이 어긋나면 서브는 대개 다음 중 하나로 실패합니다.</p>
+<div class="table-wrap"><table><thead><tr><th>실패 유형</th><th>원인</th><th>결과</th></tr></thead><tbody>
+<tr><td>옆벽 아웃</td><td>앞벽에 너무 높게, 너무 세게</td><td>서브 실수로 실점</td></tr>
+<tr><td>옆벽에 너무 앞에서 맞음</td><td>앞벽 지점이 리시버 쪽으로 너무 치우침</td><td>공이 서비스 박스 근처에서 힘을 잃고 바운드한 뒤 중간 높이로 튐 → 리시버가 앞에서 편하게 공격</td></tr>
+<tr><td>옆벽에 닿지 않음</td><td>앞벽 지점이 너무 가운데 또는 서버 쪽</td><td>공이 코트 가운데로 떠서 리시버가 정면에서 발리. 공이 T 쪽을 지나면 서버의 이동 동선과도 겹침</td></tr>
+<tr><td>높이가 리시버 어깨 정도</td><td>세미 롭이 애매하게 낮음</td><td>리시버가 가장 치기 좋은 높이. 강한 스트레이트 발리 리턴을 허용</td></tr>
+</tbody></table></div>
+<blockquote><strong>좋은 롭 서브는 "리시버가 발리를 하기엔 높고, 기다리기엔 벽에 붙은" 공이다.</strong><br>리시버는 끊어도 불편하고 기다려도 불편합니다. 어느 쪽이든 리턴은 수비적이 되고, 서버는 T에서 3구째를 기다릴 수 있습니다.</blockquote>
+
+<h3 id="s1-4"><span class="sub-num">1-4</span>오른쪽 박스와 왼쪽 박스</h3>
+<div class="table-wrap"><table><thead><tr><th>서브 위치</th><th>공이 가는 곳</th><th>특징</th></tr></thead><tbody>
+<tr><td><strong>오른쪽 박스</strong></td><td>리시버의 <strong>백핸드</strong> 쪽 (왼쪽 뒤 코너)</td><td>대부분의 리시버는 백핸드 쪽 높은 공 처리가 더 어려워서 서브의 주 무기가 되는 쪽입니다. 다만 포핸드로 서브하면 몸이 앞쪽 오른편을 향해 <strong>리시버를 등지기 쉽습니다</strong>. 그래서 일부 선수는 이 박스에서 <strong>백핸드 서브</strong>를 씁니다. 몸을 코트 쪽으로 연 채 리시버를 보며 칠 수 있기 때문입니다.</td></tr>
+<tr><td><strong>왼쪽 박스</strong></td><td>리시버의 <strong>포핸드</strong> 쪽 (오른쪽 뒤 코너)</td><td>포핸드로 서브하면 자연스럽게 몸이 리시버 쪽으로 열려 있어 리턴을 보기 쉽습니다. 리시버가 포핸드로 공격하기 쉬우므로 <strong>높이와 옆벽 접촉의 정확도</strong>가 더 중요합니다.</td></tr>
+</tbody></table></div>
+<p>랠리를 이기면 박스를 바꿔 다시 서브해야 하므로 어느 한쪽만 잘해서는 안 됩니다. 새로 서브권을 얻었을 때는 원하는 박스를 고를 수 있습니다. 이때 보통 상대 약점(대개 백핸드) 쪽으로 보내는 박스를 고릅니다.</p>
+
+<h3 id="s1-5"><span class="sub-num">1-5</span>서브 직후 T로 가는 동선</h3>
+<p>서브의 마지막 단계는 공을 치는 것이 아니라 <strong>T에 도착해 리시버를 바라보는 것</strong>입니다.</p>
+<ol><li><strong>출발 타이밍</strong> : 공이 라켓을 떠나면 바로 움직입니다. 자기 서브를 끝까지 지켜보며 박스에 서 있으면, 리시버가 칠 때 아직 이동 중이게 됩니다.</li><li><strong>방향</strong> : 서비스 박스에서 T까지는 한두 걸음의 대각선입니다. 목표 지점은 T 그 자체가 아니라 <a href="스쿼시_단식_경기운용_전술.html#2-다이나믹-t--상대가-치는-위치에-따른-대기-위치">다이나믹 T</a> 원리에 따라 <strong>공이 간 쪽으로 약간, T보다 반 걸음 뒤</strong>입니다. 리시버가 뒤 코너에서 칠 것이기 때문입니다.</li><li><strong>몸의 방향</strong> : 이동하면서 몸을 돌려 리시버를 봅니다. 리시버의 라켓과 몸의 방향에서 리턴의 방향을 미리 읽습니다.</li><li><strong>스플릿 스텝</strong> : 리시버가 공을 치는 순간 가볍게 착지해 양쪽 어디로든 출발할 수 있게 준비합니다.</li></ol>
+<p>서브 동선에서 흔한 실수는 <strong>리시버가 친 리턴과 같은 길 위에 서는 것</strong>입니다. 서버가 T로 가는 길은 리턴이 가장 자주 지나가는 길(스트레이트 길이)과 겹치지 않아야 합니다. 그래서 서버는 리시버 쪽 옆벽에서 떨어져 T 쪽으로 비켜 섭니다.</p>
+
+<h3 id="s1-6"><span class="sub-num">1-6</span>서브 운영 : 변화와 상대 읽기</h3>
+<ul><li><strong>같은 준비, 다른 서브</strong> : 롭과 하드 서브를 같은 자세에서 칩니다. 리시버가 준비 자세에서 높이를 미리 판단하지 못하게 하기 위해서입니다.</li><li><strong>리시버의 위치를 보고 고르기</strong> : 리시버가 앞으로 나와 서 있으면 발리할 생각입니다. 이때는 더 높고 깊은 롭으로 머리 위를 넘깁니다. 반대로 뒤로 물러나 있으면 바운드를 기다릴 생각이므로, 세미 롭이나 바디 서브로 준비 시간을 줄입니다.</li><li><strong>리턴 습관 읽기</strong> : 리시버가 매번 스트레이트로 리턴하면 3구째 대기 위치를 그쪽으로 조금 더 기울일 수 있습니다. 서브는 3구째를 위한 정보 수집이기도 합니다.</li><li><strong>중요한 점수에서는 가장 안전한 서브</strong> : 서브 실수는 곧 실점입니다. 게임볼·매치볼에서는 실수 확률이 가장 낮은 높이와 속도로 칩니다.</li></ul>
+<hr>
+
+<h2 id="s2"><span class="sec-num">2</span>리턴 : 불리한 출발을 중립으로 되돌리기</h2>
+
+<h3 id="s2-1"><span class="sub-num">2-1</span>리턴의 목표</h3>
+<p>리시버는 T에서 더 먼 곳, 대개 불편한 높이의 공으로 랠리를 시작합니다. 그래서 리턴의 1차 목표는 공격이 아니라 <strong>중립화</strong>입니다.</p>
+<ol><li><strong>서버를 T에서 밀어내기</strong> : 서버가 T에서 3구째를 치지 못하게, 서버를 뒤 코너로 보냅니다.</li><li><strong>내가 T로 돌아갈 시간 벌기</strong> : 리턴을 치고 나서 T까지 서너 걸음을 이동할 시간이 필요합니다. 공을 높이거나 길게 보내면 그 시간이 생깁니다.</li><li><strong>실수하지 않기</strong> : 서브와 마찬가지로 리턴 실수도 곧 실점입니다. 리턴에서 니크를 노리는 것은 확률이 맞지 않습니다.</li></ol>
+<blockquote><strong>좋은 리턴의 결과 : 다음 공을 칠 때 서버는 뒤 코너에, 리시버는 T에 있다.</strong><br>즉 리턴 한 번으로 서버와 리시버의 위치가 뒤바뀌면 출발선의 불리함이 사라집니다.</blockquote>
+
+<h3 id="s2-2"><span class="sub-num">2-2</span>대기 위치와 자세</h3>
+<div class="table-wrap"><table><thead><tr><th>요소</th><th>정석</th><th>이유</th></tr></thead><tbody>
+<tr><td>위치</td><td>서비스 박스 뒤쪽 안쪽 모서리에서 대각선으로 한 걸음 뒤, 옆벽에서 대략 1~1.5m</td><td>옆벽에 맞고 내려오는 공을 칠 공간을 남기면서, 발리로 앞에서 끊을 수도 있는 거리</td></tr>
+<tr><td>몸의 방향</td><td>앞벽 쪽 옆 코너를 향해 비스듬히 서고, 고개를 돌려 서버를 봄</td><td>스윙 준비가 된 자세로 서버의 라켓 면과 공의 출발을 함께 볼 수 있음</td></tr>
+<tr><td>라켓</td><td>미리 들어 올린 상태 (특히 백핸드 쪽)</td><td>높은 공을 발리로 끊으려면 백스윙 시간을 줄여야 함</td></tr>
+<tr><td>무게 중심</td><td>앞발 쪽에 살짝, 무릎은 가볍게 굽힘</td><td>앞으로 나가 발리하는 것과 뒤로 물러나는 것 모두에 대비</td></tr>
+</tbody></table></div>
+<p>서버가 롭을 주로 치면 반 걸음 앞으로 나와 발리 기회를 늘립니다. 하드 서브가 섞이면 반 걸음 뒤로 물러나 반응 시간을 늘립니다. 서버가 위치를 읽고 서브를 바꾸듯, 리시버도 서브를 읽고 위치를 바꿉니다.</p>
+
+<h3 id="s2-3"><span class="sub-num">2-3</span>발리할까, 기다릴까</h3>
+<p>리턴의 가장 중요한 판단은 <strong>공을 어디에서 치느냐</strong>입니다. 판단 순서는 다음과 같습니다.</p>
+<ol><li><strong>옆벽에 맞기 전에 편한 높이로 닿는가?</strong> → <strong>발리</strong>. 가장 좋은 선택입니다. 공이 코너로 들어가기 전에 끊으므로 내가 뒤로 끌려가지 않고, 서버의 T 이동 시간도 줄어듭니다.</li><li><strong>옆벽에 맞은 뒤에도 벽에서 떨어져 높이가 남아 있는가?</strong> → <strong>발리</strong>. 벽 쪽으로 라켓 면을 세워 짧은 스윙으로 칩니다.</li><li><strong>옆벽에 붙어 내려와 스윙 공간이 없는가?</strong> → <strong>바운드시킨다</strong>. 공이 백월에 맞고 나오면 그때 칩니다. 이때는 이미 수비 상황이므로 높은 스트레이트 롭으로 시간을 벌거나 짧은 스윙의 스트레이트 길이로 버팁니다.</li></ol>
+<blockquote><strong>리턴의 발리는 "공격"이 아니라 "뒤 코너로 끌려가지 않는 방법"이다.</strong><br>발리로 끊는 목적은 득점이 아니라 위치입니다. 그래서 리턴 발리의 기본 방향도 드롭이 아니라 스트레이트 길이입니다.</blockquote>
+<p>억지 발리는 피해야 합니다. 머리 위로 지나가는 공을 뛰어 올라 걷어 내거나, 벽에 붙은 공을 무리하게 발리하면 공이 짧고 가운데로 떠 T에 있는 서버에게 가장 쉬운 3구를 줍니다.</p>
+
+<h3 id="s2-4"><span class="sub-num">2-4</span>리턴 선택지와 우선순위</h3>
+<figure class="fig"><svg role="img" aria-label="리턴 선택지 : 정석, 조건부 공격, 피해야 할 리턴" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 580" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <defs>
+    <marker id="sv3-g" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2f9e44"/></marker>
+    <marker id="sv3-o" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#e8590c"/></marker>
+    <marker id="sv3-r" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#e03131"/></marker>
+    <marker id="sv3-b" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f6feb"/></marker>
+  </defs>
+  <rect width="960" height="580" fill="#fff"/>
+  <text x="480" y="30" text-anchor="middle" font-size="20" font-weight="700" fill="#222">리턴 선택지 (위에서 본 코트, 앞벽은 위쪽 · 나 = 리시버)</text>
+
+  <g id="sv3-c1">
+    <rect x="45" y="110" width="230" height="351" fill="#fbf7ef" stroke="#9aa4ae" stroke-width="2"/>
+    <rect x="45" y="104" width="230" height="7" fill="#9aa4ae"/>
+    <line x1="45" y1="306" x2="275" y2="306" stroke="#c9a96e" stroke-width="2"/>
+    <line x1="160" y1="306" x2="160" y2="461" stroke="#c9a96e" stroke-width="2"/>
+    <rect x="45" y="306" width="58" height="58" fill="none" stroke="#c9a96e" stroke-width="2"/>
+    <rect x="217" y="306" width="58" height="58" fill="none" stroke="#c9a96e" stroke-width="2"/>
+  </g>
+  <use href="#sv3-c1" x="320"/>
+  <use href="#sv3-c1" x="640"/>
+
+  <!-- Panel 1 : standard -->
+  <text x="160" y="66" text-anchor="middle" font-size="16" font-weight="700" fill="#222">① 정석 리턴</text>
+  <text x="160" y="88" text-anchor="middle" font-size="13" fill="#555">→ 서버를 T에서 뒤로 밀어낸다</text>
+  <polyline points="82,418 70,111 60,452" fill="none" stroke="#2f9e44" stroke-width="4" marker-end="url(#sv3-g)"/>
+  <polyline points="82,418 190,111 262,448" fill="none" stroke="#2f9e44" stroke-width="2.5" stroke-dasharray="8 5" marker-end="url(#sv3-g)"/>
+  <line x1="150" y1="318" x2="92" y2="430" stroke="#e8590c" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#sv3-o)"/>
+  <line x1="94" y1="408" x2="146" y2="334" stroke="#1f6feb" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#sv3-b)"/>
+  <circle cx="82" cy="425" r="13" fill="#1f6feb"/><text x="82" y="430" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">나</text>
+  <circle cx="165" cy="312" r="13" fill="#e8590c"/><text x="165" y="317" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">서버</text>
+  <text x="160" y="486" text-anchor="middle" font-size="13" font-weight="700" fill="#2b8a3e">스트레이트 드라이브 · 롭 (실선)</text>
+  <text x="160" y="504" text-anchor="middle" font-size="12" fill="#444">넓은 크로스 롭 (점선)</text>
+
+  <!-- Panel 2 : conditional attack -->
+  <text x="480" y="66" text-anchor="middle" font-size="16" font-weight="700" fill="#222">② 조건부 공격 리턴</text>
+  <text x="480" y="88" text-anchor="middle" font-size="13" fill="#555">→ 서브가 느슨하고 서버가 T에 늦을 때만</text>
+  <polyline points="418,362 382,111 374,150" fill="none" stroke="#2f9e44" stroke-width="4" marker-end="url(#sv3-g)"/>
+  <line x1="545" y1="335" x2="404" y2="170" stroke="#e8590c" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#sv3-o)"/>
+  <circle cx="418" cy="370" r="13" fill="#1f6feb"/><text x="418" y="375" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">나</text>
+  <circle cx="556" cy="342" r="13" fill="#e8590c"/><text x="556" y="347" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">서버</text>
+  <text x="566" y="380" text-anchor="middle" font-size="11" font-weight="700" fill="#e8590c">아직 박스 근처</text>
+  <text x="480" y="486" text-anchor="middle" font-size="13" font-weight="700" fill="#2b8a3e">발리 드롭 · 발리 킬</text>
+  <text x="480" y="504" text-anchor="middle" font-size="12" fill="#444">짧고 느슨한 서브를 앞에서 끊어 먼 앞 코너로</text>
+
+  <!-- Panel 3 : avoid -->
+  <text x="800" y="66" text-anchor="middle" font-size="16" font-weight="700" fill="#222">③ 피해야 할 리턴</text>
+  <text x="800" y="88" text-anchor="middle" font-size="13" fill="#555">→ T에 있는 서버에게 공격 기회</text>
+  <polyline points="722,418 806,111 850,330" fill="none" stroke="#e03131" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#sv3-r)"/>
+  <polyline points="722,418 686,360 880,111 902,160" fill="none" stroke="#e03131" stroke-width="2.5" stroke-dasharray="3 5" marker-end="url(#sv3-r)"/>
+  <circle cx="805" cy="312" r="34" fill="#e8590c" opacity=".08" stroke="#e8590c" stroke-dasharray="4 4"/>
+  <text x="836" y="284" font-size="18" font-weight="700" fill="#e03131">✕</text>
+  <circle cx="722" cy="425" r="13" fill="#1f6feb"/><text x="722" y="430" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">나</text>
+  <circle cx="805" cy="312" r="13" fill="#e8590c"/><text x="805" y="317" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">서버</text>
+  <text x="800" y="486" text-anchor="middle" font-size="13" font-weight="700" fill="#c92a2a">가운데로 새는 크로스 · 수비적 보스트</text>
+  <text x="800" y="504" text-anchor="middle" font-size="12" fill="#444">서버가 T에서 한 걸음 만에 공격</text>
+
+  <!-- legend -->
+  <g font-size="12" fill="#444">
+    <rect x="150" y="530" width="660" height="34" rx="8" fill="#f8f9fa" stroke="#dee2e6"/>
+    <line x1="168" y1="547" x2="198" y2="547" stroke="#2f9e44" stroke-width="4"/><text x="206" y="551">정석 1순위</text>
+    <line x1="290" y1="547" x2="320" y2="547" stroke="#2f9e44" stroke-width="2.5" stroke-dasharray="8 5"/><text x="328" y="551">대안</text>
+    <line x1="380" y1="547" x2="410" y2="547" stroke="#e03131" stroke-width="2.5" stroke-dasharray="7 5"/><text x="418" y="551">피해야 할 샷</text>
+    <line x1="520" y1="547" x2="550" y2="547" stroke="#1f6feb" stroke-width="2.5" stroke-dasharray="7 5"/><text x="558" y="551">나의 이동</text>
+    <line x1="640" y1="547" x2="670" y2="547" stroke="#e8590c" stroke-width="2.5" stroke-dasharray="7 5"/><text x="678" y="551">서버의 이동</text>
+  </g>
+</svg><figcaption>리턴 선택지. 서버의 오른쪽 박스 서브를 왼쪽 뒤 코너에서 받는 상황</figcaption></figure>
+<div class="table-wrap"><table><thead><tr><th>리턴</th><th>언제</th><th>효과</th><th>주의할 점</th></tr></thead><tbody>
+<tr><td><strong>스트레이트 드라이브</strong> (1순위)</td><td>발리로 끊었거나 공이 벽에서 조금이라도 떨어져 있을 때</td><td>서버를 내가 있던 뒤 코너로 보내고, 그동안 내가 T를 차지함. 서버와 리시버의 위치가 맞바뀜</td><td>옆벽에 붙여야 함. 벽에서 떨어지면 T에 있는 서버가 발리로 끊음</td></tr>
+<tr><td><strong>스트레이트 롭</strong></td><td>서브가 타이트해서 공격적인 스윙이 불가능할 때</td><td>높이로 시간을 벌고 T로 복귀. 서버는 뒤 코너에서 높은 공을 처리해야 함</td><td>짧으면 서버가 앞에서 발리. 높고 깊게</td></tr>
+<tr><td><strong>넓은 크로스 롭·드라이브</strong></td><td>서버가 리시버 쪽으로 너무 기울어 반대쪽이 비었을 때</td><td>서버를 대각선 반대편 뒤 코너로 보냄</td><td>서버보다 뒤에서 옆벽에 닿을 만큼 넓어야 함. 가운데로 새면 최악의 리턴</td></tr>
+<tr><td><strong>발리 드롭·킬</strong></td><td>서브가 짧고 느슨하며, 서버가 아직 T에 도착하지 않았을 때</td><td>서버를 가장 먼 앞 코너로 뛰게 함</td><td>조건이 맞을 때만. 서버가 이미 T에 있으면 앞 코너에서 반격당함</td></tr>
+<tr><td><strong>보스트</strong></td><td>거의 쓰지 않음</td><td>-</td><td>T에 있는 서버에게 앞쪽에서 공격할 공을 줌. 기본편의 "수비적 보스트 금지" 원칙과 같음</td></tr>
+</tbody></table></div>
+
+<h3 id="s2-5"><span class="sub-num">2-5</span>서브 종류별 정석 리턴</h3>
+<div class="table-wrap"><table><thead><tr><th>들어온 서브</th><th>정석 리턴</th><th>핵심</th></tr></thead><tbody>
+<tr><td>좋은 롭 서브 (높고, 옆벽 높은 곳, 깊음)</td><td>발리가 닿으면 짧은 스윙의 <strong>스트레이트 발리 드라이브</strong>. 닿지 않으면 바운드 후 <strong>높은 스트레이트 롭</strong></td><td>무리하지 않고 중립으로 돌아가기</td></tr>
+<tr><td>어깨 높이로 오는 롭·세미 롭</td><td><strong>스트레이트 발리 드라이브</strong>를 강하게</td><td>리시버에게 가장 좋은 높이. 서버를 확실히 뒤로 보냄</td></tr>
+<tr><td>짧거나 가운데로 뜬 서브</td><td><strong>발리 드롭·킬</strong> 또는 서버 반대편으로 넓은 크로스</td><td>서버가 T에 늦었는지 먼저 확인</td></tr>
+<tr><td>하드 서브</td><td>짧은 백스윙의 블록으로 <strong>스트레이트 길게</strong>. 공의 속도를 이용</td><td>크게 휘두르지 않기. 빠른 공에는 라켓 면만 정확하면 길이가 나옴</td></tr>
+<tr><td>바디 서브</td><td>몸을 공에서 빼 공간을 만든 뒤 <strong>스트레이트</strong>. 여의치 않으면 <strong>높은 스트레이트 롭</strong></td><td>몸을 빼는 첫 스텝이 리턴의 질을 결정</td></tr>
+<tr><td>옆벽에 붙어 뒤 코너로 떨어지는 서브</td><td>백월 이후 <strong>높은 스트레이트 롭</strong> 또는 짧은 스윙 스트레이트</td><td>이미 수비 상황. 시간 벌기가 우선</td></tr>
+</tbody></table></div>
+<hr>
+
+<h2 id="s3"><span class="sec-num">3</span>3구째 : 서버의 첫 번째 진짜 기회</h2>
+
+<h3 id="s3-1"><span class="sub-num">3-1</span>T에서 리턴을 읽는 법</h3>
+<p>서브가 좋았다면 서버는 T 근처에서 리시버의 리턴을 기다립니다. 리턴을 치기 전에 다음 신호를 읽습니다.</p>
+<ul><li><strong>리시버가 공을 치는 위치</strong> : 뒤 코너 깊숙이, 벽에 붙은 공을 치고 있다면 리턴은 스트레이트 길이나 롭일 가능성이 큽니다. 몸 앞에서 편하게 치고 있다면 크로스나 발리 드롭까지 모든 선택지가 열려 있습니다.</li><li><strong>라켓 면과 스윙 크기</strong> : 열린 면과 아래에서 위로 올라가는 스윙은 롭 신호입니다. 짧고 단단한 스윙은 스트레이트 길이 신호입니다.</li><li><strong>리시버의 균형</strong> : 뒤로 기울어 있으면 리턴이 짧아질 가능성이 큽니다. 서버는 앞으로 반 걸음 기울여 준비합니다.</li></ul>
+
+<h3 id="s3-2"><span class="sub-num">3-2</span>리턴 유형별 3구 선택</h3>
+<figure class="fig"><svg role="img" aria-label="3구째 판단 흐름" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <defs>
+    <marker id="sv4-a" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#495057"/></marker>
+  </defs>
+  <rect width="960" height="470" fill="#fff"/>
+  <text x="480" y="32" text-anchor="middle" font-size="20" font-weight="700" fill="#222">3구째 판단 흐름 : 리턴이 어떻게 왔나?</text>
+
+  <rect x="330" y="52" width="300" height="48" rx="10" fill="#1f6feb"/>
+  <text x="480" y="82" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">T에서 리턴의 질 확인</text>
+
+  <g stroke="#495057" stroke-width="2" fill="none">
+    <path d="M480,100 L480,118 L135,118 L135,146" marker-end="url(#sv4-a)"/>
+    <path d="M480,118 L367,118 L367,146" marker-end="url(#sv4-a)"/>
+    <path d="M480,118 L593,118 L593,146" marker-end="url(#sv4-a)"/>
+    <path d="M480,118 L825,118 L825,146" marker-end="url(#sv4-a)"/>
+    <path d="M135,232 L135,262" marker-end="url(#sv4-a)"/>
+    <path d="M367,232 L367,262" marker-end="url(#sv4-a)"/>
+    <path d="M593,232 L593,262" marker-end="url(#sv4-a)"/>
+    <path d="M825,232 L825,262" marker-end="url(#sv4-a)"/>
+  </g>
+
+  <!-- conditions -->
+  <g font-size="14" text-anchor="middle">
+    <rect x="30" y="148" width="210" height="84" rx="10" fill="#f1f3f5" stroke="#ced4da"/>
+    <text x="135" y="182" font-weight="700" fill="#222">짧거나 느슨함</text>
+    <text x="135" y="204" font-size="12" fill="#555">앞쪽·가운데에 떨어짐</text>
+    <rect x="262" y="148" width="210" height="84" rx="10" fill="#f1f3f5" stroke="#ced4da"/>
+    <text x="367" y="182" font-weight="700" fill="#222">벽에서 떨어진 길이</text>
+    <text x="367" y="204" font-size="12" fill="#555">중간 높이로 T 옆을 지남</text>
+    <rect x="488" y="148" width="210" height="84" rx="10" fill="#f1f3f5" stroke="#ced4da"/>
+    <text x="593" y="182" font-weight="700" fill="#222">타이트한 스트레이트</text>
+    <text x="593" y="204" font-size="12" fill="#555">벽에 붙어 뒤 코너로</text>
+    <rect x="720" y="148" width="210" height="84" rx="10" fill="#f1f3f5" stroke="#ced4da"/>
+    <text x="825" y="182" font-weight="700" fill="#222">높은 롭 (스트레이트·크로스)</text>
+    <text x="825" y="204" font-size="12" fill="#555">머리 위로 넘어감</text>
+  </g>
+
+  <!-- results -->
+  <g font-size="13" text-anchor="middle">
+    <rect x="30" y="264" width="210" height="120" rx="10" fill="#ebfbee" stroke="#2f9e44" stroke-width="2"/>
+    <text x="135" y="292" font-size="15" font-weight="700" fill="#2b8a3e">공격</text>
+    <text x="135" y="318" fill="#333">리시버에게서 먼</text>
+    <text x="135" y="338" fill="#333">앞 코너로 드롭·킬</text>
+    <text x="135" y="362" font-size="12" fill="#666">리시버가 아직 뒤에 있을 때</text>
+
+    <rect x="262" y="264" width="210" height="120" rx="10" fill="#ebfbee" stroke="#2f9e44" stroke-width="2"/>
+    <text x="367" y="292" font-size="15" font-weight="700" fill="#2b8a3e">발리로 끊기</text>
+    <text x="367" y="318" fill="#333">T에서 발리로 스트레이트</text>
+    <text x="367" y="338" fill="#333">길이 또는 발리 드롭</text>
+    <text x="367" y="362" font-size="12" fill="#666">리시버의 회복 시간을 빼앗음</text>
+
+    <rect x="488" y="264" width="210" height="120" rx="10" fill="#fff9db" stroke="#f08c00" stroke-width="2"/>
+    <text x="593" y="292" font-size="15" font-weight="700" fill="#e67700">버티기</text>
+    <text x="593" y="318" fill="#333">스트레이트로 다시 길게</text>
+    <text x="593" y="338" fill="#333">벽에 붙여 되돌려 줌</text>
+    <text x="593" y="362" font-size="12" fill="#666">코너에서 드롭·보스트 금지</text>
+
+    <rect x="720" y="264" width="210" height="120" rx="10" fill="#fff9db" stroke="#f08c00" stroke-width="2"/>
+    <text x="825" y="292" font-size="15" font-weight="700" fill="#e67700">높이 처리</text>
+    <text x="825" y="318" fill="#333">닿으면 발리로 길게,</text>
+    <text x="825" y="338" fill="#333">아니면 뒤 코너에서 높은 롭</text>
+    <text x="825" y="362" font-size="12" fill="#666">리시버가 T에 섰는지 확인</text>
+  </g>
+
+  <rect x="120" y="410" width="720" height="40" rx="8" fill="#f8f9fa" stroke="#dee2e6"/>
+  <text x="480" y="435" text-anchor="middle" font-size="13" fill="#444">공통 : 3구째를 친 뒤 서버도 다시 다이나믹 T로. 리시버가 T를 차지했다면 첫 T 쟁탈전은 중립으로 끝난 것</text>
+</svg><figcaption>3구째 판단 흐름. 초록 = 서버가 주도권을 쥐는 경우, 노랑 = 중립으로 돌아가는 경우</figcaption></figure>
+<p><strong>① 짧거나 느슨한 리턴 → 공격</strong></p>
+<p>리턴이 앞쪽이나 가운데에 떨어졌다면 리시버는 아직 뒤 코너에서 T로 돌아오는 중입니다. 기본편의 원리 그대로, 상대가 뒤에 있고 공이 느슨하고 내가 앞에 있는 <strong>공격의 세 조건</strong>이 모두 맞습니다. 리시버에게서 먼 앞 코너로 드롭이나 킬을 보냅니다.</p>
+<p><strong>② 벽에서 떨어진 길이 → 발리로 끊기</strong></p>
+<p>리턴이 길긴 하지만 옆벽에서 떨어져 T 옆을 지나간다면, 뒤로 따라가지 말고 T에서 발리로 끊습니다. 스트레이트 발리 드라이브로 리시버를 다시 뒤로 보내거나, 리시버가 T로 오는 중이라면 발리 드롭으로 앞 코너를 찌릅니다.</p>
+<p><strong>③ 타이트한 스트레이트 길이 → 버티기</strong></p>
+<p>좋은 리턴입니다. 이 경우 3구째에서 공격하려 하면 안 됩니다. 뒤 코너의 벽에 붙은 공으로는 드롭이나 보스트가 짧고 약해집니다. 스트레이트로 다시 길게 보내 리시버를 뒤로 묶고 랠리를 길이 싸움으로 이어 갑니다.</p>
+<p><strong>④ 높은 롭 → 높이 처리</strong></p>
+<p>리시버가 롭으로 시간을 벌었다면 그 사이 리시버는 T로 돌아옵니다. 발리가 닿으면 발리로 길게 끊어 리시버의 시간을 다시 빼앗고, 닿지 않으면 뒤 코너에서 높은 롭으로 같은 방식의 시간을 법니다.</p>
+<blockquote><strong>3구째의 원칙은 "리턴이 좋았으면 인정하고, 나빴으면 놓치지 않는다"이다.</strong><br>좋은 리턴에 무리하게 공격하면 서브로 얻은 이점을 스스로 버리게 됩니다. 반대로 짧은 리턴을 다시 길이로만 돌려주면 서브가 만든 기회를 흘려보내게 됩니다.</blockquote>
+<hr>
+
+<h2 id="s4"><span class="sec-num">4</span>한눈에 보는 첫 세 타 판단표</h2>
+<div class="table-wrap"><table><thead><tr><th>단계</th><th>상황</th><th>정석 선택</th><th>목표</th></tr></thead><tbody>
+<tr><td>서브</td><td>일반적인 상황</td><td><strong>롭·세미 롭</strong>, 옆벽 높은 곳 접촉, 뒤 코너로</td><td>리시버를 뒤에 묶고 서버는 T로</td></tr>
+<tr><td>서브</td><td>리시버가 앞으로 나와 발리를 노림</td><td><strong>더 높고 깊은 롭</strong></td><td>머리 위로 넘겨 발리를 막음</td></tr>
+<tr><td>서브</td><td>리시버가 뒤로 물러나 기다림</td><td><strong>세미 롭·바디 서브</strong>를 섞음</td><td>준비 시간을 줄임</td></tr>
+<tr><td>서브</td><td>게임볼·매치볼</td><td><strong>가장 안전한 롭</strong></td><td>서브 실수 방지</td></tr>
+<tr><td>리턴</td><td>발리가 편한 높이</td><td><strong>스트레이트 발리 드라이브</strong></td><td>서버와 위치 교대</td></tr>
+<tr><td>리턴</td><td>옆벽에 붙은 깊은 서브</td><td><strong>높은 스트레이트 롭</strong></td><td>시간 벌기, T 복귀</td></tr>
+<tr><td>리턴</td><td>짧고 느슨한 서브, 서버가 T에 늦음</td><td><strong>발리 드롭·킬</strong></td><td>서버를 가장 먼 앞 코너로</td></tr>
+<tr><td>리턴</td><td>모든 상황</td><td><strong>금지</strong> : 가운데로 새는 크로스, 수비적 보스트</td><td>-</td></tr>
+<tr><td>3구째</td><td>짧은 리턴</td><td><strong>공격</strong> : 먼 앞 코너로 드롭·킬</td><td>서브의 이점을 득점으로</td></tr>
+<tr><td>3구째</td><td>타이트한 리턴</td><td><strong>버티기</strong> : 스트레이트 길이</td><td>무리하지 않고 길이 싸움으로</td></tr>
+</tbody></table></div>
+<p>첫 세 타는 다음 한 줄로 요약됩니다.</p>
+<blockquote><strong>서브는 높게 보내고 T로 가고, 리턴은 길게 보내고 T로 가고, 3구째는 리턴의 질을 보고 결정한다.</strong></blockquote>
+<hr>
+
+<h2 id="s5"><span class="sec-num">5</span>자주 오해하는 것들</h2>
+<section class="myths">
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"세게 치는 서브가 좋은 서브다"</span></p><p class="myth-a"><span class="label">실제</span><span>빠른 서브는 리시버의 시간과 함께 <strong>서버가 T로 갈 시간</strong>도 빼앗습니다. 서브 기회가 한 번뿐이라 실수 확률도 높습니다. 좋은 서브의 기준은 속도가 아니라 리시버가 불편한 위치에서 치게 만들고, 서버가 T에 먼저 도착하는 것입니다.</span></p></div>
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"리턴은 일단 발리로 끊어야 공격적이다"</span></p><p class="myth-a"><span class="label">실제</span><span>리턴의 발리는 공격이 아니라 뒤 코너로 끌려가지 않기 위한 선택입니다. 머리 위로 지나가는 공이나 벽에 붙은 공을 억지로 발리하면 짧고 약한 리턴이 되어 T에 있는 서버에게 가장 쉬운 3구를 줍니다.</span></p></div>
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"리턴은 크로스로 쳐야 서버를 많이 움직이게 한다"</span></p><p class="myth-a"><span class="label">실제</span><span>서버는 T 근처에 있으므로 넓지 않은 크로스는 서버 바로 옆을 지나갑니다. 리턴의 기본은 스트레이트입니다. 스트레이트 리턴은 서버를 내가 있던 뒤 코너로 보내 두 사람의 위치를 맞바꿉니다. 크로스는 서버보다 뒤에서 옆벽에 닿을 만큼 넓을 때만 성립합니다.</span></p></div>
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"서브는 그냥 랠리를 시작하는 형식이다"</span></p><p class="myth-a"><span class="label">실제</span><span>서브는 랠리에서 유일하게 상대의 방해 없이, 내가 원하는 높이와 속도로 칠 수 있는 공입니다. 프로들이 서브 한 번에 공을 들이는 이유는 그 공이 리턴의 선택지와 3구째의 위치를 함께 정하기 때문입니다.</span></p></div>
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"좋은 리턴을 받으면 3구째에서 바로 반격해야 한다"</span></p><p class="myth-a"><span class="label">실제</span><span>좋은 리턴, 즉 벽에 붙은 스트레이트 길이를 받으면 랠리는 이미 중립입니다. 뒤 코너에서 억지로 드롭이나 보스트를 치면 상대가 T에서 쉽게 반격합니다. 3구째는 길이로 다시 버티고 다음 기회를 기다리는 것이 정석입니다.</span></p></div>
+</section>
+<hr>
+<blockquote class="summary">랠리의 첫 세 타는 <strong>"서버가 가진 출발선의 이점을 지키느냐, 리시버가 지우느냐"</strong>의 싸움입니다.<br>서브는 높이와 옆벽 접촉 지점으로 리시버를 뒤 코너에 묶고, 리턴은 스트레이트 길이로 서버와 자리를 맞바꾸며, 3구째는 리턴의 질을 확인한 뒤 공격과 버티기를 고릅니다. 세 타 모두 공을 친 뒤 <strong>누가 먼저 T에 서느냐</strong>로 평가합니다.</blockquote>
+<nav class="pager" aria-label="이전·다음 글"></nav>
+</main>
+</div>
+<footer class="site-foot"><a href="index.html">← 스쿼시 노트 목록</a> · 개인 학습용 노트</footer>
+</div>
+</body>
+</html>
