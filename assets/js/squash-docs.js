@@ -23,6 +23,17 @@ window.SQUASH_DOCS = [
     meta: "도표 6장 · 약 15분"
   },
   {
+    id: "grip-biomechanics", icon: "🤝", tone: "amber",
+    series: "principle",
+    status: "published",
+    href: "스쿼시_그립_생체역학.html",
+    title: "그립의 생체역학",
+    desc: "프로는 왜 라켓을 꽉 쥐지 않을까? 손잡이 모서리에 맞춘 V자가 저절로 여는 라켓 면, 방아쇠처럼 띄운 검지의 지렛대, 힘을 뺐다가 맞는 찰나에만 조이는 악력, 바꿔 잡지 않는 포·백핸드까지 쉬운 말로 풀어 봅니다.",
+    tags: ["그립", "방아쇠 그립", "악력"],
+    thumb: "images/그립_베벨단면.svg",
+    meta: "도표 4장 · 3D 손 모형 · 약 20분"
+  },
+  {
     id: "forehand-biomechanics", icon: "🦾", tone: "teal",
     series: "principle",
     status: "published",

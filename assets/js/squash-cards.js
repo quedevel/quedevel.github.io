@@ -315,12 +315,14 @@
   }
 
   var ticking = false;
+  var lastW = track.clientWidth;
   track.addEventListener("scroll", function () {
     if (ticking) return;
     ticking = true;
     requestAnimationFrame(function () {
       ticking = false;
       var w = track.clientWidth || 1;
+      if (w !== lastW) return;                 // 크기가 바뀌는 중 : keep() 이 보던 카드로 되돌림
       setIndex(Math.round(track.scrollLeft / w));
     });
   }, { passive: true });
@@ -375,7 +377,6 @@
   });
 
   // 크기가 바뀌면 보던 카드 유지
-  var lastW = track.clientWidth;
   function keep() {
     if (track.clientWidth === lastW) return;
     lastW = track.clientWidth;

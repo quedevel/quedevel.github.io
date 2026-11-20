@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>그립의 생체역학</title>
+<meta name="description" content="프로는 왜 라켓을 꽉 쥐지 않을까? 손잡이 모서리에 맞춘 V자가 저절로 여는 라켓 면, 방아쇠처럼 띄운 검지의 지렛대, 힘을 뺐다가 맞는 찰나에만 조이는 악력, 바꿔 잡지 않는 포·백핸드까지 쉬운 말로 풀어 봅니다.">
+<meta property="og:title" content="그립의 생체역학">
+<meta property="og:description" content="프로는 왜 라켓을 꽉 쥐지 않을까? 손잡이 모서리에 맞춘 V자가 저절로 여는 라켓 면, 방아쇠처럼 띄운 검지의 지렛대, 힘을 뺐다가 맞는 찰나에만 조이는 악력, 바꿔 잡지 않는 포·백핸드까지 쉬운 말로 풀어 봅니다.">
+<link rel="icon" href="favicon.ico">
+<script>try{var t=localStorage.getItem("squash-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/css/squash.css">
+<link rel="stylesheet" href="assets/css/squash-cards.css">
+<script>(function(r){try{if(localStorage.getItem("squash-view")==="scroll")return}catch(e){}r.classList.add("deck-mode");setTimeout(function(){if(!r.classList.contains("deck-ready"))r.classList.remove("deck-mode")},5000)})(document.documentElement)</script>
+<script src="assets/js/squash-docs.js" defer></script>
+<script src="assets/js/squash.js" defer></script>
+<script src="assets/js/squash-cards.js" defer></script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"}}</script>
+<script src="assets/js/grip-viewer.js" defer></script>
+</head>
+<body class="article" data-doc="grip-biomechanics" data-cards>
+<aside class="sidebar" aria-label="페이지 목록"><div class="sidebar-scroll"></div></aside>
+<div class="scrim"></div>
+<div class="main">
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="페이지 목록 열기"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3.5 5.5h13M3.5 10h13M3.5 14.5h13"/></svg></button>
+  <nav class="crumbs" aria-label="현재 위치"><a href="index.html">스쿼시 노트</a></nav>
+  <button class="icon-btn theme-toggle" type="button" aria-label="밝게/어둡게 전환">
+    <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+  </button>
+</header>
+<div class="cover" data-tone="amber" aria-hidden="true"></div>
+<div class="page">
+<main class="doc">
+<header class="doc-hero">
+<div class="page-icon" aria-hidden="true">🤝</div>
+<h1 id="그립의-생체역학">그립의 생체역학</h1>
+<dl class="props">
+<dt><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 4.5h4l1.2 1.5H14v6.5H2z"/></svg>시리즈</dt><dd><span class="pill accent">기초 원리</span></dd>
+<dt><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><path d="M8 4.8V8l2.2 1.4"/></svg>분량</dt><dd>도표 4장 · 3D 손 모형 · 약 20분</dd>
+<dt><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><path d="M8 7.2v4M8 5v.1"/></svg>기준</dt><dd>오른손잡이 · 테니스·스쿼시 그립 연구와 손잡이 기하학 기반의 대략값</dd>
+<dt><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2.5 2.5h5l6 6-5 5-6-6z"/><circle cx="5.3" cy="5.3" r=".9"/></svg>태그</dt><dd><span class="pill">그립</span><span class="pill">V자 정렬</span><span class="pill">방아쇠 그립</span><span class="pill">악력</span><span class="pill">라켓 면</span></dd>
+</dl>
+<blockquote>프로의 손은 라켓을 꽉 움켜쥔 것이 아니라 손가락에 <strong>걸쳐 둔</strong> 것처럼 보이는데, 공은 빠르고 정확하게 뻗어 나갑니다.<br>이 문서는 <a href="스쿼시_포핸드_생체역학.html">포핸드</a>·<a href="스쿼시_백핸드_생체역학.html">백핸드</a> 문서와 같은 방식으로, 연습 드릴과 교정 팁은 빼고 <strong>손가락의 자리·각도·쥐는 힘이 어떻게 라켓 면과 라켓 머리 속도로 바뀌는지</strong>만 쉬운 말로 정리합니다.<br>모든 원리는 <strong>자세 세팅 → 생기는 힘 → 공의 변화</strong> 순서로 설명합니다. 각도와 힘은 대표값이고 손 크기와 손잡이 굵기에 따라 달라집니다.</blockquote>
+</header>
+<hr>
+<nav class="toc"><h2 id="목차">목차</h2>
+<ul><li><a href="#g0">0. 먼저 : 이 문서에서 쓰는 쉬운 말</a></li><li><a href="#g1">1. 출발점 : 그립은 몸과 라켓이 만나는 유일한 접점</a></li><li><a href="#g2">2. 정석 그립의 모양 : V자는 왼쪽 모서리, 면은 저절로 열린다</a><ul><li><a href="#g2-1">2-1. 손잡이의 여덟 면과 손가락 자리</a></li><li><a href="#g2-2">2-2. 왜 손목을 젖히지 않아도 면이 열리나</a></li></ul></li><li><a href="#g3">3. 망치 그립 vs 방아쇠 그립</a><ul><li><a href="#g3-1">3-1. 망치 그립에서 일어나는 일</a></li><li><a href="#g3-2">3-2. 방아쇠 그립 : 검지 하나가 바꾸는 세 가지</a></li></ul></li><li><a href="#g4">4. 쥐는 힘 : 힘을 빼고 있다가 맞는 찰나에 조인다</a><ul><li><a href="#g4-1">4-1. 왜 처음부터 꽉 쥐면 안 되나</a></li><li><a href="#g4-2">4-2. 맞는 찰나에 조이면 생기는 두 가지</a></li><li><a href="#g4-3">4-3. 어느 부위에 힘을 주나</a></li></ul></li><li><a href="#g5">5. 포핸드와 백핸드 : 그립은 그대로, 받치는 손가락만 바뀐다</a><ul><li><a href="#g5-1">5-1. 왜 바꿔 잡지 않나</a></li><li><a href="#g5-2">5-2. 한 그립으로 양쪽이 되는 원리</a></li></ul></li><li><a href="#g6">6. 망치 그립 vs 정석 그립 한눈에 비교</a></li><li><a href="#g7">7. 스윙 단계별 그립 요약표</a></li><li><a href="#g8">8. 자주 오해하는 것들</a></li><li><a href="#g9">9. 참고 문헌</a></li></ul>
+</nav>
+<hr>
+
+<h2 id="g0"><span class="sec-num">0</span>먼저 : 이 문서에서 쓰는 쉬운 말</h2>
+<p>해부학·물리학 용어 대신 아래의 쉬운 말을 씁니다. 원래 용어는 다른 자료를 찾아볼 때 참고하도록 오른쪽에 적어 둡니다.</p>
+<div class="table-wrap"><table><thead><tr><th>이 문서의 말</th><th>어떤 손 모양·현상인가</th><th>원래 용어</th></tr></thead><tbody>
+<tr><td><strong>손잡이 면 (1~8번)</strong></td><td>팔각형 손잡이의 여덟 평평한 면. 손잡이 끝에서 볼 때 윗면이 1번, 시계 방향으로 2~8번</td><td>베벨 (Bevel)</td></tr>
+<tr><td><strong>V자</strong></td><td>엄지와 검지 사이가 만드는 V 모양 홈</td><td>V (브이)</td></tr>
+<tr><td><strong>망치 그립</strong></td><td>다섯 손가락을 뭉쳐 주먹 쥐듯, 망치 자루를 쥐는 모양</td><td>해머 그립</td></tr>
+<tr><td><strong>방아쇠 그립</strong></td><td>검지를 중지에서 살짝 떼어 방아쇠를 당기듯 뻗어 손잡이를 받치는 모양</td><td>트리거 핑거 그립</td></tr>
+<tr><td><strong>받침점</strong></td><td>지렛대가 기대어 도는 점</td><td>지레의 받침점 (Fulcrum)</td></tr>
+<tr><td><strong>쥐는 힘</strong></td><td>손가락과 손바닥으로 손잡이를 조이는 힘</td><td>악력 · 그립 압력</td></tr>
+<tr><td><strong>손목 세우기</strong></td><td>손목을 엄지 쪽으로 들어 라켓 머리를 세우고 손등 쪽으로 살짝 젖혀 둔 상태</td><td>코킹</td></tr>
+<tr><td><strong>아래팔 비틀기</strong></td><td>문고리를 돌리듯 아래팔을 안으로(손바닥이 아래로) 또는 바깥으로 비트는 동작</td><td>회내 · 회외</td></tr>
+<tr><td><strong>면이 열림</strong></td><td>라켓 면이 천장 쪽으로 젖혀진 상태</td><td>오픈 페이스</td></tr>
+<tr><td><strong>기본 그립</strong></td><td>포핸드와 백핸드를 바꿔 잡지 않고 함께 쓰는 한 가지 그립</td><td>컨티넨탈 · 뉴트럴 그립</td></tr>
+</tbody></table></div>
+<hr>
+
+<h2 id="g1"><span class="sec-num">1</span>출발점 : 그립은 몸과 라켓이 만나는 유일한 접점</h2>
+<blockquote class="analogy"><strong>직관적 비유 · 자동차 타이어</strong><br>엔진이 아무리 좋아도 차는 손바닥만 한 타이어 접지면으로만 길을 밉니다. 타이어가 미끄러지면 엔진의 힘은 길에 닿지 못합니다. 다리·골반·몸통·팔이 만든 속도도 마찬가지로 <strong>손잡이를 쥔 손</strong> 한 곳을 지나서야 라켓에 닿습니다.</blockquote>
+<p>포핸드·백핸드 문서에서 다룬 모든 릴레이는 마지막에 손을 지납니다. 그립이 정하는 것은 세 가지입니다.</p>
+<div class="table-wrap"><table><thead><tr><th>그립이 정하는 것</th><th>잘못 쥐면</th><th>제대로 쥐면</th></tr></thead><tbody>
+<tr><td><strong>면의 각도</strong></td><td>면이 닫히거나 수직이라 손목으로 따로 열어야 함 → 맞을 때마다 각도가 흔들림</td><td>쥐는 순간 면이 약 15~20° 열린 채 고정 → 공이 약 14° 위로 출발할 조건이 저절로</td></tr>
+<tr><td><strong>손목·아래팔이 움직일 수 있는 범위</strong></td><td>손목이 잠겨 라켓 머리가 늦게 따라오지 못함 → 팔로 미는 직선 스윙</td><td>손목 세우기와 아래팔 비틀기가 끝까지 움직여 라켓 머리 속도의 마지막 몫을 더함</td></tr>
+<tr><td><strong>맞는 순간 면이 버티는 정도</strong></td><td>빗맞으면 라켓이 손 안에서 비틀려 공 방향이 틀어짐</td><td>검지·엄지가 손잡이 양옆을 받쳐 면이 덜 돌아감</td></tr>
+</tbody></table></div>
+<div class="table-wrap"><table><thead><tr><th>① 자세 세팅</th><th>② 생기는 힘</th><th>③ 공의 변화</th></tr></thead><tbody>
+<tr><td>V자를 모서리에 맞추고 검지를 띄워, 느슨하게 쥐었다가 맞는 찰나만 조인다</td><td>면은 저절로 열리고, 손목은 자유롭고, 힘은 맞는 순간 손잡이에 모인다</td><td>같은 몸의 힘으로 더 빠르고, 정확한 높이·방향의 공</td></tr>
+</tbody></table></div>
+<hr>
+
+<h2 id="g2"><span class="sec-num">2</span>정석 그립의 모양 : V자는 왼쪽 모서리, 면은 저절로 열린다</h2>
+<blockquote class="analogy"><strong>직관적 비유 · 악수하기</strong><br>라켓 손잡이와 악수하듯 손을 내밀어 잡으면 손바닥이 면과 나란해집니다. 정석 그립은 여기서 손을 손잡이 위로 <strong>반 칸만</strong> 돌려 잡은 모양입니다. 그 반 칸이 라켓 면을 천장 쪽으로 살짝 열어 둡니다.</blockquote>
+
+<figure class="fig"><div class="grip3d"><p class="g-msg">3D 손 모형을 불러오는 중… (JavaScript와 WebGL이 필요합니다)</p></div><figcaption>3D 손 모형. 위 버튼으로 정석 그립과 망치 그립을 바꾸면 손가락 자리와 라켓이 돌아간 각도가 함께 바뀐다. 「아래에서」는 검지 간격, 「위에서」는 V자 위치, 「손잡이 끝에서」는 면 번호와 라켓 면 각도를 보기 좋다. 쥐는 힘 버튼은 맞는 순간 힘을 주는 곳(주황 = 당겨 조임, 파랑 = 받침)을 색으로 보여 준다. 손 크기와 각도는 대표값</figcaption></figure>
+
+<h3 id="g2-1"><span class="sub-num">2-1</span>손잡이의 여덟 면과 손가락 자리</h3>
+<p>스쿼시 라켓의 손잡이는 팔각형입니다. 라켓 면을 바닥과 수직으로 세우고 손잡이 끝에서 보면, 윗면이 1번이고 시계 방향으로 2~8번입니다(오른손잡이 기준).</p>
+<figure class="fig"><svg role="img" aria-label="손잡이의 여덟 면 위 엄지·검지 V자 위치와, 검지를 띄워 받치는 손 모양" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+<defs><marker id="gp1-o" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e8590c"/></marker><marker id="gp1-k" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#868e96"/></marker></defs>
+<rect width="960" height="540" fill="#fff"/>
+<text x="480" y="32" text-anchor="middle" font-size="19" font-weight="700" fill="#222">정석 그립 : V자는 왼쪽 모서리, 검지는 띄워서 받친다</text>
+<line x1="470" y1="58" x2="470" y2="520" stroke="#dee2e6" stroke-width="1.5" stroke-linecap="round"/>
+<text x="235" y="66" text-anchor="middle" font-size="15" font-weight="700" fill="#222">① 손잡이 끝에서 본 단면 (오른손잡이)</text>
+<line x1="235" y1="108" x2="235" y2="462" stroke="#ced4da" stroke-width="6" stroke-linecap="round"/>
+<text x="245" y="108" font-size="11.5" fill="#868e96">라켓 면</text>
+<polygon points="189.8,181 280.2,181 344,244.8 344,335.2 280.2,399 189.8,399 126,335.2 126,244.8" fill="#f1f3f5" stroke="#495057" stroke-width="2.5"/>
+<circle cx="235" cy="198" r="12" fill="#fff" stroke="#adb5bd"/>
+<text x="235" y="202.5" text-anchor="middle" font-size="12" font-weight="700" fill="#495057">1</text>
+<circle cx="300.1" cy="224.9" r="12" fill="#fff" stroke="#adb5bd"/>
+<text x="300.1" y="229.4" text-anchor="middle" font-size="12" font-weight="700" fill="#495057">2</text>
+<circle cx="327" cy="290" r="12" fill="#fff" stroke="#adb5bd"/>
+<text x="327" y="294.5" text-anchor="middle" font-size="12" font-weight="700" fill="#495057">3</text>
+<circle cx="300.1" cy="355.1" r="12" fill="#fff" stroke="#adb5bd"/>
+<text x="300.1" y="359.6" text-anchor="middle" font-size="12" font-weight="700" fill="#495057">4</text>
+<circle cx="235" cy="382" r="12" fill="#fff" stroke="#adb5bd"/>
+<text x="235" y="386.5" text-anchor="middle" font-size="12" font-weight="700" fill="#495057">5</text>
+<circle cx="169.9" cy="355.1" r="12" fill="#fff" stroke="#adb5bd"/>
+<text x="169.9" y="359.6" text-anchor="middle" font-size="12" font-weight="700" fill="#495057">6</text>
+<circle cx="143" cy="290" r="12" fill="#fff" stroke="#adb5bd"/>
+<text x="143" y="294.5" text-anchor="middle" font-size="12" font-weight="700" fill="#495057">7</text>
+<circle cx="169.9" cy="224.9" r="12" fill="#fff" stroke="#adb5bd"/>
+<text x="169.9" y="229.4" text-anchor="middle" font-size="12" font-weight="700" fill="#495057">8</text>
+<path d="M219,151 L235,175 L251,151" fill="none" stroke="#adb5bd" stroke-width="4" stroke-dasharray="5 4" stroke-linejoin="round"/>
+<text x="257" y="147" font-size="11.5" fill="#868e96">망치 그립의 V</text>
+<path d="M186.9,137.8 L186,171.7 L161.3,148.4" fill="none" stroke="#e8590c" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="142" y="131.7" text-anchor="end" font-size="14" font-weight="700" fill="#e8590c">정석 V자</text>
+<text x="142" y="149.7" text-anchor="end" font-size="12" fill="#e8590c">8번과 1번 사이 모서리</text>
+<path d="M235,230 A60,60 0 0 0 212,234.6" fill="none" stroke="#7048e8" stroke-width="2.5"/>
+<line x1="235" y1="290" x2="196.7" y2="197.6" stroke="#7048e8" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 4"/>
+<line x1="235" y1="290" x2="235" y2="190" stroke="#7048e8" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 4"/>
+<text x="181" y="264" text-anchor="middle" font-size="12" font-weight="700" fill="#7048e8">반 면 ≈ 22.5°</text>
+<circle cx="331.2" cy="193.8" r="11" fill="#1c7ed6"/>
+<text x="347.2" y="183.8" font-size="12" font-weight="700" fill="#1c7ed6">검지 뿌리 마디</text>
+<text x="347.2" y="199.8" font-size="12" fill="#1c7ed6">= 2번 면</text>
+<path d="M103,300 A132,132 0 0 1 141.7,196.7" fill="none" stroke="#f59f00" stroke-width="9" stroke-linecap="round" opacity=".85"/>
+<text x="93" y="294" text-anchor="end" font-size="12" font-weight="700" fill="#b35c00">엄지·엄지 두덩</text>
+<text x="93" y="310" text-anchor="end" font-size="12" fill="#b35c00">(7~8번 면)</text>
+<path d="M359,335.1 A132,132 0 0 1 120.7,356" fill="none" stroke="#2f9e44" stroke-width="9" stroke-linecap="round" opacity=".85"/>
+<text x="295" y="452" text-anchor="middle" font-size="12" font-weight="700" fill="#2f9e44">중지·약지·새끼 : 4~6번 면을 감아 쥠</text>
+<text x="235" y="506" text-anchor="middle" font-size="11.5" fill="#868e96">면 번호 : 손잡이 끝에서 볼 때 윗면이 1번, 시계 방향으로 2~8번</text>
+<text x="715" y="66" text-anchor="middle" font-size="15" font-weight="700" fill="#222">② 옆에서 본 손 모양</text>
+<rect x="520" y="248" width="400" height="44" rx="14" fill="#e9ecef" stroke="#868e96" stroke-width="2"/>
+<rect x="512" y="244" width="18" height="52" rx="6" fill="#adb5bd"/>
+<text x="512" y="236" font-size="11.5" fill="#868e96">손잡이 끝</text>
+<text x="918" y="238" text-anchor="end" font-size="11.5" fill="#868e96">라켓 머리 쪽 →</text>
+<ellipse cx="560" cy="274" rx="34" ry="44" fill="#ffe8cc" stroke="#e8590c" stroke-width="1.5" opacity=".75"/>
+<rect x="586" y="230" width="24" height="96" rx="12" fill="#d3f9d8" stroke="#2f9e44" stroke-width="2"/>
+<rect x="616" y="230" width="24" height="96" rx="12" fill="#d3f9d8" stroke="#2f9e44" stroke-width="2"/>
+<rect x="646" y="230" width="24" height="96" rx="12" fill="#d3f9d8" stroke="#2f9e44" stroke-width="2"/>
+<text x="628" y="354" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2f9e44">새끼·약지·중지</text>
+<text x="628" y="370" text-anchor="middle" font-size="12" fill="#2f9e44">붙여서 감아 쥠 = 당기는 쪽</text>
+<line x1="672" y1="218" x2="712" y2="218" stroke="#7048e8" stroke-width="1.5" stroke-linecap="round" marker-end="url(#gp1-k)" marker-start="url(#gp1-k)"/>
+<text x="692" y="210" text-anchor="middle" font-size="11.5" font-weight="700" fill="#7048e8">1~2 cm 띄움</text>
+<path d="M716,230 C724,262 748,292 770,308" fill="none" stroke="#1c7ed6" stroke-width="22" stroke-linecap="round" opacity=".9"/>
+<circle cx="770" cy="308" r="5" fill="#fff"/>
+<text x="790" y="310" font-size="12.5" font-weight="700" fill="#1c7ed6">검지 : 방아쇠처럼 뻗어</text>
+<text x="790" y="326" font-size="12" fill="#1c7ed6">손잡이를 받치는 받침점</text>
+<path d="M600,200 C640,210 676,234 700,262" fill="none" stroke="#f59f00" stroke-width="20" stroke-linecap="round" opacity=".85"/>
+<text x="590" y="186" font-size="12.5" font-weight="700" fill="#b35c00">엄지 : 중지 쪽으로 감싸 V자를 만듦</text>
+<text x="560" y="210" font-size="13" fill="#333"></text>
+<text x="520" y="400" font-size="12" fill="#c2410c">새끼 두덩(주황 타원) : 손잡이 끝을 손바닥 아래에 묻어 두는 자리</text>
+<rect x="500" y="424" width="440" height="58" rx="8" fill="#e7f5ff" stroke="#74c0fc"/>
+<text x="720" y="448" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1864ab">손잡이는 손바닥 가운데가 아니라 손가락 뿌리를 따라 비스듬히</text>
+<text x="720" y="468" text-anchor="middle" font-size="12.5" fill="#1864ab">→ 손목을 꺾고 아래팔을 비틀 여유가 남는다</text>
+</svg><figcaption>왼쪽은 손잡이 끝에서 본 단면. 정석 V자(주황)는 윗면 가운데(회색 점선)가 아니라 8번과 1번 사이의 왼쪽 모서리에 온다. 오른쪽은 옆에서 본 손 모양으로, 아래 세 손가락은 붙여 감고 검지는 1~2 cm 띄워 방아쇠처럼 받친다</figcaption></figure>
+<div class="table-wrap"><table><thead><tr><th>손 부위</th><th>자리</th><th>하는 일</th></tr></thead><tbody>
+<tr><td><strong>V자 (엄지와 검지 사이)</strong></td><td>8번과 1번 사이 <strong>왼쪽 모서리</strong></td><td>면이 열리는 각도를 정하는 기준선</td></tr>
+<tr><td><strong>검지 뿌리 마디</strong></td><td>2번 면</td><td>손잡이를 위에서 걸쳐 받침</td></tr>
+<tr><td><strong>검지</strong></td><td>중지에서 1~2 cm 떼어 손잡이 옆에 방아쇠처럼 걸침</td><td>지렛대의 받침점, 면 방향을 느끼는 손끝</td></tr>
+<tr><td><strong>엄지 · 엄지 두덩</strong></td><td>7~8번 면을 감싸 중지 쪽으로</td><td>검지와 짝을 이뤄 손잡이를 양옆에서 잡음</td></tr>
+<tr><td><strong>중지 · 약지 · 새끼</strong></td><td>4~6번 면을 붙여서 감아 쥠</td><td>손잡이 끝을 당기는 힘의 대부분</td></tr>
+<tr><td><strong>새끼 두덩 (손바닥 아래 바깥쪽)</strong></td><td>손잡이 끝을 묻어 둠</td><td>당기는 힘의 맞은편에서 버팀</td></tr>
+<tr><td><strong>손바닥 가운데</strong></td><td>손잡이와 살짝 떨어져 있음</td><td>손잡이가 손가락 뿌리를 따라 비스듬히 놓여 손목이 자유로움</td></tr>
+</tbody></table></div>
+
+<h3 id="g2-2"><span class="sub-num">2-2</span>왜 손목을 젖히지 않아도 면이 열리나</h3>
+<pre class="formula"><code>팔각형 한 면이 차지하는 각도 = 360° ÷ 8 = 45°
+면 가운데 → 모서리까지 = 45° ÷ 2 = 22.5°  (반 면)</code></pre>
+<p>악수하듯 내민 손의 손바닥은 공 쪽을 똑바로 향합니다. V자가 윗면(1번) 가운데에 오면 라켓 면은 손바닥과 나란해 <strong>수직</strong>이 됩니다. V자를 왼쪽 모서리로 옮기면 손잡이가 손 안에서 <strong>반 면, 약 22.5°</strong> 돌아간 채 쥐어집니다. 손 모양은 그대로인데 라켓만 돌아가 있으니, 포핸드 면이 천장 쪽으로 열립니다. 손가락이 감기며 조금 줄어들어 실제로는 <strong>약 15~20°</strong>입니다.</p>
+<figure class="fig"><svg role="img" aria-label="V자를 윗면 가운데에 두면 면이 수직, 왼쪽 모서리에 두면 같은 손 모양에서 면이 약 20도 열린다" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 430" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+<defs><marker id="gp2-v" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7048e8"/></marker><marker id="gp2-b" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1c7ed6"/></marker></defs>
+<rect width="960" height="430" fill="#fff"/>
+<text x="480" y="32" text-anchor="middle" font-size="17" font-weight="700" fill="#222">같은 손 모양, 다른 V자 위치 → 면 각도가 저절로 달라진다 (공 쪽에서 본 임팩트)</text>
+<line x1="480" y1="56" x2="480" y2="410" stroke="#dee2e6" stroke-width="1.5" stroke-linecap="round"/>
+<text x="240" y="70" text-anchor="middle" font-size="15" font-weight="700" fill="#e03131">① V자가 윗면 가운데 (망치 그립에 흔함)</text>
+<line x1="60" y1="372" x2="440" y2="372" stroke="#ced4da" stroke-width="6" stroke-linecap="round"/>
+<line x1="300" y1="110" x2="300" y2="360" stroke="#adb5bd" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6 5"/>
+<text x="306" y="122" font-size="11.5" fill="#868e96">수직</text>
+<line x1="60" y1="320" x2="132" y2="258" stroke="#dee2e6" stroke-width="26" stroke-linecap="round"/>
+<circle cx="140" cy="250" r="30" fill="#ffe8cc" stroke="#e8590c" stroke-width="1.5"/>
+<text x="140" y="302" text-anchor="middle" font-size="11.5" fill="#c2410c">손 (악수하듯 내민 모양)</text>
+<line x1="164" y1="244" x2="294" y2="220" stroke="#343a40" stroke-width="7" stroke-linecap="round"/>
+<line x1="300" y1="100" x2="300" y2="320" stroke="#343a40" stroke-width="10" stroke-linecap="round"/>
+<line x1="308" y1="210" x2="392" y2="210" stroke="#7048e8" stroke-width="3" stroke-linecap="round" marker-end="url(#gp2-v)"/>
+<text x="340" y="164" font-size="12.5" font-weight="700" fill="#7048e8">면이 정면</text>
+<line x1="308" y1="210" x2="392" y2="210" stroke="#adb5bd" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 4"/>
+<polygon points="106.1,104 125.9,104 140,118.1 140,137.9 125.9,152 106.1,152 92,137.9 92,118.1" fill="#f1f3f5" stroke="#495057" stroke-width="1.5"/>
+<circle cx="116" cy="104" r="6" fill="#e8590c"/>
+<text x="152" y="124" font-size="12" font-weight="700" fill="#e8590c">V = 1번 면 가운데</text>
+<text x="240" y="398" text-anchor="middle" font-size="12.5" font-weight="700" fill="#e03131">면이 수직 → 공을 띄우려면 손목을 젖혀 면을 따로 열어야 함</text>
+<text x="240" y="418" text-anchor="middle" font-size="12" fill="#555">손목을 쓰는 순간마다 면 각도가 흔들린다</text>
+<text x="720" y="70" text-anchor="middle" font-size="15" font-weight="700" fill="#2f9e44">② V자가 왼쪽 모서리 (정석)</text>
+<line x1="540" y1="372" x2="920" y2="372" stroke="#ced4da" stroke-width="6" stroke-linecap="round"/>
+<line x1="780" y1="110" x2="780" y2="360" stroke="#adb5bd" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6 5"/>
+<text x="786" y="122" font-size="11.5" fill="#868e96">수직</text>
+<line x1="540" y1="320" x2="612" y2="258" stroke="#dee2e6" stroke-width="26" stroke-linecap="round"/>
+<circle cx="620" cy="250" r="30" fill="#ffe8cc" stroke="#e8590c" stroke-width="1.5"/>
+<text x="620" y="302" text-anchor="middle" font-size="11.5" fill="#c2410c">손 (악수하듯 내민 모양)</text>
+<line x1="644" y1="244" x2="774" y2="220" stroke="#343a40" stroke-width="7" stroke-linecap="round"/>
+<line x1="742.4" y1="106.6" x2="817.6" y2="313.4" stroke="#343a40" stroke-width="10" stroke-linecap="round"/>
+<line x1="787.5" y1="207.3" x2="866.5" y2="178.5" stroke="#7048e8" stroke-width="3" stroke-linecap="round" marker-end="url(#gp2-v)"/>
+<text x="820" y="164" font-size="12.5" font-weight="700" fill="#7048e8">면이 위로 약 20°</text>
+<path d="M840,210 A60,60 0 0 0 836.4,189.5" fill="none" stroke="#7048e8" stroke-width="2"/>
+<line x1="788" y1="210" x2="872" y2="210" stroke="#adb5bd" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 4"/>
+<polygon points="586.1,104 605.9,104 620,118.1 620,137.9 605.9,152 586.1,152 572,137.9 572,118.1" fill="#f1f3f5" stroke="#495057" stroke-width="1.5"/>
+<circle cx="586.1" cy="104" r="6" fill="#e8590c"/>
+<text x="632" y="124" font-size="12" font-weight="700" fill="#e8590c">V = 8·1번 모서리</text>
+<text x="720" y="398" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2f9e44">손잡이가 반 면(22.5°) 돌아가 있어 면이 저절로 약 15~20° 열림</text>
+<text x="720" y="418" text-anchor="middle" font-size="12" fill="#555">손목은 세운 채 그대로 → 공이 약 14° 위로 출발할 조건</text>
+</svg><figcaption>같은 손 모양에서 V자 위치만 바꿨을 때 공 쪽에서 본 라켓 면. V자가 윗면 가운데면 면이 수직이고, 왼쪽 모서리면 면이 약 20° 열린다. 각도는 대표값</figcaption></figure>
+<div class="table-wrap"><table><thead><tr><th>① 자세 세팅</th><th>② 생기는 힘</th><th>③ 공의 변화</th></tr></thead><tbody>
+<tr><td>V자를 왼쪽 모서리에 맞춰 쥔다</td><td>손잡이가 반 면 돌아간 채 고정돼, 손 모양을 바꾸지 않아도 면이 약 15~20° 열린다</td><td>포핸드 문서의 '면 15~20° 열림 → 공 약 14° 위로 출발' 조건이 손목 조작 없이 만들어짐</td></tr>
+<tr><td>V자가 윗면 가운데나 오른쪽(2번 쪽)으로 간다</td><td>면이 수직이거나 닫혀, 공을 띄우려면 손목을 손등 쪽으로 젖혀 면을 따로 열어야 한다</td><td>젖히는 양이 매번 달라 공 높이가 들쭉날쭉. 낮게 깔려 틴에 걸리기 쉬움</td></tr>
+</tbody></table></div>
+<p>면 1°가 5 m 앞 앞벽에서 약 9 cm의 차이가 되므로, 쥐는 순간 각도가 정해지는 것이 손목으로 그때그때 맞추는 것보다 훨씬 정확합니다.</p>
+<hr>
+
+<h2 id="g3"><span class="sec-num">3</span>망치 그립 vs 방아쇠 그립</h2>
+<blockquote class="analogy"><strong>직관적 비유 · 망치질 vs 칼질</strong><br>망치는 주먹으로 꽉 쥐고 위에서 아래로 내리찍습니다. 손목이 잠긴 채 팔 전체가 직선으로 움직이는 도구입니다. 요리사가 칼을 쥘 때는 검지를 칼 옆에 대고 엄지와 함께 방향을 잡고, 나머지 손가락은 가볍게 감습니다. 그래야 칼끝을 섬세하게 조종할 수 있습니다. <strong>라켓 그립은 칼 쥐기에 가깝습니다.</strong></blockquote>
+
+<h3 id="g3-1"><span class="sub-num">3-1</span>망치 그립에서 일어나는 일</h3>
+<div class="table-wrap"><table><thead><tr><th>#</th><th>① 망치 그립의 자세</th><th>② 잃는 것</th><th>③ 공의 변화</th></tr></thead><tbody>
+<tr><td>1</td><td>손잡이를 손바닥 한가운데에 가로로 놓고 주먹을 쥔다</td><td>손잡이가 손바닥에 박혀 손목을 엄지 쪽·손등 쪽으로 꺾을 여유가 줄어든다 (<strong>손목 잠김</strong>)</td><td>손목 세우기와 라켓 머리가 늦게 따라오는 구간이 사라져 마지막 가속을 잃음</td></tr>
+<tr><td>2</td><td>다섯 손가락을 뭉쳐 처음부터 꽉 쥔다</td><td>손가락을 굽히는 근육과 펴는 근육이 아래팔에서 함께 당겨져 손목과 아래팔이 뻣뻣해진다 (<strong>브레이크</strong>)</td><td>아래팔 비틀기가 막혀 팔 전체를 미는 직선 스윙 → 밀어 치기</td></tr>
+<tr><td>3</td><td>V자가 윗면 가운데나 2번 쪽으로 간다</td><td>라켓 면이 수직이거나 오히려 닫힌다</td><td>공이 낮게 깔리거나, 띄우려고 손목을 젖혀 면이 흔들림</td></tr>
+<tr><td>4</td><td>검지가 다른 손가락에 붙어 받침점이 없다</td><td>손잡이를 받치는 두 점 사이가 약 4 cm뿐이라 라켓 무게를 버티는 데 약 2배의 힘이 든다</td><td>더 꽉 쥐게 되고 팔이 금방 지치는 악순환</td></tr>
+</tbody></table></div>
+
+<h3 id="g3-2"><span class="sub-num">3-2</span>방아쇠 그립 : 검지 하나가 바꾸는 세 가지</h3>
+<figure class="fig"><svg role="img" aria-label="망치 그립과 검지를 띄운 그립에서 라켓 머리 무게를 버티는 두 힘의 크기 비교" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+<defs><marker id="gp3-r" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e03131"/></marker><marker id="gp3-b" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1c7ed6"/></marker><marker id="gp3-g" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2f9e44"/></marker><marker id="gp3-k" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#495057"/></marker></defs>
+<rect width="960" height="500" fill="#fff"/>
+<text x="480" y="32" text-anchor="middle" font-size="18" font-weight="700" fill="#222">검지가 받침점 : 두 손가락 사이가 넓을수록 적은 힘으로 라켓을 다룬다</text>
+<text x="40" y="93" font-size="15" font-weight="700" fill="#e03131">① 망치 그립 : 손가락을 뭉쳐 쥠</text>
+<rect x="120" y="176" width="260" height="18" rx="7" fill="#e9ecef" stroke="#868e96" stroke-width="1.5"/>
+<line x1="380" y1="185" x2="590" y2="185" stroke="#495057" stroke-width="6" stroke-linecap="round"/>
+<ellipse cx="720" cy="185" rx="130" ry="20" fill="#f8f9fa" stroke="#343a40" stroke-width="5"/>
+<circle cx="540" cy="185" r="9" fill="#495057"/>
+<line x1="540" y1="197" x2="540" y2="243" stroke="#495057" stroke-width="3" stroke-linecap="round" marker-end="url(#gp3-k)"/>
+<text x="550" y="241" font-size="12" fill="#495057">라켓 무게 약 1.4 N (140 g)</text>
+<line x1="150" y1="131" x2="150" y2="173" stroke="#2f9e44" stroke-width="4" stroke-linecap="round" marker-end="url(#gp3-g)"/>
+<text x="150" y="125" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2f9e44">새끼 두덩·아래 손가락 : 누름</text>
+<line x1="210" y1="241" x2="210" y2="197" stroke="#1c7ed6" stroke-width="4" stroke-linecap="round" marker-end="url(#gp3-b)"/>
+<text x="218" y="261" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1c7ed6">검지 : 받침 (붙어 있음)</text>
+<line x1="150" y1="215" x2="210" y2="215" stroke="#7048e8" stroke-width="1.5" stroke-linecap="round" marker-start="url(#gp3-k)" marker-end="url(#gp3-k)"/>
+<text x="180" y="211" text-anchor="middle" font-size="11.5" font-weight="700" fill="#7048e8">약 4 cm</text>
+<rect x="620" y="123" width="250" height="36" rx="8" fill="#fff5f5" stroke="#ffa8a8"/>
+<text x="745" y="146" text-anchor="middle" font-size="13" font-weight="700" fill="#c92a2a">두 힘이 각각 약 11 N 필요</text>
+<text x="40" y="293" font-size="15" font-weight="700" fill="#2f9e44">② 정석 그립 : 검지를 띄워 받침</text>
+<rect x="120" y="376" width="260" height="18" rx="7" fill="#e9ecef" stroke="#868e96" stroke-width="1.5"/>
+<line x1="380" y1="385" x2="590" y2="385" stroke="#495057" stroke-width="6" stroke-linecap="round"/>
+<ellipse cx="720" cy="385" rx="130" ry="20" fill="#f8f9fa" stroke="#343a40" stroke-width="5"/>
+<circle cx="540" cy="385" r="9" fill="#495057"/>
+<line x1="540" y1="397" x2="540" y2="443" stroke="#495057" stroke-width="3" stroke-linecap="round" marker-end="url(#gp3-k)"/>
+<text x="550" y="441" font-size="12" fill="#495057">라켓 무게 약 1.4 N (140 g)</text>
+<line x1="150" y1="331" x2="150" y2="373" stroke="#2f9e44" stroke-width="4" stroke-linecap="round" marker-end="url(#gp3-g)"/>
+<text x="150" y="325" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2f9e44">새끼 두덩·아래 손가락 : 누름</text>
+<line x1="270" y1="441" x2="270" y2="397" stroke="#1c7ed6" stroke-width="4" stroke-linecap="round" marker-end="url(#gp3-b)"/>
+<text x="278" y="461" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1c7ed6">검지 : 받침</text>
+<line x1="150" y1="415" x2="270" y2="415" stroke="#7048e8" stroke-width="1.5" stroke-linecap="round" marker-start="url(#gp3-k)" marker-end="url(#gp3-k)"/>
+<text x="210" y="411" text-anchor="middle" font-size="11.5" font-weight="700" fill="#7048e8">약 8 cm</text>
+<rect x="620" y="323" width="250" height="36" rx="8" fill="#ebfbee" stroke="#8ce99a"/>
+<text x="745" y="346" text-anchor="middle" font-size="13" font-weight="700" fill="#2b8a3e">두 힘이 각각 약 6 N 필요</text>
+<text x="480" y="484" text-anchor="middle" font-size="12.5" fill="#555">버텨야 할 비틀림 = 무게 1.4 N × 손잡이 끝에서 무게 중심까지 약 0.33 m ≈ 0.45 N·m → 두 힘 ≈ 0.45 ÷ 간격</text>
+</svg><figcaption>라켓을 수평으로 들 때 손잡이 끝 쪽(초록)은 누르고 검지(파랑)는 받친다. 두 점 사이가 넓을수록 같은 무게를 더 작은 힘으로 버틴다. 무게 중심 위치와 힘의 크기는 대표값</figcaption></figure>
+<pre class="formula"><code>라켓 무게 약 1.4 N (140 g) × 손잡이 끝에서 무게 중심까지 약 0.33 m ≈ 0.45 N·m
+두 지지점 간격 약 4 cm (망치 그립)  →  0.45 ÷ 0.04 ≈ 11 N
+두 지지점 간격 약 8 cm (방아쇠 그립) →  0.45 ÷ 0.08 ≈ 6 N</code></pre>
+<div class="table-wrap"><table><thead><tr><th>역할</th><th>① 자세 세팅</th><th>② 생기는 힘</th><th>③ 공의 변화</th></tr></thead><tbody>
+<tr><td><strong>① 받침점</strong></td><td>검지를 중지에서 1~2 cm 떼어 손잡이 옆에 방아쇠처럼 걸친다</td><td>누르는 새끼 두덩과 받치는 검지 사이가 약 8 cm로 벌어져 지렛대가 길어진다 → 라켓 머리 무게를 버티는 힘이 약 절반</td><td>덜 쥐어도 라켓이 안정 → 느슨한 손으로 휘두를 수 있음</td></tr>
+<tr><td><strong>② 손목 · 아래팔의 자유</strong></td><td>손잡이가 손바닥 가운데가 아니라 손가락 뿌리를 따라 비스듬히 놓인다</td><td>손목 세우기(엄지 쪽 15~25°), 손등 쪽 젖힘, 아래팔 비틀기가 손잡이에 걸리지 않고 끝까지 움직인다</td><td>라켓 머리가 늦게 따라왔다가 맞기 직전에 한 번 더 가속 (포핸드 문서 4장)</td></tr>
+<tr><td><strong>③ 미세 조향</strong></td><td>검지 안쪽 면과 엄지가 손잡이 양옆에 닿아 있다</td><td>면이 비틀리려 하면 검지와 엄지가 손잡이 양옆에서 서로 반대로 밀어 버틴다. 손끝이 면의 방향을 바로 느낀다</td><td>빗맞아도 면이 덜 돌아가 방향 오차가 줄어듦</td></tr>
+</tbody></table></div>
+<hr>
+
+<h2 id="g4"><span class="sec-num">4</span>쥐는 힘 : 힘을 빼고 있다가 맞는 찰나에 조인다</h2>
+<blockquote class="analogy"><strong>직관적 비유 · 치약 튜브</strong><br>치약 튜브를 들고 다닐 때는 내용물이 나오지 않을 만큼만 쥡니다. 짜야 할 순간에만 꾹 누릅니다. 라켓도 휘두르는 동안은 <strong>빠지지 않을 만큼만</strong> 쥐고, 공이 맞는 찰나에만 조입니다.</blockquote>
+
+<h3 id="g4-1"><span class="sub-num">4-1</span>왜 처음부터 꽉 쥐면 안 되나</h3>
+<div class="table-wrap"><table><thead><tr><th>① 자세 세팅</th><th>② 생기는 힘</th><th>③ 공의 변화</th></tr></thead><tbody>
+<tr><td>준비 ~ 다운스윙 동안 10 중 약 2~3의 힘으로 쥔다</td><td>아래팔 근육이 느슨해 손목과 아래팔이 몸통에 끌려 늦게 따라오고, 고무줄처럼 늘어난다</td><td>맞기 직전 라켓 머리가 튕기듯 가속 → 같은 몸의 힘으로 더 빠른 공</td></tr>
+<tr><td>처음부터 끝까지 7~8의 힘으로 꽉 쥔다</td><td>손가락을 굽히는 근육과 펴는 근육이 함께 당겨 손목에 브레이크가 걸린다</td><td>라켓 머리가 손과 한 덩어리로 움직여 느린 공. 팔도 빨리 지침</td></tr>
+</tbody></table></div>
+<p>공이 라켓에 붙어 있는 시간은 0.003~0.005초입니다. 뇌의 명령이 손가락 근육에 닿는 데만 수십 ms가 걸리므로, "맞는 순간에 조인다"는 실제로는 <strong>맞기 직전에 조이기 시작해 맞은 직후에 정점</strong>이 되는 흐름입니다. 테니스 연구에서도 쥐는 힘은 맞기 직전부터 올라가 맞은 직후에 가장 커집니다.</p>
+<figure class="fig"><svg role="img" aria-label="스윙 단계별 쥐는 힘 : 망치 그립은 내내 꽉, 정석 그립은 힘을 뺐다가 맞는 순간만 조임" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+<rect width="960" height="470" fill="#fff"/>
+<text x="480" y="32" text-anchor="middle" font-size="18" font-weight="700" fill="#222">쥐는 힘의 흐름 : 내내 꽉 vs 맞는 찰나만 조이기</text>
+<line x1="110" y1="360" x2="900" y2="360" stroke="#f1f3f5" stroke-width="1" stroke-linecap="round"/>
+<text x="100" y="364" text-anchor="end" font-size="11" fill="#868e96">0</text>
+<line x1="110" y1="304" x2="900" y2="304" stroke="#f1f3f5" stroke-width="1" stroke-linecap="round"/>
+<text x="100" y="308" text-anchor="end" font-size="11" fill="#868e96">2</text>
+<line x1="110" y1="248" x2="900" y2="248" stroke="#f1f3f5" stroke-width="1" stroke-linecap="round"/>
+<text x="100" y="252" text-anchor="end" font-size="11" fill="#868e96">4</text>
+<line x1="110" y1="192" x2="900" y2="192" stroke="#f1f3f5" stroke-width="1" stroke-linecap="round"/>
+<text x="100" y="196" text-anchor="end" font-size="11" fill="#868e96">6</text>
+<line x1="110" y1="136" x2="900" y2="136" stroke="#f1f3f5" stroke-width="1" stroke-linecap="round"/>
+<text x="100" y="140" text-anchor="end" font-size="11" fill="#868e96">8</text>
+<line x1="110" y1="80" x2="900" y2="80" stroke="#f1f3f5" stroke-width="1" stroke-linecap="round"/>
+<text x="100" y="84" text-anchor="end" font-size="11" fill="#868e96">10</text>
+<line x1="110" y1="360" x2="900" y2="360" stroke="#495057" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="110" y1="360" x2="110" y2="70" stroke="#495057" stroke-width="1.5" stroke-linecap="round"/>
+<text x="46" y="220" text-anchor="middle" font-size="12" fill="#495057">쥐는 힘</text>
+<text x="46" y="236" text-anchor="middle" font-size="11" fill="#868e96">(10 = 최대)</text>
+<text x="157.4" y="384" text-anchor="middle" font-size="12.5" font-weight="700" fill="#495057">준비</text>
+<text x="315.4" y="384" text-anchor="middle" font-size="12.5" font-weight="700" fill="#495057">백스윙</text>
+<text x="520.8" y="384" text-anchor="middle" font-size="12.5" font-weight="700" fill="#495057">다운스윙</text>
+<text x="678.8" y="384" text-anchor="middle" font-size="12.5" font-weight="700" fill="#495057">임팩트</text>
+<text x="821" y="384" text-anchor="middle" font-size="12.5" font-weight="700" fill="#495057">팔로우스루</text>
+<rect x="655.0999999999999" y="70" width="47.40000000000009" height="290" fill="#fff4e6"/>
+<text x="678.8" y="64" text-anchor="middle" font-size="11.5" font-weight="700" fill="#e8590c">맞기 직전 ~ 맞은 직후</text>
+<path d="M110,164 L268,150 L505,136 L678.8,127.6 L781.5,136 L900,150" fill="none" stroke="#e03131" stroke-width="3" stroke-dasharray="9 6"/>
+<path d="M110,262 L228.5,281.6 L386.5,290 L544.5,276 L631.4,234 L670.9,150 L686.7,136 L718.3,220 L789.4,270.4 L900,276" fill="none" stroke="#2f9e44" stroke-width="4" stroke-linejoin="round"/>
+<text x="394.4" y="122.4" text-anchor="middle" font-size="12.5" font-weight="700" fill="#e03131">망치 그립 : 처음부터 끝까지 꽉 → 브레이크를 밟은 채 휘두름</text>
+<text x="347" y="312" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2f9e44">정석 : 쥔 힘 약 2~3 (라켓이 손에서 빠지지 않을 만큼)</text>
+<text x="742" y="130" font-size="12.5" font-weight="700" fill="#2f9e44">찰나에 7~8로 조임</text>
+<rect x="110" y="400" width="790" height="52" rx="8" fill="#f8f9fa" stroke="#dee2e6"/>
+<circle cx="134" cy="420" r="7" fill="#2f9e44"/>
+<text x="148" y="424" font-size="12.5" fill="#333">조이는 곳 : 새끼·약지·중지가 손잡이 끝을 손바닥 쪽으로 당김</text>
+<circle cx="134" cy="440" r="7" fill="#1c7ed6"/>
+<text x="148" y="444" font-size="12.5" fill="#333">버티는 곳 : 포핸드는 검지 받침, 백핸드는 엄지·엄지 두덩이 손잡이 뒤에서 받침</text>
+</svg><figcaption>스윙 단계별 쥐는 힘의 흐름(10 = 최대). 망치 그립은 내내 7~8로 꽉 쥐고, 정석 그립은 2~3으로 느슨하다가 맞기 직전 ~ 맞은 직후에만 7~8로 조인다. 값은 개념도</figcaption></figure>
+
+<h3 id="g4-2"><span class="sub-num">4-2</span>맞는 찰나에 조이면 생기는 두 가지</h3>
+<div class="table-wrap"><table><thead><tr><th>효과</th><th>① 자세 세팅</th><th>② 생기는 힘</th><th>③ 공의 변화</th></tr></thead><tbody>
+<tr><td><strong>마지막 가속</strong></td><td>아래 세 손가락이 손잡이 끝을 손바닥 쪽으로 당기고, 검지가 그 반대편에서 받친다</td><td>당기는 손가락과 받치는 검지가 짝을 이뤄 라켓을 검지 근처를 축으로 돌린다. 방아쇠를 당기듯 손잡이 끝이 들어오고 라켓 머리가 앞으로 튀어 나간다</td><td>라켓 머리 속도의 마지막 몫. 손목 세우기가 풀리는 동작과 겹쳐 맞는 순간 최고 속도</td></tr>
+<tr><td><strong>면 고정</strong></td><td>맞기 직전 다섯 손가락이 손잡이를 감싸 조인다</td><td>공이 0.004초 동안 평균 약 340 N으로 면을 밀어도, 특히 빗맞아 손잡이를 비틀려 해도 면이 덜 돌아간다</td><td>방향과 높이가 흔들리지 않음. 정중앙에 맞을 때보다 빗맞을 때 차이가 큼</td></tr>
+</tbody></table></div>
+<p>단, 조인다고 공이 직접 더 세게 나가는 것은 아닙니다. 연구에 따르면 정중앙에 맞을 때는 쥐는 힘이 공 속도를 거의 바꾸지 않습니다. 조이는 진짜 이유는 <strong>마지막 가속을 만드는 짝힘</strong>과 <strong>빗맞을 때 면이 돌아가지 않게 붙잡는 것</strong>입니다.</p>
+
+<h3 id="g4-3"><span class="sub-num">4-3</span>어느 부위에 힘을 주나</h3>
+<div class="table-wrap"><table><thead><tr><th>손 부위</th><th>평소 하는 일</th><th>맞는 찰나</th><th>포핸드 / 백핸드</th></tr></thead><tbody>
+<tr><td><strong>중지 · 약지 · 새끼</strong></td><td>손잡이를 감아 손바닥 쪽으로 가볍게 당김</td><td><strong>가장 세게 조임</strong>. 조이는 힘의 대부분</td><td>공통</td></tr>
+<tr><td><strong>새끼 두덩</strong></td><td>손잡이 끝을 묻어 둠</td><td>당기는 힘의 맞은편에서 손잡이 끝이 빠지지 않게 버팀</td><td>공통</td></tr>
+<tr><td><strong>검지 (방아쇠)</strong></td><td>받침점. 면의 방향을 느낌</td><td>손잡이 뒤에 <strong>단단히 대어</strong> 면을 받침 (세게 쥐는 것이 아님)</td><td>포핸드의 중심</td></tr>
+<tr><td><strong>엄지 · 엄지 두덩</strong></td><td>검지와 짝을 이뤄 V자를 닫음</td><td>손잡이 뒤쪽을 눌러 면을 받침</td><td>백핸드의 중심</td></tr>
+<tr><td><strong>손바닥 가운데</strong></td><td>손잡이와 살짝 떨어져 있음</td><td>끝까지 비워 둠</td><td>공통 (손목의 자유)</td></tr>
+</tbody></table></div>
+<div class="table-wrap"><table><thead><tr><th>① 자세 세팅</th><th>② 생기는 힘</th><th>③ 공의 변화</th></tr></thead><tbody>
+<tr><td>아래 세 손가락은 당기고, 검지(포핸드)나 엄지(백핸드)는 손잡이 뒤에서 받친다</td><td>당김과 받침이 짝힘이 되어 라켓 머리를 마지막으로 가속하고, 맞는 순간 면이 공의 반발에 밀려 돌아가지 않게 붙잡는다</td><td>속도는 마지막까지 붙고, 면 각도는 공이 떠날 때까지 유지</td></tr>
+</tbody></table></div>
+<hr>
+
+<h2 id="g5"><span class="sec-num">5</span>포핸드와 백핸드 : 그립은 그대로, 받치는 손가락만 바뀐다</h2>
+<blockquote class="analogy"><strong>직관적 비유 · 젓가락질</strong><br>젓가락으로 콩을 집을 때와 놓을 때 손 모양은 그대로이고, 손가락 끝의 힘만 바뀝니다. 매번 젓가락을 고쳐 쥐면 콩을 놓칩니다. 스쿼시 그립도 <strong>한 번 쥔 모양 그대로</strong> 포핸드와 백핸드를 오가고, 받치는 손가락의 힘만 옮깁니다.</blockquote>
+
+<h3 id="g5-1"><span class="sub-num">5-1</span>왜 바꿔 잡지 않나</h3>
+<p>프로 드라이브는 시속 140~200 km로 날아가 앞벽을 맞고 돌아오는 데 1초 안팎이 걸리고, 앞쪽 발리 교환은 0.5초도 안 될 때가 있습니다. 그 사이에 공을 보고, 움직이고, 백스윙까지 해야 합니다. 테니스처럼 손잡이를 돌려 잡으면 그 짧은 시간을 쓰고, 다시 쥘 때마다 V자 위치가 조금씩 달라져 <strong>면 각도의 기준이 흔들립니다.</strong></p>
+
+<h3 id="g5-2"><span class="sub-num">5-2</span>한 그립으로 양쪽이 되는 원리</h3>
+<div class="table-wrap"><table><thead><tr><th></th><th>포핸드</th><th>백핸드</th></tr></thead><tbody>
+<tr><td><strong>공을 미는 면</strong></td><td>손바닥 쪽 면</td><td>손등 쪽 면</td></tr>
+<tr><td><strong>면을 15~20° 여는 것</strong></td><td>반 면 돌려 쥔 그립 (저절로)</td><td>맞는 순간 <strong>바깥으로 풀리는 아래팔</strong> (백핸드 문서 6-2)</td></tr>
+<tr><td><strong>뒤에서 받치는 손가락</strong></td><td>검지 (방아쇠)</td><td>엄지 · 엄지 두덩</td></tr>
+<tr><td><strong>조이는 손가락</strong></td><td>중지 · 약지 · 새끼</td><td>중지 · 약지 · 새끼 (같음)</td></tr>
+<tr><td><strong>손이 바꾸는 것</strong></td><td>—</td><td>엄지가 손잡이 뒤쪽을 누르는 힘만 조금 늘림</td></tr>
+</tbody></table></div>
+<p>라켓을 손잡이 축으로 돌리면 한쪽 면이 열리는 만큼 반대쪽 면은 닫힙니다. 그래서 같은 그립에서 백핸드의 손등 쪽 면은 손잡이만으로는 열리지 않습니다. 백핸드는 백스윙에서 아래팔을 안으로 감아 두었다가 맞는 순간 <strong>바깥으로 풀며</strong> 면을 엽니다. 아래팔이 비틀릴 수 있는 범위는 약 150° 이상이라, 이 정도 보정은 그립을 바꾸지 않아도 충분히 들어갑니다.</p>
+<div class="table-wrap"><table><thead><tr><th>V자 위치</th><th>포핸드 면</th><th>백핸드 면</th><th>결과</th></tr></thead><tbody>
+<tr><td>윗면 가운데 (1번)</td><td>수직 → 손목을 젖혀 열어야 함</td><td>아래팔을 조금만 풀어도 열림</td><td>포핸드가 불안정</td></tr>
+<tr><td><strong>왼쪽 모서리 (8·1번) — 정석</strong></td><td><strong>저절로 15~20° 열림</strong></td><td>아래팔을 바깥으로 풀며 15~20°로 맞춤 (백핸드 스윙에 원래 있는 동작)</td><td><strong>양쪽 모두 손목 조작 없이 같은 그립으로</strong></td></tr>
+<tr><td>더 왼쪽 (8번 가운데)</td><td>40° 이상 열림 → 공이 뜸</td><td>아래팔을 거의 안 풀어도 열림</td><td>포핸드 드라이브가 떠서 짧아짐</td></tr>
+</tbody></table></div>
+<div class="table-wrap"><table><thead><tr><th>① 자세 세팅</th><th>② 생기는 힘</th><th>③ 공의 변화</th></tr></thead><tbody>
+<tr><td>포핸드와 백핸드 사이에서 그립을 돌리지 않고, 받치는 힘만 검지 ↔ 엄지로 옮긴다</td><td>면 각도의 기준(V자 위치)이 한 번도 흔들리지 않고, 바꿔 잡는 시간도 들지 않는다</td><td>빠른 발리 교환에서도 양쪽 모두 같은 높이·각도의 공</td></tr>
+</tbody></table></div>
+<hr>
+
+<h2 id="g6"><span class="sec-num">6</span>망치 그립 vs 정석 그립 한눈에 비교</h2>
+<p>글로 읽으면 헷갈리는 차이를 한 표로 정리했습니다.</p>
+<div class="table-wrap"><table><thead><tr><th>항목</th><th>망치 그립 (초보)</th><th>정석 그립 (프로)</th></tr></thead><tbody>
+<tr><td><strong>손가락 배치</strong></td><td>다섯 손가락을 뭉쳐 주먹 쥐듯</td><td>아래 세 손가락은 붙여 감고, 검지는 1~2 cm 띄워 <strong>방아쇠처럼</strong></td></tr>
+<tr><td><strong>손잡이가 놓이는 곳</strong></td><td>손바닥 한가운데에 가로로</td><td>손가락 뿌리를 따라 <strong>비스듬히</strong>, 손바닥 가운데는 비움</td></tr>
+<tr><td><strong>V자 위치</strong></td><td>윗면 가운데나 2번 쪽</td><td><strong>8·1번 사이 왼쪽 모서리</strong></td></tr>
+<tr><td><strong>받침점</strong></td><td>없음 (지지점 간격 약 4 cm)</td><td>검지 (지지점 간격 약 8 cm)</td></tr>
+<tr><td><strong>손목 자유도</strong></td><td>잠김. 세우기·젖히기가 작음</td><td>엄지 쪽 15~25° 세우기, 손등 쪽 젖힘이 자유로움</td></tr>
+<tr><td><strong>아래팔 비틀기</strong></td><td>막힘 → 팔 전체를 밂</td><td>끝까지 움직여 마지막 속도를 보탬</td></tr>
+<tr><td><strong>라켓 면 각도</strong></td><td>수직이거나 닫힘. 열려면 손목을 젖힘</td><td><strong>저절로 15~20° 열림</strong></td></tr>
+<tr><td><strong>쥐는 힘의 흐름</strong></td><td>처음부터 끝까지 7~8</td><td>2~3 → 맞는 찰나 7~8 → 다시 3</td></tr>
+<tr><td><strong>스윙 모양</strong></td><td>뻣뻣한 직선, 미는 스윙</td><td>라켓 머리가 늦게 따라오는 채찍 스윙</td></tr>
+<tr><td><strong>구질 : 속도 · 깊이</strong></td><td>느리고 중간에서 죽음</td><td>빠르고 백월까지 뻗음</td></tr>
+<tr><td><strong>구질 : 높이 · 방향</strong></td><td>낮게 깔리거나 들쭉날쭉, 빗맞으면 틀어짐</td><td>약 14° 위로 일정하게 출발, 빗맞아도 덜 틀어짐</td></tr>
+<tr><td><strong>백핸드 전환</strong></td><td>면이 안 맞아 손목으로 보정하거나 바꿔 잡음</td><td>그립 그대로, 받치는 손가락만 엄지 쪽으로</td></tr>
+<tr><td><strong>몸의 부담</strong></td><td>아래팔이 빨리 지치고 팔꿈치 바깥쪽이 뻐근하기 쉬움</td><td>필요한 순간에만 힘을 써 오래 버팀</td></tr>
+</tbody></table></div>
+<hr>
+
+<h2 id="g7"><span class="sec-num">7</span>스윙 단계별 그립 요약표</h2>
+<div class="table-wrap"><table><thead><tr><th>단계</th><th>쥐는 힘 (10 = 최대)</th><th>검지 · 엄지</th><th>손목 · 아래팔</th><th>라켓 면</th></tr></thead><tbody>
+<tr><td><strong>준비</strong></td><td>약 3</td><td>검지는 띄워 걸쳐 두고, 엄지는 가볍게 감쌈</td><td>느슨함</td><td>V자 모서리 → 약 15~20° 열린 채</td></tr>
+<tr><td><strong>백스윙</strong></td><td>약 2~3</td><td>검지가 라켓 머리 무게를 받침</td><td>손목을 세워 둠</td><td>열린 채 위로</td></tr>
+<tr><td><strong>다운스윙</strong></td><td>약 3 (조금씩 오름)</td><td>받침 유지</td><td>느슨해서 저절로 더 젖혀짐 (라켓 머리가 늦게 따라옴)</td><td>열린 각도 유지</td></tr>
+<tr><td><strong>임팩트</strong></td><td><strong>약 7~8</strong> (맞기 직전 ~ 맞은 직후)</td><td>포핸드는 검지, 백핸드는 엄지가 손잡이 뒤를 받침</td><td>아래 세 손가락의 당김과 함께 마지막 가속</td><td>약 15~20° 열린 채 고정</td></tr>
+<tr><td><strong>팔로우스루</strong></td><td>약 3으로 다시 풂</td><td>가볍게 걸침</td><td>느슨하게 감속</td><td>—</td></tr>
+</tbody></table></div>
+<hr>
+
+<h2 id="g8"><span class="sec-num">8</span>자주 오해하는 것들</h2>
+<section class="myths">
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"라켓을 꽉 쥐어야 공이 세게 나간다"</span></p><p class="myth-a"><span class="label">실제</span><span>꽉 쥐면 손목과 아래팔에 <strong>브레이크</strong>가 걸려 라켓 머리가 늦게 따라오지 못합니다. 공은 맞는 순간의 라켓 속도로 날아가고, 그 속도는 느슨한 손목에서 나옵니다. 조이는 것은 맞는 <strong>찰나</strong>뿐입니다.</span></p></div>
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"검지를 띄우는 건 멋 부리기다"</span></p><p class="myth-a"><span class="label">실제</span><span>검지는 지렛대의 <strong>받침점</strong>입니다. 손잡이를 받치는 두 점 사이가 약 4 cm에서 8 cm로 벌어져, 라켓 무게를 버티는 힘이 절반으로 줄고 면의 방향을 손끝으로 느낄 수 있습니다.</span></p></div>
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"면을 열려면 손목을 젖혀야 한다"</span></p><p class="myth-a"><span class="label">실제</span><span>V자를 왼쪽 모서리에 맞추면 손잡이가 반 면(22.5°) 돌아간 채 쥐어져, 손목을 따로 젖히지 않아도 포핸드 면이 15~20° 열립니다. 손목으로 여는 면은 맞을 때마다 각도가 흔들립니다.</span></p></div>
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"백핸드에서는 그립을 돌려 잡아야 한다"</span></p><p class="myth-a"><span class="label">실제</span><span>스쿼시는 바꿔 잡을 시간이 거의 없습니다. 백핸드의 면은 손잡이가 아니라 <strong>바깥으로 풀리는 아래팔</strong>이 열고, 손가락은 받치는 힘만 검지에서 엄지 쪽으로 옮깁니다.</span></p></div>
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"손잡이를 손바닥 한가운데에 꽉 붙여야 안정적이다"</span></p><p class="myth-a"><span class="label">실제</span><span>손바닥 한가운데에 박힌 손잡이는 손목을 잠급니다. 손잡이는 손가락 뿌리를 따라 비스듬히 놓고, 손바닥 가운데는 살짝 비워 둡니다.</span></p></div>
+</section>
+<hr>
+
+<h2 id="g9"><span class="sec-num">9</span>참고 문헌</h2>
+<ul>
+<li>Knudson, D. V., &amp; White, S. C. (1989). Forces on the hand in the tennis forehand drive: Application of force sensing resistors. <em>International Journal of Sport Biomechanics</em>, 5(3), 324–331.</li>
+<li>Hatze, H. (1976). Forces and duration of impact, and grip tightness during the tennis stroke. <em>Medicine and Science in Sports</em>, 8(2), 88–95.</li>
+<li>Elliott, B., Marshall, R., &amp; Noffal, G. (1996). The role of upper limb segment rotations in the development of racket-head speed in the squash forehand. <em>Journal of Sports Sciences</em>, 14(2), 159–165.</li>
+<li>Marshall, R. N., &amp; Elliott, B. C. (2000). Long-axis rotation: The missing link in proximal-to-distal segmental sequencing. <em>Journal of Sports Sciences</em>, 18(4), 247–254.</li>
+<li>Brody, H., Cross, R., &amp; Lindsey, C. (2002). <em>The Physics and Technology of Tennis</em>. Racquet Tech Publishing.</li>
+<li>Daily Squash Report, 그립 관련 코칭 칼럼 (V자를 손잡이 윗면이 아니라 왼쪽 안쪽 모서리에 맞추는 기준). dailysquashreport.com</li>
+</ul>
+<p>쥐는 힘의 흐름은 테니스 그립 압력 측정 연구를, 손잡이 기하학은 팔각형 손잡이의 단순 계산을 바탕으로 했습니다. 쥐는 힘의 숫자(10 중 2~3, 7~8), 검지를 띄우는 간격, 무게 중심 위치는 이해를 돕기 위한 대표값이고 손 크기·손잡이 굵기·라켓 균형에 따라 달라집니다. 스쿼시 그립을 직접 잰 연구는 많지 않아 V자 위치는 스쿼시 코칭 자료의 기준을 따랐습니다.</p>
+
+<blockquote class="summary">프로의 그립이 가벼워 보이는 이유는 <strong>모양이 일을 대신하기</strong> 때문입니다.<br>V자를 왼쪽 모서리에 맞추면 면이 <strong>저절로 15~20° 열리고</strong>, 검지를 방아쇠처럼 띄우면 <strong>지렛대가 길어져</strong> 덜 쥐어도 라켓이 안정되며, 손목과 아래팔은 끝까지 자유롭습니다. 힘은 <strong>맞는 찰나에만</strong> 아래 세 손가락으로 조이고, 포핸드와 백핸드 사이에서는 그립을 돌리지 않고 <strong>받치는 손가락만</strong> 검지에서 엄지로 옮깁니다.</blockquote>
+<nav class="pager" aria-label="이전·다음 글"></nav>
+</main>
+</div>
+<footer class="site-foot"><a href="index.html">← 스쿼시 노트 목록</a> · 개인 학습용 노트</footer>
+</div>
+</body>
+</html>
