@@ -101,7 +101,7 @@
     }
     if (tag === "FIGURE") {
       // 제목만 있는 카드 바로 뒤의 도표는 그 카드에 함께 담는다
-      if (cur && (cur.kind === "sec" || cur.kind === "sub") && cur.nodes.length === 1) {
+      if (cur && (cur.kind === "sec" || cur.kind === "sub") && cur.nodes.length <= 2 && cur.chars < 400) {
         cur.nodes.push(n);
         cur.withFig = true;
         cur = null;
@@ -127,6 +127,17 @@
     cur.nodes.push(el("h2", null, "정리"));
     if (summary) cur.nodes.push(summary);
     if (pager) cur.nodes.push(pager);
+  }
+
+  // 글 몇 줄뿐인 "(이어서)" 카드는 앞 카드에 다시 붙인다
+  for (var ci = cards.length - 1; ci > 0; ci--) {
+    var K = cards[ci], P = cards[ci - 1];
+    if (K.kind === "cont" && K.chars < 220 && P.kind !== "fig" && P.kind !== "cover" && P.kind !== "intro" && !P.withFig &&
+        !K.nodes.some(function (n) { return n.querySelector && n.querySelector("table, figure, svg"); })) {
+      P.nodes = P.nodes.concat(K.nodes);
+      P.chars += K.chars;
+      cards.splice(ci, 1);
+    }
   }
 
   // 같은 장 안의 짧은 소절(H3)은 최대 3개까지 한 카드로 묶는다 (훈련 드릴 목록 등)
