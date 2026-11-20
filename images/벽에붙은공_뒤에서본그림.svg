@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 580" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+<defs><marker id="tb1-o" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e8590c"/></marker><marker id="tb1-k" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#495057"/></marker><marker id="tb1-r" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e03131"/></marker></defs>
+<rect width="960" height="580" fill="#fff"/>
+<text x="480" y="32" text-anchor="middle" font-size="18" font-weight="700" fill="#222">뒤에서 본 그림 : 공이 벽에 붙을수록 몸은 떨어지고, 라켓은 세운다</text>
+<line x1="480" y1="52" x2="480" y2="560" stroke="#dee2e6" stroke-width="1.5" stroke-linecap="round"/>
+<text x="240" y="64" text-anchor="middle" font-size="15" font-weight="700" fill="#e03131">① 평소처럼 서서 수평으로 휘두름</text>
+<rect x="440" y="118" width="14" height="352" fill="#adb5bd"/>
+<text x="447" y="110" text-anchor="middle" font-size="12" font-weight="700" fill="#495057">옆벽</text>
+<line x1="40" y1="470" x2="454" y2="470" stroke="#495057" stroke-width="3" stroke-linecap="round"/>
+<line x1="395.2" y1="190" x2="438" y2="190" stroke="#e03131" stroke-width="1.8" stroke-linecap="round" marker-start="url(#tb1-r)" marker-end="url(#tb1-r)"/>
+<text x="411.6" y="182" text-anchor="middle" font-size="12.5" font-weight="700" fill="#c92a2a">약 25 cm</text>
+<line x1="376" y1="342" x2="387.2" y2="399.6" stroke="#adb5bd" stroke-width="13" stroke-linecap="round"/>
+<line x1="387.2" y1="399.6" x2="392" y2="462" stroke="#adb5bd" stroke-width="11" stroke-linecap="round"/>
+<line x1="347.2" y1="338.8" x2="324.8" y2="399.6" stroke="#adb5bd" stroke-width="13" stroke-linecap="round"/>
+<line x1="324.8" y1="399.6" x2="305.6" y2="462" stroke="#adb5bd" stroke-width="11" stroke-linecap="round"/>
+<polygon points="392,290.8 340.8,278 347.2,338.8 376,342" fill="#e9ecef" stroke="#adb5bd" stroke-width="2"/>
+<circle cx="364.8" cy="242.8" r="16" fill="#e9ecef" stroke="#adb5bd" stroke-width="2"/>
+<line x1="340.8" y1="278" x2="296" y2="302" stroke="#adb5bd" stroke-width="9" stroke-linecap="round"/>
+<line x1="296" y1="302" x2="260.8" y2="310" stroke="#adb5bd" stroke-width="8" stroke-linecap="round"/>
+<line x1="392" y1="290.8" x2="364.8" y2="338.8" stroke="#1c7ed6" stroke-width="11" stroke-linecap="round"/>
+<line x1="364.8" y1="338.8" x2="392" y2="370.8" stroke="#2f9e44" stroke-width="9" stroke-linecap="round"/>
+<line x1="383.7" y1="366" x2="440" y2="398.5" stroke="#343a40" stroke-width="6" stroke-linecap="round"/>
+<line x1="440" y1="398.5" x2="477.9" y2="420.4" stroke="#e03131" stroke-width="4" stroke-linecap="round" stroke-dasharray="6 4"/>
+<ellipse cx="454.3538290724796" cy="406.8" rx="20" ry="15.2" transform="rotate(30 454.3538290724796 406.8)" fill="none" stroke="#e03131" stroke-width="2.5" stroke-dasharray="5 4"/>
+<text x="430" y="364.5" text-anchor="end" font-size="12.5" font-weight="700" fill="#c92a2a">✕ 라켓이 벽에 먼저 닿음</text>
+<text x="430" y="380.5" text-anchor="end" font-size="11.5" fill="#c92a2a">(라켓 머리가 벽 속 10~20 cm)</text>
+<text x="394.8" y="288.8" font-size="12" font-weight="700" fill="#1864ab">팔꿈치가 접혀 몸쪽으로</text>
+<text x="394.8" y="304.8" font-size="12" fill="#1864ab">말림 (닭 날개 모양)</text>
+<line x1="392.8" y1="300.8" x2="370.8" y2="334.8" stroke="#1c7ed6" stroke-width="1.2" stroke-linecap="round"/>
+<circle cx="436.8" cy="430" r="7" fill="#f5a623" stroke="#fff" stroke-width="1.5"/>
+<text x="426.8" y="456" text-anchor="end" font-size="11.5" font-weight="700" fill="#b35c00">벽에 붙은 공</text>
+<text x="720" y="64" text-anchor="middle" font-size="15" font-weight="700" fill="#2f9e44">② 한 뼘 떨어져, 라켓을 세워 수직으로</text>
+<rect x="920" y="118" width="14" height="352" fill="#adb5bd"/>
+<text x="927" y="110" text-anchor="middle" font-size="12" font-weight="700" fill="#495057">옆벽</text>
+<line x1="520" y1="470" x2="934" y2="470" stroke="#495057" stroke-width="3" stroke-linecap="round"/>
+<rect x="852.8" y="150" width="67.20000000000005" height="320" fill="#d3f9d8" opacity=".55"/>
+<line x1="852.8" y1="190" x2="918" y2="190" stroke="#2f9e44" stroke-width="1.8" stroke-linecap="round" marker-start="url(#tb1-k)" marker-end="url(#tb1-k)"/>
+<text x="846.8" y="195" text-anchor="end" font-size="12.5" font-weight="700" fill="#2b8a3e">스윙 통로 약 45 cm</text>
+<line x1="820.8" y1="354.8" x2="843.2" y2="402.8" stroke="#adb5bd" stroke-width="13" stroke-linecap="round"/>
+<line x1="843.2" y1="402.8" x2="849.6" y2="462" stroke="#adb5bd" stroke-width="11" stroke-linecap="round"/>
+<line x1="788.8" y1="351.6" x2="763.2" y2="402.8" stroke="#adb5bd" stroke-width="13" stroke-linecap="round"/>
+<line x1="763.2" y1="402.8" x2="740.8" y2="462" stroke="#adb5bd" stroke-width="11" stroke-linecap="round"/>
+<polygon points="848,286 792,274.8 788.8,351.6 820.8,354.8" fill="#e9ecef" stroke="#adb5bd" stroke-width="2"/>
+<circle cx="814.4" cy="242.8" r="16" fill="#e9ecef" stroke="#adb5bd" stroke-width="2"/>
+<line x1="792" y1="274.8" x2="740.8" y2="300.4" stroke="#adb5bd" stroke-width="9" stroke-linecap="round"/>
+<line x1="740.8" y1="300.4" x2="696" y2="310" stroke="#adb5bd" stroke-width="8" stroke-linecap="round"/>
+<line x1="848" y1="286" x2="873.6" y2="327.6" stroke="#1c7ed6" stroke-width="11" stroke-linecap="round"/>
+<line x1="873.6" y1="327.6" x2="904" y2="358" stroke="#2f9e44" stroke-width="9" stroke-linecap="round"/>
+<line x1="904" y1="348.4" x2="904" y2="409.2" stroke="#343a40" stroke-width="6" stroke-linecap="round"/>
+<ellipse cx="904" cy="430" rx="15.2" ry="20" fill="#f1f3f5" stroke="#343a40" stroke-width="3"/>
+<line x1="904" y1="358" x2="931.2" y2="385.2" stroke="#e03131" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="5 4"/>
+<text x="881.6" y="390" text-anchor="end" font-size="11.5" font-weight="700" fill="#c92a2a">코킹이 풀리면 라켓 끝이</text>
+<text x="881.6" y="405" text-anchor="end" font-size="11.5" fill="#c92a2a">벽 쪽으로 (빨간 점선)</text>
+<path d="M894.4,158 L896,278 Q900.8,398 905.6,454 Q910.4,398 910.4,318" fill="none" stroke="#e8590c" stroke-width="3" stroke-dasharray="8 5" marker-end="url(#tb1-o)"/>
+<text x="862.8" y="146.8" text-anchor="end" font-size="12.5" font-weight="700" fill="#e8590c">벽과 나란한 수직 V자 길</text>
+<text x="862.8" y="162.8" text-anchor="end" font-size="12" fill="#e8590c">위 → 아래 → 공 밑 → 위</text>
+<circle cx="904" cy="358" r="6" fill="#f59f00"/>
+<text x="834" y="354" text-anchor="end" font-size="12" font-weight="700" fill="#b35c00">손목은 세운 채</text>
+<text x="834" y="370" text-anchor="end" font-size="11.5" fill="#b35c00">(아래팔–라켓 약 135°)</text>
+<line x1="838" y1="358" x2="896" y2="358" stroke="#f59f00" stroke-width="1.2" stroke-linecap="round"/>
+<text x="813.2" y="438.8" text-anchor="end" font-size="12" fill="#495057">무릎·엉덩이를 깊게 낮춤</text>
+<circle cx="916.8" cy="430" r="7" fill="#f5a623" stroke="#fff" stroke-width="1.5"/>
+<text x="906.8" y="456" text-anchor="end" font-size="11.5" font-weight="700" fill="#b35c00">벽에 붙은 공</text>
+<rect x="30" y="500" width="900" height="64" rx="8" fill="#f8f9fa" stroke="#dee2e6"/>
+<text x="480" y="524" text-anchor="middle" font-size="12.5" fill="#333">공 중심은 벽에서 2 cm. 라켓 테두리 바깥에서 줄까지는 약 1~1.5 cm → 라켓의 긴 옆 테두리를 벽과 나란히 세우면 줄 가장자리로 공을 맞힐 수 있다</text>
+<text x="480" y="546" text-anchor="middle" font-size="11.5" fill="#868e96">몸을 그림 크기 그대로 그린 것은 아니다. 거리와 각도는 대표값</text>
+</svg>

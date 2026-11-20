@@ -56,6 +56,39 @@ window.SQUASH_DOCS = [
     meta: "도표 5장 · 3D 뷰어 · 약 28분"
   },
   {
+    id: "volley-mechanics", icon: "⏱️", tone: "blue",
+    series: "principle",
+    status: "published",
+    href: "스쿼시_발리와_하프발리의_역학.html",
+    title: "발리와 하프발리의 역학",
+    desc: "프로는 왜 공이 바닥에 닿기 전에 쳐 버릴까? 상대에게서 빼앗는 0.3초, 날아온 공의 속도를 되돌려 보내는 원리, 잽처럼 짧은 펀치 스윙, 스플릿 스텝, 튄 직후 솟는 공을 덮는 하프발리까지 쉬운 말로 풀어 봅니다.",
+    tags: ["발리", "하프발리", "시간 빼앗기"],
+    thumb: "images/발리_타점비교.svg",
+    meta: "도표 4장 · 약 22분"
+  },
+  {
+    id: "tight-ball", icon: "🧱", tone: "amber",
+    series: "principle",
+    status: "published",
+    href: "스쿼시_벽에_붙은_공_처리_원리.html",
+    title: "벽에 붙은 공 처리 원리",
+    desc: "벽에 바짝 붙은 공은 왜 평소처럼 칠 수 없을까? 라켓 끝이 벽에 먼저 닿는 기하학, 라켓을 세워 수직 V자로 긁어내는 길, 한 뼘 물러서 만드는 스윙 통로, 끝까지 세운 손목과 얇게 깎는 접촉, 옆벽을 거울로 쓰는 보스트까지 쉬운 말로 풀어 봅니다.",
+    tags: ["타이트 볼", "수직 V자 스윙", "보스트"],
+    thumb: "images/벽에붙은공_뒤에서본그림.svg",
+    meta: "도표 3장 · 약 22분"
+  },
+  {
+    id: "back-corner-escape", icon: "🚪", tone: "rose",
+    series: "principle",
+    status: "published",
+    href: "스쿼시_백코너_수비_탈출_역학.html",
+    title: "백코너 수비 탈출의 역학",
+    desc: "옆벽과 뒷벽에 갇힌 백코너에서 어떻게 공을 앞벽까지 보내고 시간을 벌까? 두 벽이 자르는 스윙 원, 깊은 런지와 균형, 옆벽을 쿠션으로 쓰는 보스트의 각도, 2초를 사는 로브의 포물선, 둘을 가르는 조건까지 쉬운 말로 풀어 봅니다.",
+    tags: ["백코너", "보스트", "로브"],
+    thumb: "images/백코너_보스트_로브.svg",
+    meta: "도표 3장 · 약 22분"
+  },
+  {
     id: "singles-tactics", icon: "📐", tone: "violet",
     series: "tactics",
     no: 0,

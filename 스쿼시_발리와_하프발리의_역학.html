@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>발리와 하프발리의 역학</title>
+<meta name="description" content="프로는 왜 공이 바닥에 닿기 전에 쳐 버릴까? 상대에게서 빼앗는 0.3초, 날아온 공의 속도를 되돌려 보내는 원리, 잽처럼 짧은 펀치 스윙, 스플릿 스텝, 튄 직후 솟는 공을 덮는 하프발리까지 쉬운 말로 풀어 봅니다.">
+<meta property="og:title" content="발리와 하프발리의 역학">
+<meta property="og:description" content="프로는 왜 공이 바닥에 닿기 전에 쳐 버릴까? 상대에게서 빼앗는 0.3초, 날아온 공의 속도를 되돌려 보내는 원리, 잽처럼 짧은 펀치 스윙, 스플릿 스텝, 튄 직후 솟는 공을 덮는 하프발리까지 쉬운 말로 풀어 봅니다.">
+<link rel="icon" href="favicon.ico">
+<script>try{var t=localStorage.getItem("squash-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/css/squash.css">
+<link rel="stylesheet" href="assets/css/squash-cards.css">
+<script>(function(r){try{if(localStorage.getItem("squash-view")==="scroll")return}catch(e){}r.classList.add("deck-mode");setTimeout(function(){if(!r.classList.contains("deck-ready"))r.classList.remove("deck-mode")},5000)})(document.documentElement)</script>
+<script src="assets/js/squash-docs.js" defer></script>
+<script src="assets/js/squash.js" defer></script>
+<script src="assets/js/squash-cards.js" defer></script>
+</head>
+<body class="article" data-doc="volley-mechanics" data-cards>
+<aside class="sidebar" aria-label="페이지 목록"><div class="sidebar-scroll"></div></aside>
+<div class="scrim"></div>
+<div class="main">
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="페이지 목록 열기"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3.5 5.5h13M3.5 10h13M3.5 14.5h13"/></svg></button>
+  <nav class="crumbs" aria-label="현재 위치"><a href="index.html">스쿼시 노트</a></nav>
+  <button class="icon-btn theme-toggle" type="button" aria-label="밝게/어둡게 전환">
+    <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+  </button>
+</header>
+<div class="cover" data-tone="blue" aria-hidden="true"></div>
+<div class="page">
+<main class="doc">
+<header class="doc-hero">
+<div class="page-icon" aria-hidden="true">⏱️</div>
+<h1 id="발리와-하프발리의-역학">발리와 하프발리의 역학</h1>
+<dl class="props">
+<dt><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 4.5h4l1.2 1.5H14v6.5H2z"/></svg>시리즈</dt><dd><span class="pill accent">기초 원리</span></dd>
+<dt><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><path d="M8 4.8V8l2.2 1.4"/></svg>분량</dt><dd>도표 4장 · 약 22분</dd>
+<dt><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><path d="M8 7.2v4M8 5v.1"/></svg>기준</dt><dd>오른손잡이 · 공기 저항을 뺀 단순 궤적 모델과 라켓 충돌 모델 기반의 대략값</dd>
+<dt><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2.5 2.5h5l6 6-5 5-6-6z"/><circle cx="5.3" cy="5.3" r=".9"/></svg>태그</dt><dd><span class="pill">발리</span><span class="pill">하프발리</span><span class="pill">시간 빼앗기</span><span class="pill">펀치 스윙</span><span class="pill">스플릿 스텝</span></dd>
+</dl>
+<blockquote>프로의 랠리를 보면 공이 바닥에 닿기도 전에 툭툭 끊어 치는데, 그 짧은 스윙에도 공은 빠르고 상대는 늘 한 박자 늦습니다.<br>이 문서는 지금까지 정리한 <a href="스쿼시_그립_생체역학.html">그립</a>·<a href="스쿼시_포핸드_생체역학.html">포핸드</a>·<a href="스쿼시_백핸드_생체역학.html">백핸드</a>의 원리가 실전에서 하나로 합쳐지는 발리와 하프발리를, 연습 드릴과 교정 팁은 빼고 <strong>왜 그렇게 치는지</strong>의 물리와 전술 효과만 쉬운 말로 정리합니다.<br>모든 원리는 <strong>자세 세팅 → 생기는 힘 → 공의 변화</strong> 순서로 설명합니다. 시간과 속도는 단순 모델로 계산한 대표값입니다.</blockquote>
+</header>
+<hr>
+<nav class="toc"><h2 id="목차">목차</h2>
+<ul><li><a href="#v0">0. 먼저 : 이 문서에서 쓰는 쉬운 말</a></li><li><a href="#v1">1. 출발점 : 발리는 '시간'을 치는 기술</a><ul><li><a href="#v1-1">1-1. 같은 공, 세 가지 타점</a></li><li><a href="#v1-2">1-2. 나는 T에 머문다</a></li></ul></li><li><a href="#v2">2. 되돌려 보내는 힘 : 날아온 공의 속도 재활용</a><ul><li><a href="#v2-1">2-1. 나가는 공 속도의 두 가지 몫</a></li></ul></li><li><a href="#v3">3. 펀치 스윙 : 세워 두고, 짧게, 찰나에 조인다</a><ul><li><a href="#v3-1">3-1. 큰 백스윙이 독이 되는 두 가지 이유</a></li><li><a href="#v3-2">3-2. 펀치 스윙의 구조</a></li><li><a href="#v3-3">3-3. 공 높이에 따른 면 각도</a></li></ul></li><li><a href="#v4">4. 하체 : 스플릿 스텝과 짧은 한 걸음</a><ul><li><a href="#v4-1">4-1. 스플릿 스텝 : 눌린 스프링으로 기다리기</a></li><li><a href="#v4-2">4-2. 깊은 런지 대신 짧은 한 걸음</a></li><li><a href="#v4-3">4-3. 열린·일자 스탠스가 훨씬 많은 이유</a></li></ul></li><li><a href="#v5">5. 하프발리 : 튄 직후 0.1초의 물리학</a><ul><li><a href="#v5-1">5-1. 튄 직후 공의 상태</a></li><li><a href="#v5-2">5-2. 면은 조금만 열고, 라켓은 바닥과 나란히</a></li><li><a href="#v5-3">5-3. 언제 하프발리를 쓰나</a></li></ul></li><li><a href="#v6">6. 드라이브 vs 발리 vs 하프발리 한눈에 비교</a></li><li><a href="#v7">7. 자주 오해하는 것들</a></li><li><a href="#v8">8. 참고 문헌</a></li></ul>
+</nav>
+<hr>
+
+<h2 id="v0"><span class="sec-num">0</span>먼저 : 이 문서에서 쓰는 쉬운 말</h2>
+<p>해부학·물리학 용어 대신 아래의 쉬운 말을 씁니다. 원래 용어는 다른 자료를 찾아볼 때 참고하도록 오른쪽에 적어 둡니다.</p>
+<div class="table-wrap"><table><thead><tr><th>이 문서의 말</th><th>어떤 동작·현상인가</th><th>원래 용어</th></tr></thead><tbody>
+<tr><td><strong>발리</strong></td><td>공이 바닥에 닿기 전에 공중에서 바로 치는 것</td><td>볼리 (Volley)</td></tr>
+<tr><td><strong>하프발리</strong></td><td>공이 바닥에 닿자마자 솟아오르는 순간에 치는 것</td><td>하프 발리 (Half-volley)</td></tr>
+<tr><td><strong>시간 빼앗기</strong></td><td>공을 더 일찍 쳐서 상대가 준비하고 T로 돌아갈 시간을 줄이는 것</td><td>템포 · 시간 압박</td></tr>
+<tr><td><strong>되돌려 주는 몫</strong></td><td>날아온 공의 속도 가운데 라켓에 부딪쳐 다시 돌아 나가는 부분</td><td>반발 (반발계수 · 운동량 보존)</td></tr>
+<tr><td><strong>튀는 정도</strong></td><td>부딪친 뒤 속도가 얼마나 살아남는가</td><td>반발계수</td></tr>
+<tr><td><strong>공이 느끼는 라켓 무게</strong></td><td>맞은 자리에서 공이 체감하는 라켓의 무게. 스윗스팟에서 가장 무겁다</td><td>유효 질량</td></tr>
+<tr><td><strong>펀치 스윙</strong></td><td>라켓을 미리 세워 두고 짧게 끊어 치는 스윙</td><td>펀치 발리 · 컴팩트 스윙</td></tr>
+<tr><td><strong>손목 세우기 · 아래팔 비틀기</strong></td><td>손목을 엄지 쪽으로 들어 라켓 머리를 세움 / 문고리를 돌리듯 아래팔을 비틂</td><td>코킹 · 회내 · 회외</td></tr>
+<tr><td><strong>스플릿 스텝</strong></td><td>상대가 치는 순간 살짝 뛰었다가 두 발로 내려앉는 준비 동작</td><td>Split step</td></tr>
+<tr><td><strong>솟는 공</strong></td><td>바닥에 튀어 위로 올라오는 중인 공</td><td>라이징 볼</td></tr>
+<tr><td><strong>면 덮기</strong></td><td>면을 덜 열어, 솟는 공이 위로 뜨지 않고 앞으로 가게 맞히는 것</td><td>(면 각도 조절)</td></tr>
+</tbody></table></div>
+<hr>
+
+<h2 id="v1"><span class="sec-num">1</span>출발점 : 발리는 '시간'을 치는 기술</h2>
+<blockquote class="analogy"><strong>직관적 비유 · 체스 시계</strong><br>빠른 체스에서는 상대가 수를 두자마자 바로 받아 두면, 상대 시계에서 생각할 시간이 줄어듭니다. 발리도 같습니다. 공이 뒤까지 가서 튀고 느려지기를 기다리지 않고 <strong>공중에서 바로 받아 보내면</strong>, 그만큼 상대의 준비 시간이 사라집니다.</blockquote>
+
+<h3 id="v1-1"><span class="sub-num">1-1</span>같은 공, 세 가지 타점</h3>
+<p>상대의 드라이브가 앞벽을 맞고 나온 순간부터 시간을 재 봅니다. 같은 공을 발리·하프발리·드라이브로 칠 때, 내 공이 다시 앞벽에 닿는 시각을 비교했습니다.</p>
+<figure class="fig"><svg role="img" aria-label="옆에서 본 코트 : 같은 공을 발리, 하프발리, 드라이브로 칠 때의 타점과 시간" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+<defs><marker id="vl1-v" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2f9e44"/></marker><marker id="vl1-h" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e8590c"/></marker><marker id="vl1-d" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1c7ed6"/></marker><marker id="vl1-k" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#868e96"/></marker></defs>
+<rect width="960" height="540" fill="#fff"/>
+<text x="480" y="32" text-anchor="middle" font-size="18" font-weight="700" fill="#222">같은 공, 다른 타점 : 일찍 칠수록 상대의 시간이 줄어든다 (옆에서 본 코트)</text>
+<rect x="66" y="145.5" width="14" height="294.5" fill="#adb5bd"/>
+<rect x="879.5" y="230.99999999999997" width="10" height="209.00000000000003" fill="#ced4da"/>
+<line x1="66" y1="440" x2="889.5" y2="440" stroke="#495057" stroke-width="3" stroke-linecap="round"/>
+<rect x="66" y="394.4" width="14" height="45.60000000000002" fill="#e03131" opacity=".55"/>
+<text x="86" y="408.4" font-size="11.5" fill="#c92a2a">틴 0.48 m</text>
+<line x1="80" y1="270.9" x2="102" y2="270.9" stroke="#c92a2a" stroke-width="2" stroke-linecap="round"/>
+<text x="106" y="274.9" font-size="11.5" fill="#c92a2a">서비스 라인 1.78 m</text>
+<text x="73" y="137.5" text-anchor="middle" font-size="12" font-weight="700" fill="#495057">앞벽</text>
+<text x="884.5" y="223" text-anchor="middle" font-size="12" font-weight="700" fill="#495057">뒷벽</text>
+<line x1="526.1" y1="434" x2="526.1" y2="446" stroke="#495057" stroke-width="3" stroke-linecap="round"/>
+<text x="526.1" y="462" text-anchor="middle" font-size="11.5" fill="#495057">T (짧은 선 5.44 m)</text>
+<text x="80" y="480" text-anchor="middle" font-size="10.5" fill="#adb5bd">0 m</text>
+<text x="162" y="480" text-anchor="middle" font-size="10.5" fill="#adb5bd">1 m</text>
+<text x="244" y="480" text-anchor="middle" font-size="10.5" fill="#adb5bd">2 m</text>
+<text x="326" y="480" text-anchor="middle" font-size="10.5" fill="#adb5bd">3 m</text>
+<text x="408" y="480" text-anchor="middle" font-size="10.5" fill="#adb5bd">4 m</text>
+<text x="490" y="480" text-anchor="middle" font-size="10.5" fill="#adb5bd">5 m</text>
+<text x="572" y="480" text-anchor="middle" font-size="10.5" fill="#adb5bd">6 m</text>
+<text x="654" y="480" text-anchor="middle" font-size="10.5" fill="#adb5bd">7 m</text>
+<text x="736" y="480" text-anchor="middle" font-size="10.5" fill="#adb5bd">8 m</text>
+<text x="818" y="480" text-anchor="middle" font-size="10.5" fill="#adb5bd">9 m</text>
+<polyline points="80,231 91.5,232.5 103,234 114.4,235.7 125.9,237.4 137.4,239.3 148.9,241.2 160.4,243.3 171.8,245.4 183.3,247.6 194.8,249.9 206.3,252.3 217.8,254.8 229.2,257.4 240.7,260.1 252.2,262.8 263.7,265.7 275.2,268.7 286.6,271.7 298.1,274.9 309.6,278.1 321.1,281.5 332.6,284.9 344,288.4 355.5,292 367,295.7 378.5,299.5 390,303.4 401.4,307.4 412.9,311.5 424.4,315.6 435.9,319.9 447.4,324.3 458.8,328.7 470.3,333.3 481.8,337.9 493.3,342.6 504.8,347.5 516.2,352.4 527.7,357.4 539.2,362.5 550.7,367.7 562.2,373 573.6,378.3 585.1,383.8 596.6,389.4 608.1,395 619.6,400.8 631,406.7 642.5,412.6 654,418.6 665.5,424.8 677,431 688.4,437.3 698.6,438.4 707.8,435.6 717,432.9 726.2,430.3 735.3,427.8 744.5,425.4 753.7,423.1 762.9,420.9 772.1,418.7 781.3,416.7 790.4,414.8 799.6,412.9 808.8,411.2 818,409.5 827.2,407.9 836.4,406.4 845.5,405.1 854.7,403.8 863.9,402.6 873.1,401.5" fill="none" stroke="#495057" stroke-width="2.5"/>
+<text x="211.2" y="230.5" font-size="12.5" font-weight="700" fill="#495057">상대 공 : 앞벽을 맞고 나옴 (0초)</text>
+<circle cx="693.3278615782918" cy="440" r="4" fill="#495057"/>
+<text x="693.3" y="462" text-anchor="middle" font-size="11.5" fill="#495057">바운드</text>
+<path d="M522.8,355.2192857142857 Q301.4,283.25 82,307" fill="none" stroke="#2f9e44" stroke-width="2.2" stroke-dasharray="7 5" marker-end="url(#vl1-v)"/>
+<circle cx="522.8" cy="355.2192857142857" r="9" fill="#2f9e44" stroke="#fff" stroke-width="2"/>
+<text x="536.8" y="341.2" text-anchor="start" font-size="13" font-weight="700" fill="#2f9e44">발리</text>
+<path d="M736,427.6256614996207 Q408,330.75 82,354.5" fill="none" stroke="#e8590c" stroke-width="2.2" stroke-dasharray="7 5" marker-end="url(#vl1-h)"/>
+<circle cx="736" cy="427.6256614996207" r="9" fill="#e8590c" stroke="#fff" stroke-width="2"/>
+<text x="724" y="415.6" text-anchor="end" font-size="13" font-weight="700" fill="#e8590c">하프발리</text>
+<path d="M826.1999999999999,408.08338147286935 Q453.09999999999997,235.75 82,259.5" fill="none" stroke="#1c7ed6" stroke-width="2.2" stroke-dasharray="7 5" marker-end="url(#vl1-d)"/>
+<circle cx="826.1999999999999" cy="408.08338147286935" r="9" fill="#1c7ed6" stroke="#fff" stroke-width="2"/>
+<text x="826.2" y="390.1" text-anchor="middle" font-size="13" font-weight="700" fill="#1c7ed6">드라이브</text>
+<circle cx="70" cy="68" r="7" fill="#2f9e44"/>
+<text x="82" y="73" font-size="13" font-weight="700" fill="#2f9e44">발리 : 0.39초에 침</text>
+<text x="82" y="92" font-size="12" fill="#555">앞벽에서 5.4 m · 높이 0.89 m</text>
+<circle cx="360" cy="68" r="7" fill="#e8590c"/>
+<text x="372" y="73" font-size="13" font-weight="700" fill="#e8590c">하프발리 : 0.58초에 침</text>
+<text x="372" y="92" font-size="12" fill="#555">앞벽에서 8 m · 높이 13 cm</text>
+<circle cx="650" cy="68" r="7" fill="#1c7ed6"/>
+<text x="662" y="73" font-size="13" font-weight="700" fill="#1c7ed6">드라이브 : 0.68초에 침</text>
+<text x="662" y="92" font-size="12" fill="#555">앞벽에서 9.1 m · 높이 0.34 m</text>
+<rect x="60" y="486" width="840" height="44" rx="8" fill="#f8f9fa" stroke="#dee2e6"/>
+<text x="480" y="513" text-anchor="middle" font-size="13.5" font-weight="700" fill="#333">내 공이 다시 앞벽에 닿는 시각 → 발리 0.58초  ·  하프발리 0.85초  ·  드라이브 0.88초</text>
+</svg><figcaption>공기 저항을 뺀 단순 모델. 상대 공이 앞벽 2.2 m 높이에서 초속 14 m로 나와 약 7.5 m 지점에 튄다고 두었다. 발리는 T 근처, 하프발리는 튄 직후, 드라이브는 뒤에서 기다려 친다. 내 공의 속도는 발리 약 28 m/s, 하프발리 약 30 m/s, 드라이브 약 45 m/s로 두었다</figcaption></figure>
+<pre class="formula"><code>상대 공이 앞벽을 맞고 나온 순간 = 0초
+발리     : 앞벽에서 5.4 m, 높이 0.89 m → 0.39초에 침 → 앞벽까지 0.19초 → 0.58초
+하프발리 : 앞벽에서 8 m, 높이 13 cm → 0.58초에 침 → 앞벽까지 0.27초 → 0.85초
+드라이브 : 앞벽에서 9.1 m, 높이 0.34 m → 0.68초에 침 → 앞벽까지 0.20초 → 0.88초</code></pre>
+<p>발리로 친 공은 드라이브보다 약 <strong>0.30초 일찍</strong> 앞벽에 닿습니다. 드라이브의 공이 훨씬 빠른데도 그렇습니다. 공이 뒤까지 가서 튀고 느려지는 시간을 통째로 건너뛰기 때문입니다. 사람이 공을 보고 움직이기 시작하는 데만 약 0.2초가 걸리므로, 0.3초는 <strong>반응 한 번보다 긴 시간</strong>입니다.</p>
+<div class="table-wrap"><table><thead><tr><th>① 자세 세팅</th><th>② 생기는 힘</th><th>③ 공의 변화</th></tr></thead><tbody>
+<tr><td>T 근처에서 공이 바닥에 닿기 전에 친다</td><td>상대 공이 뒤까지 가서 튀고 느려지는 시간(약 0.3초)을 건너뛴다</td><td>내 공이 약 0.3초 일찍 앞벽에 닿음 → 상대가 T로 돌아오는 속도(초속 3~4 m)로 약 1 m를 덜 돌아온 상태에서 공을 받아야 함</td></tr>
+</tbody></table></div>
+
+<h3 id="v1-2"><span class="sub-num">1-2</span>나는 T에 머문다</h3>
+<div class="table-wrap"><table><thead><tr><th></th><th>발리</th><th>드라이브 (뒤에서 기다림)</th></tr></thead><tbody>
+<tr><td><strong>내가 움직이는 거리</strong></td><td>T 근처에서 한 걸음 안팎</td><td>뒤 코너까지 약 3.5 m 갔다가 T로 다시 약 3.5 m (왕복 약 7 m)</td></tr>
+<tr><td><strong>치고 난 뒤 내 위치</strong></td><td>이미 T 근처 → 바로 다음 공을 기다림</td><td>뒤 코너 → T로 돌아오는 동안 상대가 먼저 침</td></tr>
+<tr><td><strong>상대가 받는 시간</strong></td><td>약 0.3초 짧음</td><td>기준</td></tr>
+</tbody></table></div>
+<p>발리는 상대의 시간을 줄이는 동시에 <strong>내 시간은 늘리는</strong> 기술입니다. 코트 한가운데 T를 지키는 쪽이 랠리를 이끌기 때문에, 프로는 칠 수 있는 공은 될 수 있으면 발리로 끊어 냅니다.</p>
+<hr>
+
+<h2 id="v2"><span class="sec-num">2</span>되돌려 보내는 힘 : 날아온 공의 속도 재활용</h2>
+<blockquote class="analogy"><strong>직관적 비유 · 콘크리트 벽과 커튼</strong><br>같은 공을 콘크리트 벽에 던지면 튕겨 나오고, 커튼에 던지면 툭 떨어집니다. 발리의 라켓 면은 날아온 공을 받아치는 <strong>움직이는 벽</strong>입니다. 다만 스쿼시 공은 말랑해서 잘 안 튀기 때문에, 벽이 가만히 있기만 하면 돌아 나오는 몫이 생각보다 작습니다.</blockquote>
+
+<h3 id="v2-1"><span class="sub-num">2-1</span>나가는 공 속도의 두 가지 몫</h3>
+<pre class="formula"><code>나가는 공 속도 ≈ 라켓 속도 × 약 1.17 + 들어온 공 속도 × 약 0.17
+(스윗스팟, 튀는 정도 0.45, 공이 느끼는 라켓 무게 약 100 g, 공 24 g 기준)
+0.17 = (튀는 정도 × 라켓 무게 − 공 무게) ÷ (라켓 무게 + 공 무게) = (0.45 × 100 − 24) ÷ 124</code></pre>
+<figure class="fig"><svg role="img" aria-label="나가는 공 속도 = 라켓이 만든 몫 + 들어온 공이 돌려준 몫, 세 가지 경우 비교" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+<rect width="960" height="400" fill="#fff"/>
+<text x="480" y="32" text-anchor="middle" font-size="18" font-weight="700" fill="#222">나가는 공 속도는 어디서 오나 : 라켓이 만든 몫 + 들어온 공이 돌려준 몫</text>
+<text x="40" y="106" font-size="14" font-weight="700" fill="#222">블록 (라켓 거의 정지)</text>
+<text x="40" y="126" font-size="12" fill="#666">들어오는 공 25 m/s</text>
+<rect x="230" y="90" width="46.8" height="34" rx="4" fill="#f59f00"/>
+<text x="286.8" y="113" font-size="13.5" font-weight="700" fill="#333">≈ 4 m/s (15 km/h)</text>
+<text x="40" y="198" font-size="14" font-weight="700" fill="#222">펀치 발리 (라켓 15 m/s)</text>
+<text x="40" y="218" font-size="12" fill="#666">들어오는 공 25 m/s</text>
+<rect x="230" y="182" width="193" height="34" rx="4" fill="#1c7ed6"/>
+<rect x="423.1" y="182" width="46.8" height="34" rx="4" fill="#f59f00"/>
+<text x="479.8" y="205" font-size="13.5" font-weight="700" fill="#333">≈ 22 m/s (78 km/h)</text>
+<text x="40" y="290" font-size="14" font-weight="700" fill="#222">드라이브 (라켓 40 m/s)</text>
+<text x="40" y="310" font-size="12" fill="#666">튀어 느려진 공 8 m/s</text>
+<rect x="230" y="274" width="514.8" height="34" rx="4" fill="#1c7ed6"/>
+<rect x="744.8" y="274" width="15" height="34" rx="4" fill="#f59f00"/>
+<text x="769.8" y="297" font-size="13.5" font-weight="700" fill="#333">≈ 48 m/s (173 km/h)</text>
+<rect x="250" y="352" width="14" height="14" rx="3" fill="#1c7ed6"/>
+<text x="270" y="364" font-size="12.5" fill="#333">라켓이 만든 몫 ≈ 라켓 속도 × 1.17</text>
+<rect x="560" y="352" width="14" height="14" rx="3" fill="#f59f00"/>
+<text x="580" y="364" font-size="12.5" fill="#333">들어온 공이 돌려준 몫 ≈ 들어온 속도 × 0.17</text>
+<text x="480" y="390" text-anchor="middle" font-size="11.5" fill="#868e96">스윗스팟 · 튀는 정도 0.45 · 공이 느끼는 라켓 무게 약 100 g 기준의 단순 계산</text>
+</svg><figcaption>나가는 공 속도를 라켓이 만든 몫(파랑)과 들어온 공이 돌려준 몫(주황)으로 나눈 단순 계산. 들어온 공의 속도는 약 1/6만 돌아간다</figcaption></figure>
+<div class="table-wrap"><table><thead><tr><th>경우</th><th>① 자세 세팅</th><th>② 생기는 힘</th><th>③ 공의 변화</th></tr></thead><tbody>
+<tr><td><strong>블록</strong></td><td>라켓을 세워 공 앞에 대기만 한다 (라켓 거의 정지)</td><td>들어온 25 m/s 가운데 약 1/6만 돌아 나간다</td><td>약 4 m/s로 힘없이 툭 → 앞벽 앞에 떨어지는 <strong>드롭 발리</strong>가 됨</td></tr>
+<tr><td><strong>펀치 발리</strong></td><td>라켓 머리를 30~60 cm만 짧게 내지른다 (약 15 m/s)</td><td>라켓이 만든 약 17.5 m/s에 들어온 공이 돌려준 약 4 m/s가 더해진다</td><td>약 22 m/s(약 80 km/h). 드라이브의 절반 속도를 몇 분의 일의 스윙 거리로</td></tr>
+<tr><td><strong>드라이브</strong></td><td>튀어 느려진 공(약 8 m/s)을 크게 휘둘러 친다 (약 40 m/s)</td><td>속도는 거의 전부 라켓이 만든다</td><td>약 48 m/s. 가장 빠르지만 가장 늦게 침</td></tr>
+</tbody></table></div>
+<p>펀치 발리에서 라켓과 공이 부딪치는 속도는 <strong>라켓 15 m/s + 공 25 m/s = 약 40 m/s</strong>로, 크게 휘두른 드라이브와 비슷합니다. 그래서 짧게 쳐도 공이 받는 충격은 크고, 그만큼 면이 밀려 돌아가지 않게 붙잡는 일(맞는 찰나의 조임)이 중요해집니다.</p>
+<blockquote>"날아온 힘이 그대로 반사된다"는 말은 반만 맞습니다. 스쿼시 공은 잘 안 튀어서 되돌려 주는 몫은 들어온 속도의 약 1/6입니다. 발리의 진짜 이득은 속도보다 <strong>시간</strong>(1장)이고, 되돌려 주는 몫은 짧은 스윙으로도 충분한 속도를 내게 돕는 덤입니다.</blockquote>
+<hr>
+
+<h2 id="v3"><span class="sec-num">3</span>펀치 스윙 : 세워 두고, 짧게, 찰나에 조인다</h2>
+<blockquote class="analogy"><strong>직관적 비유 · 권투의 잽</strong><br>잽은 팔을 크게 빼지 않고 짧게 내지르기 때문에 상대가 보고 피할 틈이 없습니다. 크게 휘두르는 훅은 세지만 늦게 닿고, 빗나가기 쉽습니다. 발리는 잽입니다. <strong>미리 세워 둔 라켓을 짧게 내지르는</strong> 것만으로 공은 충분히 묵직하게 나갑니다.</blockquote>
+
+<h3 id="v3-1"><span class="sub-num">3-1</span>큰 백스윙이 독이 되는 두 가지 이유</h3>
+<div class="table-wrap"><table><thead><tr><th>이유</th><th>무슨 일이 일어나나</th><th>결과</th></tr></thead><tbody>
+<tr><td><strong>① 시간이 모자란다</strong></td><td>앞벽에서 T 근처 타점까지 공이 오는 시간은 약 0.39초. 공을 보고 움직이기 시작하는 데 약 0.2초가 걸리면 남는 시간은 약 0.2초. 드라이브처럼 라켓을 머리 위로 크게 뺐다 휘두르는 데는 0.5초 안팎이 든다</td><td>라켓이 늦게 도착해 공이 몸 옆이나 뒤에서 맞음</td></tr>
+<tr><td><strong>② 타점이 흔들린다</strong></td><td>크게 휘두를수록 손목과 아래팔이 맞기 직전에 아주 빠르게(1초에 1,000° 안팎) 돈다. 이때 0.01초만 어긋나도 면이 약 10° 달라진다</td><td>면 1°가 5 m 앞에서 약 9 cm이므로 10°면 약 90 cm 빗나감</td></tr>
+</tbody></table></div>
+
+<h3 id="v3-2"><span class="sub-num">3-2</span>펀치 스윙의 구조</h3>
+<div class="table-wrap"><table><thead><tr><th>구간</th><th>① 자세 세팅</th><th>② 생기는 힘</th><th>③ 공의 변화</th></tr></thead><tbody>
+<tr><td><strong>준비</strong></td><td>라켓 머리를 어깨 높이 이상으로 세운 채 기다린다. 손목은 세운 각도로 고정, 팔꿈치는 약 90°로 몸 앞</td><td>백스윙이 이미 끝나 있는 상태. 남은 것은 앞으로 내지르는 짧은 구간뿐</td><td>공이 빨리 와도 준비할 시간이 필요 없음</td></tr>
+<tr><td><strong>테이크백</strong></td><td>라켓 머리를 30~40 cm만 뒤로 당긴다</td><td>가속할 거리는 짧지만, 들어오는 공의 속도가 더해져 부딪치는 속도는 충분하다 (2장)</td><td>타점이 흔들리지 않음</td></tr>
+<tr><td><strong>앞으로</strong></td><td>팔꿈치를 조금 펴며 아래팔을 짧게 비튼다 (포핸드는 안으로, 백핸드는 바깥으로). 손목은 세운 채 그대로</td><td>라켓 머리가 30~60 cm 움직이며 약 12~20 m/s. 손목을 쓰지 않아 면 각도가 준비 때 정한 그대로 유지된다</td><td>방향과 높이가 일정</td></tr>
+<tr><td><strong>맞는 찰나</strong></td><td>아래 세 손가락으로 순간 조인다 (<a href="스쿼시_그립_생체역학.html">그립 문서</a> 4장)</td><td>부딪치는 속도 약 40 m/s의 큰 충격에도 면이 밀려 돌아가지 않는다</td><td>묵직하고 곧은 공</td></tr>
+<tr><td><strong>끝</strong></td><td>팔로우스루를 짧게 멈춘다</td><td>라켓이 몸 앞에 남아 다음 준비 자세로 바로 돌아간다</td><td>T에서 다음 공을 기다릴 수 있음</td></tr>
+</tbody></table></div>
+
+<h3 id="v3-3"><span class="sub-num">3-3</span>공 높이에 따른 면 각도</h3>
+<figure class="fig"><svg role="img" aria-label="발리 타점 높이에 따른 라켓 면 각도 : 눈높이는 거의 수직, 허리는 약간, 무릎은 더 많이 연다" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+<defs><marker id="vl2-a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2f80ed"/></marker><marker id="vl2-p" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c4dff"/></marker></defs>
+<rect width="960" height="470" fill="#fff"/>
+<text x="480" y="32" text-anchor="middle" font-size="18" font-weight="700" fill="#222">공이 낮을수록 면을 더 연다 (앞벽까지 5 m, 공 속도 약 25 m/s)</text>
+<rect x="76" y="80" width="14" height="330" fill="#adb5bd"/>
+<line x1="76" y1="410" x2="874" y2="410" stroke="#495057" stroke-width="3" stroke-linecap="round"/>
+<rect x="76" y="338" width="14" height="72" fill="#e03131" opacity=".55"/>
+<text x="96" y="342" font-size="11.5" fill="#c92a2a">틴</text>
+<rect x="90" y="147.5" width="8" height="75" fill="#40c057" opacity=".7"/>
+<text x="104" y="149.5" font-size="11.5" fill="#2b8a3e">목표 약 1.3~1.7 m</text>
+<line x1="791.8" y1="106" x2="788.2" y2="174" stroke="#343a40" stroke-width="6" stroke-linecap="round"/>
+<line x1="782" y1="140" x2="728.1" y2="137.2" stroke="#7c4dff" stroke-width="2.5" stroke-linecap="round" marker-end="url(#vl2-p)"/>
+<path d="M778,140 Q442,124 94,185" fill="none" stroke="#1c7ed6" stroke-width="2.2" stroke-dasharray="7 5" marker-end="url(#vl2-a)"/>
+<circle cx="778" cy="140" r="7" fill="#f5a623"/>
+<text x="836" y="136" font-size="13.5" font-weight="700" fill="#1c7ed6">눈높이 발리</text>
+<text x="836" y="154" font-size="12.5" fill="#333">면 거의 수직 (0~5°)</text>
+<line x1="797.1" y1="226.7" x2="782.9" y2="293.3" stroke="#343a40" stroke-width="6" stroke-linecap="round"/>
+<line x1="782" y1="260" x2="729.2" y2="248.8" stroke="#7c4dff" stroke-width="2.5" stroke-linecap="round" marker-end="url(#vl2-p)"/>
+<path d="M778,260 Q442,169 94,185" fill="none" stroke="#2f9e44" stroke-width="2.2" stroke-dasharray="7 5" marker-end="url(#vl2-a)"/>
+<circle cx="778" cy="260" r="7" fill="#f5a623"/>
+<text x="836" y="256" font-size="13.5" font-weight="700" fill="#2f9e44">허리 높이 발리</text>
+<text x="836" y="274" font-size="12.5" fill="#333">면 약 10~15° 열림</text>
+<line x1="801.6" y1="303.1" x2="778.4" y2="366.9" stroke="#343a40" stroke-width="6" stroke-linecap="round"/>
+<line x1="782" y1="335" x2="731.3" y2="316.5" stroke="#7c4dff" stroke-width="2.5" stroke-linecap="round" marker-end="url(#vl2-p)"/>
+<path d="M778,335 Q442,135 94,185" fill="none" stroke="#e8590c" stroke-width="2.2" stroke-dasharray="7 5" marker-end="url(#vl2-a)"/>
+<circle cx="778" cy="335" r="7" fill="#f5a623"/>
+<text x="836" y="331" font-size="13.5" font-weight="700" fill="#e8590c">무릎 높이 발리</text>
+<text x="836" y="349" font-size="12.5" fill="#333">면 약 15~20° 이상</text>
+<text x="480" y="452" text-anchor="middle" font-size="12" fill="#555">보라 화살표 = 면이 바라보는 방향. 높이에서 앞벽 목표까지의 차이가 클수록, 공이 위로 출발해야 해서 면을 더 연다</text>
+</svg><figcaption>앞벽까지 5 m, 공 속도 약 25 m/s에서 앞벽 1.3~1.7 m를 노릴 때. 타점이 낮을수록 공이 위로 출발해야 해서 면을 더 연다. 각도는 대표값</figcaption></figure>
+<div class="table-wrap"><table><thead><tr><th>타점 높이</th><th>면 각도</th><th>라켓 길</th><th>주로 노리는 공</th></tr></thead><tbody>
+<tr><td><strong>눈높이 이상</strong></td><td>거의 수직 ~ 살짝 덮음 (0~5°)</td><td>약간 아래로 눌러 침</td><td>킬, 빠른 발리 드라이브 (공이 수평이나 약간 아래로 가도 앞벽 낮게 맞음)</td></tr>
+<tr><td><strong>어깨 ~ 가슴</strong></td><td>약 5~10° 열림</td><td>거의 수평</td><td>발리 드라이브</td></tr>
+<tr><td><strong>허리</strong></td><td>약 10~15° 열림</td><td>수평 ~ 약간 위</td><td>발리 드라이브, 발리 드롭</td></tr>
+<tr><td><strong>무릎</strong></td><td>약 15~20° 이상 열림</td><td>약간 위로</td><td>안정적으로 길게 보내는 발리, 드롭</td></tr>
+</tbody></table></div>
+<p>눈높이 공은 앞벽 목표보다 높은 곳에서 출발하므로 공이 수평으로만 나가도 목표에 닿습니다. 무릎 높이 공은 약 1 m를 올라가야 하므로 약 13° 위로 출발해야 하고, 그만큼 면을 엽니다. <a href="스쿼시_포핸드_생체역학.html">포핸드 문서</a>에서 본 것처럼 공은 면이 바라보는 쪽보다 살짝 아래(라켓이 움직이는 쪽)로 나가므로, 면은 출발 각도보다 조금 더 엽니다.</p>
+<div class="table-wrap"><table><thead><tr><th>① 자세 세팅</th><th>② 생기는 힘</th><th>③ 공의 변화</th></tr></thead><tbody>
+<tr><td>타점 높이에 맞춰 면 각도를 준비 때 정해 두고, 손목은 고정한 채 짧게 내지른다</td><td>면 각도가 맞는 순간까지 변하지 않아 공의 출발 각도가 정확하다</td><td>높은 공은 낮고 빠르게 꽂히고, 낮은 공은 안전하게 앞벽 목표에 닿음</td></tr>
+</tbody></table></div>
+<hr>
+
+<h2 id="v4"><span class="sec-num">4</span>하체 : 스플릿 스텝과 짧은 한 걸음</h2>
+<blockquote class="analogy"><strong>직관적 비유 · 골키퍼의 제자리 뛰기</strong><br>페널티킥 직전 골키퍼는 가볍게 뛰었다가, 키커가 공을 차는 순간 착지하며 어느 쪽으로든 튀어 나갑니다. 착지하는 순간 다리가 스프링처럼 눌려 있어 서 있던 자리에서 출발할 때보다 빠릅니다. 발리를 기다리는 선수의 다리도 이렇게 <strong>눌린 스프링</strong> 상태로 만들어 둡니다.</blockquote>
+
+<h3 id="v4-1"><span class="sub-num">4-1</span>스플릿 스텝 : 눌린 스프링으로 기다리기</h3>
+<div class="table-wrap"><table><thead><tr><th>① 자세 세팅</th><th>② 생기는 힘</th><th>③ 공의 변화</th></tr></thead><tbody>
+<tr><td>상대가 공을 치는 순간에 맞춰 살짝 뛰었다가 두 발로 내려앉는다 (무릎을 가볍게 굽힘)</td><td>내려앉는 순간 허벅지·종아리 근육과 힘줄이 고무줄처럼 늘어나, 첫발이 튀어 나간다(고무줄 효과). 가만히 서 있다가 출발할 때보다 빠르다</td><td>공 방향을 본 직후 바로 한 걸음 → 공이 높을 때 칠 자리에 먼저 도착</td></tr>
+<tr><td>내려앉는 시점을 상대가 치는 순간 또는 그 직후에 맞춘다</td><td>공이 어느 쪽으로 가는지 보이는 순간 다리가 이미 눌려 있다</td><td>반응 시간 약 0.2초 안에 첫발을 뗄 수 있음</td></tr>
+</tbody></table></div>
+<p>테니스 연구에서도 스플릿 스텝을 하면 공 방향을 보고 한 걸음 내딛어 손을 뻗기까지의 시간이 줄어드는 것으로 나타났습니다.</p>
+
+<h3 id="v4-2"><span class="sub-num">4-2</span>깊은 런지 대신 짧은 한 걸음</h3>
+<div class="table-wrap"><table><thead><tr><th></th><th>드라이브 (뒤에서)</th><th>발리</th></tr></thead><tbody>
+<tr><td><strong>타점 높이</strong></td><td>무릎 아래 ~ 허리</td><td>허리 ~ 머리 위</td></tr>
+<tr><td><strong>앞 무릎</strong></td><td>깊게 굽힘 (약 90~120°)</td><td>얕게 굽힘 (약 130~160°)</td></tr>
+<tr><td><strong>걸음 수</strong></td><td>공 쪽으로 여러 걸음 + 마지막 런지</td><td>제자리 ~ 한 걸음</td></tr>
+<tr><td><strong>멈추는 방식</strong></td><td>몸의 기세가 커서 뒤꿈치부터 닿아 길게 제동</td><td>멈출 기세가 작아 발 앞쪽으로 가볍게 딛고 바로 밀어 돌아옴</td></tr>
+<tr><td><strong>체중 이동</strong></td><td>뒷발 → 앞발로 크게</td><td>공 쪽으로 짧게 실었다가 바로 T 쪽으로</td></tr>
+</tbody></table></div>
+<div class="table-wrap"><table><thead><tr><th>① 자세 세팅</th><th>② 생기는 힘</th><th>③ 공의 변화</th></tr></thead><tbody>
+<tr><td>스플릿 스텝으로 눌린 다리에서 공 쪽으로 한 걸음만 딛고 높은 타점에서 친다</td><td>깊게 앉고 일어서는 시간이 없고, 체중이 공 쪽 발에 잠깐만 실린다</td><td>치자마자 T로 돌아와 다음 공을 기다림</td></tr>
+</tbody></table></div>
+
+<h3 id="v4-3"><span class="sub-num">4-3</span>열린·일자 스탠스가 훨씬 많은 이유</h3>
+<div class="table-wrap"><table><thead><tr><th>이유</th><th>설명</th></tr></thead><tbody>
+<tr><td><strong>① 시간</strong></td><td>앞발을 가로질러 딛는 닫힌 스탠스는 한 걸음이 더 든다. 발리에는 그 시간이 없다</td></tr>
+<tr><td><strong>② 몸통 회전이 거의 필요 없다</strong></td><td>속도는 들어온 공의 반발과 짧은 펀치가 만든다. 몸통을 크게 감았다 풀 이유가 없어 가슴이 앞벽 쪽을 보고 있어도 된다</td></tr>
+<tr><td><strong>③ 즉시 T 복귀</strong></td><td>공 쪽 발에 체중을 싣고 친 뒤, 그 발로 바로 T 쪽을 밀어낸다</td></tr>
+<tr><td><strong>④ 높은 타점을 몸 앞에서</strong></td><td>서 있는 높이에서 공을 몸 앞에 두고 맞히기 쉬워, 면 각도를 눈으로 맞추기 편하다</td></tr>
+</tbody></table></div>
+<p>포핸드 발리는 공 쪽 발(오른발)로 받치는 열린 스탠스가 특히 많습니다. 백핸드 발리는 치는 어깨가 몸 앞에 있어서 일자에 가까운 스탠스로 어깨만 조금 닫는 경우가 많습니다(<a href="스쿼시_포핸드_생체역학.html">포핸드</a> 8장, <a href="스쿼시_백핸드_생체역학.html">백핸드</a> 7장의 스탠스 비교).</p>
+<hr>
+
+<h2 id="v5"><span class="sec-num">5</span>하프발리 : 튄 직후 0.1초의 물리학</h2>
+<blockquote class="analogy"><strong>직관적 비유 · 분수 물줄기 덮기</strong><br>솟아오르는 분수 물줄기에 손바닥을 살짝만 기울여 대면, 물은 위로 튀지 않고 앞으로 흘러갑니다. 손바닥을 많이 젖히면 물이 얼굴 쪽으로 튀어 오릅니다. 하프발리는 바닥에서 <strong>솟아오르는 공을 면으로 살짝 덮어</strong> 앞으로 돌려 보내는 기술입니다.</blockquote>
+
+<h3 id="v5-1"><span class="sub-num">5-1</span>튄 직후 공의 상태</h3>
+<p>1장의 공은 약 7.5 m 지점에 튄 뒤 위로 초속 약 3 m, 뒤쪽으로 초속 약 11 m로 움직입니다. 튄 뒤의 높이는 다음과 같습니다.</p>
+<div class="table-wrap"><table><thead><tr><th>튄 뒤 시간</th><th>높이</th><th>공의 상태</th></tr></thead><tbody>
+<tr><td>0.05초</td><td>약 14 cm</td><td><strong>하프발리 구간</strong>. 위로 빠르게 솟는 중 (위로 약 2.5 m/s)</td></tr>
+<tr><td>0.1초</td><td>약 25 cm</td><td>하프발리의 끝. 아직 솟는 중 (위로 약 2 m/s)</td></tr>
+<tr><td>0.2초</td><td>약 41 cm</td><td>솟는 힘이 많이 줄어듦. 뒤로 약 2.2 m 지나 뒷벽(9.75 m) 바로 앞</td></tr>
+<tr><td>그 뒤</td><td>—</td><td>뒷벽에 닿거나 떨어지기 시작 → 기다려서 치는 드라이브 구간</td></tr>
+</tbody></table></div>
+<p>하프발리는 공이 <strong>발목 높이(약 10~25 cm)에서 위로 솟는 0.1초 남짓</strong>을 잡는 기술입니다. 공이 낮고 솟는 힘이 강해서, 면을 조금만 잘못 대도 공이 뜨거나 틴에 걸립니다.</p>
+
+<h3 id="v5-2"><span class="sub-num">5-2</span>면은 조금만 열고, 라켓은 바닥과 나란히</h3>
+<figure class="fig"><svg role="img" aria-label="하프발리 : 바닥에서 솟는 공을 조금만 연 면으로 덮으면 낮고 빠르게, 많이 열면 뜬다" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+<defs><marker id="vl3-k" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#495057"/></marker><marker id="vl3-g" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2f9e44"/></marker><marker id="vl3-r" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e03131"/></marker><marker id="vl3-u" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e8590c"/></marker></defs>
+<rect width="960" height="470" fill="#fff"/>
+<text x="480" y="32" text-anchor="middle" font-size="18" font-weight="700" fill="#222">하프발리 : 튄 직후 솟는 공을 '덮어서' 앞으로 (옆에서 크게 본 그림)</text>
+<line x1="480" y1="56" x2="480" y2="450" stroke="#dee2e6" stroke-width="1.5" stroke-linecap="round"/>
+<text x="240" y="70" text-anchor="middle" font-size="15" font-weight="700" fill="#2f9e44">① 면을 조금만 연다 (정석)</text>
+<rect x="20" y="370" width="420" height="8" fill="#ced4da"/>
+<line x1="214" y1="220" x2="300" y2="362" stroke="#495057" stroke-width="2.2" stroke-linecap="round" marker-end="url(#vl3-k)"/>
+<text x="220" y="218" font-size="12" fill="#495057">들어오는 공</text>
+<circle cx="300" cy="364" r="5" fill="#495057"/>
+<line x1="306" y1="360" x2="354" y2="340" stroke="#e8590c" stroke-width="3" stroke-linecap="round" marker-end="url(#vl3-u)"/>
+<text x="230" y="396" font-size="12" font-weight="700" fill="#e8590c">솟는 힘 : 위로 약 3 m/s</text>
+<text x="230" y="414" font-size="11.5" fill="#b35c00">튄 직후 약 0.05초 · 높이 약 14 cm</text>
+<circle cx="360" cy="336" r="9" fill="#f5a623" stroke="#fff" stroke-width="2"/>
+<line x1="379.4" y1="292.3" x2="368.6" y2="379.7" stroke="#343a40" stroke-width="7" stroke-linecap="round"/>
+<line x1="346" y1="336" x2="98.4" y2="301.2" stroke="#2f9e44" stroke-width="3" stroke-linecap="round" marker-end="url(#vl3-g)"/>
+<text x="40" y="287.2" font-size="13" font-weight="700" fill="#2b8a3e">낮고 빠르게 → 틴 바로 위</text>
+<text x="440" y="270" text-anchor="end" font-size="13" font-weight="700" fill="#343a40">면 약 5~10° 열림</text>
+<text x="720" y="70" text-anchor="middle" font-size="15" font-weight="700" fill="#e03131">② 드라이브처럼 많이 연다</text>
+<rect x="500" y="370" width="420" height="8" fill="#ced4da"/>
+<line x1="694" y1="220" x2="780" y2="362" stroke="#495057" stroke-width="2.2" stroke-linecap="round" marker-end="url(#vl3-k)"/>
+<text x="700" y="218" font-size="12" fill="#495057">들어오는 공</text>
+<circle cx="780" cy="364" r="5" fill="#495057"/>
+<line x1="786" y1="360" x2="834" y2="340" stroke="#e8590c" stroke-width="3" stroke-linecap="round" marker-end="url(#vl3-u)"/>
+<text x="710" y="396" font-size="12" font-weight="700" fill="#e8590c">솟는 힘 : 위로 약 3 m/s</text>
+<text x="710" y="414" font-size="11.5" fill="#b35c00">튄 직후 약 0.05초 · 높이 약 14 cm</text>
+<circle cx="840" cy="336" r="9" fill="#f5a623" stroke="#fff" stroke-width="2"/>
+<line x1="869" y1="294.7" x2="839" y2="377.3" stroke="#343a40" stroke-width="7" stroke-linecap="round"/>
+<line x1="826" y1="336" x2="601.3" y2="226.4" stroke="#e03131" stroke-width="3" stroke-linecap="round" marker-end="url(#vl3-r)"/>
+<text x="520" y="222.4" font-size="13" font-weight="700" fill="#c92a2a">위로 떠서 느리고 짧게</text>
+<text x="920" y="270" text-anchor="end" font-size="13" font-weight="700" fill="#343a40">면 약 20° 열림</text>
+<text x="240" y="452" text-anchor="middle" font-size="12.5" fill="#2b8a3e">공의 솟는 힘을 면이 덮어 앞으로 돌림</text>
+<text x="720" y="452" text-anchor="middle" font-size="12.5" fill="#c92a2a">솟는 힘 + 열린 면이 겹쳐 공이 위로 튐</text>
+</svg><figcaption>튄 직후 약 0.05초, 높이 약 14 cm에서 맞힐 때. 왼쪽은 면을 약 5~10°만 열어 솟는 공을 덮은 경우, 오른쪽은 드라이브처럼 약 20° 연 경우. 각도는 개념을 보이기 위한 대표값</figcaption></figure>
+<div class="table-wrap"><table><thead><tr><th>① 자세 세팅</th><th>② 생기는 힘</th><th>③ 공의 변화</th></tr></thead><tbody>
+<tr><td>면을 약 5~10°만 연다 (드라이브의 15~20°보다 작게)</td><td>공이 이미 위로 솟고 있어서, 면을 덜 열어도 공은 위로 출발한다. 솟는 힘을 면이 덮어 앞쪽으로 돌린다</td><td>틴(0.48 m) 바로 위로 낮고 빠르게</td></tr>
+<tr><td>라켓은 바닥과 거의 나란히 짧게 지나간다 (아래에서 퍼 올리지 않음)</td><td>퍼 올리면 라켓이 위로 움직이는 몫이 공의 솟는 힘에 더해진다</td><td>공이 뜨지 않고 앞벽 낮은 곳에 맞음</td></tr>
+<tr><td>손목은 세운 채, 처음부터 굳히지 않고 맞는 찰나에만 조인다</td><td>느슨하게 받쳤다가 조이면 솟는 공에 면이 밀려도 각도가 유지된다. 처음부터 굳히면 작은 타이밍 차이에 면이 튕기듯 흔들린다</td><td>속도가 지나치지 않고 높이가 일정</td></tr>
+<tr><td>튄 직후일수록 일찍 맞힌다</td><td>일찍 맞힐수록 공이 낮고, 아직 덜 솟아 방향을 다루기 쉽다</td><td>공이 뒤로 지나가기 전에 T 근처에서 처리</td></tr>
+</tbody></table></div>
+<p>하프발리의 라켓 움직임은 <a href="스쿼시_포핸드_생체역학.html">포핸드 문서</a> 6-4의 '밀어 치기'에 가깝습니다. 휘둘러 속도를 만드는 기술이 아니라, <strong>면 각도로 공의 방향을 다루는</strong> 기술입니다.</p>
+
+<h3 id="v5-3"><span class="sub-num">5-3</span>언제 하프발리를 쓰나</h3>
+<div class="table-wrap"><table><thead><tr><th>상황</th><th>왜 하프발리인가</th></tr></thead><tbody>
+<tr><td>상대 드라이브가 짧아 미드 코트 발 앞에 떨어진다</td><td>기다리면 공이 뒤로 가서 내가 T에서 밀려난다. 튄 직후 잡으면 T를 지킨다</td></tr>
+<tr><td>뒤로 물러설 시간이 없다</td><td>물러서는 동안 상대가 T를 차지한다</td></tr>
+<tr><td>상대가 앞쪽에 나와 있다</td><td>빠른 템포로 뒤로 돌려보내 상대를 다시 움직이게 한다</td></tr>
+</tbody></table></div>
+<p>하프발리는 틴 위 여유가 작아 실수할 확률이 높습니다. <strong>시간이 없거나 T를 지켜야 할 때 쓰는 선택</strong>이고, 시간이 있다면 발리나 드라이브가 더 안전합니다.</p>
+<hr>
+
+<h2 id="v6"><span class="sec-num">6</span>드라이브 vs 발리 vs 하프발리 한눈에 비교</h2>
+<p>글로 읽으면 헷갈리는 차이를 한 표로 정리했습니다.</p>
+<div class="table-wrap"><table><thead><tr><th>항목</th><th>드라이브</th><th>발리</th><th>하프발리</th></tr></thead><tbody>
+<tr><td><strong>타점 위치 (앞벽에서)</strong></td><td>뒤쪽 약 8~9 m</td><td>T 근처 약 5~6 m</td><td>공이 튄 지점 바로 뒤</td></tr>
+<tr><td><strong>타점 높이</strong></td><td>무릎 아래 ~ 허리 (튀어 떨어지는 공)</td><td>허리 ~ 머리 위</td><td>발목 높이 (약 10~25 cm)</td></tr>
+<tr><td><strong>맞을 때 공의 상태</strong></td><td>튀고 느려진 공 (약 8~12 m/s)</td><td>빠르게 날아오는 공 (약 20~25 m/s)</td><td>위로 솟는 공 (위로 2~3 m/s)</td></tr>
+<tr><td><strong>백스윙</strong></td><td>크게 (라켓 머리가 머리 높이 이상)</td><td>아주 짧게 (30~40 cm)</td><td>짧게</td></tr>
+<tr><td><strong>라켓 머리 속도</strong></td><td>약 35~50 m/s</td><td>약 12~20 m/s</td><td>약 15~25 m/s</td></tr>
+<tr><td><strong>주 동력원</strong></td><td>하체·몸통 회전에서 시작하는 릴레이</td><td>들어온 공의 반발 + 짧은 아래팔 비틀기 + 찰나의 조임</td><td>짧은 스윙 + 면 각도로 솟는 힘을 앞으로 돌림</td></tr>
+<tr><td><strong>라켓 면 각도</strong></td><td>약 15~20° 열림</td><td>높이에 따라 0~20°</td><td>약 5~10° 열림</td></tr>
+<tr><td><strong>스탠스</strong></td><td>닫힌 스탠스 위주</td><td>열린 · 일자</td><td>일자 · 열린</td></tr>
+<tr><td><strong>하체</strong></td><td>여러 걸음 + 깊은 런지, 뒤꿈치 착지</td><td>스플릿 스텝 + 한 걸음, 얕게</td><td>낮게 앉되 짧게</td></tr>
+<tr><td><strong>쥐는 힘</strong></td><td>느슨하다가 맞는 찰나에 조임</td><td>같음 (충격이 커서 조임이 더 중요)</td><td>같음 (면 각도 유지가 핵심)</td></tr>
+<tr><td><strong>앞벽에 다시 닿는 시각 (1장 예)</strong></td><td>0.88초</td><td>0.58초 (약 0.3초 빠름)</td><td>0.85초 (이 예처럼 깊게 튄 공은 이득이 작고, 짧게 튄 공일수록 커짐)</td></tr>
+<tr><td><strong>전술적 목적</strong></td><td>깊이와 길이로 상대를 뒤 코너에 가둠</td><td>시간 빼앗기, T 지키기, 결정타</td><td>물러서지 않고 T를 지킴</td></tr>
+<tr><td><strong>위험</strong></td><td>치는 데 시간이 걸려 상대가 회복함</td><td>빗맞으면 면이 크게 흔들림</td><td>틴에 걸리거나 공이 뜨기 쉬움</td></tr>
+</tbody></table></div>
+<hr>
+
+<h2 id="v7"><span class="sec-num">7</span>자주 오해하는 것들</h2>
+<section class="myths">
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"발리는 세게 휘둘러야 빠르다"</span></p><p class="myth-a"><span class="label">실제</span><span>날아오는 공과 라켓이 정면으로 부딪치므로, 라켓 15 m/s만으로도 부딪치는 속도는 약 40 m/s가 됩니다. 크게 휘두르면 시간이 모자라고 면이 흔들립니다. <strong>짧게 끊어 치는 펀치</strong>가 더 빠르고 정확합니다.</span></p></div>
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"날아온 공이 빠르면 그 힘이 그대로 반사돼 세게 나간다"</span></p><p class="myth-a"><span class="label">실제</span><span>스쿼시 공은 잘 안 튀어서, 라켓을 대기만 하면 들어온 속도의 약 <strong>1/6</strong>만 돌아갑니다(25 m/s → 약 4 m/s). 발리의 진짜 이득은 속도보다 <strong>상대에게서 빼앗는 시간</strong>입니다.</span></p></div>
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"발리는 손목으로 톡 치는 것이다"</span></p><p class="myth-a"><span class="label">실제</span><span>손목은 세운 채 <strong>고정</strong>합니다. 속도는 팔꿈치의 짧은 펴짐과 아래팔 비틀기, 맞는 찰나의 조임에서 나옵니다. 손목을 튕기면 0.01초 차이에도 면이 크게 돌아갑니다.</span></p></div>
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"하프발리는 공을 퍼 올려야 넘어간다"</span></p><p class="myth-a"><span class="label">실제</span><span>공이 이미 위로 솟고 있어서, 면을 드라이브보다 <strong>덜</strong>(약 5~10°) 열고 라켓을 바닥과 나란히 보내야 낮고 빠르게 갑니다. 퍼 올리면 공이 떠서 짧아집니다.</span></p></div>
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"발리 때도 깊게 런지해야 안정적이다"</span></p><p class="myth-a"><span class="label">실제</span><span>발리는 높은 타점에서 치므로 깊게 앉을 필요가 없습니다. <strong>스플릿 스텝</strong>의 탄력으로 한 걸음만 딛고, 치자마자 T로 돌아오는 것이 핵심입니다.</span></p></div>
+</section>
+<hr>
+
+<h2 id="v8"><span class="sec-num">8</span>참고 문헌</h2>
+<ul>
+<li>Uzu, R., Shinya, M., &amp; Oda, S. (2009). A split-step shortens the time to perform a choice reaction step-and-reach movement in a simulated tennis task. <em>Journal of Sports Sciences</em>, 27(12), 1233–1240.</li>
+<li>Cross, R. (1999). The bounce of a ball. <em>American Journal of Physics</em>, 67(3), 222–227.</li>
+<li>Cross, R. (2000). The coefficient of restitution for collisions of happy balls, unhappy balls, and tennis balls. <em>American Journal of Physics</em>, 68(11), 1025–1031.</li>
+<li>Brody, H., Cross, R., &amp; Lindsey, C. (2002). <em>The Physics and Technology of Tennis</em>. Racquet Tech Publishing.</li>
+<li>Lees, A. (2003). Science and the major racket sports: A review. <em>Journal of Sports Sciences</em>, 21(9), 707–732.</li>
+<li>World Squash Federation. <em>Specifications for Squash Courts</em> (코트 길이 9.75 m, 짧은 선 5.44 m, 틴 0.48 m, 서비스 라인 1.78 m).</li>
+</ul>
+<p>시간 계산(1장)은 공기 저항과 회전을 뺀 단순 궤적 모델이고, 나가는 공 속도(2장)는 스윗스팟·튀는 정도 0.45·공이 느끼는 라켓 무게 약 100 g을 가정한 단순 충돌 모델입니다. 실제 공은 공기 저항으로 더 빨리 느려지므로 발리로 버는 시간은 이 값보다 조금 더 커질 수 있습니다. 라켓 머리 속도·면 각도·무릎 각도는 이해를 돕기 위한 대표값이고, 스쿼시 발리만 대상으로 잰 연구는 많지 않습니다.</p>
+
+<blockquote class="summary">발리의 힘은 세게 휘두르는 데서가 아니라 <strong>일찍 치는 데서</strong> 나옵니다.<br>공중에서 받아치면 상대에게서 <strong>약 0.3초</strong>를 빼앗고 나는 T에 머뭅니다. 날아온 공과 정면으로 부딪치므로 <strong>미리 세워 둔 라켓을 잽처럼 짧게</strong> 내지르고 맞는 찰나에만 조이면 충분하며, 면 각도는 공 높이에 맞춰 준비 때 정해 둡니다. 다리는 <strong>스플릿 스텝</strong>으로 눌린 스프링을 만들어 한 걸음만 딛고, 튄 직후 솟는 공은 면을 <strong>조금만 열어 덮어서</strong> 낮게 돌려보냅니다.</blockquote>
+<nav class="pager" aria-label="이전·다음 글"></nav>
+</main>
+</div>
+<footer class="site-foot"><a href="index.html">← 스쿼시 노트 목록</a> · 개인 학습용 노트</footer>
+</div>
+</body>
+</html>

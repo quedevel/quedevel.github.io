@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>벽에 붙은 공 처리 원리</title>
+<meta name="description" content="벽에 바짝 붙은 공은 왜 평소처럼 칠 수 없을까? 라켓 끝이 벽에 먼저 닿는 기하학, 라켓을 세워 수직 V자로 긁어내는 길, 한 뼘 물러서 만드는 스윙 통로, 끝까지 세운 손목과 얇게 깎는 접촉, 옆벽을 거울로 쓰는 보스트까지 쉬운 말로 풀어 봅니다.">
+<meta property="og:title" content="벽에 붙은 공 처리 원리">
+<meta property="og:description" content="벽에 바짝 붙은 공은 왜 평소처럼 칠 수 없을까? 라켓 끝이 벽에 먼저 닿는 기하학, 라켓을 세워 수직 V자로 긁어내는 길, 한 뼘 물러서 만드는 스윙 통로, 끝까지 세운 손목과 얇게 깎는 접촉, 옆벽을 거울로 쓰는 보스트까지 쉬운 말로 풀어 봅니다.">
+<link rel="icon" href="favicon.ico">
+<script>try{var t=localStorage.getItem("squash-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/css/squash.css">
+<link rel="stylesheet" href="assets/css/squash-cards.css">
+<script>(function(r){try{if(localStorage.getItem("squash-view")==="scroll")return}catch(e){}r.classList.add("deck-mode");setTimeout(function(){if(!r.classList.contains("deck-ready"))r.classList.remove("deck-mode")},5000)})(document.documentElement)</script>
+<script src="assets/js/squash-docs.js" defer></script>
+<script src="assets/js/squash.js" defer></script>
+<script src="assets/js/squash-cards.js" defer></script>
+</head>
+<body class="article" data-doc="tight-ball" data-cards>
+<aside class="sidebar" aria-label="페이지 목록"><div class="sidebar-scroll"></div></aside>
+<div class="scrim"></div>
+<div class="main">
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="페이지 목록 열기"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3.5 5.5h13M3.5 10h13M3.5 14.5h13"/></svg></button>
+  <nav class="crumbs" aria-label="현재 위치"><a href="index.html">스쿼시 노트</a></nav>
+  <button class="icon-btn theme-toggle" type="button" aria-label="밝게/어둡게 전환">
+    <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+  </button>
+</header>
+<div class="cover" data-tone="amber" aria-hidden="true"></div>
+<div class="page">
+<main class="doc">
+<header class="doc-hero">
+<div class="page-icon" aria-hidden="true">🧱</div>
+<h1 id="벽에-붙은-공-처리-원리">벽에 붙은 공 처리 원리</h1>
+<dl class="props">
+<dt><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 4.5h4l1.2 1.5H14v6.5H2z"/></svg>시리즈</dt><dd><span class="pill accent">기초 원리</span></dd>
+<dt><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><path d="M8 4.8V8l2.2 1.4"/></svg>분량</dt><dd>도표 3장 · 약 22분</dd>
+<dt><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><path d="M8 7.2v4M8 5v.1"/></svg>기준</dt><dd>오른손잡이 · 코트·라켓·공 규격과 단순 기하·충돌 모델 기반의 대략값</dd>
+<dt><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2.5 2.5h5l6 6-5 5-6-6z"/><circle cx="5.3" cy="5.3" r=".9"/></svg>태그</dt><dd><span class="pill">타이트 볼</span><span class="pill">수직 V자 스윙</span><span class="pill">스윙 통로</span><span class="pill">보스트</span></dd>
+</dl>
+<blockquote>프로는 옆벽에 바짝 붙은 공도 라켓이 벽에 걸리지 않게 걷어 올려 깊게 돌려보내는데, 같은 공을 평소처럼 치면 라켓이 벽에 부딪히거나 공이 가운데에서 죽습니다.<br>이 문서는 <a href="스쿼시_포핸드_생체역학.html">포핸드</a>·<a href="스쿼시_그립_생체역학.html">그립</a> 문서의 원리를 바탕으로, 연습 드릴과 교정 팁은 빼고 <strong>벽이라는 장애물이 있을 때 라켓 길과 관절 각도를 어떻게 바꿔 공을 살려 내는지</strong>를 쉬운 말로 정리합니다. 전술적인 선택은 <a href="스쿼시_코트구역별_특수상황.html">코트 구역별 특수 상황</a>에서 다룹니다.<br>모든 원리는 <strong>자세 세팅 → 생기는 힘 → 공의 변화</strong> 순서로 설명합니다. 거리와 각도는 대표값입니다.</blockquote>
+</header>
+<hr>
+<nav class="toc"><h2 id="목차">목차</h2>
+<ul><li><a href="#t0">0. 먼저 : 이 문서에서 쓰는 쉬운 말</a></li><li><a href="#t1">1. 출발점 : 왜 평소 스윙으로는 칠 수 없나</a><ul><li><a href="#t1-1">1-1. 벽이 막는 것 : 숫자로 본 틈</a></li><li><a href="#t1-2">1-2. 벽을 피하려다 생기는 닭 날개</a></li></ul></li><li><a href="#t2">2. 라켓 길 바꾸기 : 수평으로 휘두르기에서 수직으로 긁어내기로</a><ul><li><a href="#t2-1">2-1. 왜 라켓을 세우면 들어가나</a></li><li><a href="#t2-2">2-2. V자 길 : 세우고, 떨어뜨리고, 파고들어, 퍼 올린다</a></li><li><a href="#t2-3">2-3. 대가 : 스윗스팟을 쓸 수 없다</a></li></ul></li><li><a href="#t3">3. 스윙 통로 만들기 : 공이 붙을수록 몸은 떨어진다</a><ul><li><a href="#t3-1">3-1. 한 뼘 더 떨어진 자리</a></li><li><a href="#t3-2">3-2. 깊게 낮추기 : 공 밑으로 면을 넣는 다리</a></li></ul></li><li><a href="#t4">4. 손목 세우기와 맞는 순간의 접촉</a><ul><li><a href="#t4-1">4-1. 끝까지 손목을 세워 둔다</a></li><li><a href="#t4-2">4-2. 얇게 깎아 치기 : 언더스핀으로 띄우고 늦춘다</a></li><li><a href="#t4-3">4-3. 옆 회전과 면의 방향 : 벽을 따라갈까, 떨어져 나올까</a></li></ul></li><li><a href="#t5">5. 한계 돌파 : 스트레이트를 버리고 보스트로</a><ul><li><a href="#t5-1">5-1. 억지 스트레이트가 안 되는 이유</a></li><li><a href="#t5-2">5-2. 거울 기하학 : 옆벽을 먼저 맞힌다</a></li><li><a href="#t5-3">5-3. 보스트의 대가</a></li></ul></li><li><a href="#t6">6. 일반 드라이브 vs 벽에 붙은 공 vs 완전히 붙은 공(보스트) 한눈에 비교</a></li><li><a href="#t7">7. 자주 오해하는 것들</a></li><li><a href="#t8">8. 참고 문헌</a></li></ul>
+</nav>
+<hr>
+
+<h2 id="t0"><span class="sec-num">0</span>먼저 : 이 문서에서 쓰는 쉬운 말</h2>
+<p>해부학·물리학 용어 대신 아래의 쉬운 말을 씁니다. 원래 용어는 다른 자료를 찾아볼 때 참고하도록 오른쪽에 적어 둡니다.</p>
+<div class="table-wrap"><table><thead><tr><th>이 문서의 말</th><th>어떤 동작·현상인가</th><th>원래 용어</th></tr></thead><tbody>
+<tr><td><strong>벽에 붙은 공</strong></td><td>옆벽에 바짝 붙어 굴러가거나 튀는 공</td><td>타이트 볼 (Tight ball)</td></tr>
+<tr><td><strong>라켓이 지나가는 길</strong></td><td>라켓 머리가 그리는 선. 수평으로 도는 길과 수직으로 떨어졌다 오르는 길이 있다</td><td>스윙 궤적 · 스윙 평면</td></tr>
+<tr><td><strong>닭 날개</strong></td><td>벽을 피하려다 팔꿈치가 접혀 몸쪽으로 말려 들어간 팔 모양</td><td>치킨 윙 (Chicken wing)</td></tr>
+<tr><td><strong>스윙 통로</strong></td><td>몸과 벽 사이에 팔과 라켓이 지나갈 수 있도록 비워 둔 공간</td><td>(스윙 공간 · Corridor)</td></tr>
+<tr><td><strong>손목 세우기</strong></td><td>손목을 엄지 쪽으로 들어 아래팔과 라켓 사이에 각을 만든 상태</td><td>코킹</td></tr>
+<tr><td><strong>얇게 깎아 치기</strong></td><td>라켓이 움직이는 방향과 면이 바라보는 방향을 어긋나게 해 공의 아래쪽을 스치듯 치는 것</td><td>슬라이스 · 언더스핀 (백스핀)</td></tr>
+<tr><td><strong>옆 회전</strong></td><td>공이 세로축을 중심으로 도는 회전</td><td>사이드스핀</td></tr>
+<tr><td><strong>보스트</strong></td><td>공을 옆벽에 먼저 맞혀 꺾여서 앞벽으로 가게 하는 샷</td><td>보스트 (Boast)</td></tr>
+<tr><td><strong>거울 각도</strong></td><td>벽에 들어간 각도와 같은 각도로 튕겨 나오는 성질</td><td>입사각 = 반사각</td></tr>
+</tbody></table></div>
+<hr>
+
+<h2 id="t1"><span class="sec-num">1</span>출발점 : 왜 평소 스윙으로는 칠 수 없나</h2>
+<blockquote class="analogy"><strong>직관적 비유 · 문틈에 낀 종이</strong><br>문틈에 낀 종이를 빼려고 손을 옆으로 휘두르면 손이 문에 먼저 부딪칩니다. 손가락을 문과 나란히 세워 틈에 밀어 넣어야 종이에 닿습니다. 벽에 붙은 공도 같습니다. <strong>벽은 휘두르는 방향 하나를 통째로 막는 장애물</strong>이고, 라켓의 모양과 길을 그 틈에 맞춰 바꿔야 합니다.</blockquote>
+
+<h3 id="t1-1"><span class="sub-num">1-1</span>벽이 막는 것 : 숫자로 본 틈</h3>
+<div class="table-wrap"><table><thead><tr><th>항목</th><th>크기</th><th>무엇을 뜻하나</th></tr></thead><tbody>
+<tr><td><strong>공 지름</strong></td><td>약 40 mm</td><td>벽에 붙은 공의 중심은 벽에서 <strong>약 2 cm</strong></td></tr>
+<tr><td><strong>라켓 머리 너비</strong></td><td>약 19 cm (가운데에서 테두리까지 약 9.5 cm)</td><td>면 가운데(스윗스팟)로는 벽에 붙은 공에 닿을 수 없다</td></tr>
+<tr><td><strong>테두리 바깥 ~ 줄 가장자리</strong></td><td>약 1~1.5 cm</td><td>옆 테두리를 벽에 붙이다시피 세우면 <strong>줄 가장자리</strong>가 공 중심(2 cm)에 닿는다</td></tr>
+<tr><td><strong>손에서 라켓 끝까지</strong></td><td>약 55~60 cm</td><td>라켓이 벽을 가리키며 지나가면 줄이 공에 닿기 전에 라켓 머리가 벽 속 약 10~20 cm까지 들어가야 한다</td></tr>
+</tbody></table></div>
+<p>평소 드라이브는 몸을 축으로 라켓이 수평에 가까운 원을 그립니다. 공이 벽에서 떨어져 있으면 그 원의 일부가 공을 지나가지만, 공이 벽에 붙으면 원의 바깥쪽 절반이 벽 속에 있습니다. 그래서 <strong>라켓 머리가 공보다 벽에 먼저</strong> 닿습니다.</p>
+
+<h3 id="t1-2"><span class="sub-num">1-2</span>벽을 피하려다 생기는 닭 날개</h3>
+<figure class="fig"><svg role="img" aria-label="뒤에서 본 그림 : 벽에 붙은 공을 수평으로 휘두를 때와, 한 뼘 떨어져 라켓을 세워 수직 V자로 파고들 때" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 580" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+<defs><marker id="tb1-o" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e8590c"/></marker><marker id="tb1-k" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#495057"/></marker><marker id="tb1-r" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e03131"/></marker></defs>
+<rect width="960" height="580" fill="#fff"/>
+<text x="480" y="32" text-anchor="middle" font-size="18" font-weight="700" fill="#222">뒤에서 본 그림 : 공이 벽에 붙을수록 몸은 떨어지고, 라켓은 세운다</text>
+<line x1="480" y1="52" x2="480" y2="560" stroke="#dee2e6" stroke-width="1.5" stroke-linecap="round"/>
+<text x="240" y="64" text-anchor="middle" font-size="15" font-weight="700" fill="#e03131">① 평소처럼 서서 수평으로 휘두름</text>
+<rect x="440" y="118" width="14" height="352" fill="#adb5bd"/>
+<text x="447" y="110" text-anchor="middle" font-size="12" font-weight="700" fill="#495057">옆벽</text>
+<line x1="40" y1="470" x2="454" y2="470" stroke="#495057" stroke-width="3" stroke-linecap="round"/>
+<line x1="395.2" y1="190" x2="438" y2="190" stroke="#e03131" stroke-width="1.8" stroke-linecap="round" marker-start="url(#tb1-r)" marker-end="url(#tb1-r)"/>
+<text x="411.6" y="182" text-anchor="middle" font-size="12.5" font-weight="700" fill="#c92a2a">약 25 cm</text>
+<line x1="376" y1="342" x2="387.2" y2="399.6" stroke="#adb5bd" stroke-width="13" stroke-linecap="round"/>
+<line x1="387.2" y1="399.6" x2="392" y2="462" stroke="#adb5bd" stroke-width="11" stroke-linecap="round"/>
+<line x1="347.2" y1="338.8" x2="324.8" y2="399.6" stroke="#adb5bd" stroke-width="13" stroke-linecap="round"/>
+<line x1="324.8" y1="399.6" x2="305.6" y2="462" stroke="#adb5bd" stroke-width="11" stroke-linecap="round"/>
+<polygon points="392,290.8 340.8,278 347.2,338.8 376,342" fill="#e9ecef" stroke="#adb5bd" stroke-width="2"/>
+<circle cx="364.8" cy="242.8" r="16" fill="#e9ecef" stroke="#adb5bd" stroke-width="2"/>
+<line x1="340.8" y1="278" x2="296" y2="302" stroke="#adb5bd" stroke-width="9" stroke-linecap="round"/>
+<line x1="296" y1="302" x2="260.8" y2="310" stroke="#adb5bd" stroke-width="8" stroke-linecap="round"/>
+<line x1="392" y1="290.8" x2="364.8" y2="338.8" stroke="#1c7ed6" stroke-width="11" stroke-linecap="round"/>
+<line x1="364.8" y1="338.8" x2="392" y2="370.8" stroke="#2f9e44" stroke-width="9" stroke-linecap="round"/>
+<line x1="383.7" y1="366" x2="440" y2="398.5" stroke="#343a40" stroke-width="6" stroke-linecap="round"/>
+<line x1="440" y1="398.5" x2="477.9" y2="420.4" stroke="#e03131" stroke-width="4" stroke-linecap="round" stroke-dasharray="6 4"/>
+<ellipse cx="454.3538290724796" cy="406.8" rx="20" ry="15.2" transform="rotate(30 454.3538290724796 406.8)" fill="none" stroke="#e03131" stroke-width="2.5" stroke-dasharray="5 4"/>
+<text x="430" y="364.5" text-anchor="end" font-size="12.5" font-weight="700" fill="#c92a2a">✕ 라켓이 벽에 먼저 닿음</text>
+<text x="430" y="380.5" text-anchor="end" font-size="11.5" fill="#c92a2a">(라켓 머리가 벽 속 10~20 cm)</text>
+<text x="394.8" y="288.8" font-size="12" font-weight="700" fill="#1864ab">팔꿈치가 접혀 몸쪽으로</text>
+<text x="394.8" y="304.8" font-size="12" fill="#1864ab">말림 (닭 날개 모양)</text>
+<line x1="392.8" y1="300.8" x2="370.8" y2="334.8" stroke="#1c7ed6" stroke-width="1.2" stroke-linecap="round"/>
+<circle cx="436.8" cy="430" r="7" fill="#f5a623" stroke="#fff" stroke-width="1.5"/>
+<text x="426.8" y="456" text-anchor="end" font-size="11.5" font-weight="700" fill="#b35c00">벽에 붙은 공</text>
+<text x="720" y="64" text-anchor="middle" font-size="15" font-weight="700" fill="#2f9e44">② 한 뼘 떨어져, 라켓을 세워 수직으로</text>
+<rect x="920" y="118" width="14" height="352" fill="#adb5bd"/>
+<text x="927" y="110" text-anchor="middle" font-size="12" font-weight="700" fill="#495057">옆벽</text>
+<line x1="520" y1="470" x2="934" y2="470" stroke="#495057" stroke-width="3" stroke-linecap="round"/>
+<rect x="852.8" y="150" width="67.20000000000005" height="320" fill="#d3f9d8" opacity=".55"/>
+<line x1="852.8" y1="190" x2="918" y2="190" stroke="#2f9e44" stroke-width="1.8" stroke-linecap="round" marker-start="url(#tb1-k)" marker-end="url(#tb1-k)"/>
+<text x="846.8" y="195" text-anchor="end" font-size="12.5" font-weight="700" fill="#2b8a3e">스윙 통로 약 45 cm</text>
+<line x1="820.8" y1="354.8" x2="843.2" y2="402.8" stroke="#adb5bd" stroke-width="13" stroke-linecap="round"/>
+<line x1="843.2" y1="402.8" x2="849.6" y2="462" stroke="#adb5bd" stroke-width="11" stroke-linecap="round"/>
+<line x1="788.8" y1="351.6" x2="763.2" y2="402.8" stroke="#adb5bd" stroke-width="13" stroke-linecap="round"/>
+<line x1="763.2" y1="402.8" x2="740.8" y2="462" stroke="#adb5bd" stroke-width="11" stroke-linecap="round"/>
+<polygon points="848,286 792,274.8 788.8,351.6 820.8,354.8" fill="#e9ecef" stroke="#adb5bd" stroke-width="2"/>
+<circle cx="814.4" cy="242.8" r="16" fill="#e9ecef" stroke="#adb5bd" stroke-width="2"/>
+<line x1="792" y1="274.8" x2="740.8" y2="300.4" stroke="#adb5bd" stroke-width="9" stroke-linecap="round"/>
+<line x1="740.8" y1="300.4" x2="696" y2="310" stroke="#adb5bd" stroke-width="8" stroke-linecap="round"/>
+<line x1="848" y1="286" x2="873.6" y2="327.6" stroke="#1c7ed6" stroke-width="11" stroke-linecap="round"/>
+<line x1="873.6" y1="327.6" x2="904" y2="358" stroke="#2f9e44" stroke-width="9" stroke-linecap="round"/>
+<line x1="904" y1="348.4" x2="904" y2="409.2" stroke="#343a40" stroke-width="6" stroke-linecap="round"/>
+<ellipse cx="904" cy="430" rx="15.2" ry="20" fill="#f1f3f5" stroke="#343a40" stroke-width="3"/>
+<line x1="904" y1="358" x2="931.2" y2="385.2" stroke="#e03131" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="5 4"/>
+<text x="881.6" y="390" text-anchor="end" font-size="11.5" font-weight="700" fill="#c92a2a">코킹이 풀리면 라켓 끝이</text>
+<text x="881.6" y="405" text-anchor="end" font-size="11.5" fill="#c92a2a">벽 쪽으로 (빨간 점선)</text>
+<path d="M894.4,158 L896,278 Q900.8,398 905.6,454 Q910.4,398 910.4,318" fill="none" stroke="#e8590c" stroke-width="3" stroke-dasharray="8 5" marker-end="url(#tb1-o)"/>
+<text x="862.8" y="146.8" text-anchor="end" font-size="12.5" font-weight="700" fill="#e8590c">벽과 나란한 수직 V자 길</text>
+<text x="862.8" y="162.8" text-anchor="end" font-size="12" fill="#e8590c">위 → 아래 → 공 밑 → 위</text>
+<circle cx="904" cy="358" r="6" fill="#f59f00"/>
+<text x="834" y="354" text-anchor="end" font-size="12" font-weight="700" fill="#b35c00">손목은 세운 채</text>
+<text x="834" y="370" text-anchor="end" font-size="11.5" fill="#b35c00">(아래팔–라켓 약 135°)</text>
+<line x1="838" y1="358" x2="896" y2="358" stroke="#f59f00" stroke-width="1.2" stroke-linecap="round"/>
+<text x="813.2" y="438.8" text-anchor="end" font-size="12" fill="#495057">무릎·엉덩이를 깊게 낮춤</text>
+<circle cx="916.8" cy="430" r="7" fill="#f5a623" stroke="#fff" stroke-width="1.5"/>
+<text x="906.8" y="456" text-anchor="end" font-size="11.5" font-weight="700" fill="#b35c00">벽에 붙은 공</text>
+<rect x="30" y="500" width="900" height="64" rx="8" fill="#f8f9fa" stroke="#dee2e6"/>
+<text x="480" y="524" text-anchor="middle" font-size="12.5" fill="#333">공 중심은 벽에서 2 cm. 라켓 테두리 바깥에서 줄까지는 약 1~1.5 cm → 라켓의 긴 옆 테두리를 벽과 나란히 세우면 줄 가장자리로 공을 맞힐 수 있다</text>
+<text x="480" y="546" text-anchor="middle" font-size="11.5" fill="#868e96">몸을 그림 크기 그대로 그린 것은 아니다. 거리와 각도는 대표값</text>
+</svg><figcaption>뒤에서 본 그림. 왼쪽은 평소처럼 벽 가까이 서서 수평으로 휘두를 때로, 라켓이 벽을 가리킨 채 지나가 벽에 먼저 닿고 팔꿈치는 몸쪽으로 접힌다. 오른쪽은 한 뼘 떨어져 라켓을 세우고 벽과 나란한 수직 V자 길로 파고드는 모습. 거리와 각도는 대표값</figcaption></figure>
+<div class="table-wrap"><table><thead><tr><th>#</th><th>① 닭 날개 자세</th><th>② 잃는 것</th><th>③ 공의 변화</th></tr></thead><tbody>
+<tr><td>1</td><td>벽을 피하려고 팔꿈치를 접어 옆구리 쪽으로 당긴다</td><td>팔이 접혀 도는 반경이 팔 + 라켓에서 아래팔 + 라켓 정도로 짧아진다. 라켓 머리 속도 = 도는 빠르기 × 반경이므로 속도가 크게 준다</td><td>공이 짧고 느림</td></tr>
+<tr><td>2</td><td>팔이 몸통에 붙어 있다</td><td>몸통이 돌면 팔이 같이 끌려가 벽으로 들어가므로 몸통 회전을 멈춘다. 하체·몸통에서 오는 릴레이가 끊긴다</td><td>힘의 대부분이 공에 닿지 않음</td></tr>
+<tr><td>3</td><td>손목을 손바닥 쪽으로 꺾어 라켓을 몸쪽으로 당긴다</td><td>면이 닫힌다 (바닥 쪽을 향함)</td><td>공이 낮게 깔려 틴에 걸리기 쉬움</td></tr>
+</tbody></table></div>
+<div class="table-wrap"><table><thead><tr><th>① 자세 세팅</th><th>② 생기는 힘</th><th>③ 공의 변화</th></tr></thead><tbody>
+<tr><td>평소의 수평 스윙을 그대로 쓰거나, 벽을 피하려 팔을 접는다</td><td>라켓이 벽에 먼저 닿거나, 반경·몸통 회전·면 각도를 한꺼번에 잃는다</td><td>공이 짧게 가운데로 떨어져 상대에게 공격 기회를 줌</td></tr>
+</tbody></table></div>
+<hr>
+
+<h2 id="t2"><span class="sec-num">2</span>라켓 길 바꾸기 : 수평으로 휘두르기에서 수직으로 긁어내기로</h2>
+<blockquote class="analogy"><strong>직관적 비유 · 좁은 골목길과 스티커 긁기</strong><br>큰 트럭은 좁은 골목에서 돌지 못하지만, 자전거는 세워서 끌면 벽을 따라 지나갑니다. 벽에 붙은 스티커는 손톱을 세워 벽을 따라 <strong>위에서 아래로 긁어</strong> 떼어 냅니다. 벽에 붙은 공도 라켓을 세워 벽을 따라 떨어뜨렸다가 공 밑을 긁어 올립니다.</blockquote>
+
+<h3 id="t2-1"><span class="sub-num">2-1</span>왜 라켓을 세우면 들어가나</h3>
+<div class="table-wrap"><table><thead><tr><th></th><th>수평으로 휘두르기 (평소)</th><th>수직으로 긁어내기 (벽에 붙은 공)</th></tr></thead><tbody>
+<tr><td><strong>뒤에서 본 라켓</strong></td><td>벽 쪽을 가리키며 눕는다</td><td>벽과 나란히 선다</td></tr>
+<tr><td><strong>벽에 가장 가까운 부분</strong></td><td>라켓 끝</td><td>라켓의 긴 옆 테두리</td></tr>
+<tr><td><strong>벽과 라켓 사이</strong></td><td>라켓 끝이 벽 속으로 들어가야 줄이 공에 닿음</td><td>옆 테두리가 벽을 스칠 정도면 줄 가장자리가 공에 닿음</td></tr>
+<tr><td><strong>라켓이 지나가는 면</strong></td><td>바닥과 거의 나란한 원</td><td>벽과 거의 나란한 원 (위 → 아래 → 위)</td></tr>
+</tbody></table></div>
+<p>라켓을 세우면 라켓 머리의 <strong>긴 옆 테두리</strong>가 벽과 나란해집니다. 테두리 바깥에서 줄까지는 1~1.5 cm뿐이므로, 테두리가 벽을 스치듯 지나가면 줄 가장자리가 벽에서 2 cm 떨어진 공의 중심 뒤에 닿습니다. 휘두르는 원 전체가 벽과 나란한 면 안에 있어서 <strong>벽에 걸릴 부분이 없습니다</strong>.</p>
+
+<h3 id="t2-2"><span class="sub-num">2-2</span>V자 길 : 세우고, 떨어뜨리고, 파고들어, 퍼 올린다</h3>
+<figure class="fig"><svg role="img" aria-label="옆벽을 바라보고 본 라켓 머리의 V자 길과, 맞는 순간 면 각도·라켓 길·공의 출발 방향" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+<defs><marker id="tb2-o" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e8590c"/></marker><marker id="tb2-p" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c4dff"/></marker><marker id="tb2-k" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#495057"/></marker><marker id="tb2-b" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2f80ed"/></marker></defs>
+<rect width="960" height="500" fill="#fff"/>
+<text x="480" y="32" text-anchor="middle" font-size="18" font-weight="700" fill="#222">옆에서 본 V자 길 : 세워서 떨어뜨리고, 공 밑을 파고들어, 퍼 올린다</text>
+<text x="480" y="54" text-anchor="middle" font-size="12" fill="#868e96">(코트 가운데에서 옆벽을 바라본 그림 · 왼쪽이 앞벽 쪽)</text>
+<line x1="40" y1="440" x2="920" y2="440" stroke="#495057" stroke-width="3" stroke-linecap="round"/>
+<line x1="120" y1="470" x2="60" y2="470" stroke="#868e96" stroke-width="2" stroke-linecap="round" marker-end="url(#tb2-k)"/>
+<text x="126" y="475" font-size="12" fill="#868e96">앞벽 쪽</text>
+<line x1="40" y1="315.2" x2="920" y2="315.2" stroke="#ffc9c9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 5"/>
+<text x="46" y="309.2" font-size="11.5" fill="#e03131">틴 높이 0.48 m (참고)</text>
+<path d="M717,81.2 L678,193 L613,341.2 L553.2,414 L501.2,398.4 L470,382.8 L379,341.2 L288,263.2" fill="none" stroke="#e8590c" stroke-width="3.5" stroke-dasharray="9 6" stroke-linejoin="round" marker-end="url(#tb2-o)"/>
+<text x="729" y="71.2" text-anchor="start" font-size="13" font-weight="700" fill="#d9480f">① 라켓 머리를 높이 세움</text>
+<text x="660.8" y="268.4" text-anchor="start" font-size="13" font-weight="700" fill="#d9480f">② 벽을 따라 수직에 가깝게 떨어뜨림</text>
+<text x="569.2" y="436" text-anchor="start" font-size="13" font-weight="700" fill="#d9480f">③ 공 밑으로 파고듦</text>
+<text x="288" y="247.2" text-anchor="middle" font-size="13" font-weight="700" fill="#d9480f">④ 위로 짧게 퍼 올리며 끝냄</text>
+<line x1="499.3" y1="354.1" x2="468.7" y2="411.5" stroke="#343a40" stroke-width="7" stroke-linecap="round"/>
+<circle cx="470" cy="382.8" r="9" fill="#f5a623" stroke="#fff" stroke-width="2"/>
+<line x1="460" y1="382.8" x2="354" y2="326.5" stroke="#7c4dff" stroke-width="3" stroke-linecap="round" marker-end="url(#tb2-p)"/>
+<line x1="460" y1="382.8" x2="225.1" y2="297.3" stroke="#2f80ed" stroke-width="3" stroke-linecap="round" marker-end="url(#tb2-b)"/>
+<line x1="460" y1="382.8" x2="303.5" y2="349.5" stroke="#495057" stroke-width="3" stroke-linecap="round" marker-end="url(#tb2-k)"/>
+<rect x="46" y="78" width="330" height="88" rx="8" fill="#f8f9fa" stroke="#dee2e6"/>
+<line x1="60" y1="100" x2="92" y2="100" stroke="#7c4dff" stroke-width="3" stroke-linecap="round"/>
+<text x="102" y="105" font-size="12.5" font-weight="700" fill="#7c4dff">면이 바라보는 방향 ≈ 28° 위</text>
+<line x1="60" y1="124" x2="92" y2="124" stroke="#2f80ed" stroke-width="3" stroke-linecap="round"/>
+<text x="102" y="129" font-size="12.5" font-weight="700" fill="#2f80ed">공 출발 ≈ 20° 위 (높고 깊게 탈출)</text>
+<line x1="60" y1="148" x2="92" y2="148" stroke="#495057" stroke-width="3" stroke-linecap="round"/>
+<text x="102" y="153" font-size="12.5" font-weight="700" fill="#495057">라켓 길 ≈ 12° 위 (퍼 올림)</text>
+<path d="M486,368.8 A20,20 0 1 1 466,402.8" fill="none" stroke="#2f9e44" stroke-width="2" marker-end="url(#tb2-k)"/>
+<text x="510" y="336.8" font-size="12.5" font-weight="700" fill="#2b8a3e">면이 길보다 약 15° 더 열림 → 공 아래를 얇게 깎아 언더스핀</text>
+<rect x="560" y="76" width="370" height="64" rx="8" fill="#fff4e6" stroke="#f59f00"/>
+<text x="745" y="100" text-anchor="middle" font-size="12.5" fill="#7a4a00">평소 드라이브 : 면 약 15~20°, 라켓 길 0~10° 아래</text>
+<text x="745" y="122" text-anchor="middle" font-size="12.5" font-weight="700" fill="#7a4a00">벽에 붙은 낮은 공 : 면 약 25~30°, 라켓 길 약 10~15° 위</text>
+</svg><figcaption>코트 가운데에서 옆벽을 바라본 그림(왼쪽이 앞벽). 라켓 머리가 높은 곳에서 벽을 따라 떨어져 공 밑으로 파고든 뒤 위로 짧게 퍼 올린다. 맞는 순간 면은 약 28°, 라켓 길은 약 12° 위로 향해, 공은 그 사이인 약 20° 위로 출발한다. 각도는 대표값</figcaption></figure>
+<div class="table-wrap"><table><thead><tr><th>구간</th><th>① 자세 세팅</th><th>② 생기는 힘</th><th>③ 공의 변화</th></tr></thead><tbody>
+<tr><td><strong>① 세우기</strong></td><td>백스윙에서 라켓 머리를 머리 높이 이상으로 세우고, 라켓을 벽과 나란히 둔다</td><td>떨어뜨릴 높이가 가속할 거리가 된다. 처음부터 벽과 나란한 면 안에 들어가 있다</td><td>벽에 걸리지 않고 출발</td></tr>
+<tr><td><strong>② 떨어뜨리기</strong></td><td>라켓 머리를 벽을 따라 수직에 가깝게 아래로 보낸다</td><td>원의 지름이 벽과 나란해 테두리가 벽을 스쳐도 길이 막히지 않는다</td><td>공 뒤 아래쪽에 도착</td></tr>
+<tr><td><strong>③ 파고들기</strong></td><td>라켓 머리를 공보다 조금 낮게 넣는다</td><td>면을 공 밑에 넣어야 낮은 공을 틴 위로 띄울 수 있다</td><td>바닥에 붙은 공도 걷어 올림</td></tr>
+<tr><td><strong>④ 퍼 올리기</strong></td><td>라켓 길을 약 10~15° 위로 바꾸며 짧게 끝낸다. 면은 약 25~30° 열어 둔다</td><td>공은 면이 바라보는 쪽(약 28°)과 라켓 길(약 12°) 사이인 약 20° 위로 출발한다</td><td>앞벽 높은 곳에 맞고 깊게 → 시간을 벎</td></tr>
+</tbody></table></div>
+
+<h3 id="t2-3"><span class="sub-num">2-3</span>대가 : 스윗스팟을 쓸 수 없다</h3>
+<div class="table-wrap"><table><thead><tr><th>① 자세 세팅</th><th>② 생기는 힘</th><th>③ 공의 변화</th></tr></thead><tbody>
+<tr><td>줄 가장자리(라켓 가운데 축에서 약 8 cm)로 공을 맞힌다</td><td>공이 느끼는 라켓 무게가 스윗스팟보다 가볍고, 공이 라켓을 손잡이 축 둘레로 비틀려 한다</td><td>공 속도가 줄고 면이 돌아가기 쉬움 → 힘보다 높이와 깊이를 노림</td></tr>
+</tbody></table></div>
+<p>그래서 벽에 붙은 공은 <strong>공격보다 탈출</strong>이 목표입니다. 맞는 찰나에 손잡이를 조여(<a href="스쿼시_그립_생체역학.html">그립 문서</a> 4장) 면이 비틀리는 것을 막고, 높고 깊게 보내 T로 돌아갈 시간을 법니다. 같은 결론을 <a href="스쿼시_코트구역별_특수상황.html">코트 구역별 특수 상황</a> 2장에서는 전술 쪽에서 정리했습니다.</p>
+<hr>
+
+<h2 id="t3"><span class="sec-num">3</span>스윙 통로 만들기 : 공이 붙을수록 몸은 떨어진다</h2>
+<blockquote class="analogy"><strong>직관적 비유 · 좁은 틈에 빗자루 넣기</strong><br>가구와 벽 사이 좁은 틈에 빗자루를 넣을 때, 틈에 바짝 붙어 서면 빗자루를 세울 수 없습니다. 한 걸음 물러서야 팔을 뻗어 빗자루를 틈과 나란히 세워 넣을 수 있습니다. 벽에 붙은 공도 <strong>몸이 물러나야 팔과 라켓이 들어갈 통로</strong>가 생깁니다.</blockquote>
+
+<h3 id="t3-1"><span class="sub-num">3-1</span>한 뼘 더 떨어진 자리</h3>
+<div class="table-wrap"><table><thead><tr><th></th><th>벽에 바짝 섬</th><th>한 뼘 떨어져 섬</th></tr></thead><tbody>
+<tr><td><strong>몸통 옆면과 벽 사이</strong></td><td>약 25 cm</td><td>약 45 cm 이상</td></tr>
+<tr><td><strong>팔의 모양</strong></td><td>펼 공간이 없어 팔꿈치가 접힘 (닭 날개)</td><td>어깨에서 공 쪽으로 거의 편 채 뻗음</td></tr>
+<tr><td><strong>라켓</strong></td><td>벽을 가리키며 눕는다</td><td>손목을 세운 채 벽과 나란히 선다</td></tr>
+<tr><td><strong>몸통 회전</strong></td><td>팔이 몸에 걸려 막힘</td><td>작게나마 쓸 수 있음</td></tr>
+</tbody></table></div>
+<div class="table-wrap"><table><thead><tr><th>① 자세 세팅</th><th>② 생기는 힘</th><th>③ 공의 변화</th></tr></thead><tbody>
+<tr><td>공이 벽에 붙을수록 평소보다 한 뼘(약 15~20 cm) 벽에서 떨어진 자리에 발을 놓는다</td><td>몸과 벽 사이에 약 45 cm 이상의 통로가 생겨, 팔을 펴고 라켓을 벽과 나란히 세울 수 있다</td><td>라켓이 벽에 걸리지 않고, 팔의 반경을 지켜 속도를 덜 잃음</td></tr>
+</tbody></table></div>
+
+<h3 id="t3-2"><span class="sub-num">3-2</span>깊게 낮추기 : 공 밑으로 면을 넣는 다리</h3>
+<div class="table-wrap"><table><thead><tr><th>① 자세 세팅</th><th>② 생기는 힘</th><th>③ 공의 변화</th></tr></thead><tbody>
+<tr><td>앞 무릎과 엉덩이를 평소보다 깊게 굽혀 (앞 무릎 약 90° 안팎) 어깨 높이를 낮춘다</td><td>어깨가 낮아지면 팔을 편 채로도 손이 무릎 높이까지 내려가, 세운 라켓의 머리가 공보다 아래로 들어간다</td><td>바닥에 붙은 낮은 공 밑으로 면을 넣어 틴 위로 띄움</td></tr>
+<tr><td>몸통을 공 쪽(벽 쪽)으로 살짝 기울인다</td><td>몸은 벽에서 떨어져 있어도 어깨는 공 쪽으로 다가가 팔이 닿는다</td><td>통로를 지키면서 공에 닿음</td></tr>
+<tr><td>마지막 스텝은 뒤꿈치부터 딛는다</td><td>깊이 앉는 만큼 몸을 멈추는 힘이 크다. 엉덩이·허벅지 뒤 근육이 브레이크와 스프링을 맡는다 (<a href="스쿼시_포핸드_생체역학.html">포핸드 문서</a> 2-2)</td><td>흔들리지 않는 받침 위에서 면 각도가 일정, 치고 나서 T로 되튕김</td></tr>
+</tbody></table></div>
+<hr>
+
+<h2 id="t4"><span class="sec-num">4</span>손목 세우기와 맞는 순간의 접촉</h2>
+<blockquote class="analogy"><strong>직관적 비유 · 스티커를 손톱으로 긁어 떼기</strong><br>벽에 붙은 스티커는 손톱을 <strong>세운 채</strong> 아래 가장자리에 넣어 긁어 올려야 떨어집니다. 손톱을 눕히면 손가락이 벽에 먼저 닿습니다. 라켓도 손목을 세워 둔 채 공의 뒤 아래쪽을 파고들어 긁어 올립니다.</blockquote>
+
+<h3 id="t4-1"><span class="sub-num">4-1</span>끝까지 손목을 세워 둔다</h3>
+<div class="table-wrap"><table><thead><tr><th></th><th>손목을 세운 채 (약 135°)</th><th>손목이 풀림 (일직선)</th></tr></thead><tbody>
+<tr><td><strong>라켓 방향</strong></td><td>아래팔이 벽 쪽으로 비스듬해도 라켓은 벽과 나란히 수직</td><td>라켓이 아래팔의 연장선으로 누워 끝이 벽 쪽을 가리킴</td></tr>
+<tr><td><strong>벽과의 관계</strong></td><td>옆 테두리만 벽을 스침</td><td>라켓 끝이 벽에 먼저 닿음</td></tr>
+<tr><td><strong>면</strong></td><td>세운 각도가 면의 열림을 지켜 준다</td><td>면이 흔들리고 닫히기 쉬움</td></tr>
+<tr><td><strong>속도</strong></td><td>라켓 머리가 손을 앞지르는 마지막 가속을 일부 포기</td><td>가속은 생기지만 벽에 막힘</td></tr>
+</tbody></table></div>
+<div class="table-wrap"><table><thead><tr><th>① 자세 세팅</th><th>② 생기는 힘</th><th>③ 공의 변화</th></tr></thead><tbody>
+<tr><td>맞는 순간까지 손목의 세운 각도(아래팔–라켓 약 135°)를 풀지 않는다</td><td>아래팔이 벽 쪽으로 비스듬히 뻗어도 라켓은 벽과 나란히 남아, 라켓 끝 대신 줄 가장자리가 공 뒤 아래를 파고든다</td><td>벽에 걸리지 않고 면 각도가 일정</td></tr>
+</tbody></table></div>
+
+<h3 id="t4-2"><span class="sub-num">4-2</span>얇게 깎아 치기 : 언더스핀으로 띄우고 늦춘다</h3>
+<p>정면으로 세게 때릴 수 없을 때는 공의 <strong>아래쪽을 얇게</strong> 칩니다. 면은 약 25~30° 열고 라켓 길은 약 10~15° 위로 보내, 면이 길보다 약 15° 더 열리게 합니다. <a href="스쿼시_포핸드_생체역학.html">포핸드 문서</a> 7-3처럼 이 차이만큼 라켓 속도의 일부가 회전으로 바뀝니다.</p>
+<pre class="formula"><code>면과 라켓 길의 차이 약 15° → 정면으로 미는 몫 cos 15° ≈ 97%, 스치는 몫 sin 15° ≈ 26%
+스치는 몫이 공 아래쪽을 앞으로 끌어 → 공이 뒤로 도는 회전(언더스핀)</code></pre>
+<div class="table-wrap"><table><thead><tr><th>① 자세 세팅</th><th>② 생기는 힘</th><th>③ 공의 변화</th></tr></thead><tbody>
+<tr><td>면을 길보다 약 15° 더 열어 공 아래를 스친다</td><td>공 아래쪽이 앞으로 끌려 공이 뒤로 돈다 (언더스핀). 공은 면이 바라보는 쪽과 라켓 길 사이로 출발한다</td><td>낮은 타점에서도 공이 위로 출발해 틴을 넘음</td></tr>
+<tr><td>세게 때리지 않고 짧게 퍼 올린다</td><td>라켓 속도의 일부가 회전으로 가고, 줄 가장자리라 속도도 줄어든다</td><td>공이 덜 빠르지만 높이·길이를 맞추기 쉬움</td></tr>
+</tbody></table></div>
+
+<h3 id="t4-3"><span class="sub-num">4-3</span>옆 회전과 면의 방향 : 벽을 따라갈까, 떨어져 나올까</h3>
+<p>공이 벽에 닿아 있는 채로 맞으면, 출발하는 순간 공의 벽 쪽 면이 벽에 끌려(마찰) 공이 세로축으로 돌기 시작합니다(옆 회전). 이때 공이 어디로 가는지는 <strong>면이 벽에 대해 어느 쪽을 향하는가</strong>가 정합니다. 앞벽까지 약 8 m이므로 면 1°는 앞벽에서 약 14 cm의 차이가 됩니다.</p>
+<div class="table-wrap"><table><thead><tr><th>면의 방향</th><th>공이 가는 길</th><th>결과</th></tr></thead><tbody>
+<tr><td><strong>벽과 나란하게</strong></td><td>벽을 긁으며 나가 마찰로 속도를 잃는다</td><td>공이 짧아지기 쉬움</td></tr>
+<tr><td><strong>벽에서 1~3° 바깥으로</strong></td><td>벽을 스치듯 떨어져 나와 벽 가까이를 따라간다 (앞벽에서 벽으로부터 약 15~40 cm)</td><td><strong>가장 안전한 탈출</strong>. 다시 벽 근처로 길게</td></tr>
+<tr><td><strong>벽 쪽으로</strong></td><td>곧바로 옆벽을 때리고 꺾인다</td><td>의도하지 않은 짧은 보스트</td></tr>
+<tr><td><strong>5° 이상 바깥으로</strong></td><td>코트 가운데로 빠진다</td><td>상대가 T에서 쉽게 공격</td></tr>
+</tbody></table></div>
+<hr>
+
+<h2 id="t5"><span class="sec-num">5</span>한계 돌파 : 스트레이트를 버리고 보스트로</h2>
+<blockquote class="analogy"><strong>직관적 비유 · 당구의 쿠션 치기</strong><br>당구에서 공이 직접 갈 길이 막혀 있으면 쿠션(벽)을 먼저 맞혀 꺾어 보냅니다. 쿠션에 들어간 각도만큼 반대쪽으로 튕겨 나오기 때문에, 쿠션 너머 <strong>거울에 비친 자리</strong>를 노리면 됩니다. 보스트는 옆벽을 쿠션으로 쓰는 샷입니다.</blockquote>
+
+<h3 id="t5-1"><span class="sub-num">5-1</span>억지 스트레이트가 안 되는 이유</h3>
+<div class="table-wrap"><table><thead><tr><th>#</th><th>① 억지로 스트레이트를 칠 때</th><th>② 생기는 일</th><th>③ 공의 변화</th></tr></thead><tbody>
+<tr><td>1</td><td>공과 벽 사이에 줄 가장자리조차 들어갈 틈이 없는데 면을 벽과 나란히 대려 한다</td><td>줄보다 테두리가 먼저 공이나 벽에 닿는다</td><td>빗맞아 방향을 잃음 (라켓도 상함)</td></tr>
+<tr><td>2</td><td>벽을 피하려 손목을 손바닥 쪽으로 꺾는다</td><td>면이 닫힌다</td><td>공이 틴에 걸림</td></tr>
+<tr><td>3</td><td>공간이 없어 스윙이 중간에 멈춘다</td><td>라켓 속도가 없다</td><td>공이 짧게 가운데에서 죽어 상대에게 공격 기회</td></tr>
+</tbody></table></div>
+
+<h3 id="t5-2"><span class="sub-num">5-2</span>거울 기하학 : 옆벽을 먼저 맞힌다</h3>
+<figure class="fig"><svg role="img" aria-label="위에서 본 코트 : 옆벽에 완전히 붙은 공을 옆벽 쪽으로 먼저 맞혀 앞벽으로 보내는 보스트와 거울에 비친 목표" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+<defs><marker id="tb3-o" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e8590c"/></marker><marker id="tb3-k" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#495057"/></marker><marker id="tb3-v" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7048e8"/></marker></defs>
+<rect width="960" height="540" fill="#fff"/>
+<text x="480" y="32" text-anchor="middle" font-size="18" font-weight="700" fill="#222">보스트 : 옆벽을 거울로 쓰는 역발상 (위에서 본 코트)</text>
+<rect x="70" y="60" width="256" height="390" fill="#fbf7f0" stroke="#495057" stroke-width="3"/>
+<line x1="70" y1="277.6" x2="326" y2="277.6" stroke="#c92a2a" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="198" y1="277.6" x2="198" y2="450" stroke="#c92a2a" stroke-width="1.5" stroke-linecap="round"/>
+<rect x="70" y="277.6" width="64" height="64" fill="none" stroke="#c92a2a" stroke-width="1.2"/>
+<rect x="262" y="277.6" width="64" height="64" fill="none" stroke="#c92a2a" stroke-width="1.2"/>
+<text x="254" y="52" text-anchor="middle" font-size="12" font-weight="700" fill="#495057">앞벽</text>
+<text x="332" y="240" font-size="12" font-weight="700" fill="#495057">오른쪽 옆벽 (거울)</text>
+<circle cx="198" cy="277.6" r="4" fill="#c92a2a"/>
+<text x="206" y="271.6" font-size="12" font-weight="700" fill="#c92a2a">T</text>
+<rect x="326" y="60" width="256" height="390" fill="none" stroke="#ced4da" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="454" y="472" text-anchor="middle" font-size="12" fill="#adb5bd">옆벽에 비친 코트</text>
+<line x1="325.2" y1="404" x2="525.4" y2="60" stroke="#7048e8" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 5" marker-end="url(#tb3-v)"/>
+<circle cx="525.4084926012313" cy="66" r="6" fill="none" stroke="#7048e8" stroke-width="2"/>
+<text x="535.4" y="86" font-size="12.5" font-weight="700" fill="#7048e8">거울에 비친 목표</text>
+<text x="535.4" y="102" font-size="12" fill="#7048e8">여기를 향해 치면</text>
+<line x1="325.2" y1="404" x2="126.6" y2="62" stroke="#e8590c" stroke-width="3.5" stroke-linecap="round" marker-end="url(#tb3-o)"/>
+<line x1="126.6" y1="62" x2="78" y2="112" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="6 4" marker-end="url(#tb3-o)"/>
+<text x="126.6" y="52" text-anchor="middle" font-size="12" font-weight="700" fill="#d9480f">앞벽 왼쪽에 맞음</text>
+<text x="78" y="156" font-size="11.5" fill="#d9480f">앞 왼쪽 구석에서 죽음</text>
+<path d="M325.2,344 A60,60 0 0 0 295.2,352" fill="none" stroke="#495057" stroke-width="1.5"/>
+<text x="273.2" y="328" font-size="12" font-weight="700" fill="#495057">약 30°</text>
+<line x1="266" y1="442" x2="316" y2="410" stroke="#2f9e44" stroke-width="3" stroke-linecap="round" marker-end="url(#tb3-k)"/>
+<text x="74" y="472" font-size="12" font-weight="700" fill="#2b8a3e">초록 화살표 : 라켓은 코트 안쪽 빈 공간에서 비스듬히</text>
+<text x="74" y="488" font-size="12" fill="#2b8a3e">들어와 벽에 걸릴 것이 없다</text>
+<circle cx="325.2" cy="404" r="6" fill="#f5a623" stroke="#fff" stroke-width="1.5"/>
+<rect x="640" y="244" width="290" height="200" rx="10" fill="#fff5f5" stroke="#ffa8a8"/>
+<text x="654" y="270" font-size="14" font-weight="700" fill="#c92a2a">억지 스트레이트가 안 되는 이유</text>
+<text x="654" y="300" font-size="12.5" fill="#333">① 줄이 공에 닿기 전에 테두리가 벽에 닿음</text>
+<text x="654" y="324" font-size="12.5" fill="#333">② 벽을 피하려 손목을 꺾으면 면이 닫혀 틴</text>
+<text x="654" y="348" font-size="12.5" fill="#333">③ 공간이 없어 스윙이 멈춤 → 공이 짧게</text>
+<text x="654" y="372" font-size="12.5" fill="#333">    가운데에서 죽어 상대에게 공격 기회</text>
+<text x="654" y="416" font-size="13" font-weight="700" fill="#2b8a3e">→ 들어갈 틈이 없으면 각을 바꾼다</text>
+</svg><figcaption>위에서 본 코트. 오른쪽 뒤 구석에서 옆벽에 완전히 붙은 공을, 옆벽 쪽으로 약 30° 비스듬히 쳐서 옆벽에 먼저 맞힌다. 공은 같은 각도로 꺾여 앞벽 왼쪽에 맞고 앞 왼쪽 구석으로 떨어진다. 보라 점선은 옆벽에 비친 목표. 각도는 대표값이고, 실제 공은 옆벽에서 속도와 회전을 잃어 조금 덜 꺾인다</figcaption></figure>
+<pre class="formula"><code>오른쪽 뒤 구석 (앞벽에서 약 8.6 m) 에서 옆벽 쪽으로 30° 비스듬히 침
+→ 옆벽에서 같은 30°로 꺾여 앞벽까지 가는 동안 옆으로 8.6 × tan 30° ≈ 5.0 m 이동
+→ 앞벽 왼쪽 (왼쪽 벽에서 약 1.4 m) 에 맞고 앞 왼쪽 구석으로</code></pre>
+<div class="table-wrap"><table><thead><tr><th>① 자세 세팅</th><th>② 생기는 힘</th><th>③ 공의 변화</th></tr></thead><tbody>
+<tr><td>면을 옆벽 쪽으로 약 30~45° 연다(돌린다). 라켓은 코트 안쪽 빈 공간에서 공 뒤로 비스듬히 들어온다</td><td>라켓이 벽과 나란할 필요가 없어 걸릴 것이 없다. 옆벽이 공의 방향을 거울처럼 꺾어 준다</td><td>공이 앞벽 반대쪽 낮은 곳에 맞고 앞 구석에서 죽음</td></tr>
+<tr><td>옆벽 너머 '거울에 비친 목표'를 향해 친다</td><td>들어간 각도 = 나오는 각도이므로, 거울 속 목표로 가는 직선이 실제로는 꺾인 길이 된다</td><td>막힌 자리에서도 공을 앞벽으로 보냄</td></tr>
+</tbody></table></div>
+
+<h3 id="t5-3"><span class="sub-num">5-3</span>보스트의 대가</h3>
+<p>보스트는 공을 앞 구석으로 보내므로, 상대가 T에 있으면 그 공을 앞에서 공격할 수 있습니다. 벽에 붙은 공에서 보스트는 <strong>공격 샷이 아니라 탈출구</strong>입니다. 틈이 조금이라도 있으면 2장의 수직 V자로 높고 깊게 빠져나오는 것이 먼저이고, 틈이 전혀 없을 때 보스트를 고릅니다.</p>
+<hr>
+
+<h2 id="t6"><span class="sec-num">6</span>일반 드라이브 vs 벽에 붙은 공 vs 완전히 붙은 공(보스트) 한눈에 비교</h2>
+<p>글로 읽으면 헷갈리는 차이를 한 표로 정리했습니다.</p>
+<div class="table-wrap"><table><thead><tr><th>항목</th><th>일반 드라이브</th><th>벽에 붙은 공</th><th>완전히 붙은 공 (보스트)</th></tr></thead><tbody>
+<tr><td><strong>공과 벽 사이</strong></td><td>한 뼘 이상</td><td>0 ~ 몇 cm (줄 가장자리가 들어갈 틈)</td><td>0 (줄이 들어갈 틈 없음)</td></tr>
+<tr><td><strong>몸과 벽의 거리</strong></td><td>공에 맞춘 평소 거리</td><td>평소보다 <strong>한 뼘 더</strong> 떨어짐 (통로 약 45 cm 이상)</td><td>공 뒤 코트 안쪽으로 비스듬히</td></tr>
+<tr><td><strong>라켓이 지나가는 길</strong></td><td>바닥과 거의 나란한 원 (수평)</td><td>벽과 나란한 <strong>수직 V자</strong> (위 → 아래 → 위)</td><td>코트 안쪽에서 옆벽을 향해 비스듬히</td></tr>
+<tr><td><strong>백스윙</strong></td><td>크게</td><td>라켓을 높이 세움, 팔로우스루는 짧게</td><td>짧게 ~ 중간</td></tr>
+<tr><td><strong>손목 세우기</strong></td><td>내려오며 풀려 마지막 가속</td><td><strong>끝까지 유지</strong> (아래팔–라켓 약 135°)</td><td>유지, 면을 옆벽 쪽으로</td></tr>
+<tr><td><strong>타점</strong></td><td>앞발 옆 ~ 약간 앞, 무릎 높이 안팎</td><td>공 뒤 아래쪽, 무릎 아래까지 낮게</td><td>공 뒤 (몸에서 비스듬히 앞)</td></tr>
+<tr><td><strong>맞는 줄의 자리</strong></td><td>스윗스팟</td><td>줄 가장자리 (옆 테두리 쪽)</td><td>스윗스팟 근처</td></tr>
+<tr><td><strong>면 각도</strong></td><td>수직에서 약 15~20° 열림</td><td>약 25~30° 열림, 벽에서 1~3° 바깥으로</td><td>옆벽 쪽으로 약 30~45° 돌림</td></tr>
+<tr><td><strong>하체</strong></td><td>런지, 뒤꿈치 착지</td><td>더 깊게 낮춤 (앞 무릎 약 90°), 몸통을 공 쪽으로 기울임</td><td>공 뒤로 돌아 들어가는 스텝</td></tr>
+<tr><td><strong>구질</strong></td><td>빠르고 깊게, 약한 컷</td><td>느리지만 높고 깊게, 언더스핀</td><td>옆벽에서 꺾여 앞 구석으로 낮게</td></tr>
+<tr><td><strong>목표</strong></td><td>상대를 뒤에 가둠</td><td><strong>탈출</strong> : 시간 벌기</td><td><strong>탈출</strong> : 막힌 자리에서 공을 살림</td></tr>
+<tr><td><strong>위험</strong></td><td>—</td><td>공이 짧거나 가운데로 빠짐</td><td>앞 구석으로 가서 상대가 T에서 공격</td></tr>
+</tbody></table></div>
+<hr>
+
+<h2 id="t7"><span class="sec-num">7</span>자주 오해하는 것들</h2>
+<section class="myths">
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"벽에 붙은 공은 벽에 바짝 붙어 서서 쳐야 한다"</span></p><p class="myth-a"><span class="label">실제</span><span>반대입니다. 몸이 벽에 붙으면 팔과 라켓이 지나갈 통로가 사라져 팔꿈치가 접힙니다. 공이 벽에 붙을수록 몸은 <strong>한 뼘 더 떨어져</strong> 통로를 만듭니다.</span></p></div>
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"라켓이 벽에 닿으면 실패다"</span></p><p class="myth-a"><span class="label">실제</span><span>라켓의 옆 테두리가 벽을 스치는 것은 정상입니다. 줄 가장자리로 공을 맞히려면 테두리가 벽과 1 cm 안팎까지 붙어야 합니다. 실패는 벽을 피하려다 <strong>스윙이 멈추는 것</strong>입니다.</span></p></div>
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"손목을 튕기면 공이 벽에서 빠져나온다"</span></p><p class="myth-a"><span class="label">실제</span><span>손목이 풀리면 라켓이 아래팔의 연장선으로 누워 <strong>라켓 끝이 벽 쪽으로</strong> 갑니다. 끝까지 손목을 세워 둬야 라켓이 벽과 나란히 남습니다.</span></p></div>
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"아무리 붙어도 스트레이트로 쳐야 한다"</span></p><p class="myth-a"><span class="label">실제</span><span>공과 벽 사이에 줄이 들어갈 틈이 없으면 스트레이트는 테두리부터 맞거나 면이 닫혀 틴에 걸립니다. 그때는 옆벽을 거울로 쓰는 <strong>보스트</strong>가 물리적으로 맞는 답입니다.</span></p></div>
+<div class="myth"><p class="myth-q"><span class="label">오해</span><span>"벽에 붙은 공도 세게 쳐서 깊게 보내야 한다"</span></p><p class="myth-a"><span class="label">실제</span><span>줄 가장자리로 맞는 공은 스윗스팟보다 느리게 나가고 면도 비틀리기 쉽습니다. 목표는 힘이 아니라 <strong>높고 깊게 빠져나오기</strong>입니다.</span></p></div>
+</section>
+<hr>
+
+<h2 id="t8"><span class="sec-num">8</span>참고 문헌</h2>
+<ul>
+<li>Brody, H., Cross, R., &amp; Lindsey, C. (2002). <em>The Physics and Technology of Tennis</em>. Racquet Tech Publishing.</li>
+<li>Cross, R. (1999). The bounce of a ball. <em>American Journal of Physics</em>, 67(3), 222–227.</li>
+<li>Cross, R. (2002). Grip-slip behavior of a bouncing ball. <em>American Journal of Physics</em>, 70(11), 1093–1102.</li>
+<li>Lees, A. (2003). Science and the major racket sports: A review. <em>Journal of Sports Sciences</em>, 21(9), 707–732.</li>
+<li>World Squash Federation. <em>Specifications for Squash Courts, Racquets and Balls</em> (코트 9.75 × 6.4 m, 라켓 길이 최대 686 mm, 공 지름 40.0 ± 0.5 mm).</li>
+</ul>
+<p>벽과의 거리, 라켓 머리 너비, 테두리 두께, 면 각도, 무릎 각도는 이해를 돕기 위한 대표값이고 라켓 모델과 체격에 따라 달라집니다. 보스트 각도(5장)는 옆벽에서 속도·회전을 잃지 않는 이상적인 거울 반사로 계산했으며, 실제 공은 옆벽에서 조금 덜 꺾입니다. 벽에 붙은 공의 스윙을 직접 잰 연구는 거의 없어, 기하학과 충돌 원리, 다른 문서의 관절 원리를 바탕으로 정리했습니다.</p>
+
+<blockquote class="summary">벽에 붙은 공은 힘이 아니라 <strong>공간의 문제</strong>입니다.<br>수평으로 휘두르면 라켓 끝이 벽에 먼저 닿으므로, 몸은 <strong>한 뼘 더 떨어져</strong> 통로를 만들고 라켓은 <strong>벽과 나란히 세워</strong> 위에서 아래로 떨어뜨렸다가 공 밑을 파고들어 퍼 올립니다. 손목은 끝까지 세워 라켓 끝이 아닌 줄 가장자리가 공에 닿게 하고, 면을 길보다 더 열어 <strong>얇게 깎아</strong> 높고 깊게 빠져나옵니다. 줄이 들어갈 틈조차 없으면 스트레이트를 버리고, 옆벽을 <strong>거울</strong>로 쓰는 보스트로 탈출합니다.</blockquote>
+<nav class="pager" aria-label="이전·다음 글"></nav>
+</main>
+</div>
+<footer class="site-foot"><a href="index.html">← 스쿼시 노트 목록</a> · 개인 학습용 노트</footer>
+</div>
+</body>
+</html>
