@@ -23,6 +23,17 @@ window.SQUASH_DOCS = [
     meta: "도표 6장 · 약 15분"
   },
   {
+    id: "forehand-biomechanics", icon: "🦾", tone: "teal",
+    series: "principle",
+    status: "published",
+    href: "스쿼시_포핸드_생체역학.html",
+    title: "포핸드 드라이브의 생체역학",
+    desc: "프로의 포핸드는 왜 힘을 꽉 주지 않는데도 공이 백월까지 뻗을까? 팔 각도가 만드는 지렛대, 채찍처럼 늦게 따라오는 라켓 머리, 라켓이 지나가는 길과 면의 각도까지 쉬운 말로 풀어 봅니다.",
+    tags: ["포핸드", "생체역학", "채찍 효과"],
+    thumb: "images/포핸드_관절세팅.svg",
+    meta: "도표 4장 · 약 20분"
+  },
+  {
     id: "singles-tactics", icon: "📐", tone: "violet",
     series: "tactics",
     no: 0,

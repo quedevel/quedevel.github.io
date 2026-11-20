@@ -406,6 +406,10 @@ blockquote.summary {
 }
 blockquote.summary::before { content: "📌"; top: 18px; }
 
+/* analogy callout — 섹션 첫머리의 직관적 비유 */
+blockquote.analogy { background: var(--amber-soft); }
+blockquote.analogy::before { content: "🧭"; }
+
 /* pager — linked page cards */
 .pager { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 48px; }
 .pager:empty { display: none; }
