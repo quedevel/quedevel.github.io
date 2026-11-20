@@ -1,0 +1,232 @@
+/*
+ * 스쿼시 노트 — 카드뉴스(가로 슬라이드) 보기
+ * html.deck-mode 일 때만 적용됩니다. 내용은 그대로 두고 squash-cards.js 가 문서를 카드로 나눕니다.
+ */
+
+/* 카드 만들기 전 긴 글이 번쩍 보이지 않게 */
+html.deck-mode:not(.deck-ready) .page { visibility: hidden; }
+
+html.deck-mode body { overflow: hidden; }
+html.deck-mode .main { height: 100vh; height: 100dvh; display: flex; flex-direction: column; }
+html.deck-mode .topbar { flex: none; border-bottom-color: var(--line); }
+html.deck-mode .cover,
+html.deck-mode .site-foot { display: none; }
+html.deck-mode .page { flex: 1; min-height: 0; max-width: none; margin: 0; padding: 0; }
+html.deck-mode main.doc { height: 100%; }
+
+/* ---------- 덱 ---------- */
+.deck { position: relative; height: 100%; display: flex; flex-direction: column; }
+.deck-progress { flex: none; height: 3px; background: var(--line); }
+.deck-progress span { display: block; height: 100%; width: 0; background: var(--accent); transition: width .3s ease; }
+
+.deck-track {
+  flex: 1; min-height: 0;
+  display: flex;
+  overflow-x: auto; overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+.deck-track::-webkit-scrollbar { display: none; }
+.deck-track:focus { outline: none; }
+
+.slide {
+  flex: 0 0 100%; min-width: 0;
+  scroll-snap-align: center; scroll-snap-stop: always;
+  display: flex; justify-content: center;
+  padding: 20px 92px 16px;
+  box-sizing: border-box;
+}
+
+/* ---------- 카드 ---------- */
+.card {
+  width: 100%; max-width: 780px; height: 100%;
+  display: flex; flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.card-body {
+  flex: 1; min-height: 0;
+  overflow-y: auto; overflow-x: hidden;
+  overscroll-behavior-y: contain;
+  padding: 30px 38px 26px;
+  display: flex; flex-direction: column;
+}
+.card-body > * { flex: none; }
+.card-body > :first-child { margin-top: 0; }
+.card-body > :last-child { margin-bottom: 0; }
+.card-kicker {
+  margin: 0 0 12px !important;
+  font-size: .78rem; font-weight: 650; letter-spacing: .02em;
+  color: var(--muted);
+}
+.card-kicker .ck-tag {
+  display: inline-block; margin-left: 6px; padding: 0 7px; border-radius: 6px;
+  background: var(--accent-soft); color: var(--accent-ink); font-size: .72rem;
+}
+.card-kicker + h2, .card-kicker + h3 { margin-top: 0; }
+.card-body > h2:first-child, .card-body > h3:first-child { margin-top: 0; }
+.card .doc-hero, .card .fig { margin-top: 0; }
+
+/* 장 첫 카드 : 제목 + 비유만 있는 짧은 카드는 가운데에 크게 */
+.card-opener .card-body { justify-content: center; }
+.card-opener h2 { font-size: clamp(1.6rem, 3.6vw, 2.1rem); margin-bottom: 18px; }
+.card-opener h2 .sec-num {
+  display: block; margin: 0 0 6px;
+  font-size: .9rem; color: var(--accent); letter-spacing: .08em;
+}
+.card-opener h2 .sec-num::before { content: "CHAPTER "; }
+
+/* 도표 카드 : 도표를 세로 가운데에 (넘칠 때는 위부터) */
+.card-fig .card-body > .fig { margin-top: auto; margin-bottom: auto; }
+
+/* 다음 카드 힌트 */
+.card-next {
+  flex: none;
+  display: flex; align-items: center; gap: 10px;
+  width: 100%;
+  padding: 11px 22px;
+  border: 0; border-top: 1px solid var(--line);
+  background: var(--block);
+  color: var(--muted); font-size: .82rem; text-align: left;
+  cursor: pointer;
+  transition: color .15s ease, background .15s ease;
+}
+.card-next .cn-label { flex: none; font-weight: 600; }
+.card-next .cn-title { flex: 1; min-width: 0; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.card-next .cn-arrow { flex: none; font-size: 1.05rem; }
+.card-next:hover { background: var(--hover-2); color: var(--accent); }
+.card-next.is-end { cursor: default; }
+.card-next.is-end:hover { background: var(--block); color: var(--muted); }
+
+/* ---------- 표지 카드 ---------- */
+.card-cover .card-body { padding-top: 34px; }
+.card-cover .page-icon { margin-top: 0; width: 64px; height: 64px; font-size: 42px; background: var(--block); box-shadow: none; }
+.card-cover h1 { margin-top: 14px; }
+.card-cover .props { margin: 10px 0 14px; }
+.cover-sum {
+  margin: 4px 0 18px; padding: 14px 18px;
+  border-radius: 12px; background: var(--accent-soft);
+  color: var(--ink-2); font-size: .95rem; line-height: 1.75;
+}
+.cover-sum b.cs-label { display: block; margin-bottom: 4px; color: var(--accent-ink); font-size: .78rem; letter-spacing: .04em; }
+.cover-toc-head { display: flex; align-items: baseline; justify-content: space-between; margin: 4px 0 8px; font-size: .82rem; color: var(--muted); font-weight: 600; }
+.cover-toc-head strong { color: var(--accent-ink); font-size: .9rem; }
+.cover-toc { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.cover-toc li { margin: 0; padding: 0; }
+.cover-toc button {
+  width: 100%; display: flex; gap: 10px; align-items: baseline;
+  padding: 8px 12px; border: 1px solid var(--line); border-radius: 10px;
+  background: var(--surface); color: var(--ink-2);
+  font-size: .86rem; line-height: 1.45; text-align: left; cursor: pointer;
+  transition: background .12s ease, border-color .12s ease;
+}
+.cover-toc button:hover { background: var(--hover); border-color: var(--line-2); }
+.cover-toc .ct-num { flex: none; min-width: 1.2em; color: var(--accent); font-weight: 700; font-variant-numeric: tabular-nums; }
+.cover-toc .ct-page { margin-left: auto; flex: none; color: var(--faint); font-size: .74rem; font-variant-numeric: tabular-nums; }
+.cover-start {
+  align-self: flex-start;
+  margin-top: 16px; padding: 9px 18px;
+  border: 0; border-radius: 10px;
+  background: var(--accent); color: #fff; font-weight: 650; cursor: pointer;
+}
+.cover-start:hover { filter: brightness(1.08); }
+
+/* ---------- 좌우 화살표 ---------- */
+.deck-arrow {
+  position: absolute; top: 50%; z-index: 5;
+  width: 48px; height: 48px; margin-top: -40px;
+  display: grid; place-items: center;
+  border: 1px solid var(--line); border-radius: 50%;
+  background: var(--surface); color: var(--ink-2);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: opacity .15s ease, background .15s ease;
+}
+.deck-arrow svg { width: 22px; height: 22px; }
+.deck-arrow:hover { background: var(--hover-2); }
+.deck-arrow:disabled { opacity: 0; pointer-events: none; }
+.deck-arrow.prev { left: 22px; }
+.deck-arrow.next { right: 22px; }
+
+/* ---------- 하단 바 ---------- */
+.deck-bar {
+  flex: none;
+  display: flex; align-items: center; gap: 6px;
+  padding: 8px 16px;
+  padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+  border-top: 1px solid var(--line);
+  background: var(--canvas);
+  font-size: .84rem;
+}
+.deck-bar .db-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  height: 34px; padding: 0 12px;
+  border: 1px solid var(--line); border-radius: 9px;
+  background: var(--surface); color: var(--ink-2);
+  font-size: .82rem; font-weight: 600; white-space: nowrap;
+  cursor: pointer; text-decoration: none;
+}
+.deck-bar .db-btn:hover { background: var(--hover-2); text-decoration: none; }
+.deck-bar .db-btn svg { width: 15px; height: 15px; }
+.deck-bar .db-nav { display: none; width: 38px; padding: 0; justify-content: center; }
+.deck-bar .db-nav:disabled { opacity: .35; cursor: default; }
+.db-count { min-width: 64px; text-align: center; font-weight: 700; color: var(--ink); font-variant-numeric: tabular-nums; }
+.db-count small { color: var(--faint); font-weight: 600; }
+.db-title { flex: 1; min-width: 0; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.db-mode { margin-left: auto; }
+
+/* ---------- 인터랙티브 요소 : 스와이프와 충돌 방지 ---------- */
+.card .swing3d { touch-action: pan-y; }           /* 3D 뷰어 위의 가로 드래그는 카드를 넘기지 않음 */
+.card .swing3d canvas { touch-action: none; }
+.card .table-wrap, .card pre { overscroll-behavior-x: contain; }
+
+/* ---------- 긴 글 보기일 때 : 카드로 돌아가는 버튼 ---------- */
+.view-toggle {
+  position: fixed; right: 18px; bottom: 18px; z-index: 60;
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 9px 14px; border: 1px solid var(--line); border-radius: 999px;
+  background: var(--surface); color: var(--ink-2); box-shadow: var(--shadow-lg);
+  font-size: .84rem; font-weight: 650; cursor: pointer;
+}
+.view-toggle:hover { background: var(--hover-2); }
+.view-toggle svg { width: 15px; height: 15px; }
+
+/* ---------- 반응형 ---------- */
+@media (max-width: 900px) {
+  .slide { padding: 14px 64px 12px; }
+  .deck-arrow { width: 40px; height: 40px; }
+  .deck-arrow.prev { left: 12px; }
+  .deck-arrow.next { right: 12px; }
+}
+@media (max-width: 720px) {
+  .slide { padding: 10px 10px 8px; }
+  .deck-arrow { display: none; }
+  .card { border-radius: 14px; }
+  .card-body { padding: 22px 18px 18px; }
+  .card-next { padding: 10px 16px; }
+  .deck-bar { padding-left: 10px; padding-right: 10px; gap: 5px; }
+  .deck-bar .db-nav { display: inline-flex; }
+  .deck-bar .db-label { display: none; }
+  .deck-bar .db-btn { padding: 0 10px; }
+  .db-title { display: none; }
+  .db-count { flex: 1; }
+  .cover-toc { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .deck-track { scroll-behavior: auto; }
+  .deck-progress span { transition: none; }
+}
+@media print {
+  html.deck-mode body { overflow: visible; }
+}
+
+/* 카드 안의 3D 뷰어는 캡션까지 한 화면에 들어오도록 조금 낮게 */
+.card .sw-view { max-height: min(48vh, 440px); }
+
+/* 한 카드에 묶인 두 번째 이후 소제목은 간격을 띄움 */
+.card-body > :not(.card-kicker) + h3 { margin-top: 30px; }
