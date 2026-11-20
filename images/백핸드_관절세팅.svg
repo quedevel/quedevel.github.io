@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+<defs><marker id="bh1-k" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#495057"/></marker><marker id="bh1-o" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#e8590c"/></marker><marker id="bh1-b" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c7ed6"/></marker></defs>
+<rect width="960" height="600" fill="#fff"/>
+<text x="480" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#222">백핸드 : 어깨를 닫아 감아 두고, 멈추면서 펼친다 (위에서 본 그림)</text>
+<line x1="480" y1="56" x2="480" y2="585" stroke="#dee2e6" stroke-width="1.5"/>
+<text x="250" y="70" text-anchor="middle" font-size="16" font-weight="700" fill="#222">① 백스윙 정점</text>
+<rect x="30" y="96" width="435" height="424" fill="#fbf7ef"/>
+<rect x="30" y="88" width="435" height="8" fill="#9aa4ae"/>
+<rect x="22" y="88" width="8" height="432" fill="#9aa4ae"/>
+<text x="36" y="114" font-size="12" font-weight="700" fill="#555">앞벽 ↑</text>
+<text x="36" y="510" font-size="12" font-weight="700" fill="#555">← 옆벽(왼쪽)</text>
+<line x1="300" y1="150" x2="300" y2="500" stroke="#adb5bd" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6 4"/>
+<text x="306" y="160" font-size="11.5" fill="#868e96">옆벽과 나란한 선</text>
+<ellipse cx="334" cy="424" rx="17" ry="8" transform="rotate(-30 334 424)" fill="#dee2e6" stroke="#adb5bd"/>
+<ellipse cx="238" cy="354" rx="17" ry="8" transform="rotate(-30 238 354)" fill="#dee2e6" stroke="#adb5bd"/>
+<ellipse cx="300" cy="360" rx="34" ry="17" transform="rotate(-100 300 360)" fill="#f1f3f5" stroke="#868e96" stroke-width="1.5" stroke-dasharray="4 3"/>
+<line x1="268.9" y1="328.9" x2="331.1" y2="391.1" stroke="#495057" stroke-width="13" stroke-linecap="round"/>
+<circle cx="295.8" cy="364.2" r="15" fill="#e9ecef" stroke="#868e96" stroke-width="1.5"/>
+<circle cx="285.2" cy="374.8" r="3.5" fill="#868e96"/>
+<line x1="268.9" y1="328.9" x2="270.3" y2="389.7" stroke="#1c7ed6" stroke-width="11" stroke-linecap="round"/>
+<line x1="270.3" y1="389.7" x2="312.7" y2="409.5" stroke="#2f9e44" stroke-width="9" stroke-linecap="round"/>
+<line x1="312.7" y1="409.5" x2="361.1" y2="435.8" stroke="#343a40" stroke-width="6" stroke-linecap="round"/>
+<ellipse cx="400.6" cy="457.2" rx="46" ry="26" transform="rotate(28.5 400.6 457.2)" fill="#f1f3f5" stroke="#343a40" stroke-width="3.5"/>
+<line x1="331.1" y1="391.1" x2="354" y2="431.9" stroke="#adb5bd" stroke-width="8" stroke-linecap="round"/>
+<path d="M300,268 A92,92 0 0 0 234.9,294.9" fill="none" stroke="#e8590c" stroke-width="2.5"/>
+<text x="226" y="268" text-anchor="end" font-size="13" font-weight="700" fill="#e8590c">어깨선 30~45° 더 돎</text>
+<text x="226" y="286" text-anchor="end" font-size="11.5" fill="#e8590c">(등이 앞벽 쪽으로 살짝 보임)</text>
+<text x="346" y="348" font-size="12.5" font-weight="700" fill="#495057">골반은 0~15°</text>
+<text x="210.3" y="423.7" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2f9e44">팔꿈치 90~110°</text>
+<text x="210.3" y="441.7" text-anchor="middle" font-size="12" fill="#2f9e44">가슴 앞을 가로지름</text>
+<text x="406.6" y="507.2" text-anchor="middle" font-size="12" fill="#343a40">라켓 머리는 위·뒤</text>
+<text x="406.6" y="523.2" text-anchor="middle" font-size="12" fill="#868e96">반대 손이 목을 받침</text>
+<rect x="30" y="532" width="436" height="48" rx="8" fill="#f8f9fa" stroke="#dee2e6"/>
+<text x="248" y="552" text-anchor="middle" font-size="12.5" font-weight="700" fill="#333">어깨–골반 사이가 30~40° 비틀린 상태 = 감아 둔 태엽</text>
+<text x="248" y="570" text-anchor="middle" font-size="12" fill="#555">어깨 뒤쪽·등 위쪽 근육이 고무줄처럼 늘어나 있음</text>
+<text x="720" y="70" text-anchor="middle" font-size="16" font-weight="700" fill="#222">② 임팩트</text>
+<rect x="510" y="96" width="435" height="424" fill="#fbf7ef"/>
+<rect x="510" y="88" width="435" height="8" fill="#9aa4ae"/>
+<rect x="502" y="88" width="8" height="432" fill="#9aa4ae"/>
+<text x="516" y="114" font-size="12" font-weight="700" fill="#555">앞벽 ↑</text>
+<text x="516" y="510" font-size="12" font-weight="700" fill="#555">← 옆벽(왼쪽)</text>
+<line x1="800" y1="150" x2="800" y2="500" stroke="#adb5bd" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6 4"/>
+<ellipse cx="830" cy="430" rx="17" ry="8" transform="rotate(-30 830 430)" fill="#dee2e6" stroke="#adb5bd"/>
+<ellipse cx="738" cy="354" rx="17" ry="8" transform="rotate(-30 738 354)" fill="#dee2e6" stroke="#adb5bd"/>
+<ellipse cx="800" cy="360" rx="34" ry="17" transform="rotate(-68 800 360)" fill="#f1f3f5" stroke="#868e96" stroke-width="1.5" stroke-dasharray="4 3"/>
+<line x1="806.1" y1="316.4" x2="793.9" y2="403.6" stroke="#495057" stroke-width="13" stroke-linecap="round"/>
+<circle cx="794.1" cy="359.2" r="15" fill="#e9ecef" stroke="#868e96" stroke-width="1.5"/>
+<circle cx="779.2" cy="357.1" r="3.5" fill="#868e96"/>
+<path d="M840,420 Q690,400 686.1,316.2" fill="none" stroke="#e8590c" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#bh1-o)"/>
+<text x="690" y="438" text-anchor="middle" font-size="12.5" font-weight="700" fill="#e8590c">팔이 어깨에서 부채처럼 펼쳐짐</text>
+<line x1="806.1" y1="316.4" x2="680.1" y2="294.2" stroke="#1c7ed6" stroke-width="10" stroke-linecap="round"/>
+<line x1="680.1" y1="294.2" x2="636.1" y2="294.2" stroke="#343a40" stroke-width="6" stroke-linecap="round"/>
+<ellipse cx="592.1" cy="294.2" rx="44" ry="7" fill="#f1f3f5" stroke="#343a40" stroke-width="3.5"/>
+<circle cx="592.1" cy="278.2" r="9" fill="#fab005" stroke="#222" stroke-width="1.5"/>
+<line x1="592.1" y1="278.2" x2="592.1" y2="128" stroke="#1c7ed6" stroke-width="2.5" stroke-linecap="round" marker-end="url(#bh1-b)"/>
+<text x="600.1" y="140" font-size="12" font-weight="700" fill="#1c7ed6">면이 앞벽을 정면으로</text>
+<line x1="602.1" y1="278.2" x2="616.1" y2="278.2" stroke="#868e96" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="3 3"/>
+<line x1="600.1" y1="354" x2="718" y2="354" stroke="#868e96" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="3 3"/>
+<line x1="608.1" y1="280.2" x2="608.1" y2="352" stroke="#555" stroke-width="1.5" stroke-linecap="round" marker-start="url(#bh1-k)" marker-end="url(#bh1-k)"/>
+<text x="600.1" y="328" text-anchor="end" font-size="12" font-weight="700" fill="#333">앞발보다</text>
+<text x="600.1" y="344" text-anchor="end" font-size="12" font-weight="700" fill="#333">20~40 cm 앞</text>
+<text x="744.1" y="278.2" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1c7ed6">팔꿈치 160~175°</text>
+<line x1="793.9" y1="403.6" x2="894" y2="435.2" stroke="#adb5bd" stroke-width="8" stroke-linecap="round"/>
+<text x="853.9" y="465.6" text-anchor="middle" font-size="12.5" font-weight="700" fill="#495057">반대 팔은 뒤로 → 몸통 멈춤</text>
+<text x="852" y="320" font-size="12.5" font-weight="700" fill="#e8590c">어깨선은</text>
+<text x="852" y="338" font-size="12.5" font-weight="700" fill="#e8590c">0~15°만 열림</text>
+<rect x="510" y="532" width="436" height="48" rx="8" fill="#f8f9fa" stroke="#dee2e6"/>
+<text x="728" y="552" text-anchor="middle" font-size="12.5" font-weight="700" fill="#333">몸통은 거의 옆을 본 채 멈추고, 그 기세로 팔이 튀어 나감</text>
+<text x="728" y="570" text-anchor="middle" font-size="12" fill="#555">골반은 15~30° 정도 앞벽 쪽으로 열림</text>
+</svg>

@@ -31,7 +31,18 @@ window.SQUASH_DOCS = [
     desc: "프로의 포핸드는 왜 힘을 꽉 주지 않는데도 공이 백월까지 뻗을까? 팔 각도가 만드는 지렛대, 채찍처럼 늦게 따라오는 라켓 머리, 라켓이 지나가는 길과 면의 각도까지 쉬운 말로 풀어 봅니다.",
     tags: ["포핸드", "생체역학", "채찍 효과"],
     thumb: "images/포핸드_관절세팅.svg",
-    meta: "도표 4장 · 약 20분"
+    meta: "도표 4장 · 3D 뷰어 · 약 20분"
+  },
+  {
+    id: "backhand-biomechanics", icon: "🪃", tone: "violet",
+    series: "principle",
+    status: "published",
+    href: "스쿼시_백핸드_생체역학.html",
+    title: "백핸드 드라이브의 생체역학",
+    desc: "프로의 백핸드는 왜 가볍게 휘두르는데도 벽을 따라 깊게 뻗을까? 닫아 둔 어깨, 일찍 멈추는 몸통, 어깨에서 부채처럼 펼쳐지는 팔, 아래팔 비틀기의 타이밍까지 쉬운 말로 풀어 봅니다.",
+    tags: ["백핸드", "생체역학", "몸통 브레이크"],
+    thumb: "images/백핸드_관절세팅.svg",
+    meta: "도표 3장 · 3D 뷰어 · 약 20분"
   },
   {
     id: "singles-tactics", icon: "📐", tone: "violet",
